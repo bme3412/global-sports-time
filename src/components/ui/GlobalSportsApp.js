@@ -259,7 +259,7 @@ export default function GlobalSportsApp() {
           <ul className="list-disc pl-5">
             <li>Check local broadcasting rights in your travel destination</li>
             <li>Be aware of time zone differences when scheduling viewing times</li>
-            <li>Consider using a VPN to access your home country's streaming services</li>
+            <li>Consider using a VPN to access your home country&apos;s streaming services</li>
             <li>Look for sports bars or public viewing areas in your travel location</li>
             <li>Subscribe to international sports streaming services if available</li>
           </ul>

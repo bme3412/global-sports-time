@@ -111,7 +111,7 @@ export default function Home() {
         <CardContent>
           <ul className="list-disc pl-5">
             <li>Check official league websites for international viewing options</li>
-            <li>Follow teams' social media accounts for updates on international broadcasts</li>
+            <li>Follow teams&apos; social media accounts for updates on international broadcasts</li>
             <li>Consider subscribing to sports-specific streaming services</li>
             <li>Join online communities or forums for expat sports fans in your destination</li>
             <li>Download mobile apps for live scores and game notifications</li>
