@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Tv, Globe, DollarSign, ChevronDown, ChevronUp } from 'lucide-react';
+import { Tv, Globe, DollarSign, ChevronDown, ChevronUp, AlertTriangle } from 'lucide-react';
 
 const ViewingGuide = ({ league, team1, team2, location, viewingOptions }) => {
   const [expandedSection, setExpandedSection] = useState(null);
   const options = viewingOptions[league]?.[location];
-
-  if (!options) {
-    return <p>No viewing information available for this combination.</p>;
-  }
 
   const toggleSection = (section) => {
     setExpandedSection(expandedSection === section ? null : section);
@@ -36,6 +32,28 @@ const ViewingGuide = ({ league, team1, team2, location, viewingOptions }) => {
     </div>
   );
 
+  if (!options) {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center">
+            <AlertTriangle className="mr-2 text-yellow-500" />
+            No Viewing Information Available
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p>We don't have specific viewing information for {league.toUpperCase()} in {location}.</p>
+          <p className="mt-2">Suggestions:</p>
+          <ul className="list-disc pl-5 mt-1">
+            <li>Check the official {league.toUpperCase()} website for international viewing options.</li>
+            <li>Look for sports streaming services available in {location}.</li>
+            <li>Consider using a VPN to access streaming services from other countries.</li>
+          </ul>
+        </CardContent>
+      </Card>
+    );
+  }
+
   return (
     <Card>
       <CardHeader>
@@ -58,11 +76,13 @@ const ViewingGuide = ({ league, team1, team2, location, viewingOptions }) => {
           icon={DollarSign}
           content={<p>{options.cost}</p>}
         />
-        <Section
-          title="Restrictions"
-          icon={Globe}
-          content={<p>{options.restrictions}</p>}
-        />
+        {options.restrictions && (
+          <Section
+            title="Restrictions"
+            icon={Globe}
+            content={<p>{options.restrictions}</p>}
+          />
+        )}
       </CardContent>
     </Card>
   );
