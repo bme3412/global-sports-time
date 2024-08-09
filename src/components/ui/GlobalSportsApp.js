@@ -49,7 +49,7 @@ const teams = [
     name: "Manchester United",
     league: "premier",
     city: "Manchester",
-    country: "UK",
+    country: "United Kingdom",
     timezone: "Europe/London",
   },
   {
