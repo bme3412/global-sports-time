@@ -349,7 +349,7 @@ export default function GlobalSportsApp() {
         <CardHeader>
           <CardTitle className="flex items-center text-2xl">
             <MapPin className="mr-2 text-red-500" />
-            Viewing Details
+            Team Info
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -387,7 +387,7 @@ export default function GlobalSportsApp() {
         <CardHeader>
           <CardTitle className="flex items-center text-2xl">
             <MapPin className="mr-2 text-red-500" />
-            Viewing Details
+            Game Info
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -412,10 +412,10 @@ export default function GlobalSportsApp() {
               )}
             </div>
             <div>
-            <h3 className="text-lg font-semibold mb-2">Your Viewing Info</h3>
+            <h3 className="text-lg font-semibold mb-2">Where will you be watching?</h3>
               <Select onValueChange={setWatchLocation}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Where will you watch?" />
+                  <SelectValue placeholder="Select location" />
                 </SelectTrigger>
                 <SelectContent>
                   {locations.map(location => (
