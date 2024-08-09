@@ -130,7 +130,7 @@ export default function Home() {
               </li>
               <li className="flex items-center">
                 <Globe className="mr-2 text-green-500" />
-                Follow teams' social media accounts for updates on international broadcasts
+                Follow teams&apos; social media accounts for updates on international broadcasts
               </li>
               <li className="flex items-center">
                 <Shield className="mr-2 text-purple-500" />
