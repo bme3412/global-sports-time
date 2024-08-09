@@ -42,7 +42,7 @@ const ViewingGuide = ({ league, team1, team2, location, viewingOptions }) => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>We don't have specific viewing information for {league.toUpperCase()} in {location}.</p>
+          <p>We don&apos;t have specific viewing information for {league.toUpperCase()} in {location}.</p>
           <p className="mt-2">Suggestions:</p>
           <ul className="list-disc pl-5 mt-1">
             <li>Check the official {league.toUpperCase()} website for international viewing options.</li>
