@@ -1,19 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Tv, Globe, DollarSign, AlertTriangle } from 'lucide-react';
+import { Tv, Globe, DollarSign, AlertTriangle, Info, Users, MapPin, Clock, Trophy, Calendar } from 'lucide-react';
 
-const ViewingGuide = ({ league, teams = [], location, viewingOptions }) => {
-  const [selectedTeams, setSelectedTeams] = useState([]);
+const ViewingGuide = ({ league, teams = [], location, viewingOptions, teamDetails = {} }) => {
   const options = viewingOptions[league]?.[location];
-
-  const toggleTeam = (team) => {
-    setSelectedTeams(prevSelectedTeams =>
-      prevSelectedTeams.includes(team)
-        ? prevSelectedTeams.filter(t => t !== team)
-        : [...prevSelectedTeams, team]
-    );
-  };
 
   const InfoSection = ({ title, content, icon: Icon }) => (
     <div className="mb-4">
@@ -24,6 +14,7 @@ const ViewingGuide = ({ league, teams = [], location, viewingOptions }) => {
       <div className="pl-6">{content}</div>
     </div>
   );
+
 
   if (!options) {
     return (
@@ -59,31 +50,65 @@ const ViewingGuide = ({ league, teams = [], location, viewingOptions }) => {
             <h3 className="text-lg font-semibold mb-2">Team Information</h3>
             {teams.length > 0 ? (
               <div>
-                <h4 className="text-md font-medium mb-1">Select Teams:</h4>
-                {teams.map((team) => (
-                  <div key={team} className="flex items-center space-x-2 mb-1">
-                    <Checkbox
-                      id={team}
-                      checked={selectedTeams.includes(team)}
-                      onCheckedChange={() => toggleTeam(team)}
-                    />
-                    <label
-                      htmlFor={team}
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      {team}
-                    </label>
-                  </div>
-                ))}
+                {teams.map((teamName) => {
+                  const team = teamDetails[teamName] || {};
+                  return (
+                    <div key={teamName} className="mb-4 p-3 bg-gray-100 rounded-lg">
+                      <h4 className="text-md font-medium mb-2">{teamName}</h4>
+                      <InfoSection
+                        title="Home Arena"
+                        icon={MapPin}
+                        content={<p>{team.homeArena || 'N/A'}</p>}
+                      />
+                      <InfoSection
+                        title="Key Players"
+                        icon={Users}
+                        content={
+                          <ul className="list-disc pl-5">
+                            {team.keyPlayers?.map((player, index) => (
+                              <li key={index}>{player.name} - {player.position}</li>
+                            )) || 'N/A'}
+                          </ul>
+                        }
+                      />
+                      <InfoSection
+                        title="Recent Form"
+                        icon={Clock}
+                        content={<p>{team.recentForm || 'N/A'}</p>}
+                      />
+                      <InfoSection
+                        title="Championships"
+                        icon={Trophy}
+                        content={<p>{team.championships || 'N/A'}</p>}
+                      />
+                      <InfoSection
+                        title="Current Season"
+                        icon={Calendar}
+                        content={
+                          <p>
+                            Wins: {team.currentSeasonStats?.wins || 'N/A'}, 
+                            Losses: {team.currentSeasonStats?.losses || 'N/A'}
+                            {team.currentSeasonStats?.draws !== undefined && `, Draws: ${team.currentSeasonStats.draws}`}
+                          </p>
+                        }
+                      />
+                      <InfoSection
+                        title="Team History"
+                        icon={Info}
+                        content={<p>{team.teamHistory || 'N/A'}</p>}
+                      />
+                    </div>
+                  );
+                })}
               </div>
             ) : (
-              <p>No teams available for selection.</p>
+              <p>No team information available.</p>
             )}
           </div>
 
-          {/* Game Info */}
+          {/* Viewing Info */}
           <div className="sm:w-1/2">
-            <h3 className="text-lg font-semibold mb-2">Game Information</h3>
+            <h3 className="text-lg font-semibold mb-2">Viewing Information</h3>
             <InfoSection
               title="Available Services"
               icon={Tv}
@@ -105,6 +130,13 @@ const ViewingGuide = ({ league, teams = [], location, viewingOptions }) => {
                 title="Restrictions"
                 icon={Globe}
                 content={<p>{options.restrictions}</p>}
+              />
+            )}
+            {options.additionalInfo && (
+              <InfoSection
+                title="Additional Information"
+                icon={Info}
+                content={<p>{options.additionalInfo}</p>}
               />
             )}
           </div>
