@@ -5,7 +5,7 @@ import GlobalSportsApp from '@/components/ui/GlobalSportsApp';
 import VPNComparison from '@/components/ui/VPNComparison';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Globe } from 'lucide-react';
+import { Globe, Tv, Shield } from 'lucide-react';
 
 const vpnData = [
   { name: 'NordVPN', price: 3.71, servers: 5400, maxDevices: 6, affiliateLink: 'https://nordvpn.com/affiliate' },
@@ -72,52 +72,82 @@ export default function Home() {
   const [showVPNComparison, setShowVPNComparison] = useState(false);
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Global Sports Viewing Guide</h1>
-      
-      <GlobalSportsApp viewingOptions={viewingOptions} />
-      
-      <div className="mt-8">
-        <Button 
-          onClick={() => setShowVPNComparison(!showVPNComparison)}
-          className="mb-4"
-        >
-          {showVPNComparison ? 'Hide' : 'Show'} VPN Comparison
-        </Button>
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800">
+      <div className="container mx-auto p-4 md:p-8">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center text-gray-800 dark:text-gray-100">
+          Global Sports Viewing Guide
+        </h1>
         
-        {showVPNComparison && (
-          <Card>
-            <CardHeader>
-              <CardTitle>Recommended VPN Services</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="mb-4">To access geo-restricted content and ensure your online privacy while streaming sports, consider using a VPN service:</p>
-              <VPNComparison vpns={vpnData} />
-              <p className="mt-4 text-sm text-gray-600">
-                Note: Prices and features may vary. We recommend checking the official websites for the most up-to-date information.
-              </p>
-            </CardContent>
-          </Card>
-        )}
-      </div>
+        <Card className="mb-8 shadow-lg">
+          <CardContent className="p-6">
+            <GlobalSportsApp viewingOptions={viewingOptions} />
+          </CardContent>
+        </Card>
+        
+        <div className="mb-8">
+          <Button 
+            onClick={() => setShowVPNComparison(!showVPNComparison)}
+            className="w-full md:w-auto"
+            size="lg"
+          >
+            <Shield className="mr-2" />
+            {showVPNComparison ? 'Hide' : 'Show'} VPN Comparison
+          </Button>
+          
+          {showVPNComparison && (
+            <Card className="mt-4 shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center text-2xl">
+                  <Shield className="mr-2" />
+                  Recommended VPN Services
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="mb-4 text-gray-600 dark:text-gray-300">
+                  To access geo-restricted content and ensure your online privacy while streaming sports, consider using a VPN service:
+                </p>
+                <VPNComparison vpns={vpnData} />
+                <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                  Note: Prices and features may vary. We recommend checking the official websites for the most up-to-date information.
+                </p>
+              </CardContent>
+            </Card>
+          )}
+        </div>
 
-      <Card className="mt-8">
-        <CardHeader>
-          <CardTitle className="flex items-center">
-            <Globe className="mr-2" />
-            Additional Resources
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="list-disc pl-5">
-            <li>Check official league websites for international viewing options</li>
-            <li>Follow teams&apos; social media accounts for updates on international broadcasts</li>
-            <li>Consider subscribing to sports-specific streaming services</li>
-            <li>Join online communities or forums for expat sports fans in your destination</li>
-            <li>Download mobile apps for live scores and game notifications</li>
-          </ul>
-        </CardContent>
-      </Card>
+        <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle className="flex items-center text-2xl">
+              <Globe className="mr-2" />
+              Additional Resources
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+              <li className="flex items-center">
+                <Tv className="mr-2 text-blue-500" />
+                Check official league websites for international viewing options
+              </li>
+              <li className="flex items-center">
+                <Globe className="mr-2 text-green-500" />
+                Follow teams' social media accounts for updates on international broadcasts
+              </li>
+              <li className="flex items-center">
+                <Shield className="mr-2 text-purple-500" />
+                Consider subscribing to sports-specific streaming services
+              </li>
+              <li className="flex items-center">
+                <Globe className="mr-2 text-red-500" />
+                Join online communities or forums for expat sports fans in your destination
+              </li>
+              <li className="flex items-center">
+                <Tv className="mr-2 text-yellow-500" />
+                Download mobile apps for live scores and game notifications
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
