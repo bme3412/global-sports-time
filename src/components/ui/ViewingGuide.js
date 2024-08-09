@@ -35,7 +35,7 @@ const ViewingGuide = ({ league, teams = [], location, viewingOptions }) => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>We don't have specific viewing information for {league?.toUpperCase() || 'this league'} in {location || 'this location'}.</p>
+          <p>We don&apos;t have specific viewing information for {league?.toUpperCase() || 'this league'} in {location || 'this location'}.</p>
           <p className="mt-2">Suggestions:</p>
           <ul className="list-disc pl-5 mt-1">
             <li>Check the official league website for international viewing options.</li>
@@ -57,7 +57,7 @@ const ViewingGuide = ({ league, teams = [], location, viewingOptions }) => {
           {/* Team Info */}
           <div className="sm:w-1/2 mb-4 sm:mb-0">
             <h3 className="text-lg font-semibold mb-2">Team Information</h3>
-            {Array.isArray(teams) && teams.length > 0 ? (
+            {teams.length > 0 ? (
               <div>
                 <h4 className="text-md font-medium mb-1">Select Teams:</h4>
                 {teams.map((team) => (
@@ -67,7 +67,10 @@ const ViewingGuide = ({ league, teams = [], location, viewingOptions }) => {
                       checked={selectedTeams.includes(team)}
                       onCheckedChange={() => toggleTeam(team)}
                     />
-                    <label htmlFor={team} className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                    <label
+                      htmlFor={team}
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
                       {team}
                     </label>
                   </div>
