@@ -2,13 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -677,109 +671,111 @@ export default function GlobalSportsApp() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle className="flex items-center text-2xl">
-            <MapPin className="mr-2 text-red-500" />
-            Team Info
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {leagues.map((league) => (
-              <Button
-                key={league.id}
-                variant={selectedLeague === league.id ? "default" : "outline"}
-                onClick={() => setSelectedLeague(league.id)}
-              >
-                {league.name}
-              </Button>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {teams
-              .filter((team) => team.league === selectedLeague)
-              .map((team) => (
-                <div key={team.id} className="flex items-center space-x-2">
-                  <Checkbox
-                    id={team.id}
-                    checked={selectedTeams.includes(team.id)}
-                    onCheckedChange={() => handleTeamToggle(team.id)}
-                  />
-                  <label htmlFor={team.id} className="text-sm">
-                    {team.name}
-                  </label>
-                </div>
-              ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle className="flex items-center text-2xl">
-            <MapPin className="mr-2 text-red-500" />
-            Game Info
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Selected Team Info</h3>
-              {getTeamLocation() && (
-                <div className="flex items-center space-x-2 mb-2">
-                  <MapPin className="text-blue-500" />
-                  <span className="text-sm">
-                    Team Location: {getTeamLocation()}
-                  </span>
-                </div>
-              )}
-              {getTeamTimezone() && (
-                <div className="flex items-center space-x-2">
-                  <Clock className="text-green-500" />
-                  <span className="text-sm">
-                    Team Timezone: {getTeamTimezone()}
-                  </span>
-                </div>
-              )}
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-2">
-                Where will you be watching?
-              </h3>
-              <Select onValueChange={setWatchLocation}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select location" />
-                </SelectTrigger>
-                <SelectContent>
-                  {locations.map((location) => (
-                    <SelectItem key={location.id} value={location.id}>
-                      {location.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <div className="flex items-center space-x-2 mt-2">
-                <Calendar className="text-purple-500" />
-                <Input
-                  type="date"
-                  placeholder="Select viewing date"
-                  value={watchDate}
-                  onChange={(e) => setWatchDate(e.target.value)}
-                />
+    <div className="max-w-7xl mx-auto p-4">
+      <div className="flex flex-col md:flex-row gap-8 mb-8">
+        <Card className="flex-1">
+          <CardHeader>
+            <CardTitle className="flex items-center text-2xl">
+              <MapPin className="mr-2 text-red-500" />
+              Team Info
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {leagues.map((league) => (
                 <Button
-                  variant="outline"
-                  onClick={() => setWatchDate("")}
-                  className="ml-2"
+                  key={league.id}
+                  variant={selectedLeague === league.id ? "default" : "outline"}
+                  onClick={() => setSelectedLeague(league.id)}
                 >
-                  Clear Date
+                  {league.name}
                 </Button>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {teams
+                .filter((team) => team.league === selectedLeague)
+                .map((team) => (
+                  <div key={team.id} className="flex items-center space-x-2">
+                    <Checkbox
+                      id={team.id}
+                      checked={selectedTeams.includes(team.id)}
+                      onCheckedChange={() => handleTeamToggle(team.id)}
+                    />
+                    <label htmlFor={team.id} className="text-sm">
+                      {team.name}
+                    </label>
+                  </div>
+                ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="flex-1">
+          <CardHeader>
+            <CardTitle className="flex items-center text-2xl">
+              <MapPin className="mr-2 text-red-500" />
+              Game Info
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Selected Team Info</h3>
+                {getTeamLocation() && (
+                  <div className="flex items-center space-x-2 mb-2">
+                    <MapPin className="text-blue-500" />
+                    <span className="text-sm">
+                      Team Location: {getTeamLocation()}
+                    </span>
+                  </div>
+                )}
+                {getTeamTimezone() && (
+                  <div className="flex items-center space-x-2">
+                    <Clock className="text-green-500" />
+                    <span className="text-sm">
+                      Team Timezone: {getTeamTimezone()}
+                    </span>
+                  </div>
+                )}
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">
+                  Where will you be watching?
+                </h3>
+                <Select onValueChange={setWatchLocation}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select location" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {locations.map((location) => (
+                      <SelectItem key={location.id} value={location.id}>
+                        {location.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <div className="flex items-center space-x-2 mt-2">
+                  <Calendar className="text-purple-500" />
+                  <Input
+                    type="date"
+                    placeholder="Select viewing date"
+                    value={watchDate}
+                    onChange={(e) => setWatchDate(e.target.value)}
+                  />
+                  <Button
+                    variant="outline"
+                    onClick={() => setWatchDate("")}
+                    className="ml-2"
+                  >
+                    Clear Date
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      </div>
 
       {/* Game Schedule */}
       <div>
