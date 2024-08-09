@@ -1,113 +1,123 @@
-import Image from "next/image";
+'use client';
+
+import React, { useState } from 'react';
+import GlobalSportsApp from '@/components/ui/GlobalSportsApp';
+import VPNComparison from '@/components/ui/VPNComparison';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Globe } from 'lucide-react';
+
+const vpnData = [
+  { name: 'NordVPN', price: 3.71, servers: 5400, maxDevices: 6, affiliateLink: 'https://nordvpn.com/affiliate' },
+  { name: 'ExpressVPN', price: 6.67, servers: 3000, maxDevices: 5, affiliateLink: 'https://expressvpn.com/affiliate' },
+  { name: 'Surfshark', price: 2.49, servers: 3200, maxDevices: 'Unlimited', affiliateLink: 'https://surfshark.com/affiliate' },
+  { name: 'CyberGhost', price: 2.29, servers: 7400, maxDevices: 7, affiliateLink: 'https://cyberghostvpn.com/affiliate' },
+];
+
+const viewingOptions = {
+  nba: {
+    usa: {
+      services: ['NBA League Pass', 'ESPN+', 'ABC', 'TNT'],
+      cost: '$28.99/month for NBA League Pass',
+      restrictions: 'Some games may be blacked out locally',
+    },
+    uk: {
+      services: ['Sky Sports', 'NBA League Pass International'],
+      cost: '£24.99/month for Sky Sports',
+      restrictions: 'No local blackouts',
+    },
+    australia: {
+      services: ['ESPN', 'NBA League Pass'],
+      cost: 'A$39.99/month for NBA League Pass',
+      restrictions: 'No local blackouts',
+    },
+  },
+  premier: {
+    usa: {
+      services: ['Peacock', 'NBC Sports', 'USA Network'],
+      cost: '$4.99/month for Peacock',
+      restrictions: 'Not all games are televised',
+    },
+    uk: {
+      services: ['Sky Sports', 'BT Sport', 'Amazon Prime Video'],
+      cost: '£25/month for NOW TV Sky Sports Pass',
+      restrictions: 'Saturday 3pm games are not televised',
+    },
+    australia: {
+      services: ['Optus Sport'],
+      cost: 'A$24.99/month for Optus Sport',
+      restrictions: 'No local blackouts',
+    },
+  },
+  nfl: {
+    usa: {
+      services: ['NFL Sunday Ticket', 'CBS', 'FOX', 'NBC', 'ESPN'],
+      cost: '$73.49/month for NFL Sunday Ticket',
+      restrictions: 'Local games may be blacked out',
+    },
+    uk: {
+      services: ['Sky Sports', 'NFL Game Pass'],
+      cost: '£14.99/month for NFL Game Pass',
+      restrictions: 'No local blackouts',
+    },
+    australia: {
+      services: ['ESPN', 'NFL Game Pass'],
+      cost: 'A$28.99/month for NFL Game Pass',
+      restrictions: 'No local blackouts',
+    },
+  },
+};
 
 export default function Home() {
+  const [showVPNComparison, setShowVPNComparison] = useState(false);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-6">Global Sports Viewing Guide</h1>
+      
+      <GlobalSportsApp viewingOptions={viewingOptions} />
+      
+      <div className="mt-8">
+        <Button 
+          onClick={() => setShowVPNComparison(!showVPNComparison)}
+          className="mb-4"
+        >
+          {showVPNComparison ? 'Hide' : 'Show'} VPN Comparison
+        </Button>
+        
+        {showVPNComparison && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Recommended VPN Services</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="mb-4">To access geo-restricted content and ensure your online privacy while streaming sports, consider using a VPN service:</p>
+              <VPNComparison vpns={vpnData} />
+              <p className="mt-4 text-sm text-gray-600">
+                Note: Prices and features may vary. We recommend checking the official websites for the most up-to-date information.
+              </p>
+            </CardContent>
+          </Card>
+        )}
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Card className="mt-8">
+        <CardHeader>
+          <CardTitle className="flex items-center">
+            <Globe className="mr-2" />
+            Additional Resources
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul className="list-disc pl-5">
+            <li>Check official league websites for international viewing options</li>
+            <li>Follow teams' social media accounts for updates on international broadcasts</li>
+            <li>Consider subscribing to sports-specific streaming services</li>
+            <li>Join online communities or forums for expat sports fans in your destination</li>
+            <li>Download mobile apps for live scores and game notifications</li>
+          </ul>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
