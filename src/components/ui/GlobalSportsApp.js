@@ -3,18 +3,31 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
-import SportSelector from "./SportSelector";
-import LeagueSelector from "./LeagueSelector";
+import SportLeagueSelector from "./SportSelector";
 import TeamSelector from "./TeamSelector";
-import TeamInfo from "./TeamInfo";
 import LocationSelector from "./LocationSelector";
 import GameSchedule from "./GameSchedule";
 
-import { leagues, teams, locations, games, viewingOptions } from "../../data/mockData";
+// Import JSON data
+import leaguesData from "@/data/leagues.json";
+import locationsData from "@/data/locations.json";
+import nbaTeamsData from "@/data/teams/nba_teams.json";
+import premierLeagueTeamsData from "@/data/teams/premierleague_teams.json";
+import nbaViewingOptionsData from "@/data/viewingOptions/nba_viewing.json";
+
+// Safely process imported data
+const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
+const locations = Array.isArray(locationsData.locations) ? locationsData.locations : [];
+const nbaTeams = Array.isArray(nbaTeamsData.teams) ? nbaTeamsData.teams : [];
+const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams) ? premierLeagueTeamsData.teams : [];
+const nbaViewingOptions = nbaViewingOptionsData || {};
+
+// Combine team data
+const teams = [...nbaTeams, ...premierLeagueTeams];
 
 // Group leagues by sport
 const sportGroups = leagues.reduce((acc, league) => {
-  const [, sport] = league.name.match(/\((.*?)\)/) || [null, 'Other'];
+  const [, sport] = league.name.match(/\((.*?)\)/) || [null, "Other"];
   if (!acc[sport]) {
     acc[sport] = [];
   }
@@ -40,13 +53,58 @@ const teamCities = teams.reduce((acc, team) => {
   return acc;
 }, {});
 
+// Generate mock game data
+const generateMockGames = () => {
+  const mockGames = [];
+  const leagueIds = leagues.map((league) => league.id);
+
+  for (let i = 0; i < 20; i++) {
+    const randomLeague =
+      leagueIds[Math.floor(Math.random() * leagueIds.length)];
+    const leagueTeams = teams.filter((team) => team.league === randomLeague);
+
+    if (leagueTeams.length < 2) continue;
+
+    const team1 = leagueTeams[Math.floor(Math.random() * leagueTeams.length)];
+    let team2 = leagueTeams[Math.floor(Math.random() * leagueTeams.length)];
+    while (team2.id === team1.id) {
+      team2 = leagueTeams[Math.floor(Math.random() * leagueTeams.length)];
+    }
+
+    const gameDate = new Date();
+    gameDate.setDate(gameDate.getDate() + Math.floor(Math.random() * 14)); // Random date within next 2 weeks
+
+    mockGames.push({
+      id: `game-${i + 1}`,
+      league: randomLeague,
+      team1: team1.id,
+      team2: team2.id,
+      time: gameDate.toISOString(),
+    });
+  }
+
+  return mockGames;
+};
+
 export default function GlobalSportsApp() {
-  const [selectedSport, setSelectedSport] = useState(sports[0]);
-  const [selectedLeague, setSelectedLeague] = useState(sportGroups[sports[0]][0].id);
+  const [selectedSport, setSelectedSport] = useState(sports[0] || "");
+  const [selectedLeague, setSelectedLeague] = useState(
+    sportGroups[sports[0]]?.[0]?.id || ""
+  );
   const [selectedTeams, setSelectedTeams] = useState([]);
   const [watchLocation, setWatchLocation] = useState("");
   const [watchDate, setWatchDate] = useState("");
   const [filteredGames, setFilteredGames] = useState([]);
+  const [userTimezone, setUserTimezone] = useState(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  );
+
+  const [games, setGames] = useState([]);
+
+  useEffect(() => {
+    // Generate mock games when the component mounts
+    setGames(generateMockGames());
+  }, []);
 
   useEffect(() => {
     const now = new Date();
@@ -64,11 +122,11 @@ export default function GlobalSportsApp() {
     });
     newFilteredGames.sort((a, b) => new Date(a.time) - new Date(b.time));
     setFilteredGames(newFilteredGames);
-  }, [selectedLeague, selectedTeams, watchDate]);
+  }, [selectedLeague, selectedTeams, watchDate, games]);
 
   const handleSportChange = (sport) => {
     setSelectedSport(sport);
-    setSelectedLeague(sportGroups[sport][0].id);
+    setSelectedLeague(sportGroups[sport]?.[0]?.id || "");
     setSelectedTeams([]);
   };
 
@@ -80,22 +138,20 @@ export default function GlobalSportsApp() {
     );
   };
 
-  const getTeamLocation = () => {
-    if (selectedTeams.length === 1) {
-      const teamInfo = teamCities[selectedTeams[0]];
-      return `${teamInfo.city}, ${teamInfo.state ? teamInfo.state + ", " : ""}${
-        teamInfo.country
-      }`;
-    }
-    return "";
+  const getFilteredTeams = () => {
+    return teams.filter((team) => team.league === selectedLeague);
   };
 
-  const getTeamTimezone = () => {
-    if (selectedTeams.length === 1) {
-      return teamCities[selectedTeams[0]].timezone;
-    }
-    return "";
-  };
+  if (sports.length === 0 || teams.length === 0) {
+    console.error("No sports or teams data available.");
+    console.error("Sports:", sports);
+    console.error("Teams:", teams);
+    return (
+      <div>
+        Error: No sports or teams data available. Please check your data files and the console for more information.
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto p-4">
@@ -108,22 +164,22 @@ export default function GlobalSportsApp() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <SportSelector
+            <SportLeagueSelector
               sports={sports}
+              sportGroups={sportGroups}
               selectedSport={selectedSport}
-              setSelectedSport={handleSportChange}
-            />
-            <LeagueSelector
-              leagues={sportGroups[selectedSport]}
+              setSelectedSport={setSelectedSport}
               selectedLeague={selectedLeague}
               setSelectedLeague={setSelectedLeague}
             />
-            <TeamSelector
-              teams={teams.filter(team => sportGroups[selectedSport].some(league => league.id === team.league))}
-              selectedLeague={selectedLeague}
-              selectedTeams={selectedTeams}
-              handleTeamToggle={handleTeamToggle}
-            />
+            {selectedLeague && (
+              <TeamSelector
+                teams={getFilteredTeams()}
+                selectedLeague={selectedLeague}
+                selectedTeams={selectedTeams}
+                handleTeamToggle={handleTeamToggle}
+              />
+            )}
           </CardContent>
         </Card>
 
@@ -135,10 +191,6 @@ export default function GlobalSportsApp() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <TeamInfo
-              getTeamLocation={getTeamLocation}
-              getTeamTimezone={getTeamTimezone}
-            />
             <LocationSelector
               locations={locations}
               setWatchLocation={setWatchLocation}
@@ -154,10 +206,12 @@ export default function GlobalSportsApp() {
         watchDate={watchDate}
         watchLocation={watchLocation}
         locations={locations}
-        viewingOptions={viewingOptions}
+        viewingOptions={nbaViewingOptions}
         teamCities={teamCities}
         teams={teams}
         teamDetails={teamDetails}
+        selectedLeague={selectedLeague}
+        userTimezone={userTimezone}
       />
     </div>
   );

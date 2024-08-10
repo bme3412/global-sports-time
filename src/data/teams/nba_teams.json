@@ -1,0 +1,104 @@
+{
+    "teams": [
+      {
+        "id": "celtics",
+        "name": "Boston Celtics",
+        "league": "nba",
+        "city": "Boston",
+        "state": "Massachusetts",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "TD Garden"
+      },
+      {
+        "id": "lakers",
+        "name": "Los Angeles Lakers",
+        "league": "nba",
+        "city": "Los Angeles",
+        "state": "California",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeArena": "Crypto.com Arena"
+      },
+      {
+        "id": "warriors",
+        "name": "Golden State Warriors",
+        "league": "nba",
+        "city": "San Francisco",
+        "state": "California",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeArena": "Chase Center"
+      },
+      {
+        "id": "bulls",
+        "name": "Chicago Bulls",
+        "league": "nba",
+        "city": "Chicago",
+        "state": "Illinois",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "United Center"
+      },
+      {
+        "id": "heat",
+        "name": "Miami Heat",
+        "league": "nba",
+        "city": "Miami",
+        "state": "Florida",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "FTX Arena"
+      },
+      {
+        "id": "knicks",
+        "name": "New York Knicks",
+        "league": "nba",
+        "city": "New York City",
+        "state": "New York",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Madison Square Garden"
+      },
+      {
+        "id": "nets",
+        "name": "Brooklyn Nets",
+        "league": "nba",
+        "city": "Brooklyn",
+        "state": "New York",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Barclays Center"
+      },
+      {
+        "id": "mavericks",
+        "name": "Dallas Mavericks",
+        "league": "nba",
+        "city": "Dallas",
+        "state": "Texas",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "American Airlines Center"
+      },
+      {
+        "id": "raptors",
+        "name": "Toronto Raptors",
+        "league": "nba",
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "Canada",
+        "timezone": "America/Toronto",
+        "homeArena": "Scotiabank Arena"
+      },
+      {
+        "id": "76ers",
+        "name": "Philadelphia 76ers",
+        "league": "nba",
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Wells Fargo Center"
+      }
+    ]
+  }

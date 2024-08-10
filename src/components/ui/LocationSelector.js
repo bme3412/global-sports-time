@@ -5,8 +5,6 @@ import { MapPin, Calendar } from "lucide-react";
 const LocationSelector = ({ locations, setWatchLocation, watchDate, setWatchDate }) => {
   return (
     <div className="bg-white p-6 rounded-xl shadow-md space-y-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Viewing Details</h2>
-      
       <div className="space-y-2">
         <label htmlFor="location" className="block text-sm font-medium text-gray-700">
           Where will you be watching?

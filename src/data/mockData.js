@@ -27,32 +27,6 @@ export const teams = [
     country: "USA",
     timezone: "America/New_York",
     homeArena: "TD Garden",
-    founded: 1946,
-    mascot: "Lucky the Leprechaun",
-    teamColors: ["Green", "White", "Black", "Gold"],
-    championships: 17,
-    keyPlayers: [
-      { name: "Jayson Tatum", position: "Small Forward" },
-      { name: "Jaylen Brown", position: "Shooting Guard" },
-      { name: "Marcus Smart", position: "Point Guard" },
-    ],
-    headCoach: "Joe Mazzulla",
-    recentForm: "Won 7 of last 10 games",
-    currentSeasonStats: {
-      wins: 57,
-      losses: 25,
-      conferenceName: "Eastern",
-      conferencePosition: 2,
-    },
-    rivalries: ["Los Angeles Lakers", "Philadelphia 76ers"],
-    upcomingFixtures: [
-      { opponent: "Miami Heat", date: "2024-08-15", location: "Home" },
-      { opponent: "Philadelphia 76ers", date: "2024-08-18", location: "Away" },
-    ],
-    teamHistory:
-      "The Celtics are one of the most successful franchises in NBA history, with a record 17 championships. They dominated the league in the 1960s, led by legendary coach Red Auerbach and star player Bill Russell.",
-    fanbase:
-      "Known as some of the most passionate fans in the NBA, Celtics supporters are often referred to as the 'Green Army'.",
   },
   {
     id: "lakers",
@@ -63,36 +37,6 @@ export const teams = [
     country: "USA",
     timezone: "America/Los_Angeles",
     homeArena: "Crypto.com Arena",
-    founded: 1947,
-    mascot: "None (previously had Jack Nicholson as unofficial mascot)",
-    teamColors: ["Purple", "Gold"],
-    championships: 17,
-    keyPlayers: [
-      { name: "LeBron James", position: "Small Forward" },
-      { name: "Anthony Davis", position: "Power Forward" },
-      { name: "Russell Westbrook", position: "Point Guard" },
-    ],
-    headCoach: "Darvin Ham",
-    recentForm: "Won 6 of last 10 games",
-    currentSeasonStats: {
-      wins: 43,
-      losses: 39,
-      conferenceName: "Western",
-      conferencePosition: 7,
-    },
-    rivalries: ["Boston Celtics", "LA Clippers"],
-    upcomingFixtures: [
-      {
-        opponent: "Golden State Warriors",
-        date: "2024-08-12",
-        location: "Away",
-      },
-      { opponent: "Phoenix Suns", date: "2024-08-16", location: "Home" },
-    ],
-    teamHistory:
-      "The Lakers are one of the most storied franchises in NBA history, tied with the Celtics for the most championships. They've been home to many NBA legends including Magic Johnson, Kareem Abdul-Jabbar, Kobe Bryant, and Shaquille O'Neal.",
-    fanbase:
-      "The Lakers have a global fanbase and are known for their celebrity fans, often seen courtside at home games.",
   },
   {
     id: "man_utd",
@@ -102,34 +46,7 @@ export const teams = [
     country: "United Kingdom",
     timezone: "Europe/London",
     homeArena: "Old Trafford",
-    founded: 1878,
-    mascot: "Fred the Red",
-    teamColors: ["Red", "White", "Black"],
-    championships: 20, // Premier League titles
-    keyPlayers: [
-      { name: "Bruno Fernandes", position: "Midfielder" },
-      { name: "Marcus Rashford", position: "Forward" },
-      { name: "David de Gea", position: "Goalkeeper" },
-    ],
-    headCoach: "Erik ten Hag",
-    recentForm: "Won 6 of last 10 games",
-    currentSeasonStats: {
-      wins: 23,
-      losses: 9,
-      draws: 6,
-      leaguePosition: 3,
-    },
-    rivalries: ["Liverpool", "Manchester City", "Arsenal"],
-    upcomingFixtures: [
-      { opponent: "Liverpool", date: "2024-08-11", location: "Away" },
-      { opponent: "Tottenham Hotspur", date: "2024-08-19", location: "Home" },
-    ],
-    teamHistory:
-      "Manchester United is one of the most successful clubs in English football history. They've won a record 20 league titles and have a rich history of producing talented players through their youth academy.",
-    fanbase:
-      "Known as the 'Red Devils', Manchester United has one of the largest and most widespread fanbases in world football.",
-  },
-  // ... Add similar detailed information for other teams
+  }
 ];
 
 export const locations = [

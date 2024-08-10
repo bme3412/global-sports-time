@@ -1,0 +1,94 @@
+{
+    "teams": [
+      {
+        "id": "arsenal",
+        "name": "Arsenal",
+        "league": "premier-league",
+        "city": "London",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Emirates Stadium"
+      },
+      {
+        "id": "man-city",
+        "name": "Manchester City",
+        "league": "premier-league",
+        "city": "Manchester",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Etihad Stadium"
+      },
+      {
+        "id": "man-united",
+        "name": "Manchester United",
+        "league": "premier-league",
+        "city": "Manchester",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Old Trafford"
+      },
+      {
+        "id": "liverpool",
+        "name": "Liverpool",
+        "league": "premier-league",
+        "city": "Liverpool",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Anfield"
+      },
+      {
+        "id": "chelsea",
+        "name": "Chelsea",
+        "league": "premier-league",
+        "city": "London",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Stamford Bridge"
+      },
+      {
+        "id": "tottenham",
+        "name": "Tottenham Hotspur",
+        "league": "premier-league",
+        "city": "London",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Tottenham Hotspur Stadium"
+      },
+      {
+        "id": "newcastle",
+        "name": "Newcastle United",
+        "league": "premier-league",
+        "city": "Newcastle upon Tyne",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "St James' Park"
+      },
+      {
+        "id": "west-ham",
+        "name": "West Ham United",
+        "league": "premier-league",
+        "city": "London",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "London Stadium"
+      },
+      {
+        "id": "everton",
+        "name": "Everton",
+        "league": "premier-league",
+        "city": "Liverpool",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Goodison Park"
+      },
+      {
+        "id": "leicester",
+        "name": "Leicester City",
+        "league": "premier-league",
+        "city": "Leicester",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "King Power Stadium"
+      }
+    ]
+  }
