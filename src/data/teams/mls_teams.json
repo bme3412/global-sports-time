@@ -1,0 +1,94 @@
+{
+    "teams": [
+      {
+        "id": "atlanta-united",
+        "name": "Atlanta United FC",
+        "league": "mls",
+        "city": "Atlanta",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Mercedes-Benz Stadium"
+      },
+      {
+        "id": "la-galaxy",
+        "name": "LA Galaxy",
+        "league": "mls",
+        "city": "Los Angeles",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Dignity Health Sports Park"
+      },
+      {
+        "id": "lafc",
+        "name": "Los Angeles FC",
+        "league": "mls",
+        "city": "Los Angeles",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Banc of California Stadium"
+      },
+      {
+        "id": "seattle-sounders",
+        "name": "Seattle Sounders FC",
+        "league": "mls",
+        "city": "Seattle",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Lumen Field"
+      },
+      {
+        "id": "toronto-fc",
+        "name": "Toronto FC",
+        "league": "mls",
+        "city": "Toronto",
+        "country": "Canada",
+        "timezone": "America/Toronto",
+        "homeStadium": "BMO Field"
+      },
+      {
+        "id": "nycfc",
+        "name": "New York City FC",
+        "league": "mls",
+        "city": "New York City",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Yankee Stadium"
+      },
+      {
+        "id": "ny-red-bulls",
+        "name": "New York Red Bulls",
+        "league": "mls",
+        "city": "Harrison",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Red Bull Arena"
+      },
+      {
+        "id": "portland-timbers",
+        "name": "Portland Timbers",
+        "league": "mls",
+        "city": "Portland",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Providence Park"
+      },
+      {
+        "id": "orlando-city",
+        "name": "Orlando City SC",
+        "league": "mls",
+        "city": "Orlando",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Exploria Stadium"
+      },
+      {
+        "id": "inter-miami",
+        "name": "Inter Miami CF",
+        "league": "mls",
+        "city": "Fort Lauderdale",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "DRV PNK Stadium"
+      }
+    ]
+  }

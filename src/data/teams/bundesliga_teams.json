@@ -1,0 +1,94 @@
+{
+    "teams": [
+      {
+        "id": "bayern-munich",
+        "name": "FC Bayern Munich",
+        "league": "bundesliga",
+        "city": "Munich",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "Allianz Arena"
+      },
+      {
+        "id": "borussia-dortmund",
+        "name": "Borussia Dortmund",
+        "league": "bundesliga",
+        "city": "Dortmund",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "Signal Iduna Park"
+      },
+      {
+        "id": "rb-leipzig",
+        "name": "RB Leipzig",
+        "league": "bundesliga",
+        "city": "Leipzig",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "Red Bull Arena"
+      },
+      {
+        "id": "bayer-leverkusen",
+        "name": "Bayer 04 Leverkusen",
+        "league": "bundesliga",
+        "city": "Leverkusen",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "BayArena"
+      },
+      {
+        "id": "borussia-monchengladbach",
+        "name": "Borussia Mönchengladbach",
+        "league": "bundesliga",
+        "city": "Mönchengladbach",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "Borussia-Park"
+      },
+      {
+        "id": "eintracht-frankfurt",
+        "name": "Eintracht Frankfurt",
+        "league": "bundesliga",
+        "city": "Frankfurt",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "Deutsche Bank Park"
+      },
+      {
+        "id": "vfl-wolfsburg",
+        "name": "VfL Wolfsburg",
+        "league": "bundesliga",
+        "city": "Wolfsburg",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "Volkswagen Arena"
+      },
+      {
+        "id": "sc-freiburg",
+        "name": "SC Freiburg",
+        "league": "bundesliga",
+        "city": "Freiburg",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "Europa-Park Stadion"
+      },
+      {
+        "id": "tsg-hoffenheim",
+        "name": "TSG 1899 Hoffenheim",
+        "league": "bundesliga",
+        "city": "Sinsheim",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "PreZero Arena"
+      },
+      {
+        "id": "fc-koln",
+        "name": "1. FC Köln",
+        "league": "bundesliga",
+        "city": "Cologne",
+        "country": "Germany",
+        "timezone": "Europe/Berlin",
+        "homeStadium": "RheinEnergieStadion"
+      }
+    ]
+  }

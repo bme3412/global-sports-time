@@ -1,0 +1,94 @@
+{
+    "teams": [
+      {
+        "id": "psg",
+        "name": "Paris Saint-Germain",
+        "league": "ligue1",
+        "city": "Paris",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Parc des Princes"
+      },
+      {
+        "id": "olympique-marseille",
+        "name": "Olympique de Marseille",
+        "league": "ligue1",
+        "city": "Marseille",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Orange Vélodrome"
+      },
+      {
+        "id": "olympique-lyonnais",
+        "name": "Olympique Lyonnais",
+        "league": "ligue1",
+        "city": "Lyon",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Groupama Stadium"
+      },
+      {
+        "id": "lille",
+        "name": "Lille OSC",
+        "league": "ligue1",
+        "city": "Lille",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Stade Pierre-Mauroy"
+      },
+      {
+        "id": "monaco",
+        "name": "AS Monaco",
+        "league": "ligue1",
+        "city": "Monaco",
+        "country": "Monaco",
+        "timezone": "Europe/Monaco",
+        "homeStadium": "Stade Louis II"
+      },
+      {
+        "id": "rennes",
+        "name": "Stade Rennais FC",
+        "league": "ligue1",
+        "city": "Rennes",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Roazhon Park"
+      },
+      {
+        "id": "nice",
+        "name": "OGC Nice",
+        "league": "ligue1",
+        "city": "Nice",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Allianz Riviera"
+      },
+      {
+        "id": "lens",
+        "name": "RC Lens",
+        "league": "ligue1",
+        "city": "Lens",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Stade Bollaert-Delelis"
+      },
+      {
+        "id": "strasbourg",
+        "name": "RC Strasbourg Alsace",
+        "league": "ligue1",
+        "city": "Strasbourg",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Stade de la Meinau"
+      },
+      {
+        "id": "nantes",
+        "name": "FC Nantes",
+        "league": "ligue1",
+        "city": "Nantes",
+        "country": "France",
+        "timezone": "Europe/Paris",
+        "homeStadium": "Stade de la Beaujoire"
+      }
+    ]
+  }

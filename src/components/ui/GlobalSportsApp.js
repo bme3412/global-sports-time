@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
@@ -13,17 +11,40 @@ import leaguesData from "@/data/leagues.json";
 import locationsData from "@/data/locations.json";
 import nbaTeamsData from "@/data/teams/nba_teams.json";
 import premierLeagueTeamsData from "@/data/teams/premierleague_teams.json";
+import euroLeagueTeamsData from "@/data/teams/euroleague_teams.json";
+import laLigaTeamsData from "@/data/teams/laliga_teams.json";
+import bundesligaTeamsData from "@/data/teams/bundesliga_teams.json";
+import serieATeamsData from "@/data/teams/seriea_teams.json";
+import ligue1TeamsData from "@/data/teams/ligue1_teams.json";
+import mlsTeamsData from "@/data/teams/mls_teams.json";
 import nbaViewingOptionsData from "@/data/viewingOptions/nba_viewing.json";
+import mlsViewingOptionsData from "@/data/viewingOptions/mls_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
 const locations = Array.isArray(locationsData.locations) ? locationsData.locations : [];
 const nbaTeams = Array.isArray(nbaTeamsData.teams) ? nbaTeamsData.teams : [];
 const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams) ? premierLeagueTeamsData.teams : [];
+const euroLeagueTeams = Array.isArray(euroLeagueTeamsData.teams) ? euroLeagueTeamsData.teams : [];
+const laLigaTeams = Array.isArray(laLigaTeamsData.teams) ? laLigaTeamsData.teams : [];
+const bundesligaTeams = Array.isArray(bundesligaTeamsData.teams) ? bundesligaTeamsData.teams : [];
+const serieATeams = Array.isArray(serieATeamsData.teams) ? serieATeamsData.teams : [];
+const ligue1Teams = Array.isArray(ligue1TeamsData.teams) ? ligue1TeamsData.teams : [];
+const mlsTeams = Array.isArray(mlsTeamsData.teams) ? mlsTeamsData.teams : [];
 const nbaViewingOptions = nbaViewingOptionsData || {};
+const mlsViewingOptions = mlsViewingOptionsData || {};
 
 // Combine team data
-const teams = [...nbaTeams, ...premierLeagueTeams];
+const teams = [
+  ...nbaTeams,
+  ...premierLeagueTeams,
+  ...euroLeagueTeams,
+  ...laLigaTeams,
+  ...bundesligaTeams,
+  ...serieATeams,
+  ...ligue1Teams,
+  ...mlsTeams
+];
 
 // Group leagues by sport
 const sportGroups = leagues.reduce((acc, league) => {
@@ -46,7 +67,7 @@ const teamDetails = teams.reduce((acc, team) => {
 const teamCities = teams.reduce((acc, team) => {
   acc[team.id] = {
     city: team.city,
-    state: team.state,
+    state: team.state, // Keep state for MLS teams
     country: team.country,
     timezone: team.timezone,
   };
@@ -142,6 +163,17 @@ export default function GlobalSportsApp() {
     return teams.filter((team) => team.league === selectedLeague);
   };
 
+  const getViewingOptions = (league) => {
+    switch (league) {
+      case 'nba':
+        return nbaViewingOptions;
+      case 'mls':
+        return mlsViewingOptions;
+      default:
+        return {};
+    }
+  };
+
   if (sports.length === 0 || teams.length === 0) {
     console.error("No sports or teams data available.");
     console.error("Sports:", sports);
@@ -206,7 +238,7 @@ export default function GlobalSportsApp() {
         watchDate={watchDate}
         watchLocation={watchLocation}
         locations={locations}
-        viewingOptions={nbaViewingOptions}
+        viewingOptions={getViewingOptions(selectedLeague)}
         teamCities={teamCities}
         teams={teams}
         teamDetails={teamDetails}

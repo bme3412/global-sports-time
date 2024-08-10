@@ -1,0 +1,105 @@
+{
+    "mls": {
+      "usa": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "FOX",
+          "FS1",
+          "Univision",
+          "UniMás",
+          "Twitter",
+          "ESPN+",
+          "Hulu + Live TV",
+          "YouTube TV",
+          "FuboTV"
+        ],
+        "cost": "$14.99/month or $99/season for MLS Season Pass, $69.99/month for Hulu + Live TV",
+        "restrictions": "MLS Season Pass on Apple TV is required for all out-of-market games",
+        "additionalInfo": "MLS Season Pass offers all MLS matches with no blackouts. FOX and FS1 broadcast select matches nationally."
+      },
+      "canada": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "TSN",
+          "RDS",
+          "CTV"
+        ],
+        "cost": "CAD 19.99/month or CAD 129/season for MLS Season Pass, CAD 19.99/month for TSN Direct",
+        "restrictions": "MLS Season Pass on Apple TV is required for all out-of-market games",
+        "additionalInfo": "TSN and CTV share English-language rights for select matches. RDS provides French-language coverage."
+      },
+      "uk": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "Sky Sports"
+        ],
+        "cost": "£14.99/month or £99/season for MLS Season Pass, £24.99/month for Sky Sports",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sports shows select MLS matches. MLS Season Pass offers all matches."
+      },
+      "germany": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "DAZN"
+        ],
+        "cost": "€14.99/month or €99/season for MLS Season Pass, €14.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN shows select MLS matches. MLS Season Pass offers all matches."
+      },
+      "france": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "Canal+"
+        ],
+        "cost": "€14.99/month or €99/season for MLS Season Pass, Canal+ pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Canal+ shows select MLS matches. MLS Season Pass offers all matches."
+      },
+      "spain": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "DAZN"
+        ],
+        "cost": "€14.99/month or €99/season for MLS Season Pass, €14.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN shows select MLS matches. MLS Season Pass offers all matches."
+      },
+      "brazil": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "ESPN Brasil"
+        ],
+        "cost": "R$39.99/month or R$259.90/season for MLS Season Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN Brasil shows select MLS matches. MLS Season Pass offers all matches."
+      },
+      "mexico": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "ESPN",
+          "TUDN"
+        ],
+        "cost": "MXN 299/month or MXN 1,999/season for MLS Season Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN and TUDN show select MLS matches. MLS Season Pass offers all matches."
+      },
+      "australia": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "beIN SPORTS"
+        ],
+        "cost": "AUD 19.99/month or AUD 139/season for MLS Season Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN SPORTS shows select MLS matches. MLS Season Pass offers all matches."
+      },
+      "japan": {
+        "services": [
+          "MLS Season Pass on Apple TV",
+          "DAZN"
+        ],
+        "cost": "¥1,890/month or ¥12,900/season for MLS Season Pass, ¥3,000/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN shows select MLS matches. MLS Season Pass offers all matches."
+      }
+    }
+  }
