@@ -20,6 +20,9 @@ import mlsTeamsData from "@/data/teams/mls_teams.json";
 import nbaViewingOptionsData from "@/data/viewingOptions/nba_viewing.json";
 import mlsViewingOptionsData from "@/data/viewingOptions/mls_viewing.json";
 
+// Import Premier League schedule data
+import premierLeagueSchedule from "@/data/schedules/schedule_premierleague.csv";
+
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
 const locations = Array.isArray(locationsData.locations) ? locationsData.locations : [];
@@ -67,184 +70,162 @@ const teamDetails = teams.reduce((acc, team) => {
 const teamCities = teams.reduce((acc, team) => {
   acc[team.id] = {
     city: team.city,
-    state: team.state, // Keep state for MLS teams
+    state: team.state,
     country: team.country,
     timezone: team.timezone,
   };
   return acc;
 }, {});
 
-// Generate mock game data
-const generateMockGames = () => {
-  const mockGames = [];
-  const leagueIds = leagues.map((league) => league.id);
-
-  for (let i = 0; i < 20; i++) {
-    const randomLeague =
-      leagueIds[Math.floor(Math.random() * leagueIds.length)];
-    const leagueTeams = teams.filter((team) => team.league === randomLeague);
-
-    if (leagueTeams.length < 2) continue;
-
-    const team1 = leagueTeams[Math.floor(Math.random() * leagueTeams.length)];
-    let team2 = leagueTeams[Math.floor(Math.random() * leagueTeams.length)];
-    while (team2.id === team1.id) {
-      team2 = leagueTeams[Math.floor(Math.random() * leagueTeams.length)];
-    }
-
-    const gameDate = new Date();
-    gameDate.setDate(gameDate.getDate() + Math.floor(Math.random() * 14)); // Random date within next 2 weeks
-
-    mockGames.push({
-      id: `game-${i + 1}`,
-      league: randomLeague,
-      team1: team1.id,
-      team2: team2.id,
-      time: gameDate.toISOString(),
-    });
-  }
-
-  return mockGames;
-};
-
 export default function GlobalSportsApp() {
-  const [selectedSport, setSelectedSport] = useState(sports[0] || "");
-  const [selectedLeague, setSelectedLeague] = useState(
-    sportGroups[sports[0]]?.[0]?.id || ""
-  );
-  const [selectedTeams, setSelectedTeams] = useState([]);
-  const [watchLocation, setWatchLocation] = useState("");
-  const [watchDate, setWatchDate] = useState("");
-  const [filteredGames, setFilteredGames] = useState([]);
-  const [userTimezone, setUserTimezone] = useState(
-    Intl.DateTimeFormat().resolvedOptions().timeZone
-  );
-
-  const [games, setGames] = useState([]);
-
-  useEffect(() => {
-    // Generate mock games when the component mounts
-    setGames(generateMockGames());
-  }, []);
-
-  useEffect(() => {
-    const now = new Date();
-    const newFilteredGames = games.filter((game) => {
-      const gameDate = new Date(game.time);
-      return (
-        game.league === selectedLeague &&
-        (selectedTeams.length === 0 ||
-          selectedTeams.includes(game.team1) ||
-          selectedTeams.includes(game.team2)) &&
-        (watchDate
-          ? gameDate.toDateString() === new Date(watchDate).toDateString()
-          : gameDate >= now)
-      );
-    });
-    newFilteredGames.sort((a, b) => new Date(a.time) - new Date(b.time));
-    setFilteredGames(newFilteredGames);
-  }, [selectedLeague, selectedTeams, watchDate, games]);
-
-  const handleSportChange = (sport) => {
-    setSelectedSport(sport);
-    setSelectedLeague(sportGroups[sport]?.[0]?.id || "");
-    setSelectedTeams([]);
-  };
-
-  const handleTeamToggle = (teamId) => {
-    setSelectedTeams((prev) =>
-      prev.includes(teamId)
-        ? prev.filter((id) => id !== teamId)
-        : [...prev, teamId]
+    const [selectedSport, setSelectedSport] = useState("");
+    const [selectedLeague, setSelectedLeague] = useState("");
+    const [selectedTeams, setSelectedTeams] = useState([]);
+    const [watchLocation, setWatchLocation] = useState("");
+    const [watchDate, setWatchDate] = useState("");
+    const [filteredGames, setFilteredGames] = useState([]);
+    const [userTimezone, setUserTimezone] = useState(
+      Intl.DateTimeFormat().resolvedOptions().timeZone
     );
-  };
-
-  const getFilteredTeams = () => {
-    return teams.filter((team) => team.league === selectedLeague);
-  };
-
-  const getViewingOptions = (league) => {
-    switch (league) {
-      case 'nba':
-        return nbaViewingOptions;
-      case 'mls':
-        return mlsViewingOptions;
-      default:
-        return {};
-    }
-  };
-
-  if (sports.length === 0 || teams.length === 0) {
-    console.error("No sports or teams data available.");
-    console.error("Sports:", sports);
-    console.error("Teams:", teams);
+  
+    const [premierLeagueGames, setPremierLeagueGames] = useState([]);
+  
+    useEffect(() => {
+      // Set Premier League games
+      setPremierLeagueGames(premierLeagueSchedule.map((game, index) => ({
+        ...game,
+        id: `pl-${index}`,
+        league: 'premier-league',
+        onSky: game['On Sky Sports'] === 'Yes'
+      })));
+    }, []);
+  
+    useEffect(() => {
+      let newFilteredGames = [];
+  
+      if (selectedLeague === 'premier-league' && selectedTeams.length > 0) {
+        newFilteredGames = premierLeagueGames.filter(game => 
+          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
+        );
+      }
+  
+      if (watchDate) {
+        const watchDateObj = new Date(watchDate);
+        newFilteredGames = newFilteredGames.filter(game => {
+          const gameDate = new Date(game.Date);
+          return gameDate.toDateString() === watchDateObj.toDateString();
+        });
+      }
+  
+      newFilteredGames.sort((a, b) => new Date(a.Date) - new Date(b.Date));
+      setFilteredGames(newFilteredGames);
+    }, [selectedLeague, selectedTeams, watchDate, premierLeagueGames]);
+  
+    const handleSportChange = (sport) => {
+      setSelectedSport(sport);
+      setSelectedLeague("");
+      setSelectedTeams([]);
+    };
+  
+    const handleLeagueChange = (league) => {
+      setSelectedLeague(league);
+      setSelectedTeams([]);
+    };
+  
+    const handleTeamToggle = (teamId) => {
+      setSelectedTeams((prev) =>
+        prev.includes(teamId)
+          ? prev.filter((id) => id !== teamId)
+          : [...prev, teamId]
+      );
+    };
+  
+    const getFilteredTeams = () => {
+      if (selectedLeague === 'premier-league') {
+        const uniqueTeams = new Set([
+          ...premierLeagueGames.map(game => game.Home),
+          ...premierLeagueGames.map(game => game.Away)
+        ]);
+        return Array.from(uniqueTeams).map(teamName => ({ id: teamName, name: teamName }));
+      } else {
+        return teams.filter((team) => team.league === selectedLeague);
+      }
+    };
+  
+    const getViewingOptions = (league) => {
+      switch (league) {
+        case 'nba':
+          return nbaViewingOptions;
+        case 'mls':
+          return mlsViewingOptions;
+        default:
+          return {};
+      }
+    };
+  
     return (
-      <div>
-        Error: No sports or teams data available. Please check your data files and the console for more information.
+      <div className="max-w-7xl mx-auto p-4">
+        <div className="flex flex-col md:flex-row gap-8 mb-8">
+          <Card className="flex-1">
+            <CardHeader>
+              <CardTitle className="flex items-center text-2xl">
+                <MapPin className="mr-2 text-red-500" />
+                Team Info
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <SportLeagueSelector
+                sports={sports}
+                sportGroups={sportGroups}
+                selectedSport={selectedSport}
+                setSelectedSport={handleSportChange}
+                selectedLeague={selectedLeague}
+                setSelectedLeague={handleLeagueChange}
+              />
+              {selectedLeague && (
+                <TeamSelector
+                  teams={getFilteredTeams()}
+                  selectedLeague={selectedLeague}
+                  selectedTeams={selectedTeams}
+                  handleTeamToggle={handleTeamToggle}
+                />
+              )}
+            </CardContent>
+          </Card>
+  
+          <Card className="flex-1">
+            <CardHeader>
+              <CardTitle className="flex items-center text-2xl">
+                <MapPin className="mr-2 text-red-500" />
+                Game Info
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <LocationSelector
+                locations={locations}
+                setWatchLocation={setWatchLocation}
+                watchDate={watchDate}
+                setWatchDate={setWatchDate}
+              />
+            </CardContent>
+          </Card>
+        </div>
+  
+        {selectedTeams.length > 0 && (
+          <GameSchedule
+            filteredGames={filteredGames}
+            watchDate={watchDate}
+            watchLocation={watchLocation}
+            locations={locations}
+            viewingOptions={getViewingOptions(selectedLeague)}
+            teamCities={teamCities}
+            teams={teams}
+            teamDetails={teamDetails}
+            selectedLeague={selectedLeague}
+            userTimezone={userTimezone}
+            isPremierLeague={selectedLeague === 'premier-league'}
+          />
+        )}
       </div>
     );
   }
-
-  return (
-    <div className="max-w-7xl mx-auto p-4">
-      <div className="flex flex-col md:flex-row gap-8 mb-8">
-        <Card className="flex-1">
-          <CardHeader>
-            <CardTitle className="flex items-center text-2xl">
-              <MapPin className="mr-2 text-red-500" />
-              Team Info
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <SportLeagueSelector
-              sports={sports}
-              sportGroups={sportGroups}
-              selectedSport={selectedSport}
-              setSelectedSport={setSelectedSport}
-              selectedLeague={selectedLeague}
-              setSelectedLeague={setSelectedLeague}
-            />
-            {selectedLeague && (
-              <TeamSelector
-                teams={getFilteredTeams()}
-                selectedLeague={selectedLeague}
-                selectedTeams={selectedTeams}
-                handleTeamToggle={handleTeamToggle}
-              />
-            )}
-          </CardContent>
-        </Card>
-
-        <Card className="flex-1">
-          <CardHeader>
-            <CardTitle className="flex items-center text-2xl">
-              <MapPin className="mr-2 text-red-500" />
-              Game Info
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <LocationSelector
-              locations={locations}
-              setWatchLocation={setWatchLocation}
-              watchDate={watchDate}
-              setWatchDate={setWatchDate}
-            />
-          </CardContent>
-        </Card>
-      </div>
-
-      <GameSchedule
-        filteredGames={filteredGames}
-        watchDate={watchDate}
-        watchLocation={watchLocation}
-        locations={locations}
-        viewingOptions={getViewingOptions(selectedLeague)}
-        teamCities={teamCities}
-        teams={teams}
-        teamDetails={teamDetails}
-        selectedLeague={selectedLeague}
-        userTimezone={userTimezone}
-      />
-    </div>
-  );
-}

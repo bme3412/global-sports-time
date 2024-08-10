@@ -1,5 +1,3 @@
-// src/components/SportSelector.js
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -24,10 +22,7 @@ const SportLeagueSelector = ({ sports, sportGroups, selectedSport, setSelectedSp
         {sports.map((sport) => (
           <button
             key={sport}
-            onClick={() => {
-              setSelectedSport(sport);
-              setSelectedLeague(sportGroups[sport][0].id);
-            }}
+            onClick={() => setSelectedSport(sport)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ease-in-out
               ${selectedSport === sport
                 ? 'bg-blue-500 text-white'
@@ -53,13 +48,6 @@ const SportLeagueSelector = ({ sports, sportGroups, selectedSport, setSelectedSp
               </Button>
             ))}
           </div>
-        </div>
-      )}
-
-      {selectedLeague && (
-        <div>
-          <h2 className="text-lg font-semibold mb-2">Select Team</h2>
-          {/* Team checkboxes will be rendered here */}
         </div>
       )}
     </div>

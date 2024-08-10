@@ -1,87 +1,90 @@
-// src/components/ui/GameSchedule.js
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import React from 'react';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Card, CardContent } from "@/components/ui/card";
 import { formatInTimeZone } from 'date-fns-tz';
-import { MapPin, Clock, Tv } from "lucide-react";
+import { parseISO } from 'date-fns';
+import { MapPin, Clock, Tv, Calendar } from "lucide-react";
 
-const InfoItem = ({ icon: Icon, label, value }) => (
-  <div className="flex items-center space-x-3 mb-3 p-3 bg-gray-50 rounded-lg shadow-sm">
-    <div className={`p-2 rounded-full ${label.includes("Location") ? "bg-blue-100" : "bg-green-100"}`}>
-      <Icon className={`w-5 h-5 ${label.includes("Location") ? "text-blue-600" : "text-green-600"}`} />
-    </div>
-    <div>
-      <p className="text-sm font-medium text-gray-500">{label}</p>
-      <p className="text-base font-semibold text-gray-800">{value}</p>
-    </div>
+const IconLabel = ({ icon: Icon, label }) => (
+  <div className="flex items-center space-x-1 text-sm text-gray-500">
+    <Icon className="w-4 h-4" />
+    <span>{label}</span>
   </div>
 );
 
 const GameSchedule = ({
   filteredGames,
-  watchDate,
   watchLocation,
   locations,
   viewingOptions,
   teamCities,
-  teams,
   teamDetails,
   selectedLeague,
-  userTimezone
+  userTimezone,
+  isPremierLeague
 }) => {
-  const getTeamName = (teamId) => {
-    return teamDetails[teamId]?.name || `Team ${teamId}`;
-  };
-
-  const getTeamCity = (teamId) => {
-    return teamCities[teamId] || { city: "Unknown", country: "Unknown", timezone: "UTC" };
+  const getTeamName = (teamId) => teamDetails[teamId]?.name || teamId;
+  const getTeamCity = (teamId) => teamCities[teamId] || { city: "Unknown", country: "Unknown" };
+  
+  const formatGameTime = (time) => {
+    if (!time) return 'Time TBA';
+    try {
+      const date = typeof time === 'string' ? parseISO(time) : new Date(time);
+      return formatInTimeZone(date, userTimezone, 'MMM d, HH:mm');
+    } catch (error) {
+      console.error('Error formatting game time:', error);
+      return 'Invalid Date';
+    }
   };
 
   return (
     <div className="space-y-4">
-      {filteredGames.map((game) => (
-        <Card key={game.id} className="mb-4">
-          <CardHeader>
-            <CardTitle>
-              {getTeamName(game.team1)} vs {getTeamName(game.team2)}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-6">
+      {filteredGames.map((game, index) => (
+        <Card key={index} className="overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 text-white">
+            <h2 className="text-xl font-bold">
+              {isPremierLeague 
+                ? `${game.Home} vs ${game.Away}`
+                : `${getTeamName(game.team1)} vs ${getTeamName(game.team2)}`
+              }
+            </h2>
+          </div>
+          <CardContent className="p-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
-                <h3 className="font-semibold mb-2">Game Time</h3>
-                <InfoItem
-                  icon={Clock}
-                  label="Kickoff"
-                  value={formatInTimeZone(new Date(game.time), userTimezone, 'yyyy-MM-dd HH:mm zzz')}
-                />
+                <IconLabel icon={Calendar} label="Date & Time" />
+                <p className="font-semibold">
+                  {isPremierLeague
+                    ? `${game.Date}, ${game.Time}`
+                    : formatGameTime(game.time)
+                  }
+                </p>
               </div>
-
               <div>
-                <h3 className="font-semibold mb-2">Viewing Details</h3>
-                {watchLocation && (
-                  <InfoItem
-                    icon={MapPin}
-                    label="Watch Location"
-                    value={locations.find((loc) => loc.id === watchLocation)?.name || "N/A"}
-                  />
-                )}
-                <InfoItem
-                  icon={Tv}
-                  label="Viewing Options"
-                  value={viewingOptions[selectedLeague]?.services?.join(", ") || "N/A"}
-                />
+                <IconLabel icon={MapPin} label="Venue" />
+                <p className="font-semibold">
+                  {isPremierLeague 
+                    ? `${game.Home} Stadium`
+                    : (game.venue || `${getTeamName(game.team1)} Stadium`)
+                  }
+                </p>
               </div>
-
               <div>
-                <h3 className="font-semibold mb-2">Venue Information</h3>
-                <InfoItem icon={MapPin} label="Venue" value={game.venue || "N/A"} />
-                <InfoItem
-                  icon={MapPin}
-                  label="Location"
-                  value={`${getTeamCity(game.team1).city}, ${getTeamCity(game.team1).country}`}
-                />
+                <IconLabel icon={Tv} label="Broadcast" />
+                <p className="font-semibold">
+                  {isPremierLeague
+                    ? (game.onSky ? "Sky Sports" : "Not on Sky Sports")
+                    : (viewingOptions[selectedLeague]?.services?.join(", ") || "TBA")
+                  }
+                </p>
               </div>
             </div>
+            {watchLocation && (
+              <div className="mt-4 p-2 bg-blue-50 rounded-md">
+                <IconLabel icon={MapPin} label="Your Watch Location" />
+                <p className="font-semibold">{locations.find((loc) => loc.id === watchLocation)?.name || "N/A"}</p>
+              </div>
+            )}
           </CardContent>
         </Card>
       ))}
