@@ -3,121 +3,121 @@
       {
         "id": "new_york",
         "name": "New York City",
-        "country": "USA",
+        "country": "us",
         "timezone": "America/New_York"
       },
       {
         "id": "los_angeles",
         "name": "Los Angeles",
-        "country": "USA",
+        "country": "us",
         "timezone": "America/Los_Angeles"
       },
       {
         "id": "chicago",
         "name": "Chicago",
-        "country": "USA",
+        "country": "us",
         "timezone": "America/Chicago"
       },
       {
         "id": "london",
         "name": "London",
-        "country": "United Kingdom",
+        "country": "uk",
         "timezone": "Europe/London"
       },
       {
         "id": "tokyo",
         "name": "Tokyo",
-        "country": "Japan",
+        "country": "jp",
         "timezone": "Asia/Tokyo"
       },
       {
         "id": "sydney",
         "name": "Sydney",
-        "country": "Australia",
+        "country": "au",
         "timezone": "Australia/Sydney"
       },
       {
         "id": "paris",
         "name": "Paris",
-        "country": "France",
+        "country": "fr",
         "timezone": "Europe/Paris"
       },
       {
         "id": "berlin",
         "name": "Berlin",
-        "country": "Germany",
+        "country": "de",
         "timezone": "Europe/Berlin"
       },
       {
         "id": "dubai",
         "name": "Dubai",
-        "country": "United Arab Emirates",
+        "country": "ae",
         "timezone": "Asia/Dubai"
       },
       {
         "id": "mumbai",
         "name": "Mumbai",
-        "country": "India",
+        "country": "in",
         "timezone": "Asia/Kolkata"
       },
       {
         "id": "singapore",
         "name": "Singapore",
-        "country": "Singapore",
+        "country": "sg",
         "timezone": "Asia/Singapore"
       },
       {
         "id": "sao_paulo",
         "name": "São Paulo",
-        "country": "Brazil",
+        "country": "br",
         "timezone": "America/Sao_Paulo"
       },
       {
         "id": "toronto",
         "name": "Toronto",
-        "country": "Canada",
+        "country": "ca",
         "timezone": "America/Toronto"
       },
       {
         "id": "moscow",
         "name": "Moscow",
-        "country": "Russia",
+        "country": "ru",
         "timezone": "Europe/Moscow"
       },
       {
         "id": "mexico_city",
         "name": "Mexico City",
-        "country": "Mexico",
+        "country": "mx",
         "timezone": "America/Mexico_City"
       },
       {
         "id": "johannesburg",
         "name": "Johannesburg",
-        "country": "South Africa",
+        "country": "za",
         "timezone": "Africa/Johannesburg"
       },
       {
         "id": "seoul",
         "name": "Seoul",
-        "country": "South Korea",
+        "country": "kr",
         "timezone": "Asia/Seoul"
       },
       {
         "id": "istanbul",
         "name": "Istanbul",
-        "country": "Turkey",
+        "country": "tr",
         "timezone": "Europe/Istanbul"
       },
       {
         "id": "bangkok",
         "name": "Bangkok",
-        "country": "Thailand",
+        "country": "th",
         "timezone": "Asia/Bangkok"
       },
       {
         "id": "cairo",
         "name": "Cairo",
-        "country": "Egypt",
+        "country": "eg",
         "timezone": "Africa/Cairo"
       }
     ]
