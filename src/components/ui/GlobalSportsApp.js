@@ -263,21 +263,22 @@ export default function GlobalSportsApp() {
       </div>
 
       {selectedTeams.length > 0 && (
-          <GameSchedule
-            filteredGames={filteredGames}
-            watchDate={watchDate}
-            watchLocation={watchLocation}
-            locations={locations}
-            viewingOptions={getViewingOptions(selectedLeague)}
-            teamCities={teamCities}
-            teams={teams}
-            teamDetails={teamDetails}
-            selectedLeague={selectedLeague}
-            userTimezone={userTimezone}
-            isPremierLeague={selectedLeague === 'premier-league'}
-            userCountry={userCountry}
-          />
-        )}
-      </div>
-    );
+        <GameSchedule
+          filteredGames={filteredGames}
+          watchDate={watchDate}
+          watchLocation={watchLocation}
+          locations={locations}
+          viewingOptions={getViewingOptions(selectedLeague)}
+          teamCities={teamCities}
+          teams={teams}
+          teamDetails={teamDetails}
+          selectedLeague={selectedLeague}
+          userTimezone={userTimezone}
+          isPremierLeague={selectedLeague === 'premier-league'}
+          userCountry={userCountry}
+          premierLeagueTeams={premierLeagueTeamsData.teams} // Pass the Premier League teams data
+        />
+      )}
+    </div>
+  );
 }

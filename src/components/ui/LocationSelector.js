@@ -2,6 +2,15 @@
 import React from "react";
 import { MapPin, Calendar } from "lucide-react";
 
+// Helper function to convert country code to emoji flag
+const getCountryFlag = (countryCode) => {
+  const codePoints = countryCode
+    .toUpperCase()
+    .split('')
+    .map(char => 127397 + char.charCodeAt());
+  return String.fromCodePoint(...codePoints);
+};
+
 const LocationSelector = ({ locations, setWatchLocation, watchDate, setWatchDate }) => {
   return (
     <div className="bg-white p-6 rounded-xl shadow-md space-y-6">
@@ -19,7 +28,7 @@ const LocationSelector = ({ locations, setWatchLocation, watchDate, setWatchDate
             <option value="">Select location</option>
             {locations.map((location) => (
               <option key={location.id} value={location.id}>
-                {location.name}
+                {`${location.name} ${getCountryFlag(location.country)}`}
               </option>
             ))}
           </select>

@@ -14,18 +14,29 @@ const IconLabel = ({ icon: Icon, label, value }) => (
 
 const countryCodeMapping = {
   'us': 'us',
-  'uk': 'uk',
-  'ca': 'canada',
-  'au': 'australia',
-  'in': 'india',
-  'fr': 'france',
-  'de': 'germany',
-  'es': 'spain',
-  'br': 'brazil',
-  'mx': 'mexico',
-  'cn': 'china',
-  'jp': 'japan',
-  // Add more mappings as needed
+  'gb': 'gb',
+  'ca': 'ca',
+  'au': 'au',
+  'in': 'in',
+  'fr': 'fr',
+  'de': 'de',
+  'es': 'es',
+  'br': 'br',
+  'mx': 'mx',
+  'cn': 'cn',
+  'jp': 'jp',
+  'nl': 'nl',
+  'se': 'se',
+  'no': 'no',
+  'dk': 'dk',
+  'za': 'za',
+  'ae': 'ae',
+  'sg': 'sg',
+  'th': 'th',
+  'eg': 'eg',
+  'kr': 'kr',
+  'tr': 'tr',
+  'ru': 'ru'
 };
 
 const GameSchedule = ({
@@ -37,7 +48,8 @@ const GameSchedule = ({
   selectedLeague,
   userTimezone,
   isPremierLeague,
-  userCountry
+  userCountry,
+  premierLeagueTeams = []
 }) => {
   const [currentViewingInfo, setCurrentViewingInfo] = useState({});
 
@@ -65,6 +77,21 @@ const GameSchedule = ({
     }
   };
 
+  const getStadiumInfo = (teamName) => {
+    if (!Array.isArray(premierLeagueTeams)) {
+      console.error('premierLeagueTeams is not an array:', premierLeagueTeams);
+      return `${teamName} Stadium`;
+    }
+    const team = premierLeagueTeams.find(t => t.name === teamName);
+    if (team) {
+      console.log(`Found team: ${team.name}, Stadium: ${team.homeStadium}`); // Debug log
+      return `${team.homeStadium}, ${team.city}`;
+    } else {
+      console.log(`Team not found: ${teamName}`); // Debug log
+      return `${teamName} Stadium`;
+    }
+  };
+
   return (
     <div className="space-y-4">
       {filteredGames.map((game, index) => (
@@ -89,7 +116,7 @@ const GameSchedule = ({
                 icon={MapPin}
                 label="Venue"
                 value={isPremierLeague
-                  ? `${game.Home} Stadium`
+                  ? getStadiumInfo(game.Home)
                   : (game.venue || `${getTeamName(game.team1)} Stadium`)
                 }
               />

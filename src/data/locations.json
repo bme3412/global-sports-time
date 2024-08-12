@@ -21,7 +21,7 @@
       {
         "id": "london",
         "name": "London",
-        "country": "uk",
+        "country": "gb",
         "timezone": "Europe/London"
       },
       {
@@ -119,6 +119,42 @@
         "name": "Cairo",
         "country": "eg",
         "timezone": "Africa/Cairo"
+      },
+      {
+        "id": "amsterdam",
+        "name": "Amsterdam",
+        "country": "nl",
+        "timezone": "Europe/Amsterdam"
+      },
+      {
+        "id": "stockholm",
+        "name": "Stockholm",
+        "country": "se",
+        "timezone": "Europe/Stockholm"
+      },
+      {
+        "id": "oslo",
+        "name": "Oslo",
+        "country": "no",
+        "timezone": "Europe/Oslo"
+      },
+      {
+        "id": "copenhagen",
+        "name": "Copenhagen",
+        "country": "dk",
+        "timezone": "Europe/Copenhagen"
+      },
+      {
+        "id": "madrid",
+        "name": "Madrid",
+        "country": "es",
+        "timezone": "Europe/Madrid"
+      },
+      {
+        "id": "beijing",
+        "name": "Beijing",
+        "country": "cn",
+        "timezone": "Asia/Shanghai"
       }
     ]
   }

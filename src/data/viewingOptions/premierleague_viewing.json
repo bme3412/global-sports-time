@@ -1,6 +1,6 @@
 {
     "premierLeague": {
-      "uk": {
+      "gb": {
         "services": [
           "Sky Sports",
           "BT Sport",
@@ -22,7 +22,7 @@
         "restrictions": "Some matches exclusive to Peacock",
         "additionalInfo": "NBC holds exclusive rights. Matches split between NBC, USA Network, and Peacock streaming."
       },
-      "canada": {
+      "ca": {
         "services": [
           "DAZN"
         ],
@@ -30,7 +30,7 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "DAZN holds exclusive rights to all Premier League matches in Canada."
       },
-      "australia": {
+      "au": {
         "services": [
           "Optus Sport"
         ],
@@ -38,7 +38,7 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "Optus Sport has exclusive rights to all Premier League matches in Australia."
       },
-      "india": {
+      "in": {
         "services": [
           "Star Sports",
           "Disney+ Hotstar"
@@ -47,7 +47,7 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "Star Sports broadcasts select matches on TV. All matches available on Disney+ Hotstar."
       },
-      "france": {
+      "fr": {
         "services": [
           "Canal+",
           "RMC Sport"
@@ -56,7 +56,7 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "Canal+ and RMC Sport share broadcasting rights in France."
       },
-      "germany": {
+      "de": {
         "services": [
           "Sky Deutschland"
         ],
@@ -64,7 +64,7 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "Sky Deutschland holds exclusive rights to Premier League matches in Germany."
       },
-      "spain": {
+      "es": {
         "services": [
           "DAZN"
         ],
@@ -72,7 +72,7 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "DAZN holds exclusive rights to Premier League matches in Spain."
       },
-      "brazil": {
+      "br": {
         "services": [
           "ESPN Brasil",
           "Star+"
@@ -81,7 +81,7 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "ESPN Brasil broadcasts select matches on TV. All matches available on Star+ streaming."
       },
-      "mexico": {
+      "mx": {
         "services": [
           "Sky Sports",
           "Paramount+"
@@ -90,7 +90,7 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "Sky Sports broadcasts select matches on TV. Paramount+ offers streaming of all matches."
       },
-      "china": {
+      "cn": {
         "services": [
           "iQIYI Sports"
         ],
@@ -98,13 +98,110 @@
         "restrictions": "No local blackouts",
         "additionalInfo": "iQIYI Sports holds exclusive digital rights for Premier League in China."
       },
-      "japan": {
+      "jp": {
         "services": [
           "DAZN"
         ],
         "cost": "¥1,925/month for DAZN",
         "restrictions": "No local blackouts",
         "additionalInfo": "DAZN holds exclusive rights to all Premier League matches in Japan."
+      },
+      "nl": {
+        "services": [
+          "Viaplay"
+        ],
+        "cost": "€13.99/month for Viaplay",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay holds exclusive rights to Premier League matches in the Netherlands."
+      },
+      "se": {
+        "services": [
+          "Viaplay"
+        ],
+        "cost": "SEK 449/month for Viaplay Total",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay holds exclusive rights to Premier League matches in Sweden."
+      },
+      "no": {
+        "services": [
+          "TV2"
+        ],
+        "cost": "NOK 699/month for TV2 Play",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "TV2 holds exclusive rights to Premier League matches in Norway."
+      },
+      "dk": {
+        "services": [
+          "Viaplay"
+        ],
+        "cost": "DKK 449/month for Viaplay Total",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay holds exclusive rights to Premier League matches in Denmark."
+      },
+      "za": {
+        "services": [
+          "SuperSport"
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SuperSport holds exclusive rights to Premier League matches in South Africa."
+      },
+      "ae": {
+        "services": [
+          "beIN Sports"
+        ],
+        "cost": "AED 76/month for beIN SPORTS CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds exclusive rights to Premier League matches in the UAE and across the Middle East and North Africa region."
+      },
+      "sg": {
+        "services": [
+          "StarHub",
+          "Singtel"
+        ],
+        "cost": "SGD 64.90/month for StarHub Sports+ Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Both StarHub and Singtel offer Premier League matches in Singapore."
+      },
+      "th": {
+        "services": [
+          "True Visions"
+        ],
+        "cost": "THB 499/month for True Premier Football HD",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "True Visions holds the rights to broadcast Premier League matches in Thailand."
+      },
+      "eg": {
+        "services": [
+          "beIN Sports"
+        ],
+        "cost": "EGP 250/month for beIN SPORTS CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds exclusive rights to Premier League matches in Egypt and across the Middle East and North Africa region."
+      },
+      "kr": {
+        "services": [
+          "SPOTV"
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SPOTV holds the rights to broadcast Premier League matches in South Korea."
+      },
+      "tr": {
+        "services": [
+          "beIN Sports"
+        ],
+        "cost": "TRY 159/month for beIN CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds exclusive rights to Premier League matches in Turkey."
+      },
+      "ru": {
+        "services": [
+          "Okko Sport"
+        ],
+        "cost": "RUB 549/month for Okko Sport",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Okko Sport holds the rights to broadcast Premier League matches in Russia."
       }
     }
   }

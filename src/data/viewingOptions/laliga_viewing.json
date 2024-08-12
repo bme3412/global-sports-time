@@ -1,0 +1,142 @@
+{
+    "laLiga": {
+      "es": {
+        "services": [
+          "Movistar+",
+          "DAZN"
+        ],
+        "cost": "€30/month for Movistar+ LaLiga package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Movistar+ and DAZN share broadcasting rights in Spain."
+      },
+      "gb": {
+        "services": [
+          "LaLigaTV",
+          "Premier Sports",
+          "Amazon Prime Video"
+        ],
+        "cost": "£6.99/month for LaLigaTV",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "LaLigaTV broadcasts all matches. Some matches also available on Premier Sports and Amazon Prime."
+      },
+      "us": {
+        "services": [
+          "ESPN+",
+          "ABC",
+          "ESPN",
+          "ESPN2"
+        ],
+        "cost": "$9.99/month for ESPN+",
+        "restrictions": "Some matches exclusive to ESPN+",
+        "additionalInfo": "ESPN holds exclusive rights. Most matches on ESPN+, select matches on ABC, ESPN, or ESPN2."
+      },
+      "ca": {
+        "services": [
+          "TSN",
+          "RDS"
+        ],
+        "cost": "CAD 19.99/month for TSN Direct",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "TSN and RDS share broadcasting rights in Canada."
+      },
+      "au": {
+        "services": [
+          "beIN Sports",
+          "Kayo Sports"
+        ],
+        "cost": "AUD 25/month for Kayo Sports Basic",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds rights, also available through Kayo Sports streaming."
+      },
+      "in": {
+        "services": [
+          "Viacom18",
+          "JioCinema"
+        ],
+        "cost": "Free on JioCinema",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viacom18 holds rights, matches streamed for free on JioCinema."
+      },
+      "fr": {
+        "services": [
+          "beIN Sports"
+        ],
+        "cost": "€15/month for beIN Sports Connect",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds exclusive rights to La Liga matches in France."
+      },
+      "de": {
+        "services": [
+          "DAZN"
+        ],
+        "cost": "€29.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds exclusive rights to La Liga matches in Germany."
+      },
+      "it": {
+        "services": [
+          "DAZN"
+        ],
+        "cost": "€29.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds exclusive rights to La Liga matches in Italy."
+      },
+      "br": {
+        "services": [
+          "ESPN Brasil",
+          "Star+"
+        ],
+        "cost": "R$45.90/month for Star+",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN Brasil broadcasts select matches on TV. All matches available on Star+ streaming."
+      },
+      "mx": {
+        "services": [
+          "Sky Sports"
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sports holds rights to broadcast La Liga matches in Mexico."
+      },
+      "nl": {
+        "services": [
+          "Ziggo Sport"
+        ],
+        "cost": "Included in Ziggo subscription or €14.95/month for Ziggo Sport Totaal",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Ziggo Sport holds rights to La Liga matches in the Netherlands."
+      },
+      "se": {
+        "services": [
+          "C More"
+        ],
+        "cost": "SEK 299/month for C More All Sport",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "C More holds rights to La Liga matches in Sweden."
+      },
+      "no": {
+        "services": [
+          "TV2"
+        ],
+        "cost": "NOK 699/month for TV2 Play",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "TV2 holds rights to La Liga matches in Norway."
+      },
+      "dk": {
+        "services": [
+          "TV2"
+        ],
+        "cost": "DKK 189/month for TV2 Play",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "TV2 holds rights to La Liga matches in Denmark."
+      },
+      "mena": {
+        "services": [
+          "beIN Sports"
+        ],
+        "cost": "Varies by country",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds rights for the Middle East and North Africa region."
+      }
+    }
+  }
