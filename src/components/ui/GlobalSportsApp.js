@@ -5,6 +5,7 @@ import SportLeagueSelector from "./SportSelector";
 import TeamSelector from "./TeamSelector";
 import LocationSelector from "./LocationSelector";
 import GameSchedule from "./GameSchedule";
+import GameTimeConverter from "./GameTimeConverter";
 
 // Import JSON data
 import leaguesData from "@/data/leagues.json";
@@ -93,29 +94,30 @@ const teamCities = teams.reduce((acc, team) => {
 }, {});
 
 export default function GlobalSportsApp() {
-  const [selectedSport, setSelectedSport] = useState("");
-  const [selectedLeague, setSelectedLeague] = useState("");
-  const [selectedTeams, setSelectedTeams] = useState([]);
-  const [watchLocation, setWatchLocation] = useState("");
-  const [userCountry, setUserCountry] = useState("us"); // Default to US
-  const [watchDate, setWatchDate] = useState("");
-  const [filteredGames, setFilteredGames] = useState([]);
-  const [userTimezone, setUserTimezone] = useState(
-    Intl.DateTimeFormat().resolvedOptions().timeZone
-  );
-
-  const [premierLeagueGames, setPremierLeagueGames] = useState([]);
-
-  useEffect(() => {
-    // Set Premier League games
-    setPremierLeagueGames(
-      premierLeagueSchedule.map((game, index) => ({
-        ...game,
-        id: `pl-${index}`,
-        league: "premier-league",
-        onSky: game["On Sky Sports"] === "Yes",
-      }))
+    const [selectedSport, setSelectedSport] = useState("");
+    const [selectedLeague, setSelectedLeague] = useState("");
+    const [selectedTeams, setSelectedTeams] = useState([]);
+    const [watchLocation, setWatchLocation] = useState("");
+    const [userCountry, setUserCountry] = useState("us"); // Default to US
+    const [watchDateRange, setWatchDateRange] = useState({ start: "", end: "" });
+    const [filteredGames, setFilteredGames] = useState([]);
+    const [userTimezone, setUserTimezone] = useState(
+      Intl.DateTimeFormat().resolvedOptions().timeZone
     );
+  
+    const [selectedGame, setSelectedGame] = useState(null);
+    const [premierLeagueGames, setPremierLeagueGames] = useState([]);
+  
+    useEffect(() => {
+      // Set Premier League games
+      setPremierLeagueGames(
+        premierLeagueSchedule.map((game, index) => ({
+          ...game,
+          id: `pl-${index}`,
+          league: "premier-league",
+          onSky: game["On Sky Sports"] === "Yes",
+        }))
+      );
 
     // Update userCountry when watchLocation changes
     if (watchLocation) {
@@ -138,33 +140,43 @@ export default function GlobalSportsApp() {
           });
       }
     }, [watchLocation]);
-
+  
     const handleLocationChange = (newLocation) => {
-        setWatchLocation(newLocation);
-        console.log("New watch location:", newLocation); // Debug log
-      };
-
-  useEffect(() => {
-    let newFilteredGames = [];
-
-    if (selectedLeague === "premier-league" && selectedTeams.length > 0) {
-      newFilteredGames = premierLeagueGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
-    }
-
-    if (watchDate) {
-      const watchDateObj = new Date(watchDate);
-      newFilteredGames = newFilteredGames.filter((game) => {
-        const gameDate = new Date(game.Date);
-        return gameDate.toDateString() === watchDateObj.toDateString();
-      });
-    }
-
-    newFilteredGames.sort((a, b) => new Date(a.Date) - new Date(b.Date));
-    setFilteredGames(newFilteredGames);
-  }, [selectedLeague, selectedTeams, watchDate, premierLeagueGames]);
+      setWatchLocation(newLocation);
+      console.log("New watch location:", newLocation); // Debug log
+    };
+  
+    useEffect(() => {
+      let newFilteredGames = [];
+  
+      if (selectedLeague === "premier-league" && selectedTeams.length > 0) {
+        newFilteredGames = premierLeagueGames.filter(
+          (game) =>
+            selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
+        );
+        } else {
+          // Handle other leagues here if necessary
+          // For example:
+          // newFilteredGames = otherLeaguesGames.filter(...);
+        }
+    
+        if (watchDateRange.start && watchDateRange.end) {
+            const startDate = new Date(watchDateRange.start);
+            const endDate = new Date(watchDateRange.end);
+            newFilteredGames = newFilteredGames.filter((game) => {
+              const gameDate = new Date(game.Date);
+              return gameDate >= startDate && gameDate <= endDate;
+            });
+          }
+      
+          newFilteredGames.sort((a, b) => new Date(a.Date) - new Date(b.Date));
+          setFilteredGames(newFilteredGames);
+        }, [selectedLeague, selectedTeams, watchDateRange, premierLeagueGames]);
+      
+        const handleGameSelect = (game) => {
+          setSelectedGame(game);
+        };
+      
 
   const handleSportChange = (sport) => {
     setSelectedSport(sport);
@@ -214,6 +226,7 @@ export default function GlobalSportsApp() {
   };
 
 
+
   return (
     <div className="max-w-7xl mx-auto p-4">
       <div className="flex flex-col md:flex-row gap-8 mb-8">
@@ -255,8 +268,15 @@ export default function GlobalSportsApp() {
             <LocationSelector
               locations={locations}
               setWatchLocation={setWatchLocation}
-              watchDate={watchDate}
-              setWatchDate={setWatchDate}
+              watchDateRange={watchDateRange}
+              setWatchDateRange={setWatchDateRange}
+            />
+            <GameTimeConverter
+              gameTime={selectedGame ? selectedGame.Time : null}
+              gameDate={selectedGame ? selectedGame.Date : null}
+              gameTimezone={selectedGame && selectedGame.Home ? teamDetails[selectedGame.Home]?.timezone : userTimezone}
+              watchLocation={watchLocation}
+              locations={locations}
             />
           </CardContent>
         </Card>
@@ -265,7 +285,7 @@ export default function GlobalSportsApp() {
       {selectedTeams.length > 0 && (
         <GameSchedule
           filteredGames={filteredGames}
-          watchDate={watchDate}
+          watchDateRange={watchDateRange}
           watchLocation={watchLocation}
           locations={locations}
           viewingOptions={getViewingOptions(selectedLeague)}
@@ -276,7 +296,9 @@ export default function GlobalSportsApp() {
           userTimezone={userTimezone}
           isPremierLeague={selectedLeague === 'premier-league'}
           userCountry={userCountry}
-          premierLeagueTeams={premierLeagueTeamsData.teams} // Pass the Premier League teams data
+          premierLeagueTeams={premierLeagueTeamsData.teams}
+          onGameSelect={handleGameSelect}
+          selectedGame={selectedGame}
         />
       )}
     </div>
