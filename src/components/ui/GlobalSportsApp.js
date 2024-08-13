@@ -7,7 +7,6 @@ import LocationSelector from "./LocationSelector";
 import GameSchedule from "./GameSchedule";
 import GameTimeConverter from "./GameTimeConverter";
 
-
 // Import JSON data
 import leaguesData from "@/data/leagues.json";
 import locationsData from "@/data/locations.json";
@@ -28,28 +27,14 @@ import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
-const locations = Array.isArray(locationsData.locations)
-  ? locationsData.locations
-  : [];
+const locations = Array.isArray(locationsData.locations) ? locationsData.locations : [];
 const nbaTeams = Array.isArray(nbaTeamsData.teams) ? nbaTeamsData.teams : [];
-const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams)
-  ? premierLeagueTeamsData.teams
-  : [];
-const euroLeagueTeams = Array.isArray(euroLeagueTeamsData.teams)
-  ? euroLeagueTeamsData.teams
-  : [];
-const laLigaTeams = Array.isArray(laLigaTeamsData.teams)
-  ? laLigaTeamsData.teams
-  : [];
-const bundesligaTeams = Array.isArray(bundesligaTeamsData.teams)
-  ? bundesligaTeamsData.teams
-  : [];
-const serieATeams = Array.isArray(serieATeamsData.teams)
-  ? serieATeamsData.teams
-  : [];
-const ligue1Teams = Array.isArray(ligue1TeamsData.teams)
-  ? ligue1TeamsData.teams
-  : [];
+const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams) ? premierLeagueTeamsData.teams : [];
+const euroLeagueTeams = Array.isArray(euroLeagueTeamsData.teams) ? euroLeagueTeamsData.teams : [];
+const laLigaTeams = Array.isArray(laLigaTeamsData.teams) ? laLigaTeamsData.teams : [];
+const bundesligaTeams = Array.isArray(bundesligaTeamsData.teams) ? bundesligaTeamsData.teams : [];
+const serieATeams = Array.isArray(serieATeamsData.teams) ? serieATeamsData.teams : [];
+const ligue1Teams = Array.isArray(ligue1TeamsData.teams) ? ligue1TeamsData.teams : [];
 const mlsTeams = Array.isArray(mlsTeamsData.teams) ? mlsTeamsData.teams : [];
 const nbaViewingOptions = nbaViewingOptionsData || {};
 const mlsViewingOptions = mlsViewingOptionsData || {};
@@ -95,24 +80,23 @@ const teamCities = teams.reduce((acc, team) => {
 }, {});
 
 export default function GlobalSportsApp() {
-    const [selectedSport, setSelectedSport] = useState("");
-    const [selectedLeague, setSelectedLeague] = useState("");
-    const [selectedTeams, setSelectedTeams] = useState([]);
-    const [watchLocation, setWatchLocation] = useState("");
-    const [selectedLocation, setSelectedLocation] = useState(""); // Add this line
-    const [userCountry, setUserCountry] = useState("us");
-    const [watchDateRange, setWatchDateRange] = useState({ start: "", end: "" });
-    const [filteredGames, setFilteredGames] = useState([]);
-    const [userTimezone, setUserTimezone] = useState(
-      Intl.DateTimeFormat().resolvedOptions().timeZone
-    );
-  
-    const [selectedGame, setSelectedGame] = useState(null);
-    const [gameViewingOptions, setGameViewingOptions] = useState(null);
-    const [premierLeagueGames, setPremierLeagueGames] = useState([]);
+  const [selectedSport, setSelectedSport] = useState("");
+  const [selectedLeague, setSelectedLeague] = useState("");
+  const [selectedTeams, setSelectedTeams] = useState([]);
+  const [watchLocation, setWatchLocation] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [userCountry, setUserCountry] = useState("us");
+  const [watchDateRange, setWatchDateRange] = useState({ start: "", end: "" });
+  const [filteredGames, setFilteredGames] = useState([]);
+  const [userTimezone, setUserTimezone] = useState(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  );
+  const [selectedGame, setSelectedGame] = useState(null);
+  const [gameViewingOptions, setGameViewingOptions] = useState(null);
+  const [premierLeagueGames, setPremierLeagueGames] = useState([]);
+  const [broadcastData, setBroadcastData] = useState({});
 
   useEffect(() => {
-    // Set Premier League games
     setPremierLeagueGames(
       premierLeagueSchedule.map((game, index) => ({
         ...game,
@@ -122,32 +106,22 @@ export default function GlobalSportsApp() {
       }))
     );
 
-    // Update userCountry when watchLocation changes
-    if (watchLocation) {
-      const selectedLocation = locations.find(
-        (loc) => loc.id === watchLocation
-      );
-      if (selectedLocation && selectedLocation.country) {
-        setUserCountry(selectedLocation.country);
-        console.log("Updated userCountry:", selectedLocation.country); // Debug log
-      }
-    } else {
-      // If no location is selected, attempt to determine user's country
+    if (!watchLocation) {
       fetch("https://ipapi.co/json/")
         .then((res) => res.json())
         .then((data) => {
           setUserCountry(data.country_code.toLowerCase());
-          console.log(
-            "Updated userCountry from IP:",
-            data.country_code.toLowerCase()
-          ); // Debug log
+          console.log("Updated userCountry from IP:", data.country_code.toLowerCase());
         })
         .catch((error) => {
           console.error("Error fetching user country:", error);
-          // Keep the default "us" if there's an error
         });
     }
-  }, [watchLocation]);
+  }, []);
+
+  useEffect(() => {
+    setBroadcastData(getViewingOptions(selectedLeague));
+  }, [selectedLeague]);
 
   const handleLocationChange = (newLocation) => {
     setWatchLocation(newLocation);
@@ -156,8 +130,9 @@ export default function GlobalSportsApp() {
 
     const selectedLocationData = locations.find(loc => loc.id === newLocation);
     if (selectedLocationData && selectedLocationData.country) {
-      setUserCountry(selectedLocationData.country.toLowerCase());
-      console.log("Updated userCountry:", selectedLocationData.country.toLowerCase());
+      const newCountry = selectedLocationData.country.toLowerCase();
+      setUserCountry(newCountry);
+      console.log("Updated userCountry:", newCountry);
     }
   };
 
@@ -169,10 +144,6 @@ export default function GlobalSportsApp() {
         (game) =>
           selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
       );
-    } else {
-      // Handle other leagues here if necessary
-      // For example:
-      // newFilteredGames = otherLeaguesGames.filter(...);
     }
 
     if (watchDateRange.start && watchDateRange.end) {
@@ -239,7 +210,6 @@ export default function GlobalSportsApp() {
     }
   };
 
-
   useEffect(() => {
     if (selectedGame && selectedLeague) {
       const leagueViewingOptions = getViewingOptions(selectedLeague);
@@ -249,7 +219,7 @@ export default function GlobalSportsApp() {
       setGameViewingOptions(null);
     }
   }, [selectedGame, selectedLeague, userCountry]);
-  
+
   return (
     <div className="max-w-7xl mx-auto p-4">
       <div className="flex flex-col md:flex-row gap-8 mb-8">
@@ -305,6 +275,10 @@ export default function GlobalSportsApp() {
               }
               watchLocation={watchLocation}
               locations={locations}
+              broadcastData={broadcastData}
+              venue={selectedGame ? getStadiumInfo(selectedGame.Home) : null}
+              matchName={selectedGame ? `${selectedGame.Home} vs ${selectedGame.Away}` : null}
+              userCountry={userCountry}
             />
           </CardContent>
         </Card>
@@ -316,7 +290,7 @@ export default function GlobalSportsApp() {
           watchDateRange={watchDateRange}
           watchLocation={watchLocation}
           locations={locations}
-          viewingOptions={getViewingOptions(selectedLeague)}
+          viewingOptions={broadcastData}
           teamCities={teamCities}
           teams={teams}
           teamDetails={teamDetails}
@@ -331,4 +305,9 @@ export default function GlobalSportsApp() {
       )}
     </div>
   );
+}
+
+function getStadiumInfo(teamName) {
+  const team = premierLeagueTeams.find(t => t.name === teamName);
+  return team ? `${team.homeStadium}, ${team.city}` : `${teamName} Stadium`;
 }

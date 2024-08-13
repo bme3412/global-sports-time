@@ -31,13 +31,16 @@ const GameSchedule = ({
   const [gamesInRange, setGamesInRange] = useState([]);
 
   useEffect(() => {
-    if (isPremierLeague && viewingOptions && userCountry) {
-      const countryInfo = viewingOptions[userCountry.toLowerCase()] || viewingOptions['us'] || {};
+    console.log('ViewingOptions:', viewingOptions);
+    console.log('UserCountry:', userCountry);
+    if (viewingOptions && userCountry) {
+      const countryInfo = viewingOptions[userCountry] || viewingOptions['us'] || {};
+      console.log('Selected Country Info:', countryInfo);
       setCurrentViewingInfo(countryInfo);
     } else {
-      setCurrentViewingInfo(viewingOptions || {});
+      setCurrentViewingInfo({});
     }
-  }, [isPremierLeague, viewingOptions, userCountry]);
+  }, [viewingOptions, userCountry]);
 
   useEffect(() => {
     if (watchDateRange && watchDateRange.start && watchDateRange.end) {
@@ -102,12 +105,12 @@ const GameSchedule = ({
     const isSelected = selectedGame && selectedGame.id === game.id;
 
     return (
-      <Card 
-        key={index} 
-        className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer ${isSelected ? 'border-2 border-blue-500' : ''}`}
-        onClick={() => handleGameClick(game)}
-      >
-        <CardContent className="p-6">
+        <Card 
+          key={index} 
+          className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer ${isSelected ? 'border-2 border-blue-500' : ''}`}
+          onClick={() => handleGameClick(game)}
+        >
+          <CardContent className="p-6">
           <h2 className="text-xl font-bold mb-4 text-gray-800">
             {isPremierLeague
               ? `${game.Home} vs ${game.Away}`

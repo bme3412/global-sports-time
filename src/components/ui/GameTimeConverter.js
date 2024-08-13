@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Clock,
   MapPin,
@@ -21,7 +21,24 @@ const GameTimeConverter = ({
   broadcastData,
   venue,
   matchName,
+  userCountry
 }) => {
+  const [countryBroadcastData, setCountryBroadcastData] = useState(null);
+
+  useEffect(() => {
+    const selectedLocation = locations.find((loc) => loc.id === watchLocation);
+    const countryCode = userCountry.toLowerCase();
+    console.log('Broadcast Data:', broadcastData);
+    console.log('User Country:', countryCode);
+
+    const newCountryBroadcastData = broadcastData && broadcastData[countryCode]
+      ? broadcastData[countryCode]
+      : null;
+
+    console.log('Country Broadcast Data:', newCountryBroadcastData);
+    setCountryBroadcastData(newCountryBroadcastData);
+  }, [broadcastData, userCountry, watchLocation, locations]);
+
   const selectedLocation = locations.find((loc) => loc.id === watchLocation);
 
   if (!selectedLocation) {
@@ -46,17 +63,6 @@ const GameTimeConverter = ({
   }
 
   const watchTimezone = selectedLocation.timezone;
-  const countryCode = selectedLocation.countryCode
-    ? selectedLocation.countryCode.toLowerCase()
-    : "unknown";
-
-  // Safely access broadcastData
-  const countryBroadcastData =
-    broadcastData &&
-    broadcastData.premierLeague &&
-    broadcastData.premierLeague[countryCode]
-      ? broadcastData.premierLeague[countryCode]
-      : null;
 
   const convertTime = (time, date, sourceTimezone, targetTimezone) => {
     if (!time || !date) return null;
@@ -94,25 +100,25 @@ const GameTimeConverter = ({
   );
 
   const renderBroadcastOptions = () => {
-    if (!Array.isArray(broadcastData)) {
+    if (!countryBroadcastData || !Array.isArray(countryBroadcastData.services)) {
       return <span>Broadcast information not available</span>;
     }
 
     return (
       <ul className="list-disc list-inside space-y-1 text-sm">
-        {broadcastData.map((option, index) => (
+        {countryBroadcastData.services.map((service, index) => (
           <li key={index}>
-            {option.link ? (
+            {service.link ? (
               <a
-                href={option.link}
+                href={service.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"
               >
-                {option.name}
+                {service.name}
               </a>
             ) : (
-              <span>{option.name}</span>
+              <span>{service.name}</span>
             )}
           </li>
         ))}
@@ -160,40 +166,28 @@ const GameTimeConverter = ({
                     <span className="font-medium">Broadcast Options:</span>
                   </div>
                   {renderBroadcastOptions()}
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    {countryBroadcastData.services.map((service, index) => (
-                      <li key={index}>
-                        {service.link ? (
-                          <a
-                            href={service.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-500 hover:underline"
-                          >
-                            {service.name}
-                          </a>
-                        ) : (
-                          <span>{service.name}</span>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
-                <div className="flex items-center space-x-2 text-sm">
-                  <DollarSign size={16} className="text-green-500" />
-                  <span className="font-medium">Viewing Cost:</span>
-                  <span>{countryBroadcastData.cost}</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm">
-                  <AlertTriangle size={16} className="text-yellow-500" />
-                  <span className="font-medium">Restrictions:</span>
-                  <span>{countryBroadcastData.restrictions}</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm">
-                  <Info size={16} className="text-blue-500" />
-                  <span className="font-medium">Additional Info:</span>
-                  <span>{countryBroadcastData.additionalInfo}</span>
-                </div>
+                {countryBroadcastData.cost && (
+                  <div className="flex items-center space-x-2 text-sm">
+                    <DollarSign size={16} className="text-green-500" />
+                    <span className="font-medium">Viewing Cost:</span>
+                    <span>{countryBroadcastData.cost}</span>
+                  </div>
+                )}
+                {countryBroadcastData.restrictions && (
+                  <div className="flex items-center space-x-2 text-sm">
+                    <AlertTriangle size={16} className="text-yellow-500" />
+                    <span className="font-medium">Restrictions:</span>
+                    <span>{countryBroadcastData.restrictions}</span>
+                  </div>
+                )}
+                {countryBroadcastData.additionalInfo && (
+                  <div className="flex items-center space-x-2 text-sm">
+                    <Info size={16} className="text-blue-500" />
+                    <span className="font-medium">Additional Info:</span>
+                    <span>{countryBroadcastData.additionalInfo}</span>
+                  </div>
+                )}
               </>
             ) : (
               <div className="flex items-center space-x-2 text-yellow-600">
@@ -205,7 +199,7 @@ const GameTimeConverter = ({
             )}
           </div>
         ) : (
-            <div className="flex items-center space-x-2 text-yellow-600">
+          <div className="flex items-center space-x-2 text-yellow-600">
             <AlertCircle size={16} />
             <span>No game time selected. Please choose a game to see converted times and broadcast options.</span>
           </div>
