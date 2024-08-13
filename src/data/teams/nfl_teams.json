@@ -1,0 +1,184 @@
+{
+    "teams": [
+      {
+        "id": "patriots",
+        "name": "New England Patriots",
+        "league": "nfl",
+        "city": "Foxborough",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Gillette Stadium"
+      },
+      {
+        "id": "rams",
+        "name": "Los Angeles Rams",
+        "league": "nfl",
+        "city": "Los Angeles",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "SoFi Stadium"
+      },
+      {
+        "id": "49ers",
+        "name": "San Francisco 49ers",
+        "league": "nfl",
+        "city": "Santa Clara",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Levi's Stadium"
+      },
+      {
+        "id": "bears",
+        "name": "Chicago Bears",
+        "league": "nfl",
+        "city": "Chicago",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "Soldier Field"
+      },
+      {
+        "id": "dolphins",
+        "name": "Miami Dolphins",
+        "league": "nfl",
+        "city": "Miami Gardens",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Hard Rock Stadium"
+      },
+      {
+        "id": "giants",
+        "name": "New York Giants",
+        "league": "nfl",
+        "city": "East Rutherford",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "MetLife Stadium"
+      },
+      {
+        "id": "cowboys",
+        "name": "Dallas Cowboys",
+        "league": "nfl",
+        "city": "Arlington",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "AT&T Stadium"
+      },
+      {
+        "id": "packers",
+        "name": "Green Bay Packers",
+        "league": "nfl",
+        "city": "Green Bay",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "Lambeau Field"
+      },
+      {
+        "id": "eagles",
+        "name": "Philadelphia Eagles",
+        "league": "nfl",
+        "city": "Philadelphia",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Lincoln Financial Field"
+      },
+      {
+        "id": "chiefs",
+        "name": "Kansas City Chiefs",
+        "league": "nfl",
+        "city": "Kansas City",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "Arrowhead Stadium"
+      },
+      {
+        "id": "steelers",
+        "name": "Pittsburgh Steelers",
+        "league": "nfl",
+        "city": "Pittsburgh",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Acrisure Stadium"
+      },
+      {
+        "id": "seahawks",
+        "name": "Seattle Seahawks",
+        "league": "nfl",
+        "city": "Seattle",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Lumen Field"
+      },
+      {
+        "id": "buccaneers",
+        "name": "Tampa Bay Buccaneers",
+        "league": "nfl",
+        "city": "Tampa",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Raymond James Stadium"
+      },
+      {
+        "id": "broncos",
+        "name": "Denver Broncos",
+        "league": "nfl",
+        "city": "Denver",
+        "country": "USA",
+        "timezone": "America/Denver",
+        "homeStadium": "Empower Field at Mile High"
+      },
+      {
+        "id": "ravens",
+        "name": "Baltimore Ravens",
+        "league": "nfl",
+        "city": "Baltimore",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "M&T Bank Stadium"
+      },
+      {
+        "id": "vikings",
+        "name": "Minnesota Vikings",
+        "league": "nfl",
+        "city": "Minneapolis",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "U.S. Bank Stadium"
+      },
+      {
+        "id": "saints",
+        "name": "New Orleans Saints",
+        "league": "nfl",
+        "city": "New Orleans",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "Caesars Superdome"
+      },
+      {
+        "id": "raiders",
+        "name": "Las Vegas Raiders",
+        "league": "nfl",
+        "city": "Las Vegas",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Allegiant Stadium"
+      },
+      {
+        "id": "titans",
+        "name": "Tennessee Titans",
+        "league": "nfl",
+        "city": "Nashville",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "Nissan Stadium"
+      },
+      {
+        "id": "cardinals",
+        "name": "Arizona Cardinals",
+        "league": "nfl",
+        "city": "Glendale",
+        "country": "USA",
+        "timezone": "America/Phoenix",
+        "homeStadium": "State Farm Stadium"
+      }
+    ]
+  }

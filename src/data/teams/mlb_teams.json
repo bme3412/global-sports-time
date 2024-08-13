@@ -1,0 +1,154 @@
+{
+    "teams": [
+      {
+        "id": "yankees",
+        "name": "New York Yankees",
+        "league": "mlb",
+        "city": "New York City",
+        "state": "New York",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Yankee Stadium"
+      },
+      {
+        "id": "redsox",
+        "name": "Boston Red Sox",
+        "league": "mlb",
+        "city": "Boston",
+        "state": "Massachusetts",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Fenway Park"
+      },
+      {
+        "id": "dodgers",
+        "name": "Los Angeles Dodgers",
+        "league": "mlb",
+        "city": "Los Angeles",
+        "state": "California",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Dodger Stadium"
+      },
+      {
+        "id": "cubs",
+        "name": "Chicago Cubs",
+        "league": "mlb",
+        "city": "Chicago",
+        "state": "Illinois",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "Wrigley Field"
+      },
+      {
+        "id": "giants",
+        "name": "San Francisco Giants",
+        "league": "mlb",
+        "city": "San Francisco",
+        "state": "California",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Oracle Park"
+      },
+      {
+        "id": "cardinals",
+        "name": "St. Louis Cardinals",
+        "league": "mlb",
+        "city": "St. Louis",
+        "state": "Missouri",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "Busch Stadium"
+      },
+      {
+        "id": "braves",
+        "name": "Atlanta Braves",
+        "league": "mlb",
+        "city": "Atlanta",
+        "state": "Georgia",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Truist Park"
+      },
+      {
+        "id": "astros",
+        "name": "Houston Astros",
+        "league": "mlb",
+        "city": "Houston",
+        "state": "Texas",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeStadium": "Minute Maid Park"
+      },
+      {
+        "id": "mets",
+        "name": "New York Mets",
+        "league": "mlb",
+        "city": "New York City",
+        "state": "New York",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Citi Field"
+      },
+      {
+        "id": "phillies",
+        "name": "Philadelphia Phillies",
+        "league": "mlb",
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Citizens Bank Park"
+      },
+      {
+        "id": "nationals",
+        "name": "Washington Nationals",
+        "league": "mlb",
+        "city": "Washington",
+        "state": "D.C.",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeStadium": "Nationals Park"
+      },
+      {
+        "id": "mariners",
+        "name": "Seattle Mariners",
+        "league": "mlb",
+        "city": "Seattle",
+        "state": "Washington",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "T-Mobile Park"
+      },
+      {
+        "id": "padres",
+        "name": "San Diego Padres",
+        "league": "mlb",
+        "city": "San Diego",
+        "state": "California",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeStadium": "Petco Park"
+      },
+      {
+        "id": "bluejays",
+        "name": "Toronto Blue Jays",
+        "league": "mlb",
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "Canada",
+        "timezone": "America/Toronto",
+        "homeStadium": "Rogers Centre"
+      },
+      {
+        "id": "tigers",
+        "name": "Detroit Tigers",
+        "league": "mlb",
+        "city": "Detroit",
+        "state": "Michigan",
+        "country": "USA",
+        "timezone": "America/Detroit",
+        "homeStadium": "Comerica Park"
+      }
+    ]
+  }

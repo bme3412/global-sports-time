@@ -1,0 +1,184 @@
+{
+    "teams": [
+      {
+        "id": "adelaide",
+        "name": "Adelaide Crows",
+        "league": "afl",
+        "city": "Adelaide",
+        "state": "South Australia",
+        "country": "Australia",
+        "timezone": "Australia/Adelaide",
+        "homeGround": "Adelaide Oval"
+      },
+      {
+        "id": "brisbane",
+        "name": "Brisbane Lions",
+        "league": "afl",
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "timezone": "Australia/Brisbane",
+        "homeGround": "The Gabba"
+      },
+      {
+        "id": "carlton",
+        "name": "Carlton Blues",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Marvel Stadium"
+      },
+      {
+        "id": "collingwood",
+        "name": "Collingwood Magpies",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Melbourne Cricket Ground"
+      },
+      {
+        "id": "essendon",
+        "name": "Essendon Bombers",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Marvel Stadium"
+      },
+      {
+        "id": "fremantle",
+        "name": "Fremantle Dockers",
+        "league": "afl",
+        "city": "Perth",
+        "state": "Western Australia",
+        "country": "Australia",
+        "timezone": "Australia/Perth",
+        "homeGround": "Optus Stadium"
+      },
+      {
+        "id": "geelong",
+        "name": "Geelong Cats",
+        "league": "afl",
+        "city": "Geelong",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "GMHBA Stadium"
+      },
+      {
+        "id": "goldcoast",
+        "name": "Gold Coast Suns",
+        "league": "afl",
+        "city": "Gold Coast",
+        "state": "Queensland",
+        "country": "Australia",
+        "timezone": "Australia/Brisbane",
+        "homeGround": "Metricon Stadium"
+      },
+      {
+        "id": "gws",
+        "name": "Greater Western Sydney Giants",
+        "league": "afl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Giants Stadium"
+      },
+      {
+        "id": "hawthorn",
+        "name": "Hawthorn Hawks",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Melbourne Cricket Ground"
+      },
+      {
+        "id": "melbourne",
+        "name": "Melbourne Demons",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Melbourne Cricket Ground"
+      },
+      {
+        "id": "northmelbourne",
+        "name": "North Melbourne Kangaroos",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Marvel Stadium"
+      },
+      {
+        "id": "portadelaide",
+        "name": "Port Adelaide Power",
+        "league": "afl",
+        "city": "Adelaide",
+        "state": "South Australia",
+        "country": "Australia",
+        "timezone": "Australia/Adelaide",
+        "homeGround": "Adelaide Oval"
+      },
+      {
+        "id": "richmond",
+        "name": "Richmond Tigers",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Melbourne Cricket Ground"
+      },
+      {
+        "id": "stkilda",
+        "name": "St Kilda Saints",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Marvel Stadium"
+      },
+      {
+        "id": "sydney",
+        "name": "Sydney Swans",
+        "league": "afl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Sydney Cricket Ground"
+      },
+      {
+        "id": "westcoast",
+        "name": "West Coast Eagles",
+        "league": "afl",
+        "city": "Perth",
+        "state": "Western Australia",
+        "country": "Australia",
+        "timezone": "Australia/Perth",
+        "homeGround": "Optus Stadium"
+      },
+      {
+        "id": "westernbulldogs",
+        "name": "Western Bulldogs",
+        "league": "afl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Marvel Stadium"
+      }
+    ]
+  }

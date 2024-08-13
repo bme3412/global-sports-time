@@ -99,6 +99,56 @@
         "country": "USA",
         "timezone": "America/New_York",
         "homeArena": "Wells Fargo Center"
+      },
+      {
+        "id": "bucks",
+        "name": "Milwaukee Bucks",
+        "league": "nba",
+        "city": "Milwaukee",
+        "state": "Wisconsin",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "Fiserv Forum"
+      },
+      {
+        "id": "suns",
+        "name": "Phoenix Suns",
+        "league": "nba",
+        "city": "Phoenix",
+        "state": "Arizona",
+        "country": "USA",
+        "timezone": "America/Phoenix",
+        "homeArena": "Footprint Center"
+      },
+      {
+        "id": "spurs",
+        "name": "San Antonio Spurs",
+        "league": "nba",
+        "city": "San Antonio",
+        "state": "Texas",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "AT&T Center"
+      },
+      {
+        "id": "nuggets",
+        "name": "Denver Nuggets",
+        "league": "nba",
+        "city": "Denver",
+        "state": "Colorado",
+        "country": "USA",
+        "timezone": "America/Denver",
+        "homeArena": "Ball Arena"
+      },
+      {
+        "id": "clippers",
+        "name": "Los Angeles Clippers",
+        "league": "nba",
+        "city": "Los Angeles",
+        "state": "California",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeArena": "Crypto.com Arena"
       }
     ]
   }

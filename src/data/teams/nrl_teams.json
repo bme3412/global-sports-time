@@ -1,0 +1,164 @@
+{
+    "teams": [
+      {
+        "id": "broncos",
+        "name": "Brisbane Broncos",
+        "league": "nrl",
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "timezone": "Australia/Brisbane",
+        "homeGround": "Suncorp Stadium"
+      },
+      {
+        "id": "raiders",
+        "name": "Canberra Raiders",
+        "league": "nrl",
+        "city": "Canberra",
+        "state": "Australian Capital Territory",
+        "country": "Australia",
+        "timezone": "Australia/Canberra",
+        "homeGround": "GIO Stadium"
+      },
+      {
+        "id": "bulldogs",
+        "name": "Canterbury-Bankstown Bulldogs",
+        "league": "nrl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Accor Stadium"
+      },
+      {
+        "id": "sharks",
+        "name": "Cronulla-Sutherland Sharks",
+        "league": "nrl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "PointsBet Stadium"
+      },
+      {
+        "id": "titans",
+        "name": "Gold Coast Titans",
+        "league": "nrl",
+        "city": "Gold Coast",
+        "state": "Queensland",
+        "country": "Australia",
+        "timezone": "Australia/Brisbane",
+        "homeGround": "Cbus Super Stadium"
+      },
+      {
+        "id": "seaeagles",
+        "name": "Manly Sea Eagles",
+        "league": "nrl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "4 Pines Park"
+      },
+      {
+        "id": "storm",
+        "name": "Melbourne Storm",
+        "league": "nrl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "AAMI Park"
+      },
+      {
+        "id": "knights",
+        "name": "Newcastle Knights",
+        "league": "nrl",
+        "city": "Newcastle",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "McDonald Jones Stadium"
+      },
+      {
+        "id": "cowboys",
+        "name": "North Queensland Cowboys",
+        "league": "nrl",
+        "city": "Townsville",
+        "state": "Queensland",
+        "country": "Australia",
+        "timezone": "Australia/Brisbane",
+        "homeGround": "Queensland Country Bank Stadium"
+      },
+      {
+        "id": "eels",
+        "name": "Parramatta Eels",
+        "league": "nrl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "CommBank Stadium"
+      },
+      {
+        "id": "panthers",
+        "name": "Penrith Panthers",
+        "league": "nrl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "BlueBet Stadium"
+      },
+      {
+        "id": "rabbitohs",
+        "name": "South Sydney Rabbitohs",
+        "league": "nrl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Accor Stadium"
+      },
+      {
+        "id": "dragons",
+        "name": "St. George Illawarra Dragons",
+        "league": "nrl",
+        "city": "Sydney/Wollongong",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Netstrata Jubilee Stadium/WIN Stadium"
+      },
+      {
+        "id": "roosters",
+        "name": "Sydney Roosters",
+        "league": "nrl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Sydney Cricket Ground"
+      },
+      {
+        "id": "warriors",
+        "name": "Warriors",
+        "league": "nrl",
+        "city": "Auckland",
+        "state": "Auckland Region",
+        "country": "New Zealand",
+        "timezone": "Pacific/Auckland",
+        "homeGround": "Mt Smart Stadium"
+      },
+      {
+        "id": "tigers",
+        "name": "Wests Tigers",
+        "league": "nrl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Leichhardt Oval/Campbelltown Stadium"
+      }
+    ]
+  }

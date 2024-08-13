@@ -89,6 +89,96 @@
         "country": "England",
         "timezone": "Europe/London",
         "homeStadium": "King Power Stadium"
+      },
+      {
+        "id": "aston-villa",
+        "name": "Aston Villa",
+        "league": "premier-league",
+        "city": "Birmingham",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Villa Park"
+      },
+      {
+        "id": "crystal-palace",
+        "name": "Crystal Palace",
+        "league": "premier-league",
+        "city": "London",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Selhurst Park"
+      },
+      {
+        "id": "brighton",
+        "name": "Brighton & Hove Albion",
+        "league": "premier-league",
+        "city": "Brighton",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Amex Stadium"
+      },
+      {
+        "id": "southampton",
+        "name": "Southampton",
+        "league": "premier-league",
+        "city": "Southampton",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "St Mary's Stadium"
+      },
+      {
+        "id": "wolves",
+        "name": "Wolverhampton Wanderers",
+        "league": "premier-league",
+        "city": "Wolverhampton",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Molineux Stadium"
+      },
+      {
+        "id": "burnley",
+        "name": "Burnley",
+        "league": "premier-league",
+        "city": "Burnley",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Turf Moor"
+      },
+      {
+        "id": "leeds",
+        "name": "Leeds United",
+        "league": "premier-league",
+        "city": "Leeds",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Elland Road"
+      },
+      {
+        "id": "fulham",
+        "name": "Fulham",
+        "league": "premier-league",
+        "city": "London",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Craven Cottage"
+      },
+      {
+        "id": "brentford",
+        "name": "Brentford",
+        "league": "premier-league",
+        "city": "London",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Brentford Community Stadium"
+      },
+      {
+        "id": "norwich",
+        "name": "Norwich City",
+        "league": "premier-league",
+        "city": "Norwich",
+        "country": "England",
+        "timezone": "Europe/London",
+        "homeStadium": "Carrow Road"
       }
     ]
   }

@@ -1,0 +1,84 @@
+{
+    "teams": [
+      {
+        "id": "ads",
+        "name": "Adelaide Strikers",
+        "league": "bbl",
+        "city": "Adelaide",
+        "state": "South Australia",
+        "country": "Australia",
+        "timezone": "Australia/Adelaide",
+        "homeGround": "Adelaide Oval"
+      },
+      {
+        "id": "bh",
+        "name": "Brisbane Heat",
+        "league": "bbl",
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "timezone": "Australia/Brisbane",
+        "homeGround": "The Gabba"
+      },
+      {
+        "id": "hh",
+        "name": "Hobart Hurricanes",
+        "league": "bbl",
+        "city": "Hobart",
+        "state": "Tasmania",
+        "country": "Australia",
+        "timezone": "Australia/Hobart",
+        "homeGround": "Blundstone Arena"
+      },
+      {
+        "id": "ms",
+        "name": "Melbourne Stars",
+        "league": "bbl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Melbourne Cricket Ground"
+      },
+      {
+        "id": "mr",
+        "name": "Melbourne Renegades",
+        "league": "bbl",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "timezone": "Australia/Melbourne",
+        "homeGround": "Marvel Stadium"
+      },
+      {
+        "id": "ps",
+        "name": "Perth Scorchers",
+        "league": "bbl",
+        "city": "Perth",
+        "state": "Western Australia",
+        "country": "Australia",
+        "timezone": "Australia/Perth",
+        "homeGround": "Perth Stadium"
+      },
+      {
+        "id": "ss",
+        "name": "Sydney Sixers",
+        "league": "bbl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Sydney Cricket Ground"
+      },
+      {
+        "id": "st",
+        "name": "Sydney Thunder",
+        "league": "bbl",
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia",
+        "timezone": "Australia/Sydney",
+        "homeGround": "Sydney Showground Stadium"
+      }
+    ]
+  }

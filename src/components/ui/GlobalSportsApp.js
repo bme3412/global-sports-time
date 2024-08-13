@@ -11,6 +11,15 @@ import GameTimeConverter from "./GameTimeConverter";
 import leaguesData from "@/data/leagues.json";
 import locationsData from "@/data/locations.json";
 import nbaTeamsData from "@/data/teams/nba_teams.json";
+import nflTeamsData from "@/data/teams/nfl_teams.json";
+import mlbTeamsData from "@/data/teams/mlb_teams.json";
+import nhlTeamsData from "@/data/teams/nhl_teams.json";
+import iplTeamsData from "@/data/teams/ipl_teams.json";
+import cplTeamsData from "@/data/teams/cpl_teams.json";
+import bblTeamsData from "@/data/teams/bbl_teams.json";
+import nrlTeamsData from "@/data/teams/nrl_teams.json";
+import aflTeamsData from "@/data/teams/afl_teams.json";
+import npbTeamsData from "@/data/teams/npb_teams.json";
 import premierLeagueTeamsData from "@/data/teams/premierleague_teams.json";
 import euroLeagueTeamsData from "@/data/teams/euroleague_teams.json";
 import laLigaTeamsData from "@/data/teams/laliga_teams.json";
@@ -29,6 +38,15 @@ import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
 const locations = Array.isArray(locationsData.locations) ? locationsData.locations : [];
 const nbaTeams = Array.isArray(nbaTeamsData.teams) ? nbaTeamsData.teams : [];
+const nflTeams = Array.isArray(nflTeamsData.teams) ? nflTeamsData.teams : [];
+const mlbTeams = Array.isArray(mlbTeamsData.teams) ? mlbTeamsData.teams : [];
+const nhlTeams = Array.isArray(nhlTeamsData.teams) ? nhlTeamsData.teams : [];
+const iplTeams = Array.isArray(iplTeamsData.teams) ? iplTeamsData.teams : [];
+const cplTeams = Array.isArray(cplTeamsData.teams) ? cplTeamsData.teams : [];
+const bblTeams = Array.isArray(bblTeamsData.teams) ? bblTeamsData.teams : [];
+const nrlTeams = Array.isArray(nrlTeamsData.teams) ? nrlTeamsData.teams : [];
+const aflTeams = Array.isArray(aflTeamsData.teams) ? aflTeamsData.teams : [];
+const npbTeams = Array.isArray(npbTeamsData.teams) ? npbTeamsData.teams : [];
 const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams) ? premierLeagueTeamsData.teams : [];
 const euroLeagueTeams = Array.isArray(euroLeagueTeamsData.teams) ? euroLeagueTeamsData.teams : [];
 const laLigaTeams = Array.isArray(laLigaTeamsData.teams) ? laLigaTeamsData.teams : [];
@@ -42,6 +60,15 @@ const mlsViewingOptions = mlsViewingOptionsData || {};
 // Combine team data
 const teams = [
   ...nbaTeams,
+  ...nflTeams,
+  ...mlbTeams,
+  ...nhlTeams,
+  ...iplTeams,
+  ...cplTeams,
+  ...bblTeams,
+  ...nrlTeams,
+  ...aflTeams,
+  ...npbTeams,
   ...premierLeagueTeams,
   ...euroLeagueTeams,
   ...laLigaTeams,

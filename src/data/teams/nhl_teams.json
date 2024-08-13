@@ -1,0 +1,154 @@
+{
+    "teams": [
+      {
+        "id": "canadiens",
+        "name": "Montreal Canadiens",
+        "league": "nhl",
+        "city": "Montreal",
+        "state": "Quebec",
+        "country": "Canada",
+        "timezone": "America/Montreal",
+        "homeArena": "Bell Centre"
+      },
+      {
+        "id": "mapleleafs",
+        "name": "Toronto Maple Leafs",
+        "league": "nhl",
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "Canada",
+        "timezone": "America/Toronto",
+        "homeArena": "Scotiabank Arena"
+      },
+      {
+        "id": "bruins",
+        "name": "Boston Bruins",
+        "league": "nhl",
+        "city": "Boston",
+        "state": "Massachusetts",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "TD Garden"
+      },
+      {
+        "id": "rangers",
+        "name": "New York Rangers",
+        "league": "nhl",
+        "city": "New York City",
+        "state": "New York",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Madison Square Garden"
+      },
+      {
+        "id": "redwings",
+        "name": "Detroit Red Wings",
+        "league": "nhl",
+        "city": "Detroit",
+        "state": "Michigan",
+        "country": "USA",
+        "timezone": "America/Detroit",
+        "homeArena": "Little Caesars Arena"
+      },
+      {
+        "id": "blackhawks",
+        "name": "Chicago Blackhawks",
+        "league": "nhl",
+        "city": "Chicago",
+        "state": "Illinois",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "United Center"
+      },
+      {
+        "id": "oilers",
+        "name": "Edmonton Oilers",
+        "league": "nhl",
+        "city": "Edmonton",
+        "state": "Alberta",
+        "country": "Canada",
+        "timezone": "America/Edmonton",
+        "homeArena": "Rogers Place"
+      },
+      {
+        "id": "penguins",
+        "name": "Pittsburgh Penguins",
+        "league": "nhl",
+        "city": "Pittsburgh",
+        "state": "Pennsylvania",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "PPG Paints Arena"
+      },
+      {
+        "id": "avalanche",
+        "name": "Colorado Avalanche",
+        "league": "nhl",
+        "city": "Denver",
+        "state": "Colorado",
+        "country": "USA",
+        "timezone": "America/Denver",
+        "homeArena": "Ball Arena"
+      },
+      {
+        "id": "capitals",
+        "name": "Washington Capitals",
+        "league": "nhl",
+        "city": "Washington",
+        "state": "D.C.",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Capital One Arena"
+      },
+      {
+        "id": "canucks",
+        "name": "Vancouver Canucks",
+        "league": "nhl",
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "country": "Canada",
+        "timezone": "America/Vancouver",
+        "homeArena": "Rogers Arena"
+      },
+      {
+        "id": "lightning",
+        "name": "Tampa Bay Lightning",
+        "league": "nhl",
+        "city": "Tampa",
+        "state": "Florida",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Amalie Arena"
+      },
+      {
+        "id": "goldenknights",
+        "name": "Vegas Golden Knights",
+        "league": "nhl",
+        "city": "Las Vegas",
+        "state": "Nevada",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeArena": "T-Mobile Arena"
+      },
+      {
+        "id": "flames",
+        "name": "Calgary Flames",
+        "league": "nhl",
+        "city": "Calgary",
+        "state": "Alberta",
+        "country": "Canada",
+        "timezone": "America/Edmonton",
+        "homeArena": "Scotiabank Saddledome"
+      },
+      {
+        "id": "predators",
+        "name": "Nashville Predators",
+        "league": "nhl",
+        "city": "Nashville",
+        "state": "Tennessee",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "Bridgestone Arena"
+      }
+    ]
+  }

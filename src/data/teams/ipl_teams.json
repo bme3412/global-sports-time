@@ -1,0 +1,104 @@
+{
+    "teams": [
+      {
+        "id": "csk",
+        "name": "Chennai Super Kings",
+        "league": "ipl",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "M. A. Chidambaram Stadium"
+      },
+      {
+        "id": "mi",
+        "name": "Mumbai Indians",
+        "league": "ipl",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "Wankhede Stadium"
+      },
+      {
+        "id": "rcb",
+        "name": "Royal Challengers Bangalore",
+        "league": "ipl",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "M. Chinnaswamy Stadium"
+      },
+      {
+        "id": "kkr",
+        "name": "Kolkata Knight Riders",
+        "league": "ipl",
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "Eden Gardens"
+      },
+      {
+        "id": "dc",
+        "name": "Delhi Capitals",
+        "league": "ipl",
+        "city": "Delhi",
+        "state": "Delhi",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "Arun Jaitley Stadium"
+      },
+      {
+        "id": "rr",
+        "name": "Rajasthan Royals",
+        "league": "ipl",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "Sawai Mansingh Stadium"
+      },
+      {
+        "id": "srh",
+        "name": "Sunrisers Hyderabad",
+        "league": "ipl",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "Rajiv Gandhi International Cricket Stadium"
+      },
+      {
+        "id": "pbks",
+        "name": "Punjab Kings",
+        "league": "ipl",
+        "city": "Mohali",
+        "state": "Punjab",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "IS Bindra Stadium"
+      },
+      {
+        "id": "gt",
+        "name": "Gujarat Titans",
+        "league": "ipl",
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "Narendra Modi Stadium"
+      },
+      {
+        "id": "lsg",
+        "name": "Lucknow Super Giants",
+        "league": "ipl",
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "country": "India",
+        "timezone": "Asia/Kolkata",
+        "homeGround": "BRSABV Ekana Cricket Stadium"
+      }
+    ]
+  }
