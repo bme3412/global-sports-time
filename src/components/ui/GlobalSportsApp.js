@@ -7,6 +7,7 @@ import LocationSelector from "./LocationSelector";
 import GameSchedule from "./GameSchedule";
 import GameTimeConverter from "./GameTimeConverter";
 
+
 // Import JSON data
 import leaguesData from "@/data/leagues.json";
 import locationsData from "@/data/locations.json";
@@ -98,7 +99,8 @@ export default function GlobalSportsApp() {
     const [selectedLeague, setSelectedLeague] = useState("");
     const [selectedTeams, setSelectedTeams] = useState([]);
     const [watchLocation, setWatchLocation] = useState("");
-    const [userCountry, setUserCountry] = useState("us"); // Default to US
+    const [selectedLocation, setSelectedLocation] = useState(""); // Add this line
+    const [userCountry, setUserCountry] = useState("us");
     const [watchDateRange, setWatchDateRange] = useState({ start: "", end: "" });
     const [filteredGames, setFilteredGames] = useState([]);
     const [userTimezone, setUserTimezone] = useState(
@@ -106,77 +108,89 @@ export default function GlobalSportsApp() {
     );
   
     const [selectedGame, setSelectedGame] = useState(null);
+    const [gameViewingOptions, setGameViewingOptions] = useState(null);
     const [premierLeagueGames, setPremierLeagueGames] = useState([]);
-  
-    useEffect(() => {
-      // Set Premier League games
-      setPremierLeagueGames(
-        premierLeagueSchedule.map((game, index) => ({
-          ...game,
-          id: `pl-${index}`,
-          league: "premier-league",
-          onSky: game["On Sky Sports"] === "Yes",
-        }))
-      );
+
+  useEffect(() => {
+    // Set Premier League games
+    setPremierLeagueGames(
+      premierLeagueSchedule.map((game, index) => ({
+        ...game,
+        id: `pl-${index}`,
+        league: "premier-league",
+        onSky: game["On Sky Sports"] === "Yes",
+      }))
+    );
 
     // Update userCountry when watchLocation changes
     if (watchLocation) {
-        const selectedLocation = locations.find(loc => loc.id === watchLocation);
-        if (selectedLocation && selectedLocation.country) {
-          setUserCountry(selectedLocation.country);
-          console.log("Updated userCountry:", selectedLocation.country); // Debug log
-        }
-      } else {
-        // If no location is selected, attempt to determine user's country
-        fetch('https://ipapi.co/json/')
-          .then(res => res.json())
-          .then(data => {
-            setUserCountry(data.country_code.toLowerCase());
-            console.log("Updated userCountry from IP:", data.country_code.toLowerCase()); // Debug log
-          })
-          .catch(error => {
-            console.error('Error fetching user country:', error);
-            // Keep the default "us" if there's an error
-          });
+      const selectedLocation = locations.find(
+        (loc) => loc.id === watchLocation
+      );
+      if (selectedLocation && selectedLocation.country) {
+        setUserCountry(selectedLocation.country);
+        console.log("Updated userCountry:", selectedLocation.country); // Debug log
       }
-    }, [watchLocation]);
-  
-    const handleLocationChange = (newLocation) => {
-      setWatchLocation(newLocation);
-      console.log("New watch location:", newLocation); // Debug log
-    };
-  
-    useEffect(() => {
-      let newFilteredGames = [];
-  
-      if (selectedLeague === "premier-league" && selectedTeams.length > 0) {
-        newFilteredGames = premierLeagueGames.filter(
-          (game) =>
-            selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-        );
-        } else {
-          // Handle other leagues here if necessary
-          // For example:
-          // newFilteredGames = otherLeaguesGames.filter(...);
-        }
-    
-        if (watchDateRange.start && watchDateRange.end) {
-            const startDate = new Date(watchDateRange.start);
-            const endDate = new Date(watchDateRange.end);
-            newFilteredGames = newFilteredGames.filter((game) => {
-              const gameDate = new Date(game.Date);
-              return gameDate >= startDate && gameDate <= endDate;
-            });
-          }
-      
-          newFilteredGames.sort((a, b) => new Date(a.Date) - new Date(b.Date));
-          setFilteredGames(newFilteredGames);
-        }, [selectedLeague, selectedTeams, watchDateRange, premierLeagueGames]);
-      
-        const handleGameSelect = (game) => {
-          setSelectedGame(game);
-        };
-      
+    } else {
+      // If no location is selected, attempt to determine user's country
+      fetch("https://ipapi.co/json/")
+        .then((res) => res.json())
+        .then((data) => {
+          setUserCountry(data.country_code.toLowerCase());
+          console.log(
+            "Updated userCountry from IP:",
+            data.country_code.toLowerCase()
+          ); // Debug log
+        })
+        .catch((error) => {
+          console.error("Error fetching user country:", error);
+          // Keep the default "us" if there's an error
+        });
+    }
+  }, [watchLocation]);
+
+  const handleLocationChange = (newLocation) => {
+    setWatchLocation(newLocation);
+    setSelectedLocation(newLocation);
+    console.log("New watch location:", newLocation);
+
+    const selectedLocationData = locations.find(loc => loc.id === newLocation);
+    if (selectedLocationData && selectedLocationData.country) {
+      setUserCountry(selectedLocationData.country.toLowerCase());
+      console.log("Updated userCountry:", selectedLocationData.country.toLowerCase());
+    }
+  };
+
+  useEffect(() => {
+    let newFilteredGames = [];
+
+    if (selectedLeague === "premier-league" && selectedTeams.length > 0) {
+      newFilteredGames = premierLeagueGames.filter(
+        (game) =>
+          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
+      );
+    } else {
+      // Handle other leagues here if necessary
+      // For example:
+      // newFilteredGames = otherLeaguesGames.filter(...);
+    }
+
+    if (watchDateRange.start && watchDateRange.end) {
+      const startDate = new Date(watchDateRange.start);
+      const endDate = new Date(watchDateRange.end);
+      newFilteredGames = newFilteredGames.filter((game) => {
+        const gameDate = new Date(game.Date);
+        return gameDate >= startDate && gameDate <= endDate;
+      });
+    }
+
+    newFilteredGames.sort((a, b) => new Date(a.Date) - new Date(b.Date));
+    setFilteredGames(newFilteredGames);
+  }, [selectedLeague, selectedTeams, watchDateRange, premierLeagueGames]);
+
+  const handleGameSelect = (game) => {
+    setSelectedGame(game);
+  };
 
   const handleSportChange = (sport) => {
     setSelectedSport(sport);
@@ -214,11 +228,11 @@ export default function GlobalSportsApp() {
 
   const getViewingOptions = (league) => {
     switch (league) {
-      case 'nba':
+      case "nba":
         return nbaViewingOptions;
-      case 'mls':
+      case "mls":
         return mlsViewingOptions;
-      case 'premier-league':
+      case "premier-league":
         return premierLeagueViewingOptionsData.premierLeague;
       default:
         return {};
@@ -226,7 +240,16 @@ export default function GlobalSportsApp() {
   };
 
 
-
+  useEffect(() => {
+    if (selectedGame && selectedLeague) {
+      const leagueViewingOptions = getViewingOptions(selectedLeague);
+      const countryOptions = leagueViewingOptions[userCountry.toLowerCase()];
+      setGameViewingOptions(countryOptions);
+    } else {
+      setGameViewingOptions(null);
+    }
+  }, [selectedGame, selectedLeague, userCountry]);
+  
   return (
     <div className="max-w-7xl mx-auto p-4">
       <div className="flex flex-col md:flex-row gap-8 mb-8">
@@ -267,14 +290,19 @@ export default function GlobalSportsApp() {
           <CardContent>
             <LocationSelector
               locations={locations}
-              setWatchLocation={setWatchLocation}
+              setWatchLocation={handleLocationChange}
               watchDateRange={watchDateRange}
               setWatchDateRange={setWatchDateRange}
+              selectedLocation={selectedLocation}
             />
             <GameTimeConverter
               gameTime={selectedGame ? selectedGame.Time : null}
               gameDate={selectedGame ? selectedGame.Date : null}
-              gameTimezone={selectedGame && selectedGame.Home ? teamDetails[selectedGame.Home]?.timezone : userTimezone}
+              gameTimezone={
+                selectedGame && selectedGame.Home
+                  ? teamDetails[selectedGame.Home]?.timezone
+                  : userTimezone
+              }
               watchLocation={watchLocation}
               locations={locations}
             />
@@ -294,7 +322,7 @@ export default function GlobalSportsApp() {
           teamDetails={teamDetails}
           selectedLeague={selectedLeague}
           userTimezone={userTimezone}
-          isPremierLeague={selectedLeague === 'premier-league'}
+          isPremierLeague={selectedLeague === "premier-league"}
           userCountry={userCountry}
           premierLeagueTeams={premierLeagueTeamsData.teams}
           onGameSelect={handleGameSelect}

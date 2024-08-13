@@ -12,33 +12,6 @@ const IconLabel = ({ icon: Icon, label, value }) => (
   </div>
 );
 
-const countryCodeMapping = {
-  'us': 'us',
-  'gb': 'gb',
-  'ca': 'ca',
-  'au': 'au',
-  'in': 'in',
-  'fr': 'fr',
-  'de': 'de',
-  'es': 'es',
-  'br': 'br',
-  'mx': 'mx',
-  'cn': 'cn',
-  'jp': 'jp',
-  'nl': 'nl',
-  'se': 'se',
-  'no': 'no',
-  'dk': 'dk',
-  'za': 'za',
-  'ae': 'ae',
-  'sg': 'sg',
-  'th': 'th',
-  'eg': 'eg',
-  'kr': 'kr',
-  'tr': 'tr',
-  'ru': 'ru'
-};
-
 const GameSchedule = ({
     filteredGames,
     watchDateRange,
@@ -59,8 +32,7 @@ const GameSchedule = ({
 
   useEffect(() => {
     if (isPremierLeague && viewingOptions && userCountry) {
-      const mappedCountry = countryCodeMapping[userCountry] || userCountry;
-      const countryInfo = viewingOptions[mappedCountry] || viewingOptions['us'] || {};
+      const countryInfo = viewingOptions[userCountry.toLowerCase()] || viewingOptions['us'] || {};
       setCurrentViewingInfo(countryInfo);
     } else {
       setCurrentViewingInfo(viewingOptions || {});
@@ -73,7 +45,7 @@ const GameSchedule = ({
       const endDate = parse(watchDateRange.end, 'yyyy-MM-dd', new Date());
       
       const filteredGamesInRange = filteredGames.filter(game => {
-        const gameDate = parse(game.Date, 'EEEE d MMMM yyyy', new Date());
+        const gameDate = parse(game.Date || game.date, 'EEEE d MMMM yyyy', new Date());
         return isWithinInterval(gameDate, { start: startDate, end: endDate });
       });
 
@@ -103,13 +75,7 @@ const GameSchedule = ({
       return `${teamName} Stadium`;
     }
     const team = premierLeagueTeams.find(t => t.name === teamName);
-    if (team) {
-      console.log(`Found team: ${team.name}, Stadium: ${team.homeStadium}`); // Debug log
-      return `${team.homeStadium}, ${team.city}`;
-    } else {
-      console.log(`Team not found: ${teamName}`); // Debug log
-      return `${teamName} Stadium`;
-    }
+    return team ? `${team.homeStadium}, ${team.city}` : `${teamName} Stadium`;
   };
 
   const getWatchLocationTimezone = () => {
@@ -118,98 +84,95 @@ const GameSchedule = ({
   };
 
   const handleGameClick = (game) => {
-    console.log("Game clicked:", game); // Debug log
+    console.log("Game clicked:", game);
     onGameSelect(game);
+  };
+
+  const getTeamName = (teamId) => {
+    const team = teamDetails[teamId];
+    return team ? team.name : teamId;
+  };
+
+  const renderGameInfo = (game, index) => {
+    const watchLocationTimezone = getWatchLocationTimezone();
+    const gameTimezone = isPremierLeague 
+      ? teamDetails[game.Home]?.timezone || userTimezone
+      : teamDetails[game.team1]?.timezone || userTimezone;
+
+    const isSelected = selectedGame && selectedGame.id === game.id;
+
+    return (
+      <Card 
+        key={index} 
+        className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer ${isSelected ? 'border-2 border-blue-500' : ''}`}
+        onClick={() => handleGameClick(game)}
+      >
+        <CardContent className="p-6">
+          <h2 className="text-xl font-bold mb-4 text-gray-800">
+            {isPremierLeague
+              ? `${game.Home} vs ${game.Away}`
+              : `${getTeamName(game.team1)} vs ${getTeamName(game.team2)}`
+            }
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <IconLabel
+              icon={Calendar}
+              label="Game Time"
+              value={formatGameTime(game.Date || game.date, game.Time || game.time, gameTimezone, gameTimezone)}
+            />
+            <IconLabel
+              icon={Clock}
+              label="Your Local Time"
+              value={formatGameTime(game.Date || game.date, game.Time || game.time, gameTimezone, watchLocationTimezone)}
+            />
+            <IconLabel
+              icon={MapPin}
+              label="Venue"
+              value={isPremierLeague
+                ? getStadiumInfo(game.Home)
+                : (game.venue || `${getTeamName(game.team1 || game.Home)} Stadium`)
+              }
+            />
+            <IconLabel
+              icon={Tv}
+              label="Broadcast"
+              value={currentViewingInfo.services ? currentViewingInfo.services.map(s => s.name).join(", ") : "TBA"}
+            />
+            <IconLabel
+              icon={MapPin}
+              label="Your Watch Location"
+              value={locations.find((loc) => loc.id === watchLocation)?.name || "Not specified"}
+            />
+            {currentViewingInfo.cost && (
+              <IconLabel
+                icon={DollarSign}
+                label="Viewing Cost"
+                value={currentViewingInfo.cost}
+              />
+            )}
+            {currentViewingInfo.restrictions && (
+              <IconLabel
+                icon={AlertTriangle}
+                label="Restrictions"
+                value={currentViewingInfo.restrictions}
+              />
+            )}
+            {currentViewingInfo.additionalInfo && (
+              <IconLabel
+                icon={Info}
+                label="Additional Info"
+                value={currentViewingInfo.additionalInfo}
+              />
+            )}
+          </div>
+        </CardContent>
+      </Card>
+    );
   };
 
   return (
     <div className="space-y-4">
-      {gamesInRange.map((game, index) => {
-        const watchLocationTimezone = getWatchLocationTimezone();
-        const gameTimezone = isPremierLeague 
-          ? teamDetails[game.Home]?.timezone || userTimezone
-          : teamDetails[game.team1]?.timezone || userTimezone;
-
-        const isSelected = selectedGame && selectedGame.id === game.id;
-
-        return (
-          <Card 
-            key={index} 
-            className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer ${isSelected ? 'border-2 border-blue-500' : ''}`}
-            onClick={() => handleGameClick(game)}
-          >
-            <CardContent className="p-6">
-              <h2 className="text-xl font-bold mb-4 text-gray-800">
-                {isPremierLeague
-                  ? `${game.Home} vs ${game.Away}`
-                  : `${getTeamName(game.team1)} vs ${getTeamName(game.team2)}`
-                }
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <IconLabel
-                  icon={Calendar}
-                  label="Game Time"
-                  value={isPremierLeague
-                    ? formatGameTime(game.Date, game.Time, gameTimezone, gameTimezone)
-                    : formatGameTime(game.date, game.time, gameTimezone, gameTimezone)
-                  }
-                />
-                {watchLocation && (
-                  <IconLabel
-                    icon={Clock}
-                    label="Your Local Time"
-                    value={isPremierLeague
-                      ? formatGameTime(game.Date, game.Time, gameTimezone, watchLocationTimezone)
-                      : formatGameTime(game.date, game.time, gameTimezone, watchLocationTimezone)
-                    }
-                  />
-                )}
-                <IconLabel
-                  icon={MapPin}
-                  label="Venue"
-                  value={isPremierLeague
-                    ? getStadiumInfo(game.Home)
-                    : (game.venue || `${getTeamName(game.team1)} Stadium`)
-                  }
-                />
-                <IconLabel
-                  icon={Tv}
-                  label="Broadcast"
-                  value={currentViewingInfo.services ? currentViewingInfo.services.join(", ") : "TBA"}
-                />
-                {watchLocation && (
-                  <IconLabel
-                    icon={MapPin}
-                    label="Your Watch Location"
-                    value={locations.find((loc) => loc.id === watchLocation)?.name || "N/A"}
-                  />
-                )}
-                {currentViewingInfo.cost && (
-                  <IconLabel
-                    icon={DollarSign}
-                    label="Viewing Cost"
-                    value={currentViewingInfo.cost}
-                  />
-                )}
-                {currentViewingInfo.restrictions && (
-                  <IconLabel
-                    icon={AlertTriangle}
-                    label="Restrictions"
-                    value={currentViewingInfo.restrictions}
-                  />
-                )}
-                {currentViewingInfo.additionalInfo && (
-                  <IconLabel
-                    icon={Info}
-                    label="Additional Info"
-                    value={currentViewingInfo.additionalInfo}
-                  />
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        );
-      })}
+      {gamesInRange.map((game, index) => renderGameInfo(game, index))}
     </div>
   );
 };

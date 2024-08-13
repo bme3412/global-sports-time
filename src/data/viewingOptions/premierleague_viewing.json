@@ -2,10 +2,10 @@
     "premierLeague": {
       "gb": {
         "services": [
-          "Sky Sports",
-          "BT Sport",
-          "Amazon Prime Video",
-          "BBC (highlights)"
+          {"name": "Sky Sports", "link": "https://www.skysports.com/"},
+          {"name": "BT Sport", "link": "https://www.bt.com/sport"},
+          {"name": "Amazon Prime Video", "link": "https://www.amazon.co.uk/Prime-Video/b?node=3280626031"},
+          {"name": "BBC (highlights)", "link": "https://www.bbc.co.uk/sport/football"}
         ],
         "cost": "£41/month for Sky Sports, £25/month for BT Sport",
         "restrictions": "No 3pm Saturday matches broadcast live",
@@ -13,10 +13,10 @@
       },
       "us": {
         "services": [
-          "NBC Sports",
-          "Peacock",
-          "USA Network",
-          "Telemundo"
+          {"name": "NBC Sports", "link": "https://www.nbcsports.com/"},
+          {"name": "Peacock", "link": "https://www.peacocktv.com/"},
+          {"name": "USA Network", "link": "https://www.usanetwork.com/"},
+          {"name": "Telemundo", "link": "https://www.telemundo.com/"}
         ],
         "cost": "$4.99/month for Peacock Premium",
         "restrictions": "Some matches exclusive to Peacock",
@@ -24,7 +24,7 @@
       },
       "ca": {
         "services": [
-          "DAZN"
+          {"name": "DAZN", "link": "https://www.dazn.com/en-CA"}
         ],
         "cost": "CAD 24.99/month for DAZN",
         "restrictions": "No local blackouts",
@@ -32,7 +32,7 @@
       },
       "au": {
         "services": [
-          "Optus Sport"
+          {"name": "Optus Sport", "link": "https://www.optus.com.au/sport/optus-sport"}
         ],
         "cost": "AUD 24.99/month for Optus Sport",
         "restrictions": "No local blackouts",
@@ -40,8 +40,8 @@
       },
       "in": {
         "services": [
-          "Star Sports",
-          "Disney+ Hotstar"
+          {"name": "Star Sports", "link": "https://www.hotstar.com/in/sports/football"},
+          {"name": "Disney+ Hotstar", "link": "https://www.hotstar.com/in"}
         ],
         "cost": "₹299/month for Disney+ Hotstar",
         "restrictions": "No local blackouts",
@@ -49,8 +49,8 @@
       },
       "fr": {
         "services": [
-          "Canal+",
-          "RMC Sport"
+          {"name": "Canal+", "link": "https://www.canalplus.com/"},
+          {"name": "RMC Sport", "link": "https://rmcsport.bfmtv.com/"}
         ],
         "cost": "€19.90/month for Canal+ Sport",
         "restrictions": "No local blackouts",
@@ -58,7 +58,7 @@
       },
       "de": {
         "services": [
-          "Sky Deutschland"
+          {"name": "Sky Deutschland", "link": "https://www.sky.de/"}
         ],
         "cost": "€29.99/month for Sky Ticket Sport",
         "restrictions": "No local blackouts",
@@ -66,7 +66,7 @@
       },
       "es": {
         "services": [
-          "DAZN"
+          {"name": "DAZN", "link": "https://www.dazn.com/es-ES"}
         ],
         "cost": "€9.99/month for DAZN",
         "restrictions": "No local blackouts",
@@ -74,8 +74,8 @@
       },
       "br": {
         "services": [
-          "ESPN Brasil",
-          "Star+"
+          {"name": "ESPN Brasil", "link": "https://www.espn.com.br/"},
+          {"name": "Star+", "link": "https://www.starplus.com/"}
         ],
         "cost": "R$45.90/month for Star+",
         "restrictions": "No local blackouts",
@@ -83,8 +83,8 @@
       },
       "mx": {
         "services": [
-          "Sky Sports",
-          "Paramount+"
+          {"name": "Sky Sports", "link": "https://www.sky.com.mx/"},
+          {"name": "Paramount+", "link": "https://www.paramountplus.com/mx/"}
         ],
         "cost": "MXN 79/month for Paramount+",
         "restrictions": "No local blackouts",
@@ -92,7 +92,7 @@
       },
       "cn": {
         "services": [
-          "iQIYI Sports"
+          {"name": "iQIYI Sports", "link": "https://www.iqiyi.com/"}
         ],
         "cost": "Varies based on package",
         "restrictions": "No local blackouts",
@@ -100,7 +100,7 @@
       },
       "jp": {
         "services": [
-          "DAZN"
+          {"name": "DAZN", "link": "https://www.dazn.com/ja-JP"}
         ],
         "cost": "¥1,925/month for DAZN",
         "restrictions": "No local blackouts",
@@ -108,7 +108,7 @@
       },
       "nl": {
         "services": [
-          "Viaplay"
+          {"name": "Viaplay", "link": "https://viaplay.nl/"}
         ],
         "cost": "€13.99/month for Viaplay",
         "restrictions": "No local blackouts",
@@ -116,7 +116,7 @@
       },
       "se": {
         "services": [
-          "Viaplay"
+          {"name": "Viaplay", "link": "https://viaplay.se/"}
         ],
         "cost": "SEK 449/month for Viaplay Total",
         "restrictions": "No local blackouts",
@@ -124,7 +124,7 @@
       },
       "no": {
         "services": [
-          "TV2"
+          {"name": "TV2", "link": "https://www.tv2.no/"}
         ],
         "cost": "NOK 699/month for TV2 Play",
         "restrictions": "No local blackouts",
@@ -132,7 +132,7 @@
       },
       "dk": {
         "services": [
-          "Viaplay"
+          {"name": "Viaplay", "link": "https://viaplay.dk/"}
         ],
         "cost": "DKK 449/month for Viaplay Total",
         "restrictions": "No local blackouts",
@@ -140,7 +140,7 @@
       },
       "za": {
         "services": [
-          "SuperSport"
+          {"name": "SuperSport", "link": "https://supersport.com/"}
         ],
         "cost": "Varies based on package",
         "restrictions": "No local blackouts",
@@ -148,7 +148,7 @@
       },
       "ae": {
         "services": [
-          "beIN Sports"
+          {"name": "beIN Sports", "link": "https://www.bein.com/en/"}
         ],
         "cost": "AED 76/month for beIN SPORTS CONNECT",
         "restrictions": "No local blackouts",
@@ -156,8 +156,8 @@
       },
       "sg": {
         "services": [
-          "StarHub",
-          "Singtel"
+          {"name": "StarHub", "link": "https://www.starhub.com/"},
+          {"name": "Singtel", "link": "https://www.singtel.com/"}
         ],
         "cost": "SGD 64.90/month for StarHub Sports+ Pass",
         "restrictions": "No local blackouts",
@@ -165,7 +165,7 @@
       },
       "th": {
         "services": [
-          "True Visions"
+          {"name": "True Visions", "link": "https://truevisions.truecorp.co.th/"}
         ],
         "cost": "THB 499/month for True Premier Football HD",
         "restrictions": "No local blackouts",
@@ -173,7 +173,7 @@
       },
       "eg": {
         "services": [
-          "beIN Sports"
+          {"name": "beIN Sports", "link": "https://www.bein.com/ar/"}
         ],
         "cost": "EGP 250/month for beIN SPORTS CONNECT",
         "restrictions": "No local blackouts",
@@ -181,7 +181,7 @@
       },
       "kr": {
         "services": [
-          "SPOTV"
+          {"name": "SPOTV", "link": "https://www.spotvnow.co.kr/"}
         ],
         "cost": "Varies based on package",
         "restrictions": "No local blackouts",
@@ -189,7 +189,7 @@
       },
       "tr": {
         "services": [
-          "beIN Sports"
+          {"name": "beIN Sports", "link": "https://www.beinsports.com/tr/"}
         ],
         "cost": "TRY 159/month for beIN CONNECT",
         "restrictions": "No local blackouts",
@@ -197,7 +197,7 @@
       },
       "ru": {
         "services": [
-          "Okko Sport"
+          {"name": "Okko Sport", "link": "https://okko.sport/"}
         ],
         "cost": "RUB 549/month for Okko Sport",
         "restrictions": "No local blackouts",

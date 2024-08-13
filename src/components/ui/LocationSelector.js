@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MapPin, Calendar, AlertCircle } from "lucide-react";
-import { format, isAfter, isBefore } from "date-fns";
+import { format, isAfter, isBefore, parseISO } from "date-fns";
 
 // Helper function to convert country code to emoji flag
 const getCountryFlag = (countryCode) => {
@@ -11,7 +11,7 @@ const getCountryFlag = (countryCode) => {
   return String.fromCodePoint(...codePoints);
 };
 
-const LocationSelector = ({ locations, setWatchLocation, watchDateRange, setWatchDateRange }) => {
+const LocationSelector = ({ locations, setWatchLocation, watchDateRange, setWatchDateRange, selectedLocation }) => {
   const [localDateRange, setLocalDateRange] = useState({ start: "", end: "" });
   const [dateError, setDateError] = useState("");
 
@@ -28,7 +28,7 @@ const LocationSelector = ({ locations, setWatchLocation, watchDateRange, setWatc
     };
 
     if (newDateRange.start && newDateRange.end) {
-      if (isAfter(new Date(newDateRange.start), new Date(newDateRange.end))) {
+      if (isAfter(parseISO(newDateRange.start), parseISO(newDateRange.end))) {
         setDateError("End date cannot be before start date");
         return;
       }
@@ -52,7 +52,7 @@ const LocationSelector = ({ locations, setWatchLocation, watchDateRange, setWatc
 
   const formatDate = (dateString) => {
     if (!dateString) return "";
-    return format(new Date(dateString), "MMM d, yyyy");
+    return format(parseISO(dateString), "MMM d, yyyy");
   };
 
   return (
@@ -66,6 +66,7 @@ const LocationSelector = ({ locations, setWatchLocation, watchDateRange, setWatc
           <select
             id="location"
             onChange={(e) => setWatchLocation(e.target.value)}
+            value={selectedLocation}
             className="w-full pl-10 pr-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="">Select location</option>
