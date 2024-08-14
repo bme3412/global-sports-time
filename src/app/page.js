@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import GlobalSportsApp from '@/components/ui/GlobalSportsApp';
-import VPNComparison from '@/components/ui/VPNComparison';
+import GlobalSportsApp from '@/components/GlobalSportsApp';
+import VPNComparison from '@/components/VPNComparison';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Globe, Tv, Shield, ChevronDown, ChevronUp } from 'lucide-react';

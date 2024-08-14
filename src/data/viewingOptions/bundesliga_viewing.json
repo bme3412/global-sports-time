@@ -1,0 +1,109 @@
+{
+    "bundesliga": {
+      "de": {
+        "services": [
+          {"name": "Sky Deutschland", "link": "https://www.sky.de/"},
+          {"name": "DAZN", "link": "https://www.dazn.com/de-DE"}
+        ],
+        "cost": "€29.99/month for Sky Ticket Sport, €14.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Deutschland holds rights to most matches, DAZN broadcasts Friday and select Sunday matches."
+      },
+      "us": {
+        "services": [
+          {"name": "ESPN+", "link": "https://plus.espn.com/"}
+        ],
+        "cost": "$6.99/month for ESPN+",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN+ holds exclusive rights to all Bundesliga matches in the United States."
+      },
+      "gb": {
+        "services": [
+          {"name": "Sky Sports", "link": "https://www.skysports.com/"}
+        ],
+        "cost": "£41/month for Sky Sports",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sports broadcasts select Bundesliga matches in the UK."
+      },
+      "ca": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/en-CA"}
+        ],
+        "cost": "CAD 24.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds exclusive rights to all Bundesliga matches in Canada."
+      },
+      "au": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.beinsports.com/au/"}
+        ],
+        "cost": "AUD 19.99/month for beIN SPORTS CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds rights to Bundesliga matches in Australia."
+      },
+      "in": {
+        "services": [
+          {"name": "Sony LIV", "link": "https://www.sonyliv.com/"}
+        ],
+        "cost": "₹999/year for Sony LIV Premium",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sony LIV streams Bundesliga matches in India."
+      },
+      "nl": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.nl/"}
+        ],
+        "cost": "€13.99/month for Viaplay",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay holds rights to Bundesliga matches in the Netherlands."
+      },
+      "pl": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.pl/"}
+        ],
+        "cost": "PLN 34/month for Viaplay",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay holds rights to Bundesliga matches in Poland."
+      },
+      "jp": {
+        "services": [
+          {"name": "SKY PerfecTV!", "link": "https://www.skyperfectv.co.jp/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SKY PerfecTV! broadcasts Bundesliga matches in Japan."
+      },
+      "br": {
+        "services": [
+          {"name": "OneFootball", "link": "https://onefootball.com/en/home"}
+        ],
+        "cost": "Free",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "OneFootball streams Bundesliga matches for free in Brazil."
+      },
+      "mx": {
+        "services": [
+          {"name": "Sky Sports", "link": "https://www.sky.com.mx/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sports holds rights to Bundesliga matches in Mexico."
+      },
+      "kr": {
+        "services": [
+          {"name": "SPOTV", "link": "https://www.spotvnow.co.kr/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SPOTV holds rights to broadcast Bundesliga matches in South Korea."
+      },
+      "mena": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.bein.com/en/"}
+        ],
+        "cost": "Varies by country",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds rights to Bundesliga matches across the Middle East and North Africa region."
+      }
+    }
+  }
