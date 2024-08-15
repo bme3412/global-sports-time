@@ -11,7 +11,6 @@ import GameTimeConverter from "./GameTimeConverter";
 import leaguesData from "@/data/leagues/leagues.json";
 import locationsData from "@/data/locations/locations.json";
 import nbaTeamsData from "@/data/teams/nba_teams.json";
-import nflTeamsData from "@/data/teams/nfl_teams.json";
 import mlbTeamsData from "@/data/teams/mlb_teams.json";
 import nhlTeamsData from "@/data/teams/nhl_teams.json";
 import iplTeamsData from "@/data/teams/ipl_teams.json";
@@ -37,6 +36,9 @@ import bundesligaTeamsData from "@/data/teams/bundesliga_teams.json";
 import bundesligaSchedule from "@/data/schedules/bundesliga/schedule_bundesliga.csv";
 import bundesligaViewingOptionsData from "@/data/viewingOptions/bundesliga_viewing.json";
 
+import nflTeamsData from "@/data/teams/nfl_teams.json";
+import nflSchedule from "@/data/schedules/nfl/schedule_nfl.csv";
+import nflViewingOptionsData from "@/data/viewingOptions/nfl_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
@@ -141,6 +143,7 @@ export default function GlobalSportsApp() {
   const [premierLeagueGames, setPremierLeagueGames] = useState([]);
   const [broadcastData, setBroadcastData] = useState({});
   const [bundesligaGames, setBundesligaGames] = useState([]);
+  const [nflGames, setNflGames] = useState([]);
 
   useEffect(() => {
     setPremierLeagueGames(
@@ -158,7 +161,13 @@ export default function GlobalSportsApp() {
         league: "bundesliga",
       }))
     );
-  
+    setNflGames(
+      nflSchedule.map((game, index) => ({
+        ...game,
+        id: `nfl-${index}`,
+        league: "nfl",
+      }))
+    );
     if (!watchLocation) {
       fetch("https://ipapi.co/json/")
         .then((res) => res.json())
@@ -207,6 +216,11 @@ export default function GlobalSportsApp() {
         (game) =>
           selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
       );
+    } else if (selectedLeague === "nfl" && selectedTeams.length > 0) {
+      newFilteredGames = nflGames.filter(
+        (game) =>
+          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
+      );
     }
   
     if (watchDateRange.start && watchDateRange.end) {
@@ -220,7 +234,14 @@ export default function GlobalSportsApp() {
   
     newFilteredGames.sort((a, b) => new Date(a.Date) - new Date(b.Date));
     setFilteredGames(newFilteredGames);
-  }, [selectedLeague, selectedTeams, watchDateRange, premierLeagueGames, bundesligaGames]);
+  }, [
+    selectedLeague,
+    selectedTeams,
+    watchDateRange,
+    premierLeagueGames,
+    bundesligaGames,
+    nflGames,
+  ]);
 
   const handleGameSelect = (game) => {
     setSelectedGame(game);
@@ -264,6 +285,15 @@ export default function GlobalSportsApp() {
         id: teamName,
         name: teamName,
       }));
+    } else if (selectedLeague === "nfl") {
+      const uniqueTeams = new Set([
+        ...nflGames.map((game) => game.Home),
+        ...nflGames.map((game) => game.Away),
+      ]);
+      return Array.from(uniqueTeams).map((teamName) => ({
+        id: teamName,
+        name: teamName,
+      }));
     } else {
       return teams.filter((team) => team.league === selectedLeague);
     }
@@ -279,6 +309,8 @@ export default function GlobalSportsApp() {
         return premierLeagueViewingOptionsData.premierLeague;
       case "bundesliga":
         return bundesligaViewingOptionsData.bundesliga;
+      case "nfl":
+        return nflViewingOptionsData.nfl;
       default:
         return {};
     }

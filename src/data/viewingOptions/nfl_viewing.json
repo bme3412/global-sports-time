@@ -1,0 +1,125 @@
+{
+    "nfl": {
+      "us": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nfl.com/game-pass"},
+          {"name": "CBS", "link": "https://www.cbs.com/all-access"},
+          {"name": "Fox", "link": "https://www.fox.com/"},
+          {"name": "NBC", "link": "https://www.nbc.com/"},
+          {"name": "ESPN", "link": "https://www.espn.com/"},
+          {"name": "Amazon Prime Video", "link": "https://www.amazon.com/Prime-Video/b?node=2676882011"}
+        ],
+        "cost": "$99/year for NFL Game Pass, various costs for cable/streaming packages",
+        "restrictions": "Local blackouts may apply",
+        "additionalInfo": "Games are split between networks. Thursday Night Football exclusive to Amazon Prime. NFL Game Pass offers full game replays."
+      },
+      "ca": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/en-CA"}
+        ],
+        "cost": "CAD 24.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds exclusive rights to all NFL games in Canada, including NFL Game Pass content."
+      },
+      "gb": {
+        "services": [
+          {"name": "Sky Sports", "link": "https://www.skysports.com/"},
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "£39.99/month for Sky Sports, £150.99/year for NFL Game Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sports shows select live games. NFL Game Pass offers all games live and on-demand."
+      },
+      "de": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/de-DE"},
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "€14.99/month for DAZN, €163.99/year for NFL Game Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN shows select live games. NFL Game Pass offers all games live and on-demand."
+      },
+      "au": {
+        "services": [
+          {"name": "ESPN", "link": "https://www.espn.com.au/"},
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies for ESPN (via cable/satellite), AUD 274.99/year for NFL Game Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN shows select live games. NFL Game Pass offers all games live and on-demand."
+      },
+      "mx": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"},
+          {"name": "Fox Sports", "link": "https://www.foxsports.com.mx/"},
+          {"name": "ESPN", "link": "https://www.espn.com.mx/"}
+        ],
+        "cost": "MXN 1999/year for NFL Game Pass, varies for cable packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Fox Sports and ESPN show select live games. NFL Game Pass offers all games live and on-demand."
+      },
+      "br": {
+        "services": [
+          {"name": "ESPN Brasil", "link": "https://www.espn.com.br/"},
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies for ESPN Brasil, R$ 499/year for NFL Game Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN Brasil shows select live games. NFL Game Pass offers all games live and on-demand."
+      },
+      "jp": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/ja-JP"},
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "¥1,925/month for DAZN, ¥21,999/year for NFL Game Pass",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN shows select live games. NFL Game Pass offers all games live and on-demand."
+      },
+      "fr": {
+        "services": [
+          {"name": "beIN SPORTS", "link": "https://www.beinsports.com/france/"},
+          {"name": "L'Equipe", "link": "https://www.lequipe.fr/"}
+        ],
+        "cost": "Varies depending on cable/satellite provider",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN SPORTS holds primary rights, with L'Equipe showing some games"
+      },
+      "es": {
+        "services": [
+          {"name": "Movistar+", "link": "https://www.movistar.es/"},
+          {"name": "DAZN", "link": "https://www.dazn.com/es-ES"}
+        ],
+        "cost": "Varies depending on package and provider",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Rights shared between Movistar+ and DAZN"
+      },
+      "it": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/it-IT"}
+        ],
+        "cost": "Varies based on subscription plan",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds exclusive rights for NFL games in Italy"
+      },
+      "nl": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.nl/"}
+        ],
+        "cost": "Varies based on subscription plan",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay acquired NFL rights for the Netherlands in recent years"
+      },
+      "za": {
+        "services": [
+          {"name": "SuperSport", "link": "https://supersport.com/"}
+        ],
+        "cost": "Varies based on DStv package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SuperSport holds rights for NFL coverage across much of Africa"
+      }
+    }
+  }
+      
+    
+  

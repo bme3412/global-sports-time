@@ -77,8 +77,8 @@ const GameSchedule = ({
       console.error('premierLeagueTeams is not an array:', premierLeagueTeams);
       return `${teamName} Stadium`;
     }
-    const team = premierLeagueTeams.find(t => t.name === teamName) || teamDetails[teamName];
-    return team ? `${team.homeStadium || team.stadium}, ${team.city}` : `${teamName} Stadium`;
+    const team = premierLeagueTeams.find(t => t.name === teamName);
+    return team ? `${team.homeStadium}, ${team.city}` : `${teamName} Stadium`;
   };
 
   const getWatchLocationTimezone = () => {
@@ -91,48 +91,48 @@ const GameSchedule = ({
     onGameSelect(game);
   };
 
-  const getTeamName = (teamIdOrName) => {
-    const team = teamDetails[teamIdOrName];
-    return team ? team.name : teamIdOrName;
+  const getTeamName = (teamId) => {
+    const team = teamDetails[teamId];
+    return team ? team.name : teamId;
   };
 
   const renderGameInfo = (game, index) => {
-    const watchLocationTimezone = getWatchLocationTimezone();
-    const gameTimezone = isPremierLeague 
-      ? teamDetails[game.Home]?.timezone || userTimezone
-      : teamDetails[game.team1 || game.Home]?.timezone || userTimezone;
-  
-    const isSelected = selectedGame && selectedGame.id === game.id;
-  
-    const homeTeam = game.Home || game.team1 || 'TBA';
-    const awayTeam = game.Away || game.team2 || 'TBA';
-  
-    return (
-      <Card 
-        key={index} 
-        className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer ${isSelected ? 'border-2 border-blue-500' : ''}`}
-        onClick={() => handleGameClick(game)}
-      >
-        <CardContent className="p-6">
-          <h2 className="text-xl font-bold mb-4 text-gray-800">
-            {`${getTeamName(homeTeam)} vs ${getTeamName(awayTeam)}`}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <IconLabel
-              icon={Calendar}
-              label="Game Time"
-              value={formatGameTime(game.Date || game.date, game.Time || game.time, gameTimezone, gameTimezone)}
-            />
-            <IconLabel
-              icon={Clock}
-              label="Your Local Time"
-              value={formatGameTime(game.Date || game.date, game.Time || game.time, gameTimezone, watchLocationTimezone)}
-            />
-            <IconLabel
-              icon={MapPin}
-              label="Venue"
-              value={getStadiumInfo(homeTeam)}
-            />
+  const watchLocationTimezone = getWatchLocationTimezone();
+  const gameTimezone = isPremierLeague 
+    ? teamDetails[game.Home]?.timezone || userTimezone
+    : teamDetails[game.team1 || game.Home]?.timezone || userTimezone;
+
+  const isSelected = selectedGame && selectedGame.id === game.id;
+
+  const homeTeam = game.Home || game.team1 || 'TBA';
+  const awayTeam = game.Away || game.team2 || 'TBA';
+
+  return (
+    <Card 
+      key={index} 
+      className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer ${isSelected ? 'border-2 border-blue-500' : ''}`}
+      onClick={() => handleGameClick(game)}
+    >
+      <CardContent className="p-6">
+        <h2 className="text-xl font-bold mb-4 text-gray-800">
+          {`${getTeamName(homeTeam)} vs ${getTeamName(awayTeam)}`}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <IconLabel
+            icon={Calendar}
+            label="Game Time"
+            value={formatGameTime(game.Date || game.date, game.Time || game.time, gameTimezone, gameTimezone)}
+          />
+          <IconLabel
+            icon={Clock}
+            label="Your Local Time"
+            value={formatGameTime(game.Date || game.date, game.Time || game.time, gameTimezone, watchLocationTimezone)}
+          />
+          <IconLabel
+            icon={MapPin}
+            label="Venue"
+            value={getStadiumInfo(homeTeam)}
+          />
             <IconLabel
               icon={Tv}
               label="Broadcast"
