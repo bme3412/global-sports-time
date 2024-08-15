@@ -1,91 +1,132 @@
 {
-    "nba": {
-      "usa": {
-        "services": [
-          "NBA League Pass",
-          "ESPN+",
-          "ABC",
-          "TNT",
-          "NBA TV",
-          "Hulu + Live TV",
-          "YouTube TV",
-          "Sling TV"
-        ],
-        "cost": "$28.99/month for NBA League Pass, $69.99/month for Hulu + Live TV",
-        "restrictions": "Some games may be blacked out locally. National broadcasts are exclusive to ABC, ESPN, and TNT.",
-        "additionalInfo": "NBA League Pass offers both live and on-demand viewing. Local team games are typically blacked out on League Pass."
-      },
-      "uk": {
-        "services": ["Sky Sports", "NBA League Pass International", "NOW TV"],
-        "cost": "£24.99/month for Sky Sports, £14.99/month for NBA League Pass",
-        "restrictions": "No local blackouts, but some games may not be available live due to broadcasting rights",
-        "additionalInfo": "Sky Sports shows up to 5 live NBA games per week. NBA League Pass International offers all games with no blackouts."
-      },
-      "japan": {
-        "services": ["Rakuten", "NBA League Pass", "WOWOW"],
-        "cost": "¥2,990/month for NBA League Pass, ¥2,530/month for WOWOW",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "Rakuten has exclusive rights to NBA games in Japan. WOWOW offers some NBA content including playoffs."
-      },
-      "canada": {
-        "services": ["NBA League Pass", "TSN", "Sportsnet", "RDS"],
-        "cost": "CAD 29.99/month for NBA League Pass, CAD 19.99/month for TSN Direct",
-        "restrictions": "Local team games may be blacked out on League Pass",
-        "additionalInfo": "TSN and Sportsnet split national broadcast rights. RDS provides French-language coverage."
-      },
-      "australia": {
-        "services": ["NBA League Pass", "ESPN", "SBS"],
-        "cost": "AUD 39.99/month for NBA League Pass, AUD 25/month for Kayo Sports (includes ESPN)",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "SBS broadcasts some games for free. ESPN shows select games through Foxtel and Kayo Sports."
-      },
-      "germany": {
-        "services": ["NBA League Pass", "DAZN", "Sport1+"],
-        "cost": "€29.99/month for NBA League Pass, €14.99/month for DAZN",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "DAZN shows select games and highlights. Sport1+ offers additional coverage."
-      },
-      "france": {
-        "services": ["NBA League Pass", "beIN SPORTS"],
-        "cost": "€29.99/month for NBA League Pass, €15/month for beIN SPORTS",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "beIN SPORTS has exclusive broadcast rights for NBA games in France."
-      },
-      "spain": {
-        "services": ["NBA League Pass", "Movistar+"],
-        "cost": "€29.99/month for NBA League Pass, Movistar+ pricing varies",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "Movistar+ holds exclusive TV rights for NBA games in Spain."
-      },
-      "china": {
-        "services": ["Tencent", "CCTV"],
-        "cost": "Varies based on Tencent package",
-        "restrictions": "Some games may not be available due to political sensitivities",
-        "additionalInfo": "Tencent is the exclusive digital partner for NBA in China. CCTV broadcasts select games on traditional TV."
-      },
-      "brazil": {
-        "services": ["NBA League Pass", "ESPN Brasil", "SporTV"],
-        "cost": "R$39.99/month for NBA League Pass",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "ESPN Brasil and SporTV share broadcast rights for NBA games in Brazil."
-      },
-      "mexico": {
-        "services": ["NBA League Pass", "ESPN", "TUDN"],
-        "cost": "MXN 599/month for NBA League Pass",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "ESPN and TUDN share broadcast rights for NBA games in Mexico."
-      },
-      "philippines": {
-        "services": ["NBA League Pass", "TV5", "One Sports", "NBA TV Philippines"],
-        "cost": "₱499/month for NBA League Pass",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "TV5 and One Sports broadcast select games on free TV. NBA TV Philippines is available through cable providers."
-      },
-      "india": {
-        "services": ["NBA League Pass", "Sony Six"],
-        "cost": "₹999/month for NBA League Pass",
-        "restrictions": "No local blackouts",
-        "additionalInfo": "Sony Six holds broadcast rights for NBA games in India."
-      }
+  "nba": {
+    "us": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://www.nba.com/watch/streaming-subscriptions"},
+        {"name": "ESPN+", "link": "https://plus.espn.com/"},
+        {"name": "ABC", "link": "https://abc.com/"},
+        {"name": "TNT", "link": "https://www.tntdrama.com/sports/nba"},
+        {"name": "NBA TV", "link": "https://www.nba.com/watch/nba-tv"},
+        {"name": "Hulu + Live TV", "link": "https://www.hulu.com/live-tv"},
+        {"name": "YouTube TV", "link": "https://tv.youtube.com/"},
+        {"name": "Sling TV", "link": "https://www.sling.com/"}
+      ],
+      "cost": "$28.99/month for NBA League Pass, $69.99/month for Hulu + Live TV",
+      "restrictions": "Some games may be blacked out locally. National broadcasts are exclusive to ABC, ESPN, and TNT.",
+      "additionalInfo": "NBA League Pass offers both live and on-demand viewing. Local team games are typically blacked out on League Pass."
+    },
+    "gb": {
+      "services": [
+        {"name": "Sky Sports", "link": "https://www.skysports.com/nba"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"},
+        {"name": "NOW TV", "link": "https://www.nowtv.com/watch-sky-sports-online"}
+      ],
+      "cost": "£24.99/month for Sky Sports, £14.99/month for NBA League Pass",
+      "restrictions": "No local blackouts, but some games may not be available live due to broadcasting rights",
+      "additionalInfo": "Sky Sports shows up to 5 live NBA games per week. NBA League Pass offers all games with no blackouts."
+    },
+    "jp": {
+      "services": [
+        {"name": "Rakuten", "link": "https://sports.rakuten.co.jp/"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"},
+        {"name": "WOWOW", "link": "https://www.wowow.co.jp/"}
+      ],
+      "cost": "¥2,990/month for NBA League Pass, ¥2,530/month for WOWOW",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "Rakuten has exclusive rights to NBA games in Japan. WOWOW offers some NBA content including playoffs."
+    },
+    "ca": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"},
+        {"name": "TSN", "link": "https://www.tsn.ca/nba"},
+        {"name": "Sportsnet", "link": "https://www.sportsnet.ca/basketball/nba/"},
+        {"name": "RDS", "link": "https://www.rds.ca/basketball/nba"}
+      ],
+      "cost": "CAD 29.99/month for NBA League Pass, CAD 19.99/month for TSN Direct",
+      "restrictions": "Local team games may be blacked out on League Pass",
+      "additionalInfo": "TSN and Sportsnet split national broadcast rights. RDS provides French-language coverage."
+    },
+    "au": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"},
+        {"name": "ESPN", "link": "https://www.espn.com.au/nba/"},
+        {"name": "SBS", "link": "https://www.sbs.com.au/sport/basketball/"}
+      ],
+      "cost": "AUD 39.99/month for NBA League Pass, AUD 25/month for Kayo Sports (includes ESPN)",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "SBS broadcasts some games for free. ESPN shows select games through Foxtel and Kayo Sports."
+    },
+    "fr": {
+      "services": [
+        {"name": "beIN Sports", "link": "https://www.beinsports.com/france/"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "€14.99/month for beIN Sports Connect, €19.99/month for NBA League Pass",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "beIN Sports holds exclusive rights to NBA games in France."
+    },
+    "de": {
+      "services": [
+        {"name": "DAZN", "link": "https://www.dazn.com/de-DE"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "€29.99/month for DAZN, €19.99/month for NBA League Pass",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "DAZN holds rights to NBA games in Germany."
+    },
+    "es": {
+      "services": [
+        {"name": "Movistar+", "link": "https://www.movistar.es/particulares/movistarplus/"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies for Movistar+, €19.99/month for NBA League Pass",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "Movistar+ holds rights to NBA games in Spain."
+    },
+    "it": {
+      "services": [
+        {"name": "Sky Sport", "link": "https://sport.sky.it/nba"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies for Sky Sport package, €19.99/month for NBA League Pass",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "Sky Sport holds rights to NBA games in Italy."
+    },
+    "br": {
+      "services": [
+        {"name": "ESPN Brasil", "link": "https://www.espn.com.br/nba/"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies for TV packages with ESPN, R$59.99/month for NBA League Pass",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "ESPN Brasil broadcasts select NBA games."
+    },
+    "in": {
+      "services": [
+        {"name": "Sony Six", "link": "https://www.sonyliv.com/sports/nba-1700000094"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "₹299/month for SonyLIV, ₹1499/year for NBA League Pass",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "Sony Six holds broadcast rights for NBA in India."
+    },
+    "cn": {
+      "services": [
+        {"name": "Tencent", "link": "https://sports.qq.com/nba/"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies for Tencent services, ¥198/month for NBA League Pass",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "Tencent is the exclusive digital partner of the NBA in China."
+    },
+    "ph": {
+      "services": [
+        {"name": "NBA TV Philippines", "link": "https://www.cignal.tv/channel/NBA-Premium-TV-121"},
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies for TV packages, ₱1,300/year for NBA League Pass",
+      "restrictions": "No local blackouts",
+      "additionalInfo": "NBA TV Philippines is available through Cignal TV and other providers."
     }
   }
+}

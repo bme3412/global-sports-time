@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { formatInTimeZone } from 'date-fns-tz';
-import { parse, format, isWithinInterval } from 'date-fns';
-import { MapPin, Clock, Tv, Calendar, DollarSign, AlertTriangle, Info } from "lucide-react";
+import { formatInTimeZone } from "date-fns-tz";
+import { parse, format, isWithinInterval } from "date-fns";
+import {
+  MapPin,
+  Clock,
+  Tv,
+  Calendar,
+  DollarSign,
+  AlertTriangle,
+  Info,
+} from "lucide-react";
 
 const IconLabel = ({ icon: Icon, label, value }) => (
   <div className="flex items-center space-x-2 text-sm">
@@ -13,30 +21,28 @@ const IconLabel = ({ icon: Icon, label, value }) => (
 );
 
 const GameSchedule = ({
-    filteredGames,
-    watchDateRange,
-    watchLocation,
-    locations,
-    viewingOptions,
-    teamDetails,
-    selectedLeague,
-    userTimezone,
-    isPremierLeague,
-    userCountry,
-    premierLeagueTeams,
-    mlbTeams,
-    onGameSelect,
-    selectedGame
-  }) => {
+  filteredGames,
+  watchDateRange,
+  watchLocation,
+  locations,
+  viewingOptions,
+  teamDetails,
+  selectedLeague,
+  userTimezone,
+  userCountry,
+  onGameSelect,
+  selectedGame,
+}) => {
   const [currentViewingInfo, setCurrentViewingInfo] = useState({});
   const [gamesInRange, setGamesInRange] = useState([]);
 
   useEffect(() => {
-    console.log('ViewingOptions:', viewingOptions);
-    console.log('UserCountry:', userCountry);
+    console.log("ViewingOptions:", viewingOptions);
+    console.log("UserCountry:", userCountry);
     if (viewingOptions && userCountry) {
-      const countryInfo = viewingOptions[userCountry] || viewingOptions['us'] || {};
-      console.log('Selected Country Info:', countryInfo);
+      const countryInfo =
+        viewingOptions[userCountry.toLowerCase()] || viewingOptions["us"] || {};
+      console.log("Selected Country Info:", countryInfo);
       setCurrentViewingInfo(countryInfo);
     } else {
       setCurrentViewingInfo({});
@@ -45,11 +51,11 @@ const GameSchedule = ({
 
   useEffect(() => {
     if (watchDateRange && watchDateRange.start && watchDateRange.end) {
-      const startDate = parse(watchDateRange.start, 'yyyy-MM-dd', new Date());
-      const endDate = parse(watchDateRange.end, 'yyyy-MM-dd', new Date());
-      
-      const filteredGamesInRange = filteredGames.filter(game => {
-        const gameDate = parse(game.Date || game.date, 'EEEE d MMMM yyyy', new Date());
+      const startDate = parse(watchDateRange.start, "yyyy-MM-dd", new Date());
+      const endDate = parse(watchDateRange.end, "yyyy-MM-dd", new Date());
+
+      const filteredGamesInRange = filteredGames.filter((game) => {
+        const gameDate = parseGameDate(game.Date || game.date);
         return isWithinInterval(gameDate, { start: startDate, end: endDate });
       });
 
@@ -57,45 +63,44 @@ const GameSchedule = ({
     } else {
       setGamesInRange(filteredGames);
     }
-  }, [filteredGames, watchDateRange]);
+  }, [filteredGames, watchDateRange, selectedLeague]);
+
+  const parseGameDate = (dateString) => {
+    return parse(dateString, 'EEEE d MMMM yyyy', new Date());
+  };
 
   const formatGameTime = (dateString, timeString, sourceTimezone, targetTimezone) => {
     if (!dateString || !timeString) return 'Time TBA';
     try {
-      const parsedDate = parse(dateString, 'EEEE d MMMM yyyy', new Date());
+      const parsedDate = parseGameDate(dateString);
       const [hours, minutes] = timeString.split(':');
-      const gameDate = new Date(parsedDate);
-      gameDate.setHours(parseInt(hours), parseInt(minutes));
-      return formatInTimeZone(gameDate, targetTimezone, 'MMM d, HH:mm zzz');
+      parsedDate.setHours(parseInt(hours), parseInt(minutes));
+      
+      return formatInTimeZone(parsedDate, targetTimezone, 'MMM d, yyyy HH:mm zzz');
     } catch (error) {
-      console.error('Error formatting game time:', error);
+      console.error('Error formatting game time:', error, { dateString, timeString, sourceTimezone, targetTimezone });
       return 'Invalid Date';
     }
   };
 
   const getStadiumInfo = (teamName) => {
-    if (selectedLeague === 'mlb') {
-      if (!Array.isArray(mlbTeams)) {
-        console.error('mlbTeams is not an array:', mlbTeams);
-        return `${teamName} Stadium`;
-      }
-      const team = mlbTeams.find(t => t.name === teamName);
-      return team ? `${team.homeStadium}, ${team.city}` : `${teamName} Stadium`;
-    } else if (isPremierLeague) {
-      if (!Array.isArray(premierLeagueTeams)) {
-        console.error('premierLeagueTeams is not an array:', premierLeagueTeams);
-        return `${teamName} Stadium`;
-      }
-      const team = premierLeagueTeams.find(t => t.name === teamName);
-      return team ? `${team.homeStadium}, ${team.city}` : `${teamName} Stadium`;
+    const team = teamDetails[teamName];
+    if (!team) return `${teamName} Stadium`;
+
+    const venueName = team.homeArena || team.venue || team.stadium || team.ground || team.homeStadium;
+    const cityName = team.city || team.location;
+
+    if (venueName && cityName) {
+      return `${venueName}, ${cityName}`;
+    } else if (venueName) {
+      return venueName;
     } else {
-      // Handle other leagues here
       return `${teamName} Stadium`;
     }
   };
 
   const getWatchLocationTimezone = () => {
-    const selectedLocation = locations.find(loc => loc.id === watchLocation);
+    const selectedLocation = locations.find((loc) => loc.id === watchLocation);
     return selectedLocation ? selectedLocation.timezone : userTimezone;
   };
 
@@ -111,14 +116,12 @@ const GameSchedule = ({
 
   const renderGameInfo = (game, index) => {
     const watchLocationTimezone = getWatchLocationTimezone();
-    const gameTimezone = isPremierLeague || selectedLeague === 'mlb'
-      ? teamDetails[game.Home]?.timezone || userTimezone
-      : teamDetails[game.team1 || game.Home]?.timezone || userTimezone;
+    const gameTimezone = teamDetails[game.Home]?.timezone || userTimezone;
 
     const isSelected = selectedGame && selectedGame.id === game.id;
 
-    const homeTeam = game.Home || game.team1 || 'TBA';
-    const awayTeam = game.Away || game.team2 || 'TBA';
+    const homeTeam = game.Home || 'TBA';
+    const awayTeam = game.Away || 'TBA';
 
     return (
       <Card 
@@ -134,12 +137,12 @@ const GameSchedule = ({
             <IconLabel
               icon={Calendar}
               label="Game Time"
-              value={formatGameTime(game.Date || game.date, game.Time || game.time, gameTimezone, gameTimezone)}
+              value={formatGameTime(game.Date, game.Time, gameTimezone, gameTimezone)}
             />
             <IconLabel
               icon={Clock}
               label="Your Local Time"
-              value={formatGameTime(game.Date || game.date, game.Time || game.time, gameTimezone, watchLocationTimezone)}
+              value={formatGameTime(game.Date, game.Time, gameTimezone, watchLocationTimezone)}
             />
             <IconLabel
               icon={MapPin}
@@ -149,12 +152,19 @@ const GameSchedule = ({
             <IconLabel
               icon={Tv}
               label="Broadcast"
-              value={currentViewingInfo.services ? currentViewingInfo.services.map(s => s.name).join(", ") : "TBA"}
+              value={
+                currentViewingInfo.services
+                  ? currentViewingInfo.services.map((s) => s.name).join(", ")
+                  : "TBA"
+              }
             />
             <IconLabel
               icon={MapPin}
               label="Your Watch Location"
-              value={locations.find((loc) => loc.id === watchLocation)?.name || "Not specified"}
+              value={
+                locations.find((loc) => loc.id === watchLocation)?.name ||
+                "Not specified"
+              }
             />
             {currentViewingInfo.cost && (
               <IconLabel
@@ -182,7 +192,7 @@ const GameSchedule = ({
       </Card>
     );
   };
-
+ 
   return (
     <div className="space-y-4">
       {gamesInRange.map((game, index) => renderGameInfo(game, index))}

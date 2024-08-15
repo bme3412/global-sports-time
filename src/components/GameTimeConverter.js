@@ -22,21 +22,22 @@ const GameTimeConverter = ({
   venue,
   matchName,
   userCountry,
-  league // Add this prop to handle league-specific logic
+  league, // Add this prop to handle league-specific logic
 }) => {
   const [countryBroadcastData, setCountryBroadcastData] = useState(null);
 
   useEffect(() => {
     const selectedLocation = locations.find((loc) => loc.id === watchLocation);
     const countryCode = userCountry.toLowerCase();
-    console.log('Broadcast Data:', broadcastData);
-    console.log('User Country:', countryCode);
+    console.log("Broadcast Data:", broadcastData);
+    console.log("User Country:", countryCode);
 
-    const newCountryBroadcastData = broadcastData && broadcastData[countryCode]
-      ? broadcastData[countryCode]
-      : null;
+    const newCountryBroadcastData =
+      broadcastData && broadcastData[countryCode]
+        ? broadcastData[countryCode]
+        : null;
 
-    console.log('Country Broadcast Data:', newCountryBroadcastData);
+    console.log("Country Broadcast Data:", newCountryBroadcastData);
     setCountryBroadcastData(newCountryBroadcastData);
   }, [broadcastData, userCountry, watchLocation, locations]);
 
@@ -69,7 +70,7 @@ const GameTimeConverter = ({
     if (!time || !date) return null;
     try {
       let parsedDate;
-      if (league === 'mlb') {
+      if (league === "mlb") {
         // Adjust this parsing format if MLB uses a different date format
         parsedDate = parse(date, "yyyy-MM-dd", new Date());
       } else {
@@ -107,7 +108,10 @@ const GameTimeConverter = ({
   );
 
   const renderBroadcastOptions = () => {
-    if (!countryBroadcastData || !Array.isArray(countryBroadcastData.services)) {
+    if (
+      !countryBroadcastData ||
+      !Array.isArray(countryBroadcastData.services)
+    ) {
       return <span>Broadcast information not available</span>;
     }
 
@@ -208,7 +212,10 @@ const GameTimeConverter = ({
         ) : (
           <div className="flex items-center space-x-2 text-yellow-600">
             <AlertCircle size={16} />
-            <span>No game time selected. Please choose a game to see converted times and broadcast options.</span>
+            <span>
+              No game time selected. Please choose a game to see converted times
+              and broadcast options.
+            </span>
           </div>
         )}
       </CardContent>

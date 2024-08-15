@@ -17,8 +17,6 @@ import premierLeagueTeamsData from "@/data/teams/premierleague_teams.json";
 import bundesligaTeamsData from "@/data/teams/bundesliga_teams.json";
 import nflTeamsData from "@/data/teams/nfl_teams.json";
 import laLigaTeamsData from "@/data/teams/laliga_teams.json";
-import nbaViewingOptionsData from "@/data/viewingOptions/nba_viewing.json";
-import mlsViewingOptionsData from "@/data/viewingOptions/mls_viewing.json";
 
 // Import schedule data
 import premierLeagueSchedule from "@/data/schedules/premierleague/schedule_premierleague.csv";
@@ -26,6 +24,7 @@ import bundesligaSchedule from "@/data/schedules/bundesliga/schedule_bundesliga.
 import nflSchedule from "@/data/schedules/nfl/schedule_nfl.csv";
 import mlbSchedule from "@/data/schedules/mlb/schedule_mlb.csv";
 import laLigaSchedule from "@/data/schedules/laliga/schedule_laliga.csv";
+import nbaSchedule from "@/data/schedules/nba/schedule_nba.csv";
 
 // Import viewing options data
 import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague_viewing.json";
@@ -33,6 +32,8 @@ import bundesligaViewingOptionsData from "@/data/viewingOptions/bundesliga_viewi
 import nflViewingOptionsData from "@/data/viewingOptions/nfl_viewing.json";
 import mlbViewingOptionsData from "@/data/viewingOptions/mlb_viewing.json";
 import laLigaViewingOptionsData from "@/data/viewingOptions/laliga_viewing.json";
+import nbaViewingOptionsData from "@/data/viewingOptions/nba_viewing.json";
+import mlsViewingOptionsData from "@/data/viewingOptions/mls_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
@@ -112,6 +113,7 @@ export default function GlobalSportsApp() {
   const [nflGames, setNflGames] = useState([]);
   const [mlbGames, setMlbGames] = useState([]);
   const [laLigaGames, setLaLigaGames] = useState([]);
+  const [nbaGames, setNbaGames] = useState([]);
 
   useEffect(() => {
     setPremierLeagueGames(
@@ -150,6 +152,14 @@ export default function GlobalSportsApp() {
         league: "la-liga",
       }))
     );
+    setNbaGames(
+      nbaSchedule.map((game, index) => ({
+        ...game,
+        id: `nba-${index}`,
+        league: "nba",
+      }))
+    );
+
     if (!watchLocation) {
       fetch("https://ipapi.co/json/")
         .then((res) => res.json())
@@ -187,7 +197,7 @@ export default function GlobalSportsApp() {
 
   useEffect(() => {
     let newFilteredGames = [];
-  
+
     if (selectedLeague === "premier-league" && selectedTeams.length > 0) {
       newFilteredGames = premierLeagueGames.filter(
         (game) =>
@@ -205,6 +215,11 @@ export default function GlobalSportsApp() {
       );
     } else if (selectedLeague === "la-liga" && selectedTeams.length > 0) {
       newFilteredGames = laLigaGames.filter(
+        (game) =>
+          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
+      );
+    } else if (selectedLeague === "nba" && selectedTeams.length > 0) {
+      newFilteredGames = nbaGames.filter(
         (game) =>
           selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
       );
@@ -234,7 +249,8 @@ export default function GlobalSportsApp() {
     bundesligaGames,
     nflGames,
     mlbGames,
-    laLigaGames
+    laLigaGames,
+    nbaGames,
   ]);
 
   const handleGameSelect = (game) => {
@@ -263,12 +279,13 @@ export default function GlobalSportsApp() {
   const getFilteredTeams = () => {
     const leagueGames = {
       "premier-league": premierLeagueGames,
-      "bundesliga": bundesligaGames,
-      "nfl": nflGames,
-      "mlb": mlbGames,
-      "la-liga": laLigaGames  // Add this line
+      bundesliga: bundesligaGames,
+      nfl: nflGames,
+      mlb: mlbGames,
+      "la-liga": laLigaGames,
+      nba: nbaGames,
     };
-  
+
     if (leagueGames[selectedLeague]) {
       const uniqueTeams = new Set([
         ...leagueGames[selectedLeague].map((game) => game.Home),
@@ -286,7 +303,7 @@ export default function GlobalSportsApp() {
   const getViewingOptions = (league) => {
     switch (league) {
       case "nba":
-        return nbaViewingOptions;
+        return nbaViewingOptionsData.nba;
       case "mls":
         return mlsViewingOptions;
       case "premier-league":
@@ -409,6 +426,7 @@ function getStadiumInfo(teamName) {
   const team =
     premierLeagueTeams.find((t) => t.name === teamName) ||
     mlbTeams.find((t) => t.name === teamName) ||
-    laLigaTeams.find((t) => t.name === teamName);  // Add this line
-  return team ? `${team.homeStadium}, ${team.city}` : `${teamName} Stadium`;
+    laLigaTeams.find((t) => t.name === teamName) ||
+    nbaTeams.find((t) => t.name === teamName); // Add this line
+  return team ? `${team.homeArena}, ${team.city}` : `${teamName} Stadium`;
 }

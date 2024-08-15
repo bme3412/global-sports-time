@@ -1,154 +1,304 @@
 {
-    "teams": [
-      {
-        "id": "celtics",
-        "name": "Boston Celtics",
-        "league": "nba",
-        "city": "Boston",
-        "state": "Massachusetts",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeArena": "TD Garden"
-      },
-      {
-        "id": "lakers",
-        "name": "Los Angeles Lakers",
-        "league": "nba",
-        "city": "Los Angeles",
-        "state": "California",
-        "country": "USA",
-        "timezone": "America/Los_Angeles",
-        "homeArena": "Crypto.com Arena"
-      },
-      {
-        "id": "warriors",
-        "name": "Golden State Warriors",
-        "league": "nba",
-        "city": "San Francisco",
-        "state": "California",
-        "country": "USA",
-        "timezone": "America/Los_Angeles",
-        "homeArena": "Chase Center"
-      },
-      {
-        "id": "bulls",
-        "name": "Chicago Bulls",
-        "league": "nba",
-        "city": "Chicago",
-        "state": "Illinois",
-        "country": "USA",
-        "timezone": "America/Chicago",
-        "homeArena": "United Center"
-      },
-      {
-        "id": "heat",
-        "name": "Miami Heat",
-        "league": "nba",
-        "city": "Miami",
-        "state": "Florida",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeArena": "FTX Arena"
-      },
-      {
-        "id": "knicks",
-        "name": "New York Knicks",
-        "league": "nba",
-        "city": "New York City",
-        "state": "New York",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeArena": "Madison Square Garden"
-      },
-      {
-        "id": "nets",
-        "name": "Brooklyn Nets",
-        "league": "nba",
-        "city": "Brooklyn",
-        "state": "New York",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeArena": "Barclays Center"
-      },
-      {
-        "id": "mavericks",
-        "name": "Dallas Mavericks",
-        "league": "nba",
-        "city": "Dallas",
-        "state": "Texas",
-        "country": "USA",
-        "timezone": "America/Chicago",
-        "homeArena": "American Airlines Center"
-      },
-      {
-        "id": "raptors",
-        "name": "Toronto Raptors",
-        "league": "nba",
-        "city": "Toronto",
-        "state": "Ontario",
-        "country": "Canada",
-        "timezone": "America/Toronto",
-        "homeArena": "Scotiabank Arena"
-      },
-      {
-        "id": "76ers",
-        "name": "Philadelphia 76ers",
-        "league": "nba",
-        "city": "Philadelphia",
-        "state": "Pennsylvania",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeArena": "Wells Fargo Center"
-      },
-      {
-        "id": "bucks",
-        "name": "Milwaukee Bucks",
-        "league": "nba",
-        "city": "Milwaukee",
-        "state": "Wisconsin",
-        "country": "USA",
-        "timezone": "America/Chicago",
-        "homeArena": "Fiserv Forum"
-      },
-      {
-        "id": "suns",
-        "name": "Phoenix Suns",
-        "league": "nba",
-        "city": "Phoenix",
-        "state": "Arizona",
-        "country": "USA",
-        "timezone": "America/Phoenix",
-        "homeArena": "Footprint Center"
-      },
-      {
-        "id": "spurs",
-        "name": "San Antonio Spurs",
-        "league": "nba",
-        "city": "San Antonio",
-        "state": "Texas",
-        "country": "USA",
-        "timezone": "America/Chicago",
-        "homeArena": "AT&T Center"
-      },
-      {
-        "id": "nuggets",
-        "name": "Denver Nuggets",
-        "league": "nba",
-        "city": "Denver",
-        "state": "Colorado",
-        "country": "USA",
-        "timezone": "America/Denver",
-        "homeArena": "Ball Arena"
-      },
-      {
-        "id": "clippers",
-        "name": "Los Angeles Clippers",
-        "league": "nba",
-        "city": "Los Angeles",
-        "state": "California",
-        "country": "USA",
-        "timezone": "America/Los_Angeles",
-        "homeArena": "Crypto.com Arena"
-      }
-    ]
-  }
+  "teams": [
+    {
+      "id": "celtics",
+      "name": "Boston Celtics",
+      "league": "nba",
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "TD Garden"
+    },
+    {
+      "id": "lakers",
+      "name": "Los Angeles Lakers",
+      "league": "nba",
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeArena": "Crypto.com Arena"
+    },
+    {
+      "id": "warriors",
+      "name": "Golden State Warriors",
+      "league": "nba",
+      "city": "San Francisco",
+      "state": "California",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeArena": "Chase Center"
+    },
+    {
+      "id": "bulls",
+      "name": "Chicago Bulls",
+      "league": "nba",
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "United Center"
+    },
+    {
+      "id": "heat",
+      "name": "Miami Heat",
+      "league": "nba",
+      "city": "Miami",
+      "state": "Florida",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "Kaseya Center"
+    },
+    {
+      "id": "knicks",
+      "name": "New York Knicks",
+      "league": "nba",
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "Madison Square Garden"
+    },
+    {
+      "id": "nets",
+      "name": "Brooklyn Nets",
+      "league": "nba",
+      "city": "Brooklyn",
+      "state": "New York",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "Barclays Center"
+    },
+    {
+      "id": "mavericks",
+      "name": "Dallas Mavericks",
+      "league": "nba",
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "American Airlines Center"
+    },
+    {
+      "id": "raptors",
+      "name": "Toronto Raptors",
+      "league": "nba",
+      "city": "Toronto",
+      "state": "Ontario",
+      "country": "Canada",
+      "timezone": "America/Toronto",
+      "homeArena": "Scotiabank Arena"
+    },
+    {
+      "id": "76ers",
+      "name": "Philadelphia 76ers",
+      "league": "nba",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "Wells Fargo Center"
+    },
+    {
+      "id": "bucks",
+      "name": "Milwaukee Bucks",
+      "league": "nba",
+      "city": "Milwaukee",
+      "state": "Wisconsin",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "Fiserv Forum"
+    },
+    {
+      "id": "suns",
+      "name": "Phoenix Suns",
+      "league": "nba",
+      "city": "Phoenix",
+      "state": "Arizona",
+      "country": "USA",
+      "timezone": "America/Phoenix",
+      "homeArena": "Footprint Center"
+    },
+    {
+      "id": "spurs",
+      "name": "San Antonio Spurs",
+      "league": "nba",
+      "city": "San Antonio",
+      "state": "Texas",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "Frost Bank Center"
+    },
+    {
+      "id": "nuggets",
+      "name": "Denver Nuggets",
+      "league": "nba",
+      "city": "Denver",
+      "state": "Colorado",
+      "country": "USA",
+      "timezone": "America/Denver",
+      "homeArena": "Ball Arena"
+    },
+    {
+      "id": "clippers",
+      "name": "Los Angeles Clippers",
+      "league": "nba",
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeArena": "Crypto.com Arena"
+    },
+    {
+      "id": "pacers",
+      "name": "Indiana Pacers",
+      "league": "nba",
+      "city": "Indianapolis",
+      "state": "Indiana",
+      "country": "USA",
+      "timezone": "America/Indiana/Indianapolis",
+      "homeArena": "Gainbridge Fieldhouse"
+    },
+    {
+      "id": "wizards",
+      "name": "Washington Wizards",
+      "league": "nba",
+      "city": "Washington",
+      "state": "D.C.",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "Capital One Arena"
+    },
+    {
+      "id": "thunder",
+      "name": "Oklahoma City Thunder",
+      "league": "nba",
+      "city": "Oklahoma City",
+      "state": "Oklahoma",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "Paycom Center"
+    },
+    {
+      "id": "kings",
+      "name": "Sacramento Kings",
+      "league": "nba",
+      "city": "Sacramento",
+      "state": "California",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeArena": "Golden 1 Center"
+    },
+    {
+      "id": "jazz",
+      "name": "Utah Jazz",
+      "league": "nba",
+      "city": "Salt Lake City",
+      "state": "Utah",
+      "country": "USA",
+      "timezone": "America/Denver",
+      "homeArena": "Delta Center"
+    },
+    {
+      "id": "blazers",
+      "name": "Portland Trail Blazers",
+      "league": "nba",
+      "city": "Portland",
+      "state": "Oregon",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeArena": "Moda Center"
+    },
+    {
+      "id": "hawks",
+      "name": "Atlanta Hawks",
+      "league": "nba",
+      "city": "Atlanta",
+      "state": "Georgia",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "State Farm Arena"
+    },
+    {
+      "id": "rockets",
+      "name": "Houston Rockets",
+      "league": "nba",
+      "city": "Houston",
+      "state": "Texas",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "Toyota Center"
+    },
+    {
+      "id": "pelicans",
+      "name": "New Orleans Pelicans",
+      "league": "nba",
+      "city": "New Orleans",
+      "state": "Louisiana",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "Smoothie King Center"
+    },
+    {
+      "id": "timberwolves",
+      "name": "Minnesota Timberwolves",
+      "league": "nba",
+      "city": "Minneapolis",
+      "state": "Minnesota",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "Target Center"
+    },
+    {
+      "id": "grizzlies",
+      "name": "Memphis Grizzlies",
+      "league": "nba",
+      "city": "Memphis",
+      "state": "Tennessee",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeArena": "FedExForum"
+    },
+    {
+      "id": "pistons",
+      "name": "Detroit Pistons",
+      "league": "nba",
+      "city": "Detroit",
+      "state": "Michigan",
+      "country": "USA",
+      "timezone": "America/Detroit",
+      "homeArena": "Little Caesars Arena"
+    },
+    {
+      "id": "cavaliers",
+      "name": "Cleveland Cavaliers",
+      "league": "nba",
+      "city": "Cleveland",
+      "state": "Ohio",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "Rocket Mortgage FieldHouse"
+    },
+    {
+      "id": "magic",
+      "name": "Orlando Magic",
+      "league": "nba",
+      "city": "Orlando",
+      "state": "Florida",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "Amway Center"
+    },
+    {
+      "id": "hornets",
+      "name": "Charlotte Hornets",
+      "league": "nba",
+      "city": "Charlotte",
+      "state": "North Carolina",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeArena": "Spectrum Center"
+    }
+  ]
+}
