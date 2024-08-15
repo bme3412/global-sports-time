@@ -1,94 +1,94 @@
 {
-    "teams": [
-      {
-        "id": "real-madrid",
-        "name": "Real Madrid",
-        "league": "la-liga",
-        "city": "Madrid",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Santiago Bernabéu"
-      },
-      {
-        "id": "barcelona",
-        "name": "FC Barcelona",
-        "league": "la-liga",
-        "city": "Barcelona",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Camp Nou"
-      },
-      {
-        "id": "atletico-madrid",
-        "name": "Atlético Madrid",
-        "league": "la-liga",
-        "city": "Madrid",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Metropolitano Stadium"
-      },
-      {
-        "id": "sevilla",
-        "name": "Sevilla FC",
-        "league": "la-liga",
-        "city": "Seville",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Ramón Sánchez Pizjuán"
-      },
-      {
-        "id": "real-sociedad",
-        "name": "Real Sociedad",
-        "league": "la-liga",
-        "city": "San Sebastián",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Anoeta Stadium"
-      },
-      {
-        "id": "villarreal",
-        "name": "Villarreal CF",
-        "league": "la-liga",
-        "city": "Villarreal",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Estadio de la Cerámica"
-      },
-      {
-        "id": "athletic-bilbao",
-        "name": "Athletic Bilbao",
-        "league": "la-liga",
-        "city": "Bilbao",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "San Mamés Stadium"
-      },
-      {
-        "id": "valencia",
-        "name": "Valencia CF",
-        "league": "la-liga",
-        "city": "Valencia",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Mestalla"
-      },
-      {
-        "id": "real-betis",
-        "name": "Real Betis",
-        "league": "la-liga",
-        "city": "Seville",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Benito Villamarín"
-      },
-      {
-        "id": "celta-vigo",
-        "name": "RC Celta de Vigo",
-        "league": "la-liga",
-        "city": "Vigo",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeStadium": "Balaídos"
-      }
-    ]
-  }
+  "teams": [
+    {
+      "id": "real-madrid",
+      "name": "Real Madrid",
+      "league": "la-liga",
+      "city": "Madrid",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Santiago Bernabéu"
+    },
+    {
+      "id": "barcelona",
+      "name": "FC Barcelona",
+      "league": "la-liga",
+      "city": "Barcelona",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Camp Nou"
+    },
+    {
+      "id": "atletico-madrid",
+      "name": "Atlético Madrid",
+      "league": "la-liga",
+      "city": "Madrid",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Metropolitano Stadium"
+    },
+    {
+      "id": "sevilla",
+      "name": "Sevilla FC",
+      "league": "la-liga",
+      "city": "Seville",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Ramón Sánchez Pizjuán"
+    },
+    {
+      "id": "real-sociedad",
+      "name": "Real Sociedad",
+      "league": "la-liga",
+      "city": "San Sebastián",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Anoeta Stadium"
+    },
+    {
+      "id": "villarreal",
+      "name": "Villarreal CF",
+      "league": "la-liga",
+      "city": "Villarreal",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Estadio de la Cerámica"
+    },
+    {
+      "id": "athletic-bilbao",
+      "name": "Athletic Bilbao",
+      "league": "la-liga",
+      "city": "Bilbao",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "San Mamés Stadium"
+    },
+    {
+      "id": "valencia",
+      "name": "Valencia CF",
+      "league": "la-liga",
+      "city": "Valencia",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Mestalla"
+    },
+    {
+      "id": "real-betis",
+      "name": "Real Betis",
+      "league": "la-liga",
+      "city": "Seville",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Benito Villamarín"
+    },
+    {
+      "id": "celta-vigo",
+      "name": "RC Celta de Vigo",
+      "league": "la-liga",
+      "city": "Vigo",
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeStadium": "Balaídos"
+    }
+  ]
+}

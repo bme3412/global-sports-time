@@ -16,6 +16,7 @@ import nhlTeamsData from "@/data/teams/nhl_teams.json";
 import premierLeagueTeamsData from "@/data/teams/premierleague_teams.json";
 import bundesligaTeamsData from "@/data/teams/bundesliga_teams.json";
 import nflTeamsData from "@/data/teams/nfl_teams.json";
+import laLigaTeamsData from "@/data/teams/laliga_teams.json";
 import nbaViewingOptionsData from "@/data/viewingOptions/nba_viewing.json";
 import mlsViewingOptionsData from "@/data/viewingOptions/mls_viewing.json";
 
@@ -24,22 +25,33 @@ import premierLeagueSchedule from "@/data/schedules/premierleague/schedule_premi
 import bundesligaSchedule from "@/data/schedules/bundesliga/schedule_bundesliga.csv";
 import nflSchedule from "@/data/schedules/nfl/schedule_nfl.csv";
 import mlbSchedule from "@/data/schedules/mlb/schedule_mlb.csv";
+import laLigaSchedule from "@/data/schedules/laliga/schedule_laliga.csv";
 
 // Import viewing options data
 import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague_viewing.json";
 import bundesligaViewingOptionsData from "@/data/viewingOptions/bundesliga_viewing.json";
 import nflViewingOptionsData from "@/data/viewingOptions/nfl_viewing.json";
 import mlbViewingOptionsData from "@/data/viewingOptions/mlb_viewing.json";
+import laLigaViewingOptionsData from "@/data/viewingOptions/laliga_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
-const locations = Array.isArray(locationsData.locations) ? locationsData.locations : [];
+const locations = Array.isArray(locationsData.locations)
+  ? locationsData.locations
+  : [];
 const nbaTeams = Array.isArray(nbaTeamsData.teams) ? nbaTeamsData.teams : [];
 const nflTeams = Array.isArray(nflTeamsData.teams) ? nflTeamsData.teams : [];
 const mlbTeams = Array.isArray(mlbTeamsData.teams) ? mlbTeamsData.teams : [];
 const nhlTeams = Array.isArray(nhlTeamsData.teams) ? nhlTeamsData.teams : [];
-const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams) ? premierLeagueTeamsData.teams : [];
-const bundesligaTeams = Array.isArray(bundesligaTeamsData.teams) ? bundesligaTeamsData.teams : [];
+const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams)
+  ? premierLeagueTeamsData.teams
+  : [];
+const bundesligaTeams = Array.isArray(bundesligaTeamsData.teams)
+  ? bundesligaTeamsData.teams
+  : [];
+const laLigaTeams = Array.isArray(laLigaTeamsData.teams)
+  ? laLigaTeamsData.teams
+  : [];
 
 // Combine team data
 const teams = [
@@ -49,6 +61,7 @@ const teams = [
   ...nhlTeams,
   ...premierLeagueTeams,
   ...bundesligaTeams,
+  laLigaTeams,
 ];
 
 // Group leagues by sport
@@ -98,6 +111,7 @@ export default function GlobalSportsApp() {
   const [bundesligaGames, setBundesligaGames] = useState([]);
   const [nflGames, setNflGames] = useState([]);
   const [mlbGames, setMlbGames] = useState([]);
+  const [laLigaGames, setLaLigaGames] = useState([]);
 
   useEffect(() => {
     setPremierLeagueGames(
@@ -127,6 +141,13 @@ export default function GlobalSportsApp() {
         ...game,
         id: `nfl-${index}`,
         league: "nfl",
+      }))
+    );
+    setLaLigaGames(
+      laLigaSchedule.map((game, index) => ({
+        ...game,
+        id: `laliga-${index}`,
+        league: "la-liga",
       }))
     );
     if (!watchLocation) {
@@ -182,13 +203,18 @@ export default function GlobalSportsApp() {
         (game) =>
           selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
       );
+    } else if (selectedLeague === "la-liga" && selectedTeams.length > 0) {
+      newFilteredGames = laLigaGames.filter(
+        (game) =>
+          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
+      );
     } else if (selectedLeague === "mlb" && selectedTeams.length > 0) {
       newFilteredGames = mlbGames.filter(
         (game) =>
           selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
       );
     }
-  
+
     if (watchDateRange.start && watchDateRange.end) {
       const startDate = new Date(watchDateRange.start);
       const endDate = new Date(watchDateRange.end);
@@ -197,7 +223,7 @@ export default function GlobalSportsApp() {
         return gameDate >= startDate && gameDate <= endDate;
       });
     }
-  
+
     newFilteredGames.sort((a, b) => new Date(a.Date) - new Date(b.Date));
     setFilteredGames(newFilteredGames);
   }, [
@@ -208,6 +234,7 @@ export default function GlobalSportsApp() {
     bundesligaGames,
     nflGames,
     mlbGames,
+    laLigaGames
   ]);
 
   const handleGameSelect = (game) => {
@@ -238,7 +265,8 @@ export default function GlobalSportsApp() {
       "premier-league": premierLeagueGames,
       "bundesliga": bundesligaGames,
       "nfl": nflGames,
-      "mlb": mlbGames
+      "mlb": mlbGames,
+      "la-liga": laLigaGames  // Add this line
     };
   
     if (leagueGames[selectedLeague]) {
@@ -267,6 +295,8 @@ export default function GlobalSportsApp() {
         return bundesligaViewingOptionsData.bundesliga;
       case "nfl":
         return nflViewingOptionsData.nfl;
+      case "la-liga":
+        return laLigaViewingOptionsData.laLiga;
       case "mlb":
         return mlbViewingOptionsData.mlb;
       default:
@@ -376,6 +406,9 @@ export default function GlobalSportsApp() {
 }
 
 function getStadiumInfo(teamName) {
-  const team = premierLeagueTeams.find((t) => t.name === teamName) || mlbTeams.find((t) => t.name === teamName);
+  const team =
+    premierLeagueTeams.find((t) => t.name === teamName) ||
+    mlbTeams.find((t) => t.name === teamName) ||
+    laLigaTeams.find((t) => t.name === teamName);  // Add this line
   return team ? `${team.homeStadium}, ${team.city}` : `${teamName} Stadium`;
 }
