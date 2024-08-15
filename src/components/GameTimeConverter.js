@@ -21,7 +21,8 @@ const GameTimeConverter = ({
   broadcastData,
   venue,
   matchName,
-  userCountry
+  userCountry,
+  league // Add this prop to handle league-specific logic
 }) => {
   const [countryBroadcastData, setCountryBroadcastData] = useState(null);
 
@@ -67,7 +68,13 @@ const GameTimeConverter = ({
   const convertTime = (time, date, sourceTimezone, targetTimezone) => {
     if (!time || !date) return null;
     try {
-      const parsedDate = parse(date, "EEEE d MMMM yyyy", new Date());
+      let parsedDate;
+      if (league === 'mlb') {
+        // Adjust this parsing format if MLB uses a different date format
+        parsedDate = parse(date, "yyyy-MM-dd", new Date());
+      } else {
+        parsedDate = parse(date, "EEEE d MMMM yyyy", new Date());
+      }
       const [hours, minutes] = time.split(":");
       parsedDate.setHours(parseInt(hours), parseInt(minutes));
       return formatInTimeZone(

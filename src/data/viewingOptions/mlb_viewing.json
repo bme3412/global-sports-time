@@ -1,0 +1,108 @@
+{
+    "mlb": {
+      "us": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "ESPN+", "link": "https://plus.espn.com/"},
+          {"name": "Fox Sports", "link": "https://www.foxsports.com/"},
+          {"name": "NBC Sports", "link": "https://www.nbcsports.com/"}
+        ],
+        "cost": "$139.99/year for MLB.TV, $9.99/month for ESPN+",
+        "restrictions": "Local blackouts apply for MLB.TV",
+        "additionalInfo": "MLB.TV offers out-of-market games. Local games are typically available on regional sports networks."
+      },
+      "ca": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "Sportsnet", "link": "https://www.sportsnet.ca/"}
+        ],
+        "cost": "CAD 129.99/year for MLB.TV, varies for Sportsnet packages",
+        "restrictions": "Local blackouts may apply for MLB.TV",
+        "additionalInfo": "Sportsnet holds rights to Toronto Blue Jays games and other select MLB games."
+      },
+      "gb": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "BT Sport", "link": "https://www.bt.com/sport"}
+        ],
+        "cost": "£79.99/year for MLB.TV, varies for BT Sport packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "BT Sport broadcasts select MLB games in the UK."
+      },
+      "au": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "Kayo Sports", "link": "https://kayosports.com.au/"}
+        ],
+        "cost": "AUD 139.99/year for MLB.TV, AUD 25/month for Kayo Sports",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Kayo Sports offers select MLB games in Australia."
+      },
+      "jp": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/ja-JP"}
+        ],
+        "cost": "¥1,750/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds rights to MLB games in Japan."
+      },
+      "kr": {
+        "services": [
+          {"name": "SPOTV", "link": "https://www.spotvnow.co.kr/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SPOTV broadcasts select MLB games in South Korea."
+      },
+      "mx": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "ESPN", "link": "https://www.espn.com.mx/"}
+        ],
+        "cost": "Varies for MLB.TV and ESPN packages",
+        "restrictions": "Some blackouts may apply",
+        "additionalInfo": "ESPN broadcasts select MLB games in Mexico."
+      },
+      "latam": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "ESPN", "link": "https://www.espn.com/"}
+        ],
+        "cost": "Varies by country for MLB.TV and ESPN packages",
+        "restrictions": "Some blackouts may apply",
+        "additionalInfo": "ESPN holds rights to MLB games in many Latin American countries."
+      },
+      "eu": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies by country",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in most European countries."
+      },
+      "in": {
+        "services": [
+          {"name": "SonyLIV", "link": "https://www.sonyliv.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SonyLIV holds rights to broadcast MLB games in India."
+      },
+      "za": {
+        "services": [
+          {"name": "SuperSport", "link": "https://supersport.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SuperSport broadcasts select MLB games in South Africa and other African countries."
+      },
+      "cn": {
+        "services": [
+          {"name": "Tencent", "link": "https://sports.qq.com/mlb/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Tencent holds streaming rights for MLB games in China."
+      }
+    }
+  }

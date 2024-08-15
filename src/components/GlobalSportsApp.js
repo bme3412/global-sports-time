@@ -13,69 +13,33 @@ import locationsData from "@/data/locations/locations.json";
 import nbaTeamsData from "@/data/teams/nba_teams.json";
 import mlbTeamsData from "@/data/teams/mlb_teams.json";
 import nhlTeamsData from "@/data/teams/nhl_teams.json";
-import iplTeamsData from "@/data/teams/ipl_teams.json";
-import cplTeamsData from "@/data/teams/cpl_teams.json";
-import bblTeamsData from "@/data/teams/bbl_teams.json";
-import nrlTeamsData from "@/data/teams/nrl_teams.json";
-import aflTeamsData from "@/data/teams/afl_teams.json";
-import npbTeamsData from "@/data/teams/npb_teams.json";
 import premierLeagueTeamsData from "@/data/teams/premierleague_teams.json";
-import euroLeagueTeamsData from "@/data/teams/euroleague_teams.json";
-import laLigaTeamsData from "@/data/teams/laliga_teams.json";
-import serieATeamsData from "@/data/teams/seriea_teams.json";
-import ligue1TeamsData from "@/data/teams/ligue1_teams.json";
-import mlsTeamsData from "@/data/teams/mls_teams.json";
+import bundesligaTeamsData from "@/data/teams/bundesliga_teams.json";
+import nflTeamsData from "@/data/teams/nfl_teams.json";
 import nbaViewingOptionsData from "@/data/viewingOptions/nba_viewing.json";
 import mlsViewingOptionsData from "@/data/viewingOptions/mls_viewing.json";
 
-// Import Premier League schedule data
+// Import schedule data
 import premierLeagueSchedule from "@/data/schedules/premierleague/schedule_premierleague.csv";
-import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague_viewing.json";
-
-import bundesligaTeamsData from "@/data/teams/bundesliga_teams.json";
 import bundesligaSchedule from "@/data/schedules/bundesliga/schedule_bundesliga.csv";
-import bundesligaViewingOptionsData from "@/data/viewingOptions/bundesliga_viewing.json";
-
-import nflTeamsData from "@/data/teams/nfl_teams.json";
 import nflSchedule from "@/data/schedules/nfl/schedule_nfl.csv";
+import mlbSchedule from "@/data/schedules/mlb/schedule_mlb.csv";
+
+// Import viewing options data
+import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague_viewing.json";
+import bundesligaViewingOptionsData from "@/data/viewingOptions/bundesliga_viewing.json";
 import nflViewingOptionsData from "@/data/viewingOptions/nfl_viewing.json";
+import mlbViewingOptionsData from "@/data/viewingOptions/mlb_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
-const locations = Array.isArray(locationsData.locations)
-  ? locationsData.locations
-  : [];
+const locations = Array.isArray(locationsData.locations) ? locationsData.locations : [];
 const nbaTeams = Array.isArray(nbaTeamsData.teams) ? nbaTeamsData.teams : [];
 const nflTeams = Array.isArray(nflTeamsData.teams) ? nflTeamsData.teams : [];
 const mlbTeams = Array.isArray(mlbTeamsData.teams) ? mlbTeamsData.teams : [];
 const nhlTeams = Array.isArray(nhlTeamsData.teams) ? nhlTeamsData.teams : [];
-const iplTeams = Array.isArray(iplTeamsData.teams) ? iplTeamsData.teams : [];
-const cplTeams = Array.isArray(cplTeamsData.teams) ? cplTeamsData.teams : [];
-const bblTeams = Array.isArray(bblTeamsData.teams) ? bblTeamsData.teams : [];
-const nrlTeams = Array.isArray(nrlTeamsData.teams) ? nrlTeamsData.teams : [];
-const aflTeams = Array.isArray(aflTeamsData.teams) ? aflTeamsData.teams : [];
-const npbTeams = Array.isArray(npbTeamsData.teams) ? npbTeamsData.teams : [];
-const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams)
-  ? premierLeagueTeamsData.teams
-  : [];
-const euroLeagueTeams = Array.isArray(euroLeagueTeamsData.teams)
-  ? euroLeagueTeamsData.teams
-  : [];
-const laLigaTeams = Array.isArray(laLigaTeamsData.teams)
-  ? laLigaTeamsData.teams
-  : [];
-const bundesligaTeams = Array.isArray(bundesligaTeamsData.teams)
-  ? bundesligaTeamsData.teams
-  : [];
-const serieATeams = Array.isArray(serieATeamsData.teams)
-  ? serieATeamsData.teams
-  : [];
-const ligue1Teams = Array.isArray(ligue1TeamsData.teams)
-  ? ligue1TeamsData.teams
-  : [];
-const mlsTeams = Array.isArray(mlsTeamsData.teams) ? mlsTeamsData.teams : [];
-const nbaViewingOptions = nbaViewingOptionsData || {};
-const mlsViewingOptions = mlsViewingOptionsData || {};
+const premierLeagueTeams = Array.isArray(premierLeagueTeamsData.teams) ? premierLeagueTeamsData.teams : [];
+const bundesligaTeams = Array.isArray(bundesligaTeamsData.teams) ? bundesligaTeamsData.teams : [];
 
 // Combine team data
 const teams = [
@@ -83,19 +47,8 @@ const teams = [
   ...nflTeams,
   ...mlbTeams,
   ...nhlTeams,
-  ...iplTeams,
-  ...cplTeams,
-  ...bblTeams,
-  ...nrlTeams,
-  ...aflTeams,
-  ...npbTeams,
   ...premierLeagueTeams,
-  ...euroLeagueTeams,
-  ...laLigaTeams,
   ...bundesligaTeams,
-  ...serieATeams,
-  ...ligue1Teams,
-  ...mlsTeams,
 ];
 
 // Group leagues by sport
@@ -144,6 +97,7 @@ export default function GlobalSportsApp() {
   const [broadcastData, setBroadcastData] = useState({});
   const [bundesligaGames, setBundesligaGames] = useState([]);
   const [nflGames, setNflGames] = useState([]);
+  const [mlbGames, setMlbGames] = useState([]);
 
   useEffect(() => {
     setPremierLeagueGames(
@@ -159,6 +113,13 @@ export default function GlobalSportsApp() {
         ...game,
         id: `bundesliga-${index}`,
         league: "bundesliga",
+      }))
+    );
+    setMlbGames(
+      mlbSchedule.map((game, index) => ({
+        ...game,
+        id: `mlb-${index}`,
+        league: "mlb",
       }))
     );
     setNflGames(
@@ -221,6 +182,11 @@ export default function GlobalSportsApp() {
         (game) =>
           selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
       );
+    } else if (selectedLeague === "mlb" && selectedTeams.length > 0) {
+      newFilteredGames = mlbGames.filter(
+        (game) =>
+          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
+      );
     }
   
     if (watchDateRange.start && watchDateRange.end) {
@@ -241,6 +207,7 @@ export default function GlobalSportsApp() {
     premierLeagueGames,
     bundesligaGames,
     nflGames,
+    mlbGames,
   ]);
 
   const handleGameSelect = (game) => {
@@ -267,28 +234,17 @@ export default function GlobalSportsApp() {
   };
 
   const getFilteredTeams = () => {
-    if (selectedLeague === "premier-league") {
+    const leagueGames = {
+      "premier-league": premierLeagueGames,
+      "bundesliga": bundesligaGames,
+      "nfl": nflGames,
+      "mlb": mlbGames
+    };
+  
+    if (leagueGames[selectedLeague]) {
       const uniqueTeams = new Set([
-        ...premierLeagueGames.map((game) => game.Home),
-        ...premierLeagueGames.map((game) => game.Away),
-      ]);
-      return Array.from(uniqueTeams).map((teamName) => ({
-        id: teamName,
-        name: teamName,
-      }));
-    } else if (selectedLeague === "bundesliga") {
-      const uniqueTeams = new Set([
-        ...bundesligaGames.map((game) => game.Home),
-        ...bundesligaGames.map((game) => game.Away),
-      ]);
-      return Array.from(uniqueTeams).map((teamName) => ({
-        id: teamName,
-        name: teamName,
-      }));
-    } else if (selectedLeague === "nfl") {
-      const uniqueTeams = new Set([
-        ...nflGames.map((game) => game.Home),
-        ...nflGames.map((game) => game.Away),
+        ...leagueGames[selectedLeague].map((game) => game.Home),
+        ...leagueGames[selectedLeague].map((game) => game.Away),
       ]);
       return Array.from(uniqueTeams).map((teamName) => ({
         id: teamName,
@@ -311,6 +267,8 @@ export default function GlobalSportsApp() {
         return bundesligaViewingOptionsData.bundesliga;
       case "nfl":
         return nflViewingOptionsData.nfl;
+      case "mlb":
+        return mlbViewingOptionsData.mlb;
       default:
         return {};
     }
@@ -418,6 +376,6 @@ export default function GlobalSportsApp() {
 }
 
 function getStadiumInfo(teamName) {
-  const team = premierLeagueTeams.find((t) => t.name === teamName);
+  const team = premierLeagueTeams.find((t) => t.name === teamName) || mlbTeams.find((t) => t.name === teamName);
   return team ? `${team.homeStadium}, ${team.city}` : `${teamName} Stadium`;
 }
