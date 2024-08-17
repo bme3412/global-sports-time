@@ -137,6 +137,94 @@
       "cost": "Varies by country",
       "restrictions": "No local blackouts",
       "additionalInfo": "beIN Sports holds rights for the Middle East and North Africa region."
+    },
+    "jp": {
+      "services": [
+        {"name": "WOWOW", "link": "https://www.wowow.co.jp/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "WOWOW has held rights to La Liga matches in Japan in recent years, but current details may vary."
+    },
+    "kr": {
+      "services": [
+        {"name": "beIN Sports", "link": "https://www.beinsports.com/kr/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "beIN Sports has held rights to La Liga matches in South Korea in recent years, but current details may vary."
+    },
+    "cn": {
+      "services": [
+        {"name": "iQIYI", "link": "https://www.iqiyi.com/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "iQIYI has held rights to La Liga matches in China in recent years, but current details may vary."
+    },
+    "sg": {
+      "services": [
+        {"name": "beIN Sports", "link": "https://www.beinsports.com/en/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "beIN Sports has held rights to La Liga matches in Singapore in recent years, but current details may vary."
+    },
+    "ph": {
+      "services": [
+        {"name": "beIN Sports", "link": "https://www.beinsports.com/ph/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "beIN Sports has held rights to La Liga matches in the Philippines in recent years, but current details may vary."
+    },
+    "ru": {
+      "services": [
+        {"name": "Match TV", "link": "https://matchtv.ru/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "Match TV has held rights to La Liga matches in Russia in recent years, but current details may vary."
+    },
+    "pl": {
+      "services": [
+        {"name": "Eleven Sports", "link": "https://www.elevensports.pl/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "Eleven Sports has held rights to La Liga matches in Poland in recent years, but current details may vary."
+    },
+    "tr": {
+      "services": [
+        {"name": "beIN Sports", "link": "https://www.beinsports.com/tr/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "beIN Sports has held rights to La Liga matches in Turkey in recent years, but current details may vary."
+    },
+    "za": {
+      "services": [
+        {"name": "SuperSport", "link": "https://supersport.com/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "SuperSport has held rights to La Liga matches in South Africa in recent years, but current details may vary."
+    },
+    "th": {
+      "services": [
+        {"name": "beIN Sports", "link": "https://www.beinsports.com/th/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "beIN Sports has held rights to La Liga matches in Thailand in recent years, but current details may vary."
+    },
+    "gr": {
+      "services": [
+        {"name": "COSMOTE TV", "link": "https://www.cosmote.gr/cosmotetv/"}
+      ],
+      "cost": "Varies based on package",
+      "restrictions": "No information available",
+      "additionalInfo": "COSMOTE TV has held rights to La Liga matches in Greece in recent years, but current details may vary."
     }
   }
 }

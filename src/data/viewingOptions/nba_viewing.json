@@ -127,6 +127,110 @@
       "cost": "Varies for TV packages, ₱1,300/year for NBA League Pass",
       "restrictions": "No local blackouts",
       "additionalInfo": "NBA TV Philippines is available through Cignal TV and other providers."
+    },
+    "ae": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "sg": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "ru": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "mx": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "za": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "kr": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "tr": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "th": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "eg": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "nl": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "se": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "no": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
+    },
+    "dk": {
+      "services": [
+        {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+      ],
+      "cost": "Varies",
+      "restrictions": "No information available",
+      "additionalInfo": "NBA League Pass is available, but specific local broadcasting information is not provided."
     }
   }
 }

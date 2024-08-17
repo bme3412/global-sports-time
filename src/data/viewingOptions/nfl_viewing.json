@@ -117,9 +117,118 @@
         "cost": "Varies based on DStv package",
         "restrictions": "No local blackouts",
         "additionalInfo": "SuperSport holds rights for NFL coverage across much of Africa"
+      },
+      "in": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in India"
+      },
+      "cn": {
+        "services": [
+          {"name": "Tencent", "link": "https://www.tencent.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Tencent has held digital rights for NFL in China in recent years"
+      },
+      "sg": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in Singapore"
+      },
+      "ph": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in the Philippines"
+      },
+      "ae": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in the UAE"
+      },
+      "ru": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in Russia"
+      },
+      "pl": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in Poland"
+      },
+      "tr": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in Turkey"
+      },
+      "th": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in Thailand"
+      },
+      "eg": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in Egypt"
+      },
+      "se": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.se/"}
+        ],
+        "cost": "Varies based on subscription plan",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay has held rights to NFL games in Sweden in recent years"
+      },
+      "no": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.no/"}
+        ],
+        "cost": "Varies based on subscription plan",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay has held rights to NFL games in Norway in recent years"
+      },
+      "dk": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.dk/"}
+        ],
+        "cost": "Varies based on subscription plan",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay has held rights to NFL games in Denmark in recent years"
+      },
+      "gr": {
+        "services": [
+          {"name": "NFL Game Pass", "link": "https://www.nflgamepass.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "NFL Game Pass is the primary way to watch NFL games in Greece"
       }
     }
   }
-      
-    
-  

@@ -1,94 +1,94 @@
 {
-    "teams": [
-      {
-        "id": "real-madrid",
-        "name": "Real Madrid",
-        "league": "euroleague",
-        "city": "Madrid",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeArena": "WiZink Center"
-      },
-      {
-        "id": "cska-moscow",
-        "name": "CSKA Moscow",
-        "league": "euroleague",
-        "city": "Moscow",
-        "country": "Russia",
-        "timezone": "Europe/Moscow",
-        "homeArena": "Megasport Arena"
-      },
-      {
-        "id": "fenerbahce",
-        "name": "Fenerbahçe Beko",
-        "league": "euroleague",
-        "city": "Istanbul",
-        "country": "Turkey",
-        "timezone": "Europe/Istanbul",
-        "homeArena": "Ülker Sports Arena"
-      },
-      {
-        "id": "barcelona",
-        "name": "FC Barcelona",
-        "league": "euroleague",
-        "city": "Barcelona",
-        "country": "Spain",
-        "timezone": "Europe/Madrid",
-        "homeArena": "Palau Blaugrana"
-      },
-      {
-        "id": "olympiacos",
-        "name": "Olympiacos Piraeus",
-        "league": "euroleague",
-        "city": "Piraeus",
-        "country": "Greece",
-        "timezone": "Europe/Athens",
-        "homeArena": "Peace and Friendship Stadium"
-      },
-      {
-        "id": "maccabi",
-        "name": "Maccabi Tel Aviv",
-        "league": "euroleague",
-        "city": "Tel Aviv",
-        "country": "Israel",
-        "timezone": "Asia/Jerusalem",
-        "homeArena": "Menora Mivtachim Arena"
-      },
-      {
-        "id": "anadolu-efes",
-        "name": "Anadolu Efes",
-        "league": "euroleague",
-        "city": "Istanbul",
-        "country": "Turkey",
-        "timezone": "Europe/Istanbul",
-        "homeArena": "Sinan Erdem Dome"
-      },
-      {
-        "id": "panathinaikos",
-        "name": "Panathinaikos Athens",
-        "league": "euroleague",
-        "city": "Athens",
-        "country": "Greece",
-        "timezone": "Europe/Athens",
-        "homeArena": "Olympic Indoor Hall"
-      },
-      {
-        "id": "armani-milano",
-        "name": "AX Armani Exchange Milan",
-        "league": "euroleague",
-        "city": "Milan",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeArena": "Mediolanum Forum"
-      },
-      {
-        "id": "zalgiris",
-        "name": "Žalgiris Kaunas",
-        "league": "euroleague",
-        "city": "Kaunas",
-        "country": "Lithuania",
-        "timezone": "Europe/Vilnius",
-        "homeArena": "Žalgirio Arena"
-      }
-    ]
-  }
+  "teams": [
+    {
+      "id": "realmadrid",
+      "name": "Real Madrid",
+      "league": "euroleague",
+      "city": "Madrid",
+      "state": null,
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeArena": "WiZink Center"
+    },
+    {
+      "id": "fenerbahce",
+      "name": "Fenerbahçe Beko",
+      "league": "euroleague",
+      "city": "Istanbul",
+      "state": null,
+      "country": "Turkey",
+      "timezone": "Europe/Istanbul",
+      "homeArena": "Ülker Sports Arena"
+    },
+    {
+      "id": "barcelona",
+      "name": "FC Barcelona",
+      "league": "euroleague",
+      "city": "Barcelona",
+      "state": null,
+      "country": "Spain",
+      "timezone": "Europe/Madrid",
+      "homeArena": "Palau Blaugrana"
+    },
+    {
+      "id": "olympiacos",
+      "name": "Olympiacos Piraeus",
+      "league": "euroleague",
+      "city": "Piraeus",
+      "state": null,
+      "country": "Greece",
+      "timezone": "Europe/Athens",
+      "homeArena": "Peace and Friendship Stadium"
+    },
+    {
+      "id": "maccabi",
+      "name": "Maccabi Tel Aviv",
+      "league": "euroleague",
+      "city": "Tel Aviv",
+      "state": null,
+      "country": "Israel",
+      "timezone": "Asia/Jerusalem",
+      "homeArena": "Menora Mivtachim Arena"
+    },
+    {
+      "id": "panathinaikos",
+      "name": "Panathinaikos Athens",
+      "league": "euroleague",
+      "city": "Athens",
+      "state": null,
+      "country": "Greece",
+      "timezone": "Europe/Athens",
+      "homeArena": "Olympic Indoor Hall"
+    },
+    {
+      "id": "efesmilano",
+      "name": "Anadolu Efes",
+      "league": "euroleague",
+      "city": "Istanbul",
+      "state": null,
+      "country": "Turkey",
+      "timezone": "Europe/Istanbul",
+      "homeArena": "Sinan Erdem Dome"
+    },
+    {
+      "id": "zalgiris",
+      "name": "Žalgiris Kaunas",
+      "league": "euroleague",
+      "city": "Kaunas",
+      "state": null,
+      "country": "Lithuania",
+      "timezone": "Europe/Vilnius",
+      "homeArena": "Žalgirio Arena"
+    },
+    {
+      "id": "bayernmunich",
+      "name": "FC Bayern Munich",
+      "league": "euroleague",
+      "city": "Munich",
+      "state": null,
+      "country": "Germany",
+      "timezone": "Europe/Berlin",
+      "homeArena": "Audi Dome"
+    }
+  ]
+}

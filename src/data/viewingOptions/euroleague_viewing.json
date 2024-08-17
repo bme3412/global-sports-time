@@ -1,0 +1,228 @@
+{
+    "euroleague": {
+      "es": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/es-ES/sport/basketball/euroleague"},
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€9.99/month for DAZN, €39.99/year for Euroleague TV",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds exclusive rights for Euroleague in Spain."
+      },
+      "gr": {
+        "services": [
+          {"name": "Nova Sports", "link": "https://www.novasports.gr/"},
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "Varies for Nova Sports packages, €39.99/year for Euroleague TV",
+        "restrictions": "Some games may be exclusively on Nova Sports",
+        "additionalInfo": "Nova Sports is the main broadcaster for Euroleague in Greece."
+      },
+      "tr": {
+        "services": [
+          {"name": "beIN SPORTS", "link": "https://www.beinsports.com/tr/"},
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "Varies for beIN SPORTS packages, €39.99/year for Euroleague TV",
+        "restrictions": "Some games may be exclusively on beIN SPORTS",
+        "additionalInfo": "beIN SPORTS holds broadcasting rights for Euroleague in Turkey."
+      },
+      "ru": {
+        "services": [
+          {"name": "Match TV", "link": "https://matchtv.ru/"},
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "Varies for Match TV packages, €39.99/year for Euroleague TV",
+        "restrictions": "Some games may be exclusively on Match TV",
+        "additionalInfo": "Match TV broadcasts Euroleague games in Russia."
+      },
+      "de": {
+        "services": [
+          {"name": "MagentaSport", "link": "https://www.magentasport.de/"},
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€16.95/month for MagentaSport, €39.99/year for Euroleague TV",
+        "restrictions": "Some games may be exclusively on MagentaSport",
+        "additionalInfo": "MagentaSport holds rights for Euroleague in Germany."
+      },
+      "it": {
+        "services": [
+          {"name": "Sky Sport", "link": "https://sport.sky.it/"},
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "Varies for Sky Sport packages, €39.99/year for Euroleague TV",
+        "restrictions": "Some games may be exclusively on Sky Sport",
+        "additionalInfo": "Sky Sport broadcasts Euroleague games in Italy."
+      },
+      "fr": {
+        "services": [
+          {"name": "RMC Sport", "link": "https://rmcsport.bfmtv.com/"},
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€19/month for RMC Sport, €39.99/year for Euroleague TV",
+        "restrictions": "Some games may be exclusively on RMC Sport",
+        "additionalInfo": "RMC Sport holds rights for Euroleague in France."
+      },
+      "gb": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No local restrictions",
+        "additionalInfo": "Euroleague TV is the primary option for watching games in the UK."
+      },
+      "us": {
+        "services": [
+          {"name": "FloSports", "link": "https://www.flosports.tv/"},
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "$29.99/month for FloSports, €39.99/year for Euroleague TV",
+        "restrictions": "No local restrictions",
+        "additionalInfo": "FloSports has rights to broadcast Euroleague games in the US."
+      },
+      "jp": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "ca": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "au": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "br": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "in": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "cn": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "ph": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "ae": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "sg": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "mx": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "za": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "kr": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "th": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "eg": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "nl": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "se": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "no": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      },
+      "dk": {
+        "services": [
+          {"name": "Euroleague TV", "link": "https://tv.euroleague.net/"}
+        ],
+        "cost": "€39.99/year for Euroleague TV",
+        "restrictions": "No information available",
+        "additionalInfo": "Euroleague TV is available, but specific local broadcasting information is not provided."
+      }
+    }
+  }

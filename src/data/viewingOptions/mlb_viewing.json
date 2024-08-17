@@ -103,6 +103,157 @@
         "cost": "Varies based on package",
         "restrictions": "No local blackouts",
         "additionalInfo": "Tencent holds streaming rights for MLB games in China."
+      },
+      "es": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "DAZN", "link": "https://www.dazn.com/es-ES"}
+        ],
+        "cost": "Varies for MLB.TV and DAZN packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN has held rights to MLB games in Spain in recent years, but current details may vary."
+      },
+      "fr": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in France."
+      },
+      "de": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "DAZN", "link": "https://www.dazn.com/de-DE"}
+        ],
+        "cost": "Varies for MLB.TV and DAZN packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN has held rights to MLB games in Germany in recent years, but current details may vary."
+      },
+      "it": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Italy."
+      },
+      "br": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "ESPN", "link": "https://www.espn.com.br/"}
+        ],
+        "cost": "Varies for MLB.TV and ESPN packages",
+        "restrictions": "Some blackouts may apply",
+        "additionalInfo": "ESPN broadcasts select MLB games in Brazil."
+      },
+      "nl": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "Ziggo Sport", "link": "https://www.ziggosport.nl/"}
+        ],
+        "cost": "Varies for MLB.TV and Ziggo Sport packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Ziggo Sport has held rights to MLB games in the Netherlands in recent years, but current details may vary."
+      },
+      "ph": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "TAP Sports", "link": "https://www.tapgo.tv/"}
+        ],
+        "cost": "Varies for MLB.TV and TAP Sports packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "TAP Sports has held rights to MLB games in the Philippines in recent years, but current details may vary."
+      },
+      "sg": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Singapore."
+      },
+      "ae": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in the UAE."
+      },
+      "ru": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Russia."
+      },
+      "pl": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Poland."
+      },
+      "tr": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "S Sport", "link": "https://www.ssport.tv/"}
+        ],
+        "cost": "Varies for MLB.TV and S Sport packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "S Sport has held rights to MLB games in Turkey in recent years, but current details may vary."
+      },
+      "th": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Thailand."
+      },
+      "eg": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Egypt."
+      },
+      "se": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"},
+          {"name": "C More", "link": "https://www.cmore.se/"}
+        ],
+        "cost": "Varies for MLB.TV and C More packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "C More has held rights to MLB games in Sweden in recent years, but current details may vary."
+      },
+      "no": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Norway."
+      },
+      "dk": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Denmark."
+      },
+      "gr": {
+        "services": [
+          {"name": "MLB.TV", "link": "https://www.mlb.com/tv"}
+        ],
+        "cost": "Varies for MLB.TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "MLB.TV is the primary way to watch MLB games in Greece."
       }
     }
   }

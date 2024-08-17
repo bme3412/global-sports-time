@@ -104,6 +104,134 @@
         "cost": "Varies by country",
         "restrictions": "No local blackouts",
         "additionalInfo": "beIN Sports holds rights to Bundesliga matches across the Middle East and North Africa region."
+      },
+      "es": {
+        "services": [
+          {"name": "Movistar+", "link": "https://www.movistarplus.es/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Movistar+ has held rights to Bundesliga matches in Spain in recent years, but current details may vary."
+      },
+      "fr": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.beinsports.com/france/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "beIN Sports has held rights to Bundesliga matches in France in recent years, but current details may vary."
+      },
+      "it": {
+        "services": [
+          {"name": "Sky Italia", "link": "https://www.sky.it/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Sky Italia has held rights to Bundesliga matches in Italy in recent years, but current details may vary."
+      },
+      "ru": {
+        "services": [
+          {"name": "Match TV", "link": "https://matchtv.ru/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Match TV has held rights to Bundesliga matches in Russia in recent years, but current details may vary."
+      },
+      "cn": {
+        "services": [
+          {"name": "PP Sports", "link": "https://www.pptv.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "PP Sports has held rights to Bundesliga matches in China in recent years, but current details may vary."
+      },
+      "sg": {
+        "services": [
+          {"name": "StarHub", "link": "https://www.starhub.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "StarHub has held rights to Bundesliga matches in Singapore in recent years, but current details may vary."
+      },
+      "tr": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.beinsports.com/tr/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "beIN Sports has held rights to Bundesliga matches in Turkey in recent years, but current details may vary."
+      },
+      "ph": {
+        "services": [
+          {"name": "Cignal TV", "link": "https://www.cignal.tv/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Cignal TV has held rights to Bundesliga matches in the Philippines in recent years, but current details may vary."
+      },
+      "ae": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.bein.com/en/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "beIN Sports covers Bundesliga matches in the UAE as part of its MENA region coverage."
+      },
+      "za": {
+        "services": [
+          {"name": "SuperSport", "link": "https://supersport.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "SuperSport has held rights to Bundesliga matches in South Africa in recent years, but current details may vary."
+      },
+      "th": {
+        "services": [
+          {"name": "PPTV", "link": "https://www.pptvhd36.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "PPTV has held rights to Bundesliga matches in Thailand in recent years, but current details may vary."
+      },
+      "eg": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.bein.com/en/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "beIN Sports covers Bundesliga matches in Egypt as part of its MENA region coverage."
+      },
+      "se": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.se/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Viaplay has held rights to Bundesliga matches in Sweden in recent years, but current details may vary."
+      },
+      "no": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.no/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Viaplay has held rights to Bundesliga matches in Norway in recent years, but current details may vary."
+      },
+      "dk": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.dk/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Viaplay has held rights to Bundesliga matches in Denmark in recent years, but current details may vary."
+      },
+      "gr": {
+        "services": [
+          {"name": "Cosmote TV", "link": "https://www.cosmote.gr/cosmotetv/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Cosmote TV has held rights to Bundesliga matches in Greece in recent years, but current details may vary."
       }
     }
   }
