@@ -114,28 +114,7 @@ export default function Home() {
           )}
         </div>
 
-        <Card className="shadow-lg bg-white dark:bg-gray-800">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">Additional Resources</h2>
-            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
-              {[
-                { icon: Tv, color: 'text-blue-600', text: 'Access official league websites for international broadcasting information' },
-                { icon: Globe, color: 'text-green-600', text: 'Monitor team social media for updates on global broadcasts' },
-                { icon: Shield, color: 'text-purple-600', text: 'Explore sports-specific streaming service subscriptions' },
-                { icon: Globe, color: 'text-red-600', text: 'Engage with online communities for expatriate sports enthusiasts' },
-                { icon: Tv, color: 'text-yellow-600', text: 'Utilize mobile applications for real-time scores and notifications' },
-              ].map((item, index) => (
-                <li 
-                  key={index} 
-                  className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-all duration-300 ease-in-out"
-                >
-                  <item.icon className={`mr-3 ${item.color}`} size={24} />
-                  <span className="text-lg">{item.text}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+        
       </div>
     </div>
   );
