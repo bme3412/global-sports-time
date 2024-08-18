@@ -1,94 +1,94 @@
 {
-    "teams": [
-      {
-        "id": "juventus",
-        "name": "Juventus FC",
-        "league": "serie-a",
-        "city": "Turin",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "Allianz Stadium"
-      },
-      {
-        "id": "inter-milan",
-        "name": "Inter Milan",
-        "league": "serie-a",
-        "city": "Milan",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "San Siro"
-      },
-      {
-        "id": "ac-milan",
-        "name": "AC Milan",
-        "league": "serie-a",
-        "city": "Milan",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "San Siro"
-      },
-      {
-        "id": "napoli",
-        "name": "SSC Napoli",
-        "league": "serie-a",
-        "city": "Naples",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "Stadio Diego Armando Maradona"
-      },
-      {
-        "id": "as-roma",
-        "name": "AS Roma",
-        "league": "serie-a",
-        "city": "Rome",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "Stadio Olimpico"
-      },
-      {
-        "id": "lazio",
-        "name": "SS Lazio",
-        "league": "serie-a",
-        "city": "Rome",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "Stadio Olimpico"
-      },
-      {
-        "id": "atalanta",
-        "name": "Atalanta BC",
-        "league": "serie-a",
-        "city": "Bergamo",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "Gewiss Stadium"
-      },
-      {
-        "id": "fiorentina",
-        "name": "ACF Fiorentina",
-        "league": "serie-a",
-        "city": "Florence",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "Stadio Artemio Franchi"
-      },
-      {
-        "id": "sassuolo",
-        "name": "US Sassuolo",
-        "league": "serie-a",
-        "city": "Sassuolo",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "Mapei Stadium"
-      },
-      {
-        "id": "torino",
-        "name": "Torino FC",
-        "league": "serie-a",
-        "city": "Turin",
-        "country": "Italy",
-        "timezone": "Europe/Rome",
-        "homeStadium": "Stadio Olimpico Grande Torino"
-      }
-    ]
-  }
+  "teams": [
+    {
+      "id": "juventus",
+      "name": "Juventus",
+      "league": "serie-a",
+      "city": "Turin",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "Allianz Stadium"
+    },
+    {
+      "id": "inter-milan",
+      "name": "Inter Milan",
+      "league": "serie-a",
+      "city": "Milan",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "San Siro"
+    },
+    {
+      "id": "ac-milan",
+      "name": "AC Milan",
+      "league": "serie-a",
+      "city": "Milan",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "San Siro"
+    },
+    {
+      "id": "napoli",
+      "name": "Napoli",
+      "league": "serie-a",
+      "city": "Naples",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "Stadio Diego Armando Maradona"
+    },
+    {
+      "id": "as-roma",
+      "name": "AS Roma",
+      "league": "serie-a",
+      "city": "Rome",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "Stadio Olimpico"
+    },
+    {
+      "id": "lazio",
+      "name": "Lazio",
+      "league": "serie-a",
+      "city": "Rome",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "Stadio Olimpico"
+    },
+    {
+      "id": "atalanta",
+      "name": "Atalanta",
+      "league": "serie-a",
+      "city": "Bergamo",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "Gewiss Stadium"
+    },
+    {
+      "id": "fiorentina",
+      "name": "Fiorentina",
+      "league": "serie-a",
+      "city": "Florence",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "Stadio Artemio Franchi"
+    },
+    {
+      "id": "sassuolo",
+      "name": "Sassuolo",
+      "league": "serie-a",
+      "city": "Sassuolo",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "Mapei Stadium"
+    },
+    {
+      "id": "torino",
+      "name": "Torino",
+      "league": "serie-a",
+      "city": "Turin",
+      "country": "Italy",
+      "timezone": "Europe/Rome",
+      "homeStadium": "Stadio Olimpico Grande Torino"
+    }
+  ]
+}

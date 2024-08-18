@@ -1,0 +1,151 @@
+{
+    "serieA": {
+      "it": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/it-IT"},
+          {"name": "Sky Italia", "link": "https://sport.sky.it/"}
+        ],
+        "cost": "€29.99/month for DAZN, €14.90/month for Sky Calcio",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds rights to all matches, with 3 matches per week co-exclusive with Sky."
+      },
+      "gb": {
+        "services": [
+          {"name": "BT Sport", "link": "https://www.bt.com/sport"}
+        ],
+        "cost": "£25/month for BT Sport",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "BT Sport holds exclusive rights to Serie A matches in the UK."
+      },
+      "us": {
+        "services": [
+          {"name": "CBS Sports", "link": "https://www.cbssports.com/"},
+          {"name": "Paramount+", "link": "https://www.paramountplus.com/"}
+        ],
+        "cost": "$4.99/month for Paramount+ Essential",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "CBS holds rights, with matches on CBS Sports Network and Paramount+ streaming."
+      },
+      "ca": {
+        "services": [
+          {"name": "fuboTV", "link": "https://www.fubo.tv/welcome"}
+        ],
+        "cost": "CAD 24.99/month for fuboTV",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "fuboTV holds exclusive rights to Serie A matches in Canada."
+      },
+      "de": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/de-DE"}
+        ],
+        "cost": "€29.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds exclusive rights to Serie A matches in Germany."
+      },
+      "es": {
+        "services": [
+          {"name": "Movistar+", "link": "https://www.movistarplus.es/"}
+        ],
+        "cost": "€25/month for Movistar+ Fútbol",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Movistar+ holds rights to Serie A matches in Spain."
+      },
+      "br": {
+        "services": [
+          {"name": "ESPN Brasil", "link": "https://www.espn.com.br/"},
+          {"name": "Star+", "link": "https://www.starplus.com/"}
+        ],
+        "cost": "R$45.90/month for Star+",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN Brasil broadcasts select matches on TV. All matches available on Star+ streaming."
+      },
+      "jp": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/ja-JP"}
+        ],
+        "cost": "¥1,925/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds exclusive rights to all Serie A matches in Japan."
+      },
+      "cn": {
+        "services": [
+          {"name": "PPTV", "link": "https://sports.pptv.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "PPTV holds rights to broadcast Serie A matches in China."
+      },
+      "in": {
+        "services": [
+          {"name": "Sony Pictures Networks", "link": "https://www.sonyliv.com/"}
+        ],
+        "cost": "₹299/month for SonyLIV Premium",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sony Pictures Networks holds rights to Serie A matches in India, available on SonyLIV streaming."
+      },
+      "au": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.beinsports.com/au/"}
+        ],
+        "cost": "AUD 19.99/month for beIN SPORTS CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds rights to Serie A matches in Australia."
+      },
+      "fr": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.beinsports.com/france/"}
+        ],
+        "cost": "€15/month for beIN SPORTS CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds exclusive rights to Serie A matches in France."
+      },
+      "nl": {
+        "services": [
+          {"name": "Ziggo Sport", "link": "https://www.ziggosport.nl/"}
+        ],
+        "cost": "€14.95/month for Ziggo Sport Totaal",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Ziggo Sport holds rights to Serie A matches in the Netherlands."
+      },
+      "mena": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.bein.com/en/"}
+        ],
+        "cost": "Varies by country",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds rights to Serie A matches across the Middle East and North Africa region."
+      },
+      "ru": {
+        "services": [
+          {"name": "Match TV", "link": "https://matchtv.ru/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Match TV holds rights to broadcast Serie A matches in Russia."
+      },
+      "tr": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.beinsports.com/tr/"}
+        ],
+        "cost": "TRY 159/month for beIN CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds exclusive rights to Serie A matches in Turkey."
+      },
+      "se": {
+        "services": [
+          {"name": "C More", "link": "https://www.cmore.se/"}
+        ],
+        "cost": "SEK 449/month for C More All Sport",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "C More holds rights to Serie A matches in Sweden."
+      },
+      "pl": {
+        "services": [
+          {"name": "Eleven Sports", "link": "https://www.elevensports.pl/"}
+        ],
+        "cost": "PLN 15/month for Eleven Sports",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Eleven Sports holds rights to broadcast Serie A matches in Poland."
+      }
+    }
+  }
