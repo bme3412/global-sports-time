@@ -1,136 +1,124 @@
 {
-    "teams": [
-      {
-        "id": "giants",
-        "name": "Yomiuri Giants",
-        "league": "npb",
-        "division": "Central",
-        "city": "Tokyo",
-        "prefecture": "Tokyo",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Tokyo Dome"
-      },
-      {
-        "id": "tigers",
-        "name": "Hanshin Tigers",
-        "league": "npb",
-        "division": "Central",
-        "city": "Nishinomiya",
-        "prefecture": "Hyogo",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Hanshin Koshien Stadium"
-      },
-      {
-        "id": "carp",
-        "name": "Hiroshima Toyo Carp",
-        "league": "npb",
-        "division": "Central",
-        "city": "Hiroshima",
-        "prefecture": "Hiroshima",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Mazda Zoom-Zoom Stadium Hiroshima"
-      },
-      {
-        "id": "dragons",
-        "name": "Chunichi Dragons",
-        "league": "npb",
-        "division": "Central",
-        "city": "Nagoya",
-        "prefecture": "Aichi",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Vantelin Dome Nagoya"
-      },
-      {
-        "id": "baystars",
-        "name": "Yokohama DeNA BayStars",
-        "league": "npb",
-        "division": "Central",
-        "city": "Yokohama",
-        "prefecture": "Kanagawa",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Yokohama Stadium"
-      },
-      {
-        "id": "swallows",
-        "name": "Tokyo Yakult Swallows",
-        "league": "npb",
-        "division": "Central",
-        "city": "Tokyo",
-        "prefecture": "Tokyo",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Meiji Jingu Stadium"
-      },
-      {
-        "id": "lions",
-        "name": "Saitama Seibu Lions",
-        "league": "npb",
-        "division": "Pacific",
-        "city": "Tokorozawa",
-        "prefecture": "Saitama",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Belluna Dome"
-      },
-      {
-        "id": "hawks",
-        "name": "Fukuoka SoftBank Hawks",
-        "league": "npb",
-        "division": "Pacific",
-        "city": "Fukuoka",
-        "prefecture": "Fukuoka",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "PayPay Dome"
-      },
-      {
-        "id": "eagles",
-        "name": "Tohoku Rakuten Golden Eagles",
-        "league": "npb",
-        "division": "Pacific",
-        "city": "Sendai",
-        "prefecture": "Miyagi",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Rakuten Seimei Park Miyagi"
-      },
-      {
-        "id": "marines",
-        "name": "Chiba Lotte Marines",
-        "league": "npb",
-        "division": "Pacific",
-        "city": "Chiba",
-        "prefecture": "Chiba",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "ZOZO Marine Stadium"
-      },
-      {
-        "id": "buffaloes",
-        "name": "Orix Buffaloes",
-        "league": "npb",
-        "division": "Pacific",
-        "city": "Osaka",
-        "prefecture": "Osaka",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "Kyocera Dome Osaka"
-      },
-      {
-        "id": "fighters",
-        "name": "Hokkaido Nippon-Ham Fighters",
-        "league": "npb",
-        "division": "Pacific",
-        "city": "Sapporo",
-        "prefecture": "Hokkaido",
-        "country": "Japan",
-        "timezone": "Asia/Tokyo",
-        "homeStadium": "ES CON Field Hokkaido"
-      }
-    ]
-  }
+  "teams": [
+    {
+      "id": "giants",
+      "name": "Yomiuri Giants",
+      "league": "npb_central",
+      "city": "Tokyo",
+      "prefecture": "Tokyo",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Tokyo Dome"
+    },
+    {
+      "id": "tigers",
+      "name": "Hanshin Tigers",
+      "league": "npb_central",
+      "city": "Nishinomiya",
+      "prefecture": "Hyogo",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Hanshin Koshien Stadium"
+    },
+    {
+      "id": "carp",
+      "name": "Hiroshima Toyo Carp",
+      "league": "npb_central",
+      "city": "Hiroshima",
+      "prefecture": "Hiroshima",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Mazda Zoom-Zoom Stadium Hiroshima"
+    },
+    {
+      "id": "dragons",
+      "name": "Chunichi Dragons",
+      "league": "npb_central",
+      "city": "Nagoya",
+      "prefecture": "Aichi",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Vantelin Dome Nagoya"
+    },
+    {
+      "id": "baystars",
+      "name": "Yokohama DeNA BayStars",
+      "league": "npb_central",
+      "city": "Yokohama",
+      "prefecture": "Kanagawa",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Yokohama Stadium"
+    },
+    {
+      "id": "swallows",
+      "name": "Tokyo Yakult Swallows",
+      "league": "npb_central",
+      "city": "Tokyo",
+      "prefecture": "Tokyo",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Meiji Jingu Stadium"
+    },
+    {
+      "id": "hawks",
+      "name": "Fukuoka SoftBank Hawks",
+      "league": "npb_pacific",
+      "city": "Fukuoka",
+      "prefecture": "Fukuoka",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "PayPay Dome"
+    },
+    {
+      "id": "buffaloes",
+      "name": "Orix Buffaloes",
+      "league": "npb_pacific",
+      "city": "Osaka",
+      "prefecture": "Osaka",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Kyocera Dome Osaka"
+    },
+    {
+      "id": "lions",
+      "name": "Saitama Seibu Lions",
+      "league": "npb_pacific",
+      "city": "Tokorozawa",
+      "prefecture": "Saitama",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Belluna Dome"
+    },
+    {
+      "id": "marines",
+      "name": "Chiba Lotte Marines",
+      "league": "npb_pacific",
+      "city": "Chiba",
+      "prefecture": "Chiba",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "ZOZO Marine Stadium"
+    },
+    {
+      "id": "eagles",
+      "name": "Tohoku Rakuten Golden Eagles",
+      "league": "npb_pacific",
+      "city": "Sendai",
+      "prefecture": "Miyagi",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "Rakuten Seimei Park Miyagi"
+    },
+    {
+      "id": "fighters",
+      "name": "Hokkaido Nippon-Ham Fighters",
+      "league": "npb_pacific",
+      "city": "Sapporo",
+      "prefecture": "Hokkaido",
+      "country": "Japan",
+      "timezone": "Asia/Tokyo",
+      "homeStadium": "ES CON Field Hokkaido"
+    }
+  ]
+}

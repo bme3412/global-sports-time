@@ -22,6 +22,7 @@ import serieATeamsData from "@/data/teams/seriea_teams.json";
 import nbaGTeamsData from "@/data/teams/nbaG_teams.json";
 import wnbaTeamsData from "@/data/teams/wnba_teams.json";
 import acbTeamsData from "@/data/teams/acb_teams.json";
+import npbTeamsData from "@/data/teams/npb_teams.json";
 
 // Import schedule data
 import premierLeagueSchedule from "@/data/schedules/premierleague/schedule_premierleague.csv";
@@ -35,6 +36,7 @@ import serieASchedule from "@/data/schedules/serie-a/schedule_seriea.csv";
 import nbaGSchedule from "@/data/schedules/nbaG/schedule_nbaG.csv";
 import wnbaSchedule from "@/data/schedules/wnba/schedule_wnba.csv";
 import acbSchedule from "@/data/schedules/acb/schedule_acb.csv";
+import npbSchedule from "@/data/schedules/npb/schedule_npb.csv";
 
 // Import viewing options data
 import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague_viewing.json";
@@ -48,6 +50,7 @@ import serieAViewingOptionsData from "@/data/viewingOptions/seriea_viewing.json"
 import nbaGViewingOptionsData from "@/data/viewingOptions/nbaG_viewing.json";
 import wnbaViewingOptionsData from "@/data/viewingOptions/wnba_viewing.json";
 import acbViewingOptionsData from "@/data/viewingOptions/acb_viewing.json";
+import npbViewingOptionsData from "@/data/viewingOptions/npb_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
@@ -76,6 +79,7 @@ const bundesligaTeams = Array.isArray(bundesligaTeamsData.teams)
 const laLigaTeams = Array.isArray(laLigaTeamsData.teams)
   ? laLigaTeamsData.teams
   : [];
+const npbTeams = Array.isArray(npbTeamsData.teams) ? npbTeamsData.teams : [];
 
 // Combine team data
 const teams = [
@@ -91,6 +95,7 @@ const teams = [
   ...nbaGTeams,
   ...wnbaTeams,
   ...acbTeams,
+  ...npbTeams,
 ];
 
 // Group leagues by sport
@@ -147,6 +152,7 @@ export default function GlobalSportsApp() {
   const [nbaGGames, setNbaGGames] = useState([]);
   const [wnbaGames, setWnbaGames] = useState([]);
   const [acbGames, setAcbGames] = useState([]);
+  const [npbGames, setNpbGames] = useState([]);
 
   useEffect(() => {
     setPremierLeagueGames(
@@ -169,6 +175,13 @@ export default function GlobalSportsApp() {
         ...game,
         id: `mlb-${index}`,
         league: "mlb",
+      }))
+    );
+    setNpbGames(
+      npbSchedule.map((game, index) => ({
+        ...game,
+        id: `npb-${index}`,
+        league: "npb",
       }))
     );
     setAcbGames(
@@ -345,6 +358,13 @@ export default function GlobalSportsApp() {
               selectedTeams.includes(game.Away)
           );
           break;
+        case "npb":
+          newFilteredGames = npbGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
         default:
           break;
       }
@@ -376,6 +396,7 @@ export default function GlobalSportsApp() {
     nbaGGames,
     acbGames,
     wnbaGames,
+    npbGames,
   ]);
   const handleGameSelect = (game) => {
     setSelectedGame(game);
@@ -413,6 +434,7 @@ export default function GlobalSportsApp() {
       nba_g_league: nbaGGames,
       wnba: wnbaGames,
       acb: acbGames,
+      npb: npbGames,
     };
 
     if (leagueGames[selectedLeague]) {
@@ -452,6 +474,8 @@ export default function GlobalSportsApp() {
         return mlbViewingOptionsData.mlb;
       case "euroleague":
         return euroleagueViewingOptionsData.euroleague;
+      case "npb":
+        return npbViewingOptionsData.npb;
       default:
         return {};
     }
@@ -543,7 +567,7 @@ export default function GlobalSportsApp() {
           locations={locations}
           viewingOptions={broadcastData}
           teamCities={teamCities}
-          teams={[...teams, ...euroleagueTeams,...acbTeams]} // Update this line
+          teams={[...teams, ...euroleagueTeams, ...acbTeams]} // Update this line
           teamDetails={teamDetails}
           selectedLeague={selectedLeague}
           userTimezone={userTimezone}
@@ -568,6 +592,7 @@ function getStadiumInfo(teamName) {
     serieATeams.find((t) => t.name === teamName) ||
     nbaGTeams.find((t) => t.name === teamName) ||
     wnbaTeams.find((t) => t.name === teamName) ||
-    acbTeams.find((t) => t.name === teamName);  // Add this line
+    acbTeams.find((t) => t.name === teamName) ||
+    npbTeams.find((t) => t.name === teamName);  // Add this line
   return team ? `${team.homeArena}, ${team.city}` : `${teamName} Stadium`;
 }

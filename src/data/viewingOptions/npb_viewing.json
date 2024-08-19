@@ -1,0 +1,55 @@
+{
+    "npb": {
+      "jp": {
+        "services": [
+          {"name": "Pacific League TV", "link": "https://tv.pacificleague.jp/"},
+          {"name": "DAZN", "link": "https://www.dazn.com/ja-JP"},
+          {"name": "NHK", "link": "https://www.nhk.or.jp/"},
+          {"name": "J SPORTS", "link": "https://www.jsports.co.jp/"}
+        ],
+        "cost": "Varies by service. Pacific League TV is about ¥1,900/month, DAZN is ¥1,750/month",
+        "restrictions": "Some games may be blacked out depending on the service",
+        "additionalInfo": "Pacific League TV covers Pacific League games. DAZN, NHK, and J SPORTS broadcast select games from both leagues."
+      },
+      "us": {
+        "services": [
+          {"name": "Pacific League TV", "link": "https://tv.pacificleague.jp/"}
+        ],
+        "cost": "About $15/month for Pacific League TV",
+        "restrictions": "Only Pacific League games are available",
+        "additionalInfo": "Limited availability of NPB games in the US. Some games may be available through specialized Asian sports packages on cable/satellite providers."
+      },
+      "kr": {
+        "services": [
+          {"name": "SPOTV", "link": "https://www.spotvnow.co.kr/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "Limited selection of games",
+        "additionalInfo": "SPOTV occasionally broadcasts NPB games, particularly those featuring Korean players."
+      },
+      "tw": {
+        "services": [
+          {"name": "Videoland", "link": "https://www.videoland.com.tw/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "Limited selection of games",
+        "additionalInfo": "Videoland occasionally broadcasts NPB games, particularly those featuring Taiwanese players."
+      },
+      "cn": {
+        "services": [
+          {"name": "Tencent", "link": "https://sports.qq.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "Limited selection of games",
+        "additionalInfo": "Tencent occasionally broadcasts NPB games, but availability may vary."
+      },
+      "global": {
+        "services": [
+          {"name": "Pacific League TV", "link": "https://tv.pacificleague.jp/"}
+        ],
+        "cost": "About ¥2,200/month for Pacific League TV (price may vary by region)",
+        "restrictions": "Only Pacific League games are available",
+        "additionalInfo": "Pacific League TV is available globally, but commentary is in Japanese. Central League games are generally not available for international streaming."
+      }
+    }
+  }
