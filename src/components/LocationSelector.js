@@ -81,7 +81,8 @@ const LocationSelector = ({ locations, setWatchLocation, watchDateRange, setWatc
 
       <div className="space-y-2">
         <label className="block text-sm font-medium text-gray-700">
-          When will you be watching?
+          When will you be watching? 
+          Alternatively, browse all games below:
         </label>
         <div className="flex space-x-4">
           <div className="relative flex-1">

@@ -35,6 +35,7 @@ const GameSchedule = ({
 }) => {
   const [currentViewingInfo, setCurrentViewingInfo] = useState({});
   const [gamesInRange, setGamesInRange] = useState([]);
+  const [summary, setSummary] = useState({});
 
   useEffect(() => {
     console.log("ViewingOptions:", viewingOptions);
@@ -60,10 +61,27 @@ const GameSchedule = ({
       });
 
       setGamesInRange(filteredGamesInRange);
+      updateSummary(filteredGamesInRange);
     } else {
       setGamesInRange(filteredGames);
+      updateSummary(filteredGames);
     }
   }, [filteredGames, watchDateRange, selectedLeague]);
+
+  const updateSummary = (games) => {
+    const teams = new Set();
+    const locations = new Set();
+    games.forEach(game => {
+      teams.add(game.Home);
+      teams.add(game.Away);
+      locations.add(getStadiumInfo(game.Home));
+    });
+    setSummary({
+      games: games.length,
+      teams: teams.size,
+      locations: locations.size
+    });
+  };
 
   const parseGameDate = (dateString) => {
     return parse(dateString, 'EEEE d MMMM yyyy', new Date());
@@ -195,6 +213,13 @@ const GameSchedule = ({
  
   return (
     <div className="space-y-4">
+      {gamesInRange.length > 0 && (
+        <div className="bg-blue-100 p-4 rounded-md shadow-sm">
+          <p className="text-blue-800 font-medium">
+            Showing data for {summary.games} game{summary.games !== 1 ? 's' : ''} between {summary.teams} team{summary.teams !== 1 ? 's' : ''} at {summary.locations} location{summary.locations !== 1 ? 's' : ''}:
+          </p>
+        </div>
+      )}
       {gamesInRange.map((game, index) => renderGameInfo(game, index))}
     </div>
   );
