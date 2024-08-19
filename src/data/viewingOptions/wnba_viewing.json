@@ -1,0 +1,48 @@
+{
+    "wnba": {
+      "us": {
+        "services": [
+          {"name": "WNBA League Pass", "link": "https://www.wnba.com/leaguepass/"},
+          {"name": "ESPN+", "link": "https://plus.espn.com/"},
+          {"name": "ABC", "link": "https://abc.com/"},
+          {"name": "ESPN", "link": "https://www.espn.com/wnba/"},
+          {"name": "CBS Sports Network", "link": "https://www.cbssports.com/wnba/"},
+          {"name": "NBA TV", "link": "https://www.nba.com/watch/nba-tv"},
+          {"name": "Prime Video", "link": "https://www.amazon.com/Prime-Video/b?node=2676882011"},
+          {"name": "Paramount+", "link": "https://www.paramountplus.com/"},
+          {"name": "ION", "link": "https://iontelevision.com/"},
+          {"name": "Local TV Networks", "link": ""}
+        ],
+        "cost": "$24.99/season for WNBA League Pass, $69.99/month for Hulu + Live TV",
+        "restrictions": "Some games may be blacked out locally. National broadcasts are exclusive to ABC, ESPN, CBS Sports Network, and ION.",
+        "additionalInfo": "WNBA League Pass offers both live and on-demand viewing. Local team games are typically blacked out on League Pass. Regional sports networks and local TV stations also broadcast games."
+      },
+      "ca": {
+        "services": [
+          {"name": "WNBA League Pass", "link": "https://www.wnba.com/leaguepass/"},
+          {"name": "TSN", "link": "https://www.tsn.ca/wnba"}
+        ],
+        "cost": "CAD 24.99/season for WNBA League Pass, CAD 19.99/month for TSN Direct",
+        "restrictions": "Some games may not be available due to regional broadcast rights",
+        "additionalInfo": "TSN broadcasts select WNBA games in Canada"
+      },
+      "gb": {
+        "services": [
+          {"name": "WNBA League Pass", "link": "https://www.wnba.com/leaguepass/"},
+          {"name": "Sky Sports", "link": "https://www.skysports.com/wnba"}
+        ],
+        "cost": "£24.99/season for WNBA League Pass, varies for Sky Sports packages",
+        "restrictions": "No local blackouts, but some games may not be available live due to broadcasting rights",
+        "additionalInfo": "Sky Sports shows select WNBA games"
+      },
+      "au": {
+        "services": [
+          {"name": "WNBA League Pass", "link": "https://www.wnba.com/leaguepass/"},
+          {"name": "ESPN", "link": "https://www.espn.com.au/wnba/"}
+        ],
+        "cost": "AUD 24.99/season for WNBA League Pass, AUD 25/month for Kayo Sports (includes ESPN)",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN shows select WNBA games through Foxtel and Kayo Sports"
+      }
+    }
+  }

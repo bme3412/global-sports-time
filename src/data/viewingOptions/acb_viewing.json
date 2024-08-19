@@ -1,0 +1,43 @@
+{
+    "acb": {
+      "es": {
+        "services": [
+          {"name": "Movistar+", "link": "https://www.movistarplus.es/"},
+          {"name": "DAZN", "link": "https://www.dazn.com/es-ES/home"},
+          {"name": "ACB TV", "link": "https://www.acb.com/acbtv"},
+          {"name": "#Vamos", "link": "https://www.movistarplus.es/canal/vamos"},
+          {"name": "Teledeporte", "link": "https://www.rtve.es/play/teledeporte/"},
+          {"name": "LaLigaSportsTV", "link": "https://www.laligasportstv.com/"}
+        ],
+        "cost": "Varies by package. Movistar+ from €25/month, DAZN from €9.99/month",
+        "restrictions": "Some games may be exclusive to certain platforms",
+        "additionalInfo": "Movistar+ and DAZN have the main broadcasting rights. ACB TV offers some free content and highlights. Regional channels may broadcast local team games."
+      },
+      "gb": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/en-GB/home"},
+          {"name": "ACB TV", "link": "https://www.acb.com/acbtv"}
+        ],
+        "cost": "DAZN from £7.99/month",
+        "restrictions": "Limited game availability",
+        "additionalInfo": "DAZN occasionally broadcasts ACB games. ACB TV offers some free content and highlights."
+      },
+      "us": {
+        "services": [
+          {"name": "ACB TV", "link": "https://www.acb.com/acbtv"},
+          {"name": "FloSports", "link": "https://www.flosports.tv/"}
+        ],
+        "cost": "FloSports from $29.99/month or $150/year",
+        "restrictions": "Limited game availability",
+        "additionalInfo": "FloSports occasionally broadcasts ACB games. ACB TV offers some free content and highlights."
+      },
+      "au": {
+        "services": [
+          {"name": "ACB TV", "link": "https://www.acb.com/acbtv"}
+        ],
+        "cost": "Free for available content",
+        "restrictions": "Very limited game availability",
+        "additionalInfo": "ACB TV offers some free content and highlights. Full game broadcasts are rare."
+      }
+    }
+  }

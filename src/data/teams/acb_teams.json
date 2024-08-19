@@ -1,0 +1,191 @@
+{
+    "teams": [
+      {
+        "id": "barca",
+        "name": "Barcelona FC",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Palau Blaugrana"
+      },
+      {
+        "id": "baskonia",
+        "name": "Saski Baskonia",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Vitoria-Gasteiz",
+        "state": "Basque Country",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Fernando Buesa Arena"
+      },
+      {
+        "id": "girona",
+        "name": "Bàsquet Girona",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Girona",
+        "state": "Catalonia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Pavelló Municipal Girona-Fontajau"
+      },
+      {
+        "id": "manresa",
+        "name": "Bàsquet Manresa",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Manresa",
+        "state": "Catalonia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Pavelló Nou Congost"
+      },
+      {
+        "id": "zaragoza",
+        "name": "Basket Zaragoza",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Zaragoza",
+        "state": "Aragon",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Pabellón Príncipe Felipe"
+      },
+      {
+        "id": "granada",
+        "name": "Fundación CB Granada",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Granada",
+        "state": "Andalusia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Palacio Municipal de Deportes de Granada"
+      },
+      {
+        "id": "gran_canaria",
+        "name": "CB Gran Canaria",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Las Palmas",
+        "state": "Canary Islands",
+        "country": "Spain",
+        "timezone": "Atlantic/Canary",
+        "homeArena": "Gran Canaria Arena"
+      },
+      {
+        "id": "lleida",
+        "name": "Força Lleida",
+        "league": "leb",
+        "conference": "N/A",
+        "city": "Lleida",
+        "state": "Catalonia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Pavelló Barris Nord"
+      },
+      {
+        "id": "joventut",
+        "name": "Club Joventut Badalona",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Badalona",
+        "state": "Catalonia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Palau Municipal d'Esports de Badalona"
+      },
+      {
+        "id": "tenerife",
+        "name": "CB Canarias",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "San Cristóbal de La Laguna",
+        "state": "Canary Islands",
+        "country": "Spain",
+        "timezone": "Atlantic/Canary",
+        "homeArena": "Santiago Martín Arena"
+      },
+      {
+        "id": "coruna",
+        "name": "Básquet Coruña",
+        "league": "leb",
+        "conference": "N/A",
+        "city": "A Coruña",
+        "state": "Galicia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Palacio de los Deportes de Riazor"
+      },
+      {
+        "id": "andorra",
+        "name": "BC Andorra",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Andorra la Vella",
+        "state": "Andorra",
+        "country": "Andorra",
+        "timezone": "Europe/Andorra",
+        "homeArena": "Poliesportiu d'Andorra"
+      },
+      {
+        "id": "real_madrid",
+        "name": "Real Madrid Baloncesto",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Madrid",
+        "state": "Community of Madrid",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "WiZink Center"
+      },
+      {
+        "id": "breogan",
+        "name": "CB Breogán",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Lugo",
+        "state": "Galicia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Pazo Provincial dos Deportes de Lugo"
+      },
+      {
+        "id": "bilbao",
+        "name": "Bilbao Basket",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Bilbao",
+        "state": "Basque Country",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Bilbao Arena"
+      },
+      {
+        "id": "murcia",
+        "name": "UCAM Murcia CB",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Murcia",
+        "state": "Region of Murcia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Palacio de los Deportes de Murcia"
+      },
+      {
+        "id": "unicaja",
+        "name": "Unicaja Málaga",
+        "league": "acb",
+        "conference": "N/A",
+        "city": "Málaga",
+        "state": "Andalusia",
+        "country": "Spain",
+        "timezone": "Europe/Madrid",
+        "homeArena": "Palacio de Deportes José María Martín Carpena"
+      }
+    ]
+  }

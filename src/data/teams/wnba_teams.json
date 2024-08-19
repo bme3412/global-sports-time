@@ -1,0 +1,136 @@
+{
+    "teams": [
+      {
+        "id": "aces",
+        "name": "Las Vegas Aces",
+        "league": "wnba",
+        "conference": "Western",
+        "city": "Las Vegas",
+        "state": "Nevada",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeArena": "Michelob Ultra Arena"
+      },
+      {
+        "id": "dream",
+        "name": "Atlanta Dream",
+        "league": "wnba",
+        "conference": "Eastern",
+        "city": "Atlanta",
+        "state": "Georgia",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Gateway Center Arena"
+      },
+      {
+        "id": "sky",
+        "name": "Chicago Sky",
+        "league": "wnba",
+        "conference": "Eastern",
+        "city": "Chicago",
+        "state": "Illinois",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "Wintrust Arena"
+      },
+      {
+        "id": "sun",
+        "name": "Connecticut Sun",
+        "league": "wnba",
+        "conference": "Eastern",
+        "city": "Uncasville",
+        "state": "Connecticut",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Mohegan Sun Arena"
+      },
+      {
+        "id": "wings",
+        "name": "Dallas Wings",
+        "league": "wnba",
+        "conference": "Western",
+        "city": "Arlington",
+        "state": "Texas",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "College Park Center"
+      },
+      {
+        "id": "fever",
+        "name": "Indiana Fever",
+        "league": "wnba",
+        "conference": "Eastern",
+        "city": "Indianapolis",
+        "state": "Indiana",
+        "country": "USA",
+        "timezone": "America/Indiana/Indianapolis",
+        "homeArena": "Gainbridge Fieldhouse"
+      },
+      {
+        "id": "sparks",
+        "name": "Los Angeles Sparks",
+        "league": "wnba",
+        "conference": "Western",
+        "city": "Los Angeles",
+        "state": "California",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeArena": "Crypto.com Arena"
+      },
+      {
+        "id": "lynx",
+        "name": "Minnesota Lynx",
+        "league": "wnba",
+        "conference": "Western",
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "country": "USA",
+        "timezone": "America/Chicago",
+        "homeArena": "Target Center"
+      },
+      {
+        "id": "liberty",
+        "name": "New York Liberty",
+        "league": "wnba",
+        "conference": "Eastern",
+        "city": "Brooklyn",
+        "state": "New York",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Barclays Center"
+      },
+      {
+        "id": "mercury",
+        "name": "Phoenix Mercury",
+        "league": "wnba",
+        "conference": "Western",
+        "city": "Phoenix",
+        "state": "Arizona",
+        "country": "USA",
+        "timezone": "America/Phoenix",
+        "homeArena": "Footprint Center"
+      },
+      {
+        "id": "storm",
+        "name": "Seattle Storm",
+        "league": "wnba",
+        "conference": "Western",
+        "city": "Seattle",
+        "state": "Washington",
+        "country": "USA",
+        "timezone": "America/Los_Angeles",
+        "homeArena": "Climate Pledge Arena"
+      },
+      {
+        "id": "mystics",
+        "name": "Washington Mystics",
+        "league": "wnba",
+        "conference": "Eastern",
+        "city": "Washington",
+        "state": "D.C.",
+        "country": "USA",
+        "timezone": "America/New_York",
+        "homeArena": "Entertainment and Sports Arena"
+      }
+    ]
+  }
