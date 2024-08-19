@@ -1,0 +1,138 @@
+{
+    "nba_g_league": {
+      "us": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://www.nba.com/watch/streaming-subscriptions"},
+          {"name": "ESPN+", "link": "https://plus.espn.com/"},
+          {"name": "NBA TV", "link": "https://www.nba.com/watch/nba-tv"},
+          {"name": "YouTube TV", "link": "https://tv.youtube.com/"},
+          {"name": "Eleven Sports", "link": "https://www.elevensports.com/"}
+        ],
+        "cost": "$28.99/month for NBA League Pass, $9.99/month for ESPN+",
+        "restrictions": "Some games may be exclusive to certain platforms",
+        "additionalInfo": "NBA League Pass includes G League games. ESPN+ broadcasts select G League games."
+      },
+      "ca": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"},
+          {"name": "TSN", "link": "https://www.tsn.ca/nba"}
+        ],
+        "cost": "CAD 29.99/month for NBA League Pass, CAD 19.99/month for TSN Direct",
+        "restrictions": "Limited G League coverage on TSN",
+        "additionalInfo": "NBA League Pass includes G League games. TSN may show select G League content."
+      },
+      "gb": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "£14.99/month for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "au": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "AUD 39.99/month for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "jp": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"},
+          {"name": "Rakuten", "link": "https://sports.rakuten.co.jp/"}
+        ],
+        "cost": "¥2,990/month for NBA League Pass",
+        "restrictions": "Limited G League coverage on Rakuten",
+        "additionalInfo": "NBA League Pass includes G League games. Rakuten may show select G League content."
+      },
+      "fr": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "€19.99/month for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "de": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "€19.99/month for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "es": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "€19.99/month for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "it": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "€19.99/month for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "br": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "R$59.99/month for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "in": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "₹1499/year for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "cn": {
+        "services": [
+          {"name": "Tencent", "link": "https://sports.qq.com/nba/"}
+        ],
+        "cost": "Varies for Tencent services",
+        "restrictions": "Limited G League coverage",
+        "additionalInfo": "Tencent may provide some G League content as part of its NBA partnership."
+      },
+      "ph": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "₱1,300/year for NBA League Pass",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "ae": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "Varies",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "sg": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "Varies",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      },
+      "mx": {
+        "services": [
+          {"name": "NBA League Pass", "link": "https://watch.nba.com/streaming-subscriptions"}
+        ],
+        "cost": "Varies",
+        "restrictions": "No specific G League broadcast deals known",
+        "additionalInfo": "NBA League Pass includes G League games."
+      }
+    }
+  }

@@ -19,6 +19,7 @@ import nflTeamsData from "@/data/teams/nfl_teams.json";
 import laLigaTeamsData from "@/data/teams/laliga_teams.json";
 import euroleagueTeamsData from "@/data/teams/euroleague_teams.json";
 import serieATeamsData from "@/data/teams/seriea_teams.json";
+import nbaGTeamsData from "@/data/teams/nbaG_teams.json";
 
 // Import schedule data
 import premierLeagueSchedule from "@/data/schedules/premierleague/schedule_premierleague.csv";
@@ -29,6 +30,7 @@ import laLigaSchedule from "@/data/schedules/laliga/schedule_laliga.csv";
 import nbaSchedule from "@/data/schedules/nba/schedule_nba.csv";
 import euroleagueSchedule from "@/data/schedules/euroleague/schedule_euroleague.csv";
 import serieASchedule from "@/data/schedules/serie-a/schedule_seriea.csv";
+import nbaGSchedule from "@/data/schedules/nbaG/schedule_nbaG.csv";
 
 // Import viewing options data
 import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague_viewing.json";
@@ -39,6 +41,7 @@ import laLigaViewingOptionsData from "@/data/viewingOptions/laliga_viewing.json"
 import nbaViewingOptionsData from "@/data/viewingOptions/nba_viewing.json";
 import euroleagueViewingOptionsData from "@/data/viewingOptions/euroleague_viewing.json";
 import serieAViewingOptionsData from "@/data/viewingOptions/seriea_viewing.json";
+import nbaGViewingOptionsData from "@/data/viewingOptions/nbaG_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
@@ -49,6 +52,7 @@ const nbaTeams = Array.isArray(nbaTeamsData.teams) ? nbaTeamsData.teams : [];
 const nflTeams = Array.isArray(nflTeamsData.teams) ? nflTeamsData.teams : [];
 const mlbTeams = Array.isArray(mlbTeamsData.teams) ? mlbTeamsData.teams : [];
 const nhlTeams = Array.isArray(nhlTeamsData.teams) ? nhlTeamsData.teams : [];
+const nbaGTeams = Array.isArray(nbaGTeamsData.teams) ? nbaGTeamsData.teams : [];
 const serieATeams = Array.isArray(serieATeamsData.teams)
   ? serieATeamsData.teams
   : [];
@@ -76,6 +80,7 @@ const teams = [
   ...laLigaTeams,
   ...euroleagueTeams,
   ...serieATeams,
+  ...nbaGTeams,
 ];
 
 // Group leagues by sport
@@ -129,6 +134,7 @@ export default function GlobalSportsApp() {
   const [nbaGames, setNbaGames] = useState([]);
   const [euroleagueGames, setEuroleagueGames] = useState([]);
   const [serieAGames, setSerieAGames] = useState([]);
+  const [nbaGGames, setNbaGGames] = useState([]);
 
   useEffect(() => {
     setPremierLeagueGames(
@@ -188,6 +194,13 @@ export default function GlobalSportsApp() {
         league: "nba",
       }))
     );
+    setNbaGGames(
+      nbaGSchedule.map((game, index) => ({
+        ...game,
+        id: `nbag-${index}`,
+        league: "nba_g_league", // Ensure this matches the league ID used elsewhere
+      }))
+    );
 
     if (!watchLocation) {
       fetch("https://ipapi.co/json/")
@@ -227,46 +240,74 @@ export default function GlobalSportsApp() {
   useEffect(() => {
     let newFilteredGames = [];
 
-    if (selectedLeague === "premier-league" && selectedTeams.length > 0) {
-      newFilteredGames = premierLeagueGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
-    } else if (selectedLeague === "bundesliga" && selectedTeams.length > 0) {
-      newFilteredGames = bundesligaGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
-    } else if (selectedLeague === "nfl" && selectedTeams.length > 0) {
-      newFilteredGames = nflGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
-    } else if (selectedLeague === "la-liga" && selectedTeams.length > 0) {
-      newFilteredGames = laLigaGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
-    } else if (selectedLeague === "nba" && selectedTeams.length > 0) {
-      newFilteredGames = nbaGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
-    } else if (selectedLeague === "mlb" && selectedTeams.length > 0) {
-      newFilteredGames = mlbGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
-    } else if (selectedLeague === "euroleague" && selectedTeams.length > 0) {
-      newFilteredGames = euroleagueGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
-    } else if (selectedLeague === "serie-a" && selectedTeams.length > 0) {
-      newFilteredGames = serieAGames.filter(
-        (game) =>
-          selectedTeams.includes(game.Home) || selectedTeams.includes(game.Away)
-      );
+    if (selectedLeague && selectedTeams.length > 0) {
+      switch (selectedLeague) {
+        case "premier-league":
+          newFilteredGames = premierLeagueGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "bundesliga":
+          newFilteredGames = bundesligaGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "nfl":
+          newFilteredGames = nflGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "la-liga":
+          newFilteredGames = laLigaGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "nba":
+          newFilteredGames = nbaGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "mlb":
+          newFilteredGames = mlbGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "euroleague":
+          newFilteredGames = euroleagueGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "serie-a":
+          newFilteredGames = serieAGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "nba_g_league":
+          newFilteredGames = nbaGGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        default:
+          break;
+      }
     }
 
     if (watchDateRange.start && watchDateRange.end) {
@@ -292,8 +333,8 @@ export default function GlobalSportsApp() {
     nbaGames,
     euroleagueGames,
     serieAGames,
+    nbaGGames,
   ]);
-
   const handleGameSelect = (game) => {
     setSelectedGame(game);
   };
@@ -327,6 +368,7 @@ export default function GlobalSportsApp() {
       nba: nbaGames,
       euroleague: euroleagueGames,
       "serie-a": serieAGames,
+      "nba_g_league": nbaGGames,
     };
 
     if (leagueGames[selectedLeague]) {
@@ -342,7 +384,6 @@ export default function GlobalSportsApp() {
       return teams.filter((team) => team.league === selectedLeague);
     }
   };
-
   const getViewingOptions = (league) => {
     switch (league) {
       case "nba":
@@ -357,6 +398,8 @@ export default function GlobalSportsApp() {
         return nflViewingOptionsData.nfl;
       case "la-liga":
         return laLigaViewingOptionsData.laLiga;
+      case "nba_g_league":
+        return nbaGViewingOptionsData.nba_g_league;
       case "mlb":
         return mlbViewingOptionsData.mlb;
       case "euroleague":
@@ -474,6 +517,7 @@ function getStadiumInfo(teamName) {
     laLigaTeams.find((t) => t.name === teamName) ||
     nbaTeams.find((t) => t.name === teamName) ||
     euroleagueTeams.find((t) => t.name === teamName) ||
-    serieATeams.find((t) => t.name === teamName); // Add this line
+    serieATeams.find((t) => t.name === teamName) ||
+    nbaGTeams.find((t) => t.name === teamName);
   return team ? `${team.homeArena}, ${team.city}` : `${teamName} Stadium`;
 }

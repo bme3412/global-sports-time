@@ -1,0 +1,272 @@
+{
+    "teams": [
+      {
+        "id": "austin-spurs",
+        "name": "Austin Spurs",
+        "league": "nba-g-league",
+        "city": "Austin",
+        "state": "Texas",
+        "country": "USA",
+        "affiliatedTeam": "San Antonio Spurs"
+      },
+      {
+        "id": "birmingham-squadron",
+        "name": "Birmingham Squadron",
+        "league": "nba-g-league",
+        "city": "Birmingham",
+        "state": "Alabama",
+        "country": "USA",
+        "affiliatedTeam": "New Orleans Pelicans"
+      },
+      {
+        "id": "delaware-blue-coats",
+        "name": "Delaware Blue Coats",
+        "league": "nba-g-league",
+        "city": "Wilmington",
+        "state": "Delaware",
+        "country": "USA",
+        "affiliatedTeam": "Philadelphia 76ers"
+      },
+      {
+        "id": "capital-city-go-go",
+        "name": "Capital City Go-Go",
+        "league": "nba-g-league",
+        "city": "Washington",
+        "state": "D.C.",
+        "country": "USA",
+        "affiliatedTeam": "Washington Wizards"
+      },
+      {
+        "id": "mexico-city-capitanes",
+        "name": "Mexico City Capitanes",
+        "league": "nba-g-league",
+        "city": "Mexico City",
+        "country": "Mexico"
+      },
+      {
+        "id": "cleveland-charge",
+        "name": "Cleveland Charge",
+        "league": "nba-g-league",
+        "city": "Cleveland",
+        "state": "Ohio",
+        "country": "USA",
+        "affiliatedTeam": "Cleveland Cavaliers"
+      },
+      {
+        "id": "college-park-skyhawks",
+        "name": "College Park Skyhawks",
+        "league": "nba-g-league",
+        "city": "College Park",
+        "state": "Georgia",
+        "country": "USA",
+        "affiliatedTeam": "Atlanta Hawks"
+      },
+      {
+        "id": "motor-city-cruise",
+        "name": "Motor City Cruise",
+        "league": "nba-g-league",
+        "city": "Detroit",
+        "state": "Michigan",
+        "country": "USA",
+        "affiliatedTeam": "Detroit Pistons"
+      },
+      {
+        "id": "indiana-mad-ants",
+        "name": "Indiana Mad Ants",
+        "league": "nba-g-league",
+        "city": "Fort Wayne",
+        "state": "Indiana",
+        "country": "USA",
+        "affiliatedTeam": "Indiana Pacers"
+      },
+      {
+        "id": "grand-rapids-gold",
+        "name": "Grand Rapids Gold",
+        "league": "nba-g-league",
+        "city": "Grand Rapids",
+        "state": "Michigan",
+        "country": "USA",
+        "affiliatedTeam": "Denver Nuggets"
+      },
+      {
+        "id": "greensboro-swarm",
+        "name": "Greensboro Swarm",
+        "league": "nba-g-league",
+        "city": "Greensboro",
+        "state": "North Carolina",
+        "country": "USA",
+        "affiliatedTeam": "Charlotte Hornets"
+      },
+      {
+        "id": "iowa-wolves",
+        "name": "Iowa Wolves",
+        "league": "nba-g-league",
+        "city": "Des Moines",
+        "state": "Iowa",
+        "country": "USA",
+        "affiliatedTeam": "Minnesota Timberwolves"
+      },
+      {
+        "id": "long-island-nets",
+        "name": "Long Island Nets",
+        "league": "nba-g-league",
+        "city": "Uniondale",
+        "state": "New York",
+        "country": "USA",
+        "affiliatedTeam": "Brooklyn Nets"
+      },
+      {
+        "id": "maine-celtics",
+        "name": "Maine Celtics",
+        "league": "nba-g-league",
+        "city": "Portland",
+        "state": "Maine",
+        "country": "USA",
+        "affiliatedTeam": "Boston Celtics"
+      },
+      {
+        "id": "memphis-hustle",
+        "name": "Memphis Hustle",
+        "league": "nba-g-league",
+        "city": "Southaven",
+        "state": "Mississippi",
+        "country": "USA",
+        "affiliatedTeam": "Memphis Grizzlies"
+      },
+      {
+        "id": "oklahoma-city-blue",
+        "name": "Oklahoma City Blue",
+        "league": "nba-g-league",
+        "city": "Oklahoma City",
+        "state": "Oklahoma",
+        "country": "USA",
+        "affiliatedTeam": "Oklahoma City Thunder"
+      },
+      {
+        "id": "osceola-magic",
+        "name": "Osceola Magic",
+        "league": "nba-g-league",
+        "city": "Kissimmee",
+        "state": "Florida",
+        "country": "USA",
+        "affiliatedTeam": "Orlando Magic"
+      },
+      {
+        "id": "raptors-905",
+        "name": "Raptors 905",
+        "league": "nba-g-league",
+        "city": "Mississauga",
+        "state": "Ontario",
+        "country": "Canada",
+        "affiliatedTeam": "Toronto Raptors"
+      },
+      {
+        "id": "rio-grande-valley-vipers",
+        "name": "Rio Grande Valley Vipers",
+        "league": "nba-g-league",
+        "city": "Edinburg",
+        "state": "Texas",
+        "country": "USA",
+        "affiliatedTeam": "Houston Rockets"
+      },
+      {
+        "id": "rip-city-remix",
+        "name": "Rip City Remix",
+        "league": "nba-g-league",
+        "city": "Portland",
+        "state": "Oregon",
+        "country": "USA",
+        "affiliatedTeam": "Portland Trail Blazers"
+      },
+      {
+        "id": "salt-lake-city-stars",
+        "name": "Salt Lake City Stars",
+        "league": "nba-g-league",
+        "city": "Salt Lake City",
+        "state": "Utah",
+        "country": "USA",
+        "affiliatedTeam": "Utah Jazz"
+      },
+      {
+        "id": "san-diego-clippers",
+        "name": "San Diego Clippers",
+        "league": "nba-g-league",
+        "city": "San Diego",
+        "state": "California",
+        "country": "USA",
+        "affiliatedTeam": "LA Clippers"
+      },
+      {
+        "id": "santa-cruz-warriors",
+        "name": "Santa Cruz Warriors",
+        "league": "nba-g-league",
+        "city": "Santa Cruz",
+        "state": "California",
+        "country": "USA",
+        "affiliatedTeam": "Golden State Warriors"
+      },
+      {
+        "id": "sioux-falls-skyforce",
+        "name": "Sioux Falls Skyforce",
+        "league": "nba-g-league",
+        "city": "Sioux Falls",
+        "state": "South Dakota",
+        "country": "USA",
+        "affiliatedTeam": "Miami Heat"
+      },
+      {
+        "id": "south-bay-lakers",
+        "name": "South Bay Lakers",
+        "league": "nba-g-league",
+        "city": "El Segundo",
+        "state": "California",
+        "country": "USA",
+        "affiliatedTeam": "Los Angeles Lakers"
+      },
+      {
+        "id": "stockton-kings",
+        "name": "Stockton Kings",
+        "league": "nba-g-league",
+        "city": "Stockton",
+        "state": "California",
+        "country": "USA",
+        "affiliatedTeam": "Sacramento Kings"
+      },
+      {
+        "id": "texas-legends",
+        "name": "Texas Legends",
+        "league": "nba-g-league",
+        "city": "Frisco",
+        "state": "Texas",
+        "country": "USA",
+        "affiliatedTeam": "Dallas Mavericks"
+      },
+      {
+        "id": "westchester-knicks",
+        "name": "Westchester Knicks",
+        "league": "nba-g-league",
+        "city": "White Plains",
+        "state": "New York",
+        "country": "USA",
+        "affiliatedTeam": "New York Knicks"
+      },
+      {
+        "id": "windy-city-bulls",
+        "name": "Windy City Bulls",
+        "league": "nba-g-league",
+        "city": "Hoffman Estates",
+        "state": "Illinois",
+        "country": "USA",
+        "affiliatedTeam": "Chicago Bulls"
+      },
+      {
+        "id": "wisconsin-herd",
+        "name": "Wisconsin Herd",
+        "league": "nba-g-league",
+        "city": "Oshkosh",
+        "state": "Wisconsin",
+        "country": "USA",
+        "affiliatedTeam": "Milwaukee Bucks"
+      }
+    ]
+  }
