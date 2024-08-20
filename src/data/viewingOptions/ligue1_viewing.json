@@ -1,0 +1,165 @@
+{
+    "ligue1": {
+      "fr": {
+        "services": [
+          {"name": "Canal+", "link": "https://www.canalplus.com/"},
+          {"name": "Amazon Prime Video", "link": "https://www.primevideo.com/"}
+        ],
+        "cost": "Varies based on package, typically €20-€30/month",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Canal+ and Amazon Prime Video share Ligue 1 rights in France. Canal+ broadcasts two matches per week, while Amazon Prime Video shows the remaining eight."
+      },
+      "us": {
+        "services": [
+          {"name": "beIN SPORTS", "link": "https://www.beinsports.com/us/"}
+        ],
+        "cost": "$14.99/month for beIN SPORTS CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN SPORTS holds exclusive rights to Ligue 1 matches in the United States."
+      },
+      "gb": {
+        "services": [
+          {"name": "BT Sport", "link": "https://www.bt.com/sport"}
+        ],
+        "cost": "£25/month for BT Sport",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "BT Sport broadcasts select Ligue 1 matches in the UK."
+      },
+      "ca": {
+        "services": [
+          {"name": "beIN SPORTS", "link": "https://www.beinsports.com/ca-en/"}
+        ],
+        "cost": "CAD 14.99/month for beIN SPORTS CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN SPORTS holds rights to Ligue 1 matches in Canada."
+      },
+      "au": {
+        "services": [
+          {"name": "beIN SPORTS", "link": "https://www.beinsports.com/au/"}
+        ],
+        "cost": "AUD 19.99/month for beIN SPORTS CONNECT",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN SPORTS holds rights to Ligue 1 matches in Australia."
+      },
+      "in": {
+        "services": [
+          {"name": "Voot Select", "link": "https://www.voot.com/"}
+        ],
+        "cost": "₹299/year for Voot Select",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Voot Select streams Ligue 1 matches in India."
+      },
+      "de": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/de-DE"}
+        ],
+        "cost": "€29.99/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds rights to Ligue 1 matches in Germany."
+      },
+      "es": {
+        "services": [
+          {"name": "Movistar+", "link": "https://www.movistarplus.es/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Movistar+ holds rights to Ligue 1 matches in Spain."
+      },
+      "it": {
+        "services": [
+          {"name": "Sky Italia", "link": "https://www.sky.it/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Italia holds rights to Ligue 1 matches in Italy."
+      },
+      "br": {
+        "services": [
+          {"name": "ESPN Brasil", "link": "https://www.espn.com.br/"}
+        ],
+        "cost": "Varies based on cable/satellite provider",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "ESPN Brasil holds rights to Ligue 1 matches in Brazil."
+      },
+      "nl": {
+        "services": [
+          {"name": "Ziggo Sport", "link": "https://www.ziggosport.nl/"}
+        ],
+        "cost": "Included in Ziggo subscription or €14.95/month",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Ziggo Sport holds rights to Ligue 1 matches in the Netherlands."
+      },
+      "mena": {
+        "services": [
+          {"name": "beIN SPORTS", "link": "https://www.bein.com/en/"}
+        ],
+        "cost": "Varies by country",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN SPORTS holds rights to Ligue 1 matches across the Middle East and North Africa region."
+      },
+      "jp": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/ja-JP"}
+        ],
+        "cost": "¥1,925/month for DAZN",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN holds rights to Ligue 1 matches in Japan."
+      },
+      "kr": {
+        "services": [
+          {"name": "SPOTV", "link": "https://www.spotvnow.co.kr/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SPOTV holds rights to broadcast Ligue 1 matches in South Korea."
+      },
+      "cn": {
+        "services": [
+          {"name": "PPTV", "link": "https://sports.pptv.com/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "PPTV has held rights to Ligue 1 matches in China in recent years, but current details may vary."
+      },
+      "se": {
+        "services": [
+          {"name": "C More", "link": "https://www.cmore.se/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "C More has held rights to Ligue 1 matches in Sweden in recent years, but current details may vary."
+      },
+      "no": {
+        "services": [
+          {"name": "TV2 Sport", "link": "https://www.tv2.no/sport/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "TV2 Sport has held rights to Ligue 1 matches in Norway in recent years, but current details may vary."
+      },
+      "dk": {
+        "services": [
+          {"name": "TV2 Sport", "link": "https://sport.tv2.dk/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "TV2 Sport has held rights to Ligue 1 matches in Denmark in recent years, but current details may vary."
+      },
+      "pl": {
+        "services": [
+          {"name": "Eleven Sports", "link": "https://www.elevensports.pl/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "Eleven Sports has held rights to Ligue 1 matches in Poland in recent years, but current details may vary."
+      },
+      "tr": {
+        "services": [
+          {"name": "beIN SPORTS", "link": "https://www.beinsports.com/tr/"}
+        ],
+        "cost": "Varies based on package",
+        "restrictions": "No information available",
+        "additionalInfo": "beIN SPORTS has held rights to Ligue 1 matches in Turkey in recent years, but current details may vary."
+      }
+    }
+  }

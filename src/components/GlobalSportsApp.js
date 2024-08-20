@@ -23,6 +23,7 @@ import nbaGTeamsData from "@/data/teams/nbaG_teams.json";
 import wnbaTeamsData from "@/data/teams/wnba_teams.json";
 import acbTeamsData from "@/data/teams/acb_teams.json";
 import npbTeamsData from "@/data/teams/npb_teams.json";
+import ligue1TeamsData from "@/data/teams/ligue1_teams.json";
 
 // Import schedule data
 import premierLeagueSchedule from "@/data/schedules/premierleague/schedule_premierleague.csv";
@@ -37,6 +38,7 @@ import nbaGSchedule from "@/data/schedules/nbaG/schedule_nbaG.csv";
 import wnbaSchedule from "@/data/schedules/wnba/schedule_wnba.csv";
 import acbSchedule from "@/data/schedules/acb/schedule_acb.csv";
 import npbSchedule from "@/data/schedules/npb/schedule_npb.csv";
+import ligue1Schedule from "@/data/schedules/ligue1/schedule_ligue1.csv";
 
 // Import viewing options data
 import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague_viewing.json";
@@ -51,6 +53,7 @@ import nbaGViewingOptionsData from "@/data/viewingOptions/nbaG_viewing.json";
 import wnbaViewingOptionsData from "@/data/viewingOptions/wnba_viewing.json";
 import acbViewingOptionsData from "@/data/viewingOptions/acb_viewing.json";
 import npbViewingOptionsData from "@/data/viewingOptions/npb_viewing.json";
+import ligue1ViewingOptionsData from "@/data/viewingOptions/ligue1_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
@@ -80,6 +83,9 @@ const laLigaTeams = Array.isArray(laLigaTeamsData.teams)
   ? laLigaTeamsData.teams
   : [];
 const npbTeams = Array.isArray(npbTeamsData.teams) ? npbTeamsData.teams : [];
+const ligue1Teams = Array.isArray(ligue1TeamsData.teams)
+  ? ligue1TeamsData.teams
+  : [];
 
 // Combine team data
 const teams = [
@@ -96,6 +102,7 @@ const teams = [
   ...wnbaTeams,
   ...acbTeams,
   ...npbTeams,
+  ...ligue1Teams,
 ];
 
 // Group leagues by sport
@@ -153,6 +160,7 @@ export default function GlobalSportsApp() {
   const [wnbaGames, setWnbaGames] = useState([]);
   const [acbGames, setAcbGames] = useState([]);
   const [npbGames, setNpbGames] = useState([]);
+  const [ligue1Games, setLigue1Games] = useState([]);
 
   useEffect(() => {
     setPremierLeagueGames(
@@ -210,6 +218,13 @@ export default function GlobalSportsApp() {
         ...game,
         id: `laliga-${index}`,
         league: "la-liga",
+      }))
+    );
+    setLigue1Games(
+      ligue1Schedule.map((game, index) => ({
+        ...game,
+        id: `ligue1-${index}`,
+        league: "ligue1",
       }))
     );
     setEuroleagueGames(
@@ -316,6 +331,13 @@ export default function GlobalSportsApp() {
               selectedTeams.includes(game.Away)
           );
           break;
+        case "ligue1":
+          newFilteredGames = ligue1Games.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
         case "nba":
           newFilteredGames = nbaGames.filter(
             (game) =>
@@ -397,6 +419,7 @@ export default function GlobalSportsApp() {
     acbGames,
     wnbaGames,
     npbGames,
+    ligue1Games,
   ]);
   const handleGameSelect = (game) => {
     setSelectedGame(game);
@@ -435,6 +458,7 @@ export default function GlobalSportsApp() {
       wnba: wnbaGames,
       acb: acbGames,
       npb: npbGames,
+      ligue1: ligue1Games,
     };
 
     if (leagueGames[selectedLeague]) {
@@ -470,6 +494,8 @@ export default function GlobalSportsApp() {
         return nbaGViewingOptionsData.nba_g_league;
       case "wnba":
         return wnbaViewingOptionsData.wnba;
+      case "ligue1":
+        return ligue1ViewingOptionsData.ligue1;
       case "mlb":
         return mlbViewingOptionsData.mlb;
       case "euroleague":
@@ -593,6 +619,7 @@ function getStadiumInfo(teamName) {
     nbaGTeams.find((t) => t.name === teamName) ||
     wnbaTeams.find((t) => t.name === teamName) ||
     acbTeams.find((t) => t.name === teamName) ||
-    npbTeams.find((t) => t.name === teamName);  // Add this line
+    npbTeams.find((t) => t.name === teamName) ||
+    ligue1Teams.find((t) => t.name === teamName); // Add this line
   return team ? `${team.homeArena}, ${team.city}` : `${teamName} Stadium`;
 }
