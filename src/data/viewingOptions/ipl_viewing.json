@@ -1,0 +1,88 @@
+{
+    "ipl": {
+      "in": {
+        "services": [
+          {"name": "JioCinema", "link": "https://www.jiocinema.com/"},
+          {"name": "Star Sports", "link": "https://www.hotstar.com/in/sports/cricket"}
+        ],
+        "cost": "Free for JioCinema (streaming), Varies for Star Sports TV packages",
+        "restrictions": "No restrictions for JioCinema streaming",
+        "additionalInfo": "JioCinema offers free streaming of all IPL matches. Star Sports holds TV broadcast rights."
+      },
+      "us": {
+        "services": [
+          {"name": "Willow TV", "link": "https://www.willow.tv/"},
+          {"name": "Hotstar", "link": "https://www.hotstar.com/us"}
+        ],
+        "cost": "$9.99/month for Willow TV, $49.99/year for Hotstar",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Willow TV offers both TV and streaming options. Hotstar provides streaming of all IPL matches."
+      },
+      "gb": {
+        "services": [
+          {"name": "Sky Sports", "link": "https://www.skysports.com/cricket/"},
+          {"name": "NOW TV", "link": "https://www.nowtv.com/watch-sky-sports-online"}
+        ],
+        "cost": "£24.99/month for Sky Sports, £33.99/month for NOW TV Sports Membership",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sports shows all IPL matches live. NOW TV offers streaming of Sky Sports channels."
+      },
+      "au": {
+        "services": [
+          {"name": "Fox Cricket", "link": "https://www.foxsports.com.au/cricket"},
+          {"name": "Kayo Sports", "link": "https://kayosports.com.au/"}
+        ],
+        "cost": "Varies for Foxtel packages, AUD 25/month for Kayo Sports",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Fox Cricket shows all IPL matches. Kayo Sports offers streaming of Fox Cricket."
+      },
+      "nz": {
+        "services": [
+          {"name": "Sky Sport", "link": "https://www.sky.co.nz/watch/sport"}
+        ],
+        "cost": "Varies for Sky Sport packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sport holds rights to broadcast IPL matches in New Zealand."
+      },
+      "za": {
+        "services": [
+          {"name": "SuperSport", "link": "https://supersport.com/cricket"}
+        ],
+        "cost": "Varies for DStv packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SuperSport holds rights to broadcast IPL matches in South Africa and sub-Saharan Africa."
+      },
+      "ca": {
+        "services": [
+          {"name": "Willow TV", "link": "https://www.willow.tv/"}
+        ],
+        "cost": "CAD 9.99/month for Willow TV",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Willow TV provides both TV and streaming options for IPL matches in Canada."
+      },
+      "ae": {
+        "services": [
+          {"name": "beIN Sports", "link": "https://www.bein.com/en/"}
+        ],
+        "cost": "Varies for beIN Sports packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "beIN Sports holds rights to broadcast IPL matches in the UAE and MENA region."
+      },
+      "sg": {
+        "services": [
+          {"name": "StarHub", "link": "https://www.starhub.com/personal/tv-and-entertainment.html"}
+        ],
+        "cost": "Varies for StarHub TV packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "StarHub broadcasts IPL matches in Singapore."
+      },
+      "lk": {
+        "services": [
+          {"name": "Sky Sports", "link": "https://www.dialog.lk/television"}
+        ],
+        "cost": "Varies for Dialog TV packages",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Dialog TV broadcasts IPL matches in Sri Lanka through Sky Sports channels."
+      }
+    }
+  }

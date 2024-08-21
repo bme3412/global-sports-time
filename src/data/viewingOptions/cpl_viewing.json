@@ -1,0 +1,94 @@
+{
+    "cpl": {
+      "caribbean": {
+        "services": [
+          {"name": "SportsMax", "link": "https://www.sportsmax.tv/"},
+          {"name": "Flow Sports", "link": "https://www.flowsports.co/"}
+        ],
+        "cost": "Varies based on cable/satellite package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SportsMax and Flow Sports are the primary broadcasters in the Caribbean region."
+      },
+      "us": {
+        "services": [
+          {"name": "Willow TV", "link": "https://www.willow.tv/"},
+          {"name": "ESPN+", "link": "https://plus.espn.com/"}
+        ],
+        "cost": "$9.99/month for Willow TV, $9.99/month for ESPN+",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Willow TV offers both TV and streaming options. ESPN+ provides streaming of all CPL matches."
+      },
+      "gb": {
+        "services": [
+          {"name": "BT Sport", "link": "https://www.bt.com/sport"}
+        ],
+        "cost": "Varies based on BT Sport package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "BT Sport holds rights to broadcast CPL matches in the UK."
+      },
+      "in": {
+        "services": [
+          {"name": "FanCode", "link": "https://www.fancode.com/"}
+        ],
+        "cost": "₹99 for full tournament pass (2023 pricing)",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "FanCode holds exclusive digital rights for CPL in India."
+      },
+      "au": {
+        "services": [
+          {"name": "Fox Cricket", "link": "https://www.foxsports.com.au/cricket"}
+        ],
+        "cost": "Varies based on Foxtel package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Fox Cricket shows select CPL matches."
+      },
+      "nz": {
+        "services": [
+          {"name": "Sky Sport", "link": "https://www.sky.co.nz/watch/sport"}
+        ],
+        "cost": "Varies based on Sky Sport package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sport holds rights to broadcast CPL matches in New Zealand."
+      },
+      "za": {
+        "services": [
+          {"name": "SuperSport", "link": "https://supersport.com/cricket"}
+        ],
+        "cost": "Varies based on DStv package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SuperSport holds rights to broadcast CPL matches in South Africa and sub-Saharan Africa."
+      },
+      "ca": {
+        "services": [
+          {"name": "Willow TV", "link": "https://www.willow.tv/"}
+        ],
+        "cost": "CAD 9.99/month for Willow TV",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Willow TV provides both TV and streaming options for CPL matches in Canada."
+      },
+      "pk": {
+        "services": [
+          {"name": "Ten Sports", "link": "https://www.tensportstv.pk/"}
+        ],
+        "cost": "Varies based on cable/satellite package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Ten Sports holds rights to broadcast CPL matches in Pakistan."
+      },
+      "bd": {
+        "services": [
+          {"name": "Gazi TV", "link": "https://www.gtv.com.bd/"}
+        ],
+        "cost": "Varies based on cable/satellite package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Gazi TV broadcasts CPL matches in Bangladesh."
+      },
+      "global": {
+        "services": [
+          {"name": "CPL T20 YouTube Channel", "link": "https://www.youtube.com/user/CricketCPL"}
+        ],
+        "cost": "Free",
+        "restrictions": "May be geo-blocked in certain regions",
+        "additionalInfo": "The CPL T20 YouTube channel streams matches for free in regions without TV deals."
+      }
+    }
+  }

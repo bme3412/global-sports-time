@@ -25,6 +25,9 @@ import acbTeamsData from "@/data/teams/acb_teams.json";
 import npbTeamsData from "@/data/teams/npb_teams.json";
 import ligue1TeamsData from "@/data/teams/ligue1_teams.json";
 import mlsTeamsData from "@/data/teams/mls_teams.json";
+import iplTeamsData from "@/data/teams/ipl_teams.json";
+import cplTeamsData from "@/data/teams/cpl_teams.json";
+import bblTeamsData from "@/data/teams/bbl_teams.json";
 
 // Import schedule data
 import premierLeagueSchedule from "@/data/schedules/premierleague/schedule_premierleague.csv";
@@ -42,6 +45,9 @@ import acbSchedule from "@/data/schedules/acb/schedule_acb.csv";
 import npbSchedule from "@/data/schedules/npb/schedule_npb.csv";
 import ligue1Schedule from "@/data/schedules/ligue1/schedule_ligue1.csv";
 import mlsSchedule from "@/data/schedules/mls/schedule_mls.csv";
+import iplSchedule from "@/data/schedules/ipl/schedule_ipl.csv";
+import cplSchedule from "@/data/schedules/cpl/schedule_cpl.csv";
+import bblSchedule from "@/data/schedules/bbl/schedule_bbl.csv";
 
 // Import viewing options data
 import premierLeagueViewingOptionsData from "@/data/viewingOptions/premierleague_viewing.json";
@@ -59,12 +65,18 @@ import acbViewingOptionsData from "@/data/viewingOptions/acb_viewing.json";
 import npbViewingOptionsData from "@/data/viewingOptions/npb_viewing.json";
 import ligue1ViewingOptionsData from "@/data/viewingOptions/ligue1_viewing.json";
 import mlsViewingOptionsData from "@/data/viewingOptions/mls_viewing.json";
+import iplViewingOptionsData from "@/data/viewingOptions/ipl_viewing.json";
+import cplViewingOptionsData from "@/data/viewingOptions/cpl_viewing.json";
+import bblViewingOptionsData from "@/data/viewingOptions/bbl_viewing.json";
 
 // Safely process imported data
 const leagues = Array.isArray(leaguesData.leagues) ? leaguesData.leagues : [];
 const locations = Array.isArray(locationsData.locations)
   ? locationsData.locations
   : [];
+const iplTeams = Array.isArray(iplTeamsData.teams) ? iplTeamsData.teams : [];
+const bblTeams = Array.isArray(bblTeamsData.teams) ? bblTeamsData.teams : [];
+const cplTeams = Array.isArray(cplTeamsData.teams) ? cplTeamsData.teams : [];
 const nbaTeams = Array.isArray(nbaTeamsData.teams) ? nbaTeamsData.teams : [];
 const nflTeams = Array.isArray(nflTeamsData.teams) ? nflTeamsData.teams : [];
 const mlbTeams = Array.isArray(mlbTeamsData.teams) ? mlbTeamsData.teams : [];
@@ -110,6 +122,9 @@ const teams = [
   ...npbTeams,
   ...ligue1Teams,
   ...mlsTeams,
+  ...iplTeamsData.teams,
+  ...cplTeamsData.teams,
+  ...bblTeamsData.teams,
 ];
 
 // Group leagues by sport
@@ -170,6 +185,9 @@ export default function GlobalSportsApp() {
   const [ligue1Games, setLigue1Games] = useState([]);
   const [mlsGames, setMlsGames] = useState([]);
   const [nhlGames, setNhlGames] = useState([]);
+  const [iplGames, setIplGames] = useState([]);
+  const [cplGames, setCplGames] = useState([]);
+  const [bblGames, setBblGames] = useState([]);
 
   useEffect(() => {
     setPremierLeagueGames(
@@ -227,6 +245,27 @@ export default function GlobalSportsApp() {
         ...game,
         id: `seriea-${index}`,
         league: "serie-a",
+      }))
+    );
+    setIplGames(
+      iplSchedule.map((game, index) => ({
+        ...game,
+        id: `ipl-${index}`,
+        league: "ipl",
+      }))
+    );
+    setCplGames(
+      cplSchedule.map((game, index) => ({
+        ...game,
+        id: `cpl-${index}`,
+        league: "cpl",
+      }))
+    );
+    setBblGames(
+      bblSchedule.map((game, index) => ({
+        ...game,
+        id: `bbl-${index}`,
+        league: "bbl",
       }))
     );
     setNflGames(
@@ -335,6 +374,27 @@ export default function GlobalSportsApp() {
           break;
         case "nhl":
           newFilteredGames = nhlGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "ipl":
+          newFilteredGames = iplGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "cpl":
+          newFilteredGames = cplGames.filter(
+            (game) =>
+              selectedTeams.includes(game.Home) ||
+              selectedTeams.includes(game.Away)
+          );
+          break;
+        case "bbl":
+          newFilteredGames = bblGames.filter(
             (game) =>
               selectedTeams.includes(game.Home) ||
               selectedTeams.includes(game.Away)
@@ -459,6 +519,9 @@ export default function GlobalSportsApp() {
     ligue1Games,
     mlsGames,
     nhlGames,
+    iplGames,
+    cplGames,
+    bblGames,
   ]);
   const handleGameSelect = (game) => {
     setSelectedGame(game);
@@ -499,7 +562,10 @@ export default function GlobalSportsApp() {
       npb: npbGames,
       ligue1: ligue1Games,
       mls: mlsGames,
-      nhl: nhlGames
+      nhl: nhlGames,
+      ipl: iplGames,
+      cpl: cplGames,
+      bbl: bblGames,
     };
 
     if (leagueGames[selectedLeague]) {
@@ -519,6 +585,12 @@ export default function GlobalSportsApp() {
     switch (league) {
       case "nba":
         return nbaViewingOptionsData.nba;
+      case "ipl":
+        return iplViewingOptionsData.ipl;
+      case "cpl":
+        return cplViewingOptionsData.cpl;
+      case "bbl":
+        return bblViewingOptionsData.bbl;
       case "nhl":
         return nhlViewingOptionsData.nhl;
       case "premier-league":
@@ -667,6 +739,9 @@ function getStadiumInfo(teamName) {
     acbTeams.find((t) => t.name === teamName) ||
     npbTeams.find((t) => t.name === teamName) ||
     ligue1Teams.find((t) => t.name === teamName) ||
-    mlsTeams.find((t) => t.name === teamName);
+    mlsTeams.find((t) => t.name === teamName) ||
+    iplTeamsData.teams.find((t) => t.name === teamName) ||
+    cplTeamsData.teams.find((t) => t.name === teamName) ||
+    bblTeamsData.teams.find((t) => t.name === teamName);
   return team ? `${team.homeArena}, ${team.city}` : `${teamName} Stadium`;
 }

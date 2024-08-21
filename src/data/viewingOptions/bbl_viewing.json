@@ -1,0 +1,94 @@
+{
+    "bbl": {
+      "au": {
+        "services": [
+          {"name": "Channel 7", "link": "https://7plus.com.au/"},
+          {"name": "Foxtel", "link": "https://www.foxtel.com.au/"},
+          {"name": "Kayo Sports", "link": "https://kayosports.com.au/"}
+        ],
+        "cost": "Free for Channel 7, Varies for Foxtel packages, AUD 25/month for Kayo Sports",
+        "restrictions": "Channel 7 broadcasts select matches for free, Foxtel/Kayo show all matches",
+        "additionalInfo": "Channel 7 has free-to-air rights, while Foxtel/Kayo have rights to all matches including exclusive games"
+      },
+      "nz": {
+        "services": [
+          {"name": "Sky Sport", "link": "https://www.sky.co.nz/watch/sport"}
+        ],
+        "cost": "Varies based on Sky Sport package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sport holds rights to broadcast BBL matches in New Zealand"
+      },
+      "gb": {
+        "services": [
+          {"name": "BT Sport", "link": "https://www.bt.com/sport"}
+        ],
+        "cost": "Varies based on BT Sport package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "BT Sport holds rights to broadcast BBL matches in the UK"
+      },
+      "us": {
+        "services": [
+          {"name": "Willow TV", "link": "https://www.willow.tv/"}
+        ],
+        "cost": "$9.99/month for Willow TV",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Willow TV provides both TV and streaming options for BBL matches in the USA"
+      },
+      "in": {
+        "services": [
+          {"name": "Sony Six", "link": "https://www.sonyliv.com/"}
+        ],
+        "cost": "Varies based on SonyLIV subscription",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sony Six holds rights to broadcast BBL matches in India, available through SonyLIV streaming service"
+      },
+      "za": {
+        "services": [
+          {"name": "SuperSport", "link": "https://supersport.com/cricket"}
+        ],
+        "cost": "Varies based on DStv package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "SuperSport holds rights to broadcast BBL matches in South Africa and sub-Saharan Africa"
+      },
+      "ca": {
+        "services": [
+          {"name": "Willow TV", "link": "https://www.willow.tv/"}
+        ],
+        "cost": "CAD 9.99/month for Willow TV",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Willow TV provides both TV and streaming options for BBL matches in Canada"
+      },
+      "pk": {
+        "services": [
+          {"name": "PTV Sports", "link": "http://ptv.com.pk/ptvSports"}
+        ],
+        "cost": "Free-to-air",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "PTV Sports often broadcasts BBL matches on free-to-air TV in Pakistan"
+      },
+      "bd": {
+        "services": [
+          {"name": "Gazi TV", "link": "https://www.gtv.com.bd/"}
+        ],
+        "cost": "Varies based on cable/satellite package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Gazi TV often broadcasts BBL matches in Bangladesh"
+      },
+      "sg": {
+        "services": [
+          {"name": "HubSports", "link": "https://www.starhub.com/personal/tv-and-entertainment.html"}
+        ],
+        "cost": "Varies based on StarHub TV package",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "HubSports on StarHub often broadcasts BBL matches in Singapore"
+      },
+      "global": {
+        "services": [
+          {"name": "Cricket Australia Live App", "link": "https://www.cricket.com.au/app"}
+        ],
+        "cost": "Varies",
+        "restrictions": "May be geo-blocked in certain regions",
+        "additionalInfo": "The Cricket Australia Live app provides live streaming in some regions without TV deals, subscription may be required"
+      }
+    }
+  }

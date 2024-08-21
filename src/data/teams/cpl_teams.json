@@ -1,58 +1,64 @@
 {
-    "teams": [
-      {
-        "id": "tkr",
-        "name": "Trinbago Knight Riders",
-        "league": "cpl",
-        "city": "Port of Spain",
-        "country": "Trinidad and Tobago",
-        "timezone": "America/Port_of_Spain",
-        "homeGround": "Queen's Park Oval"
-      },
-      {
-        "id": "gaw",
-        "name": "Guyana Amazon Warriors",
-        "league": "cpl",
-        "city": "Providence",
-        "country": "Guyana",
-        "timezone": "America/Guyana",
-        "homeGround": "Providence Stadium"
-      },
-      {
-        "id": "bt",
-        "name": "Barbados Tridents",
-        "league": "cpl",
-        "city": "Bridgetown",
-        "country": "Barbados",
-        "timezone": "America/Barbados",
-        "homeGround": "Kensington Oval"
-      },
-      {
-        "id": "stkzn",
-        "name": "St Kitts and Nevis Patriots",
-        "league": "cpl",
-        "city": "Basseterre",
-        "country": "Saint Kitts and Nevis",
-        "timezone": "America/St_Kitts",
-        "homeGround": "Warner Park Sporting Complex"
-      },
-      {
-        "id": "jt",
-        "name": "Jamaica Tallawahs",
-        "league": "cpl",
-        "city": "Kingston",
-        "country": "Jamaica",
-        "timezone": "America/Jamaica",
-        "homeGround": "Sabina Park"
-      },
-      {
-        "id": "slkz",
-        "name": "Saint Lucia Kings",
-        "league": "cpl",
-        "city": "Gros Islet",
-        "country": "Saint Lucia",
-        "timezone": "America/St_Lucia",
-        "homeGround": "Daren Sammy National Cricket Stadium"
-      }
-    ]
-  }
+  "teams": [
+    {
+      "id": "tkr",
+      "name": "Trinbago Knight Riders",
+      "league": "cpl",
+      "city": "Port of Spain",
+      "region": "Trinidad and Tobago",
+      "country": "Trinidad and Tobago",
+      "timezone": "America/Port_of_Spain",
+      "homeGround": "Queen's Park Oval"
+    },
+    {
+      "id": "bt",
+      "name": "Barbados Royals",
+      "league": "cpl",
+      "city": "Bridgetown",
+      "region": "Barbados",
+      "country": "Barbados",
+      "timezone": "America/Barbados",
+      "homeGround": "Kensington Oval"
+    },
+    {
+      "id": "gaw",
+      "name": "Guyana Amazon Warriors",
+      "league": "cpl",
+      "city": "Providence",
+      "region": "Guyana",
+      "country": "Guyana",
+      "timezone": "America/Guyana",
+      "homeGround": "Providence Stadium"
+    },
+    {
+      "id": "sks",
+      "name": "St Kitts & Nevis Patriots",
+      "league": "cpl",
+      "city": "Basseterre",
+      "region": "St Kitts and Nevis",
+      "country": "Saint Kitts and Nevis",
+      "timezone": "America/St_Kitts",
+      "homeGround": "Warner Park Sporting Complex"
+    },
+    {
+      "id": "slk",
+      "name": "Saint Lucia Kings",
+      "league": "cpl",
+      "city": "Gros Islet",
+      "region": "Saint Lucia",
+      "country": "Saint Lucia",
+      "timezone": "America/St_Lucia",
+      "homeGround": "Daren Sammy National Cricket Stadium"
+    },
+    {
+      "id": "jt",
+      "name": "Jamaica Tallawahs",
+      "league": "cpl",
+      "city": "Kingston",
+      "region": "Jamaica",
+      "country": "Jamaica",
+      "timezone": "America/Jamaica",
+      "homeGround": "Sabina Park"
+    }
+  ]
+}
