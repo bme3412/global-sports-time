@@ -22,7 +22,6 @@
       { "id": "pga", "name": "PGA Tour (Golf)" },
       { "id": "atp", "name": "ATP Tour (Tennis)" },
       { "id": "wta", "name": "WTA Tour (Tennis)" },
-      { "id": "khl", "name": "KHL (Ice Hockey)" },
       { "id": "super_rugby", "name": "Super Rugby (Rugby Union)" },
       { "id": "cfl", "name": "CFL (Canadian Football)" },
       { "id": "npb", "name": "NPB (Baseball)" },
