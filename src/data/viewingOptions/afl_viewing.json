@@ -1,0 +1,56 @@
+{
+    "afl": {
+      "au": {
+        "services": [
+          {"name": "Kayo Sports", "link": "https://kayosports.com.au/"},
+          {"name": "Foxtel", "link": "https://www.foxtel.com.au/"},
+          {"name": "7plus", "link": "https://7plus.com.au/"},
+          {"name": "AFL Live Pass", "link": "https://www.afl.com.au/live-pass"}
+        ],
+        "cost": "AUD 25/month for Kayo Sports, varies for Foxtel packages, Free for 7plus, AUD 4.99/week for AFL Live Pass",
+        "restrictions": "7plus only shows select games for free",
+        "additionalInfo": "Kayo Sports and Foxtel show all AFL games live. 7plus broadcasts up to 4 games per round for free."
+      },
+      "us": {
+        "services": [
+          {"name": "Watch AFL", "link": "https://www.watchafl.com.au/"}
+        ],
+        "cost": "USD 17/month for Watch AFL",
+        "restrictions": "Only available outside Australia",
+        "additionalInfo": "Watch AFL provides live streaming and on-demand replays of all AFL games."
+      },
+      "gb": {
+        "services": [
+          {"name": "Watch AFL", "link": "https://www.watchafl.com.au/"}
+        ],
+        "cost": "GBP 13/month for Watch AFL",
+        "restrictions": "Only available outside Australia",
+        "additionalInfo": "Watch AFL provides live streaming and on-demand replays of all AFL games."
+      },
+      "ca": {
+        "services": [
+          {"name": "Watch AFL", "link": "https://www.watchafl.com.au/"}
+        ],
+        "cost": "CAD 22/month for Watch AFL",
+        "restrictions": "Only available outside Australia",
+        "additionalInfo": "Watch AFL provides live streaming and on-demand replays of all AFL games."
+      },
+      "nz": {
+        "services": [
+          {"name": "Sky Sport", "link": "https://www.sky.co.nz/"},
+          {"name": "Watch AFL", "link": "https://www.watchafl.com.au/"}
+        ],
+        "cost": "Varies for Sky Sport packages, NZD 25/month for Watch AFL",
+        "restrictions": "Sky Sport may not show all games",
+        "additionalInfo": "Sky Sport shows select AFL games. Watch AFL provides complete coverage."
+      },
+      "ie": {
+        "services": [
+          {"name": "Watch AFL", "link": "https://www.watchafl.com.au/"}
+        ],
+        "cost": "EUR 15/month for Watch AFL",
+        "restrictions": "Only available outside Australia",
+        "additionalInfo": "Watch AFL provides live streaming and on-demand replays of all AFL games."
+      }
+    }
+  }

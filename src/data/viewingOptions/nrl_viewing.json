@@ -1,0 +1,64 @@
+{
+    "nrl": {
+      "au": {
+        "services": [
+          {"name": "Kayo Sports", "link": "https://kayosports.com.au/"},
+          {"name": "Foxtel", "link": "https://www.foxtel.com.au/watch/nrl.html"},
+          {"name": "NRL Live Pass", "link": "https://www.nrl.com/digital-pass/"},
+          {"name": "Channel 9", "link": "https://www.9now.com.au/nrl"}
+        ],
+        "cost": "AUD 25/month for Kayo Sports, AUD 59/month for Foxtel",
+        "restrictions": "Some games are exclusive to Foxtel/Kayo, others are free-to-air on Channel 9",
+        "additionalInfo": "Kayo and Foxtel offer all NRL games live and on-demand. Channel 9 broadcasts selected games for free."
+      },
+      "nz": {
+        "services": [
+          {"name": "Sky Sport", "link": "https://www.sky.co.nz/sport"},
+          {"name": "Sky Sport Now", "link": "https://www.skysportnow.co.nz/"}
+        ],
+        "cost": "NZD 31.99/month for Sky Sport Now",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Sky Sport holds the rights to NRL games in New Zealand."
+      },
+      "gb": {
+        "services": [
+          {"name": "Watch NRL", "link": "https://www.watchnrl.com/"}
+        ],
+        "cost": "£13/week or £33/month for Watch NRL",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Watch NRL is the official streaming service for fans outside of Australia, New Zealand, and the Pacific Islands."
+      },
+      "us": {
+        "services": [
+          {"name": "Watch NRL", "link": "https://www.watchnrl.com/"}
+        ],
+        "cost": "$17/week or $33/month for Watch NRL",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Watch NRL is the official streaming service for fans outside of Australia, New Zealand, and the Pacific Islands."
+      },
+      "ca": {
+        "services": [
+          {"name": "Watch NRL", "link": "https://www.watchnrl.com/"}
+        ],
+        "cost": "CAD 20/week or CAD 39/month for Watch NRL",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Watch NRL is the official streaming service for fans outside of Australia, New Zealand, and the Pacific Islands."
+      },
+      "fj": {
+        "services": [
+          {"name": "Digicel", "link": "https://www.digicelgroup.com/fj/en/mobile/explore/other-stuff/entertainment/sports-entertainment.html"}
+        ],
+        "cost": "Varies",
+        "restrictions": "No information available",
+        "additionalInfo": "Digicel holds broadcasting rights for NRL in Fiji and other Pacific Islands."
+      },
+      "pg": {
+        "services": [
+          {"name": "Digicel", "link": "https://www.digicelgroup.com/pg/en/mobile/explore/other-stuff/entertainment/sports-entertainment.html"}
+        ],
+        "cost": "Varies",
+        "restrictions": "No information available",
+        "additionalInfo": "Digicel holds broadcasting rights for NRL in Papua New Guinea and other Pacific Islands."
+      }
+    }
+  }
