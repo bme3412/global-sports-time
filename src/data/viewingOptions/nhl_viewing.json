@@ -1,0 +1,102 @@
+{
+    "nhl": {
+      "us": {
+        "services": [
+          {"name": "ESPN+", "link": "https://plus.espn.com/"},
+          {"name": "Hulu", "link": "https://www.hulu.com/"},
+          {"name": "TNT", "link": "https://www.tntdrama.com/sports/nhl"},
+          {"name": "ABC", "link": "https://www.abc.com/"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"},
+          {"name": "Sling TV", "link": "https://www.sling.com/"},
+          {"name": "YouTube TV", "link": "https://tv.youtube.com/"},
+          {"name": "fuboTV", "link": "https://www.fubo.tv/"}
+        ],
+        "cost": "$9.99/month or $99.99/year for ESPN+, $69.99/month for Hulu + Live TV",
+        "restrictions": "Local blackouts apply for in-market games",
+        "additionalInfo": "ESPN+ and Hulu stream most out-of-market games. TNT and ABC broadcast select national games."
+      },
+      "ca": {
+        "services": [
+          {"name": "Sportsnet NOW", "link": "https://www.snnow.ca/"},
+          {"name": "TSN Direct", "link": "https://www.tsn.ca/subscribe"},
+          {"name": "CBC", "link": "https://www.cbc.ca/sports/hockey/nhl"},
+          {"name": "RDS", "link": "https://www.rds.ca/"}
+        ],
+        "cost": "CAD 34.99/month for Sportsnet NOW Standard, CAD 19.99/month for TSN Direct",
+        "restrictions": "Regional restrictions may apply",
+        "additionalInfo": "Sportsnet and TSN share English-language rights. RDS provides French-language coverage. CBC airs Hockey Night in Canada on Saturdays."
+      },
+      "gb": {
+        "services": [
+          {"name": "Premier Sports", "link": "https://www.premiersports.com/"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"}
+        ],
+        "cost": "£14.99/month for Premier Sports, NHL.tv pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Premier Sports shows select NHL games. NHL.tv offers all out-of-market games."
+      },
+      "de": {
+        "services": [
+          {"name": "DAZN", "link": "https://www.dazn.com/de-DE"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"}
+        ],
+        "cost": "€14.99/month for DAZN, NHL.tv pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "DAZN shows select NHL games. NHL.tv offers all out-of-market games."
+      },
+      "fr": {
+        "services": [
+          {"name": "Canal+", "link": "https://www.canalplus.com/"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"}
+        ],
+        "cost": "Canal+ pricing varies, NHL.tv pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Canal+ shows select NHL games. NHL.tv offers all out-of-market games."
+      },
+      "se": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.se/"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"}
+        ],
+        "cost": "Viaplay pricing varies, NHL.tv pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay shows select NHL games. NHL.tv offers all out-of-market games."
+      },
+      "fi": {
+        "services": [
+          {"name": "Viaplay", "link": "https://viaplay.fi/"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"}
+        ],
+        "cost": "Viaplay pricing varies, NHL.tv pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Viaplay shows select NHL games. NHL.tv offers all out-of-market games."
+      },
+      "ru": {
+        "services": [
+          {"name": "Okko Sport", "link": "https://okko.sport/"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"}
+        ],
+        "cost": "Okko Sport pricing varies, NHL.tv pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Okko Sport shows select NHL games. NHL.tv offers all out-of-market games."
+      },
+      "cz": {
+        "services": [
+          {"name": "Nova Sport", "link": "https://sport.nova.cz/"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"}
+        ],
+        "cost": "Nova Sport pricing varies, NHL.tv pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Nova Sport shows select NHL games. NHL.tv offers all out-of-market games."
+      },
+      "sk": {
+        "services": [
+          {"name": "Nova Sport", "link": "https://sport.markiza.sk/"},
+          {"name": "NHL.tv", "link": "https://www.nhl.com/subscribe"}
+        ],
+        "cost": "Nova Sport pricing varies, NHL.tv pricing varies",
+        "restrictions": "No local blackouts",
+        "additionalInfo": "Nova Sport shows select NHL games. NHL.tv offers all out-of-market games."
+      }
+    }
+  }

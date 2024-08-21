@@ -1,94 +1,184 @@
 {
-    "teams": [
-      {
-        "id": "atlanta-united",
-        "name": "Atlanta United FC",
-        "league": "mls",
-        "city": "Atlanta",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeStadium": "Mercedes-Benz Stadium"
-      },
-      {
-        "id": "la-galaxy",
-        "name": "LA Galaxy",
-        "league": "mls",
-        "city": "Los Angeles",
-        "country": "USA",
-        "timezone": "America/Los_Angeles",
-        "homeStadium": "Dignity Health Sports Park"
-      },
-      {
-        "id": "lafc",
-        "name": "Los Angeles FC",
-        "league": "mls",
-        "city": "Los Angeles",
-        "country": "USA",
-        "timezone": "America/Los_Angeles",
-        "homeStadium": "Banc of California Stadium"
-      },
-      {
-        "id": "seattle-sounders",
-        "name": "Seattle Sounders FC",
-        "league": "mls",
-        "city": "Seattle",
-        "country": "USA",
-        "timezone": "America/Los_Angeles",
-        "homeStadium": "Lumen Field"
-      },
-      {
-        "id": "toronto-fc",
-        "name": "Toronto FC",
-        "league": "mls",
-        "city": "Toronto",
-        "country": "Canada",
-        "timezone": "America/Toronto",
-        "homeStadium": "BMO Field"
-      },
-      {
-        "id": "nycfc",
-        "name": "New York City FC",
-        "league": "mls",
-        "city": "New York City",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeStadium": "Yankee Stadium"
-      },
-      {
-        "id": "ny-red-bulls",
-        "name": "New York Red Bulls",
-        "league": "mls",
-        "city": "Harrison",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeStadium": "Red Bull Arena"
-      },
-      {
-        "id": "portland-timbers",
-        "name": "Portland Timbers",
-        "league": "mls",
-        "city": "Portland",
-        "country": "USA",
-        "timezone": "America/Los_Angeles",
-        "homeStadium": "Providence Park"
-      },
-      {
-        "id": "orlando-city",
-        "name": "Orlando City SC",
-        "league": "mls",
-        "city": "Orlando",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeStadium": "Exploria Stadium"
-      },
-      {
-        "id": "inter-miami",
-        "name": "Inter Miami CF",
-        "league": "mls",
-        "city": "Fort Lauderdale",
-        "country": "USA",
-        "timezone": "America/New_York",
-        "homeStadium": "DRV PNK Stadium"
-      }
-    ]
-  }
+  "teams": [
+    {
+      "id": "atlanta-united",
+      "name": "Atlanta United FC",
+      "league": "mls",
+      "city": "Atlanta",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "Mercedes-Benz Stadium"
+    },
+    {
+      "id": "lafc",
+      "name": "Los Angeles FC",
+      "league": "mls",
+      "city": "Los Angeles",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeStadium": "BMO Stadium"
+    },
+    {
+      "id": "sounders",
+      "name": "Seattle Sounders FC",
+      "league": "mls",
+      "city": "Seattle",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeStadium": "Lumen Field"
+    },
+    {
+      "id": "fire",
+      "name": "Chicago Fire FC",
+      "league": "mls",
+      "city": "Chicago",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeStadium": "Soldier Field"
+    },
+    {
+      "id": "inter-miami",
+      "name": "Inter Miami CF",
+      "league": "mls",
+      "city": "Fort Lauderdale",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "DRV PNK Stadium"
+    },
+    {
+      "id": "nycfc",
+      "name": "New York City FC",
+      "league": "mls",
+      "city": "New York City",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "Yankee Stadium"
+    },
+    {
+      "id": "fcdallas",
+      "name": "FC Dallas",
+      "league": "mls",
+      "city": "Frisco",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeStadium": "Toyota Stadium"
+    },
+    {
+      "id": "sporting-kc",
+      "name": "Sporting Kansas City",
+      "league": "mls",
+      "city": "Kansas City",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeStadium": "Children's Mercy Park"
+    },
+    {
+      "id": "union",
+      "name": "Philadelphia Union",
+      "league": "mls",
+      "city": "Chester",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "Subaru Park"
+    },
+    {
+      "id": "galaxy",
+      "name": "LA Galaxy",
+      "league": "mls",
+      "city": "Carson",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeStadium": "Dignity Health Sports Park"
+    },
+    {
+      "id": "crew",
+      "name": "Columbus Crew",
+      "league": "mls",
+      "city": "Columbus",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "Lower.com Field"
+    },
+    {
+      "id": "timbers",
+      "name": "Portland Timbers",
+      "league": "mls",
+      "city": "Portland",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeStadium": "Providence Park"
+    },
+    {
+      "id": "orlando-city",
+      "name": "Orlando City SC",
+      "league": "mls",
+      "city": "Orlando",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "Exploria Stadium"
+    },
+    {
+      "id": "rapids",
+      "name": "Colorado Rapids",
+      "league": "mls",
+      "city": "Commerce City",
+      "country": "USA",
+      "timezone": "America/Denver",
+      "homeStadium": "Dick's Sporting Goods Park"
+    },
+    {
+      "id": "dcunited",
+      "name": "D.C. United",
+      "league": "mls",
+      "city": "Washington, D.C.",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "Audi Field"
+    },
+    {
+      "id": "mnufc",
+      "name": "Minnesota United FC",
+      "league": "mls",
+      "city": "Saint Paul",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeStadium": "Allianz Field"
+    },
+    {
+      "id": "nashville-sc",
+      "name": "Nashville SC",
+      "league": "mls",
+      "city": "Nashville",
+      "country": "USA",
+      "timezone": "America/Chicago",
+      "homeStadium": "GEODIS Park"
+    },
+    {
+      "id": "earthquakes",
+      "name": "San Jose Earthquakes",
+      "league": "mls",
+      "city": "San Jose",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "homeStadium": "PayPal Park"
+    },
+    {
+      "id": "revolutiom",
+      "name": "New England Revolution",
+      "league": "mls",
+      "city": "Foxborough",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "Gillette Stadium"
+    },
+    {
+      "id": "redbulls",
+      "name": "New York Red Bulls",
+      "league": "mls",
+      "city": "Harrison",
+      "country": "USA",
+      "timezone": "America/New_York",
+      "homeStadium": "Red Bull Arena"
+    }
+  ]
+}
