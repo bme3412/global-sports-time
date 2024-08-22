@@ -1,17 +1,15 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Globe, Tv, Shield, Info, Trophy, MapPin, Ticket, Calendar } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { Globe, Tv, Shield, Info, Trophy, Ticket } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
 import VPNComparison from '@/components/VPNComparison';
 import GlobalSportsApp from '@/components/GlobalSportsApp'; 
 import HeroSection from '@/components/HeroSection';
 import GameTimeConverter from '@/components/GameTimeConverter';
 import BackgroundImage from '@/components/BackgroundImage';
-
+import FeaturedEvents from '@/components/FeaturedEvents';
 
 const vpnData = [
   {
@@ -43,61 +41,6 @@ const vpnData = [
     affiliateLink: "https://cyberghostvpn.com/affiliate",
   },
 ];
-
-const FeaturedEvents = () => {
-  const events = [
-    {
-      name: "NBA Finals",
-      date: "June 1-18, 2024",
-      league: "NBA",
-      location: "Various NBA Arenas, USA",
-      icon: "🏀",
-    },
-    {
-      name: "Premier League Kickoff",
-      date: "August 12, 2024",
-      league: "Premier League",
-      location: "Various Stadiums, UK",
-      icon: "⚽",
-    },
-    {
-      name: "Super Bowl LIX",
-      date: "February 9, 2025",
-      league: "NFL",
-      location: "New Orleans, Louisiana, USA",
-      icon: "🏈",
-    },
-  ];
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {events.map((event, index) => (
-        <Card key={index} className="bg-white/20 backdrop-blur-md text-white">
-          <CardHeader>
-            <CardTitle className="flex items-center justify-between">
-              <span>{event.name}</span>
-              <div className="w-10 h-10 flex items-center justify-center bg-blue-500/30 rounded-full">
-                <span className="text-2xl">{event.icon}</span>
-              </div>
-            </CardTitle>
-            <div className="flex items-center justify-between mt-2">
-              <Badge variant="secondary" className="bg-blue-500/50 text-white">{event.league}</Badge>
-              <span className="text-sm text-blue-200">
-                {event.date}
-              </span>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center text-blue-100">
-              <MapPin className="mr-2 h-4 w-4" />
-              <span className="text-sm">{event.location}</span>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  );
-};
 
 const TicketInfo = () => (
   <Card className="bg-white/20 backdrop-blur-md text-white">
