@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AlertCircle, Clock, Ticket, Tv, Calendar, MapPin } from "lucide-react";
+import { AlertCircle, Clock, Tv, Calendar, MapPin } from "lucide-react";
 import { formatInTimeZone, format } from "date-fns-tz";
 import { parse, isAfter, isValid } from "date-fns";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -136,7 +136,7 @@ const GameTimeConverter = ({
   );
 
   const OptionsDisplay = ({ title, options, icon }) => (
-    <div className="w-1/2">
+    <div className="w-full">
       <div className="font-semibold text-blue-800 mb-2 flex items-center">
         {icon}
         <span className="ml-2">{title}:</span>
@@ -221,23 +221,13 @@ const GameTimeConverter = ({
                 isNextDay={localTimeFormatted.isNextDay}
               />
             </div>
-            <div className="flex justify-between">
-              {countryBroadcastData && (
-                <OptionsDisplay 
-                  title="Broadcast Options" 
-                  options={countryBroadcastData.services} 
-                  icon={<Tv size={16} />}
-                />
-              )}
+            {countryBroadcastData && (
               <OptionsDisplay 
-                title="Ticket Options" 
-                options={[
-                  { name: "Official Ticket Vendor", link: "https://example.com/tickets" },
-                  { name: "Secondary Market", link: "https://example.com/resale-tickets" },
-                ]} 
-                icon={<Ticket size={16} />}
+                title="Broadcast Options" 
+                options={countryBroadcastData.services} 
+                icon={<Tv size={16} />}
               />
-            </div>
+            )}
           </>
         ) : (
           <div className="flex items-center space-x-2 text-yellow-600">
