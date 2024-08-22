@@ -729,6 +729,7 @@ export default function GlobalSportsApp() {
               selectedLocation={selectedLocation}
             />
             <GameTimeConverter
+              gameId={selectedGame ? selectedGame.id : null}
               gameTime={selectedGame ? selectedGame.Time : null}
               gameDate={selectedGame ? selectedGame.Date : null}
               gameTimezone={
@@ -740,12 +741,10 @@ export default function GlobalSportsApp() {
               locations={locations}
               broadcastData={broadcastData}
               venue={selectedGame ? getStadiumInfo(selectedGame.Home) : null}
-              matchName={
-                selectedGame
-                  ? `${selectedGame.Home} vs ${selectedGame.Away}`
-                  : null
-              }
+              homeTeam={selectedGame ? selectedGame.Home : null}
+              awayTeam={selectedGame ? selectedGame.Away : null}
               userCountry={userCountry}
+              league={selectedLeague}
             />
           </CardContent>
         </Card>

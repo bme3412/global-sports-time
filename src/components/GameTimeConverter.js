@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
-import {
-  Clock,
-  MapPin,
-  AlertCircle,
-  Tv,
-  DollarSign,
-  Info,
-  AlertTriangle,
-} from "lucide-react";
-import { formatInTimeZone } from "date-fns-tz";
-import { parse } from "date-fns";
+import { AlertCircle, Clock, Ticket, Tv, Calendar, MapPin } from "lucide-react";
+import { formatInTimeZone, format } from "date-fns-tz";
+import { parse, isAfter, isValid } from "date-fns";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const GameTimeConverter = ({
+  gameId,
   gameTime,
   gameDate,
   gameTimezone,
@@ -20,34 +13,35 @@ const GameTimeConverter = ({
   locations,
   broadcastData,
   venue,
-  matchName,
+  homeTeam,
+  awayTeam,
   userCountry,
-  league, // Add this prop to handle league-specific logic
+  league,
 }) => {
   const [countryBroadcastData, setCountryBroadcastData] = useState(null);
+  const [teamData, setTeamData] = useState({
+    homeTeam: homeTeam || "Home Team",
+    awayTeam: awayTeam || "Away Team",
+  });
 
   useEffect(() => {
-    const selectedLocation = locations.find((loc) => loc.id === watchLocation);
     const countryCode = userCountry.toLowerCase();
-    console.log("Broadcast Data:", broadcastData);
-    console.log("User Country:", countryCode);
-
     const newCountryBroadcastData =
       broadcastData && broadcastData[countryCode]
         ? broadcastData[countryCode]
         : null;
-
-    console.log("Country Broadcast Data:", newCountryBroadcastData);
     setCountryBroadcastData(newCountryBroadcastData);
-  }, [broadcastData, userCountry, watchLocation, locations]);
+
+    setTeamData({ homeTeam, awayTeam });
+  }, [broadcastData, userCountry, homeTeam, awayTeam]);
 
   const selectedLocation = locations.find((loc) => loc.id === watchLocation);
 
   if (!selectedLocation) {
     return (
-      <Card className="mt-4">
+      <Card className="mt-4 border-yellow-300 bg-yellow-50">
         <CardHeader>
-          <CardTitle className="text-lg font-semibold">
+          <CardTitle className="text-lg font-semibold text-yellow-700">
             Game Time Converter
           </CardTitle>
         </CardHeader>
@@ -56,7 +50,7 @@ const GameTimeConverter = ({
             <AlertCircle size={16} />
             <span>
               Please select a watch location to see converted game times and
-              broadcast options.
+              options.
             </span>
           </div>
         </CardContent>
@@ -69,28 +63,37 @@ const GameTimeConverter = ({
   const convertTime = (time, date, sourceTimezone, targetTimezone) => {
     if (!time || !date) return null;
     try {
-      let parsedDate;
-      if (league === "mlb") {
-        // Adjust this parsing format if MLB uses a different date format
-        parsedDate = parse(date, "yyyy-MM-dd", new Date());
-      } else {
-        parsedDate = parse(date, "EEEE d MMMM yyyy", new Date());
+      let parsedDate = parse(date, "yyyy-MM-dd", new Date());
+      if (!isValid(parsedDate)) {
+        parsedDate = new Date(date);
       }
+
+      if (!isValid(parsedDate)) {
+        throw new Error("Unable to parse date");
+      }
+
       const [hours, minutes] = time.split(":");
       parsedDate.setHours(parseInt(hours), parseInt(minutes));
-      return formatInTimeZone(
+
+      const convertedDate = formatInTimeZone(
         parsedDate,
         targetTimezone,
-        "MMM d, yyyy HH:mm zzz"
+        "yyyy-MM-dd"
       );
+      const isNextDay = isAfter(
+        parse(convertedDate, "yyyy-MM-dd", new Date()),
+        parsedDate
+      );
+
+      return {
+        time: formatInTimeZone(parsedDate, targetTimezone, "h:mm a"),
+        date: formatInTimeZone(parsedDate, targetTimezone, "MM/dd/yyyy"),
+        timezone: formatInTimeZone(parsedDate, targetTimezone, "zzz"),
+        isNextDay: isNextDay,
+      };
     } catch (error) {
-      console.error("Error converting time:", error, {
-        time,
-        date,
-        sourceTimezone,
-        targetTimezone,
-      });
-      return "Invalid Date";
+      console.error("Error converting time:", error);
+      return null;
     }
   };
 
@@ -107,115 +110,139 @@ const GameTimeConverter = ({
     watchTimezone
   );
 
-  const renderBroadcastOptions = () => {
-    if (
-      !countryBroadcastData ||
-      !Array.isArray(countryBroadcastData.services)
-    ) {
-      return <span>Broadcast information not available</span>;
-    }
+  const TimeDisplay = ({
+    title,
+    time,
+    date,
+    timezone,
+    location,
+    isNextDay,
+  }) => (
+    <div className="mb-4">
+      <div className="font-semibold text-blue-800">{title}</div>
+      <div className="flex items-baseline">
+        <span className="text-3xl font-bold mr-2">{time}</span>
+        <span className="text-sm text-gray-600">{timezone}</span>
+      </div>
+      <div>{date}</div>
+      <div>{location}</div>
+      {isNextDay && (
+        <div className="text-sm text-red-600 mt-1 flex items-center">
+          <Clock size={14} className="mr-1" />
+          Note: This is the next day
+        </div>
+      )}
+    </div>
+  );
 
-    return (
-      <ul className="list-disc list-inside space-y-1 text-sm">
-        {countryBroadcastData.services.map((service, index) => (
+  const OptionsDisplay = ({ title, options, icon }) => (
+    <div className="w-1/2">
+      <div className="font-semibold text-blue-800 mb-2 flex items-center">
+        {icon}
+        <span className="ml-2">{title}:</span>
+      </div>
+      <ul className="list-disc list-inside">
+        {options.map((option, index) => (
           <li key={index}>
-            {service.link ? (
+            {option.link ? (
               <a
-                href={service.link}
+                href={option.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-blue-600 hover:underline"
               >
-                {service.name}
+                {option.name}
               </a>
             ) : (
-              <span>{service.name}</span>
+              <span>{option.name}</span>
             )}
           </li>
         ))}
       </ul>
-    );
+    </div>
+  );
+
+  const formatGameTitle = () => {
+    if (!gameTimeFormatted) return 'Game details not available';
+    
+    const formattedDate = gameTimeFormatted.date;
+    const venueParts = venue ? venue.split(', ') : [];
+    const venueCity = venueParts.length > 1 ? venueParts[venueParts.length - 1] : 'Unknown';
+    
+    return {
+      date: formattedDate,
+      awayTeam: teamData.awayTeam,
+      homeTeam: teamData.homeTeam,
+      city: venueCity
+    };
   };
 
+  const gameTitleData = formatGameTitle();
+
   return (
-    <Card className="mt-4">
-      <CardHeader>
-        <CardTitle className="text-lg font-semibold">
-          {matchName || "Game Time Converter"}
+    <Card className="mt-4 border-blue-200 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-md">
+      <CardHeader className="bg-gradient-to-r from-blue-100 to-indigo-100 p-4">
+        <CardTitle className="text-xl font-bold text-blue-800 space-y-2">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Calendar className="text-blue-500" size={20} />
+              <span className="text-lg font-semibold">{gameTitleData.date}</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="text-blue-500" size={20} />
+              <span className="text-lg font-semibold">{gameTitleData.city}</span>
+            </div>
+          </div>
+          <div className="text-2xl font-bold text-center py-2">
+            <span className="text-indigo-600">{gameTitleData.awayTeam}</span>
+            <span className="text-gray-500 mx-2">vs</span>
+            <span className="text-blue-600">{gameTitleData.homeTeam}</span>
+          </div>
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        {gameTime && gameDate ? (
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm">
-                <Clock size={16} className="text-blue-500" />
-                <span className="font-medium">Game Time (Local):</span>
-                <span>{gameTimeFormatted}</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm">
-                <MapPin size={16} className="text-green-500" />
-                <span className="font-medium">Your Local Time:</span>
-                <span>{localTimeFormatted}</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <MapPin size={16} />
-                <span>Watch Location: {selectedLocation.name}</span>
-              </div>
-              {venue && (
-                <div className="flex items-center space-x-2 text-sm text-gray-600">
-                  <MapPin size={16} />
-                  <span>Venue: {venue}</span>
-                </div>
-              )}
+      <CardContent className="space-y-4 pt-4">
+        {gameTimeFormatted ? (
+          <>
+            <div className="flex justify-between">
+              <TimeDisplay 
+                title="Game Time (Local)"
+                time={gameTimeFormatted.time}
+                date={gameTimeFormatted.date}
+                timezone={gameTimeFormatted.timezone}
+                location={venue || "Venue not specified"}
+                isNextDay={false}
+              />
+              <TimeDisplay 
+                title="Your Local Time"
+                time={localTimeFormatted.time}
+                date={localTimeFormatted.date}
+                timezone={localTimeFormatted.timezone}
+                location={selectedLocation.name}
+                isNextDay={localTimeFormatted.isNextDay}
+              />
             </div>
-            {countryBroadcastData ? (
-              <>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2 text-sm">
-                    <Tv size={16} className="text-purple-500" />
-                    <span className="font-medium">Broadcast Options:</span>
-                  </div>
-                  {renderBroadcastOptions()}
-                </div>
-                {countryBroadcastData.cost && (
-                  <div className="flex items-center space-x-2 text-sm">
-                    <DollarSign size={16} className="text-green-500" />
-                    <span className="font-medium">Viewing Cost:</span>
-                    <span>{countryBroadcastData.cost}</span>
-                  </div>
-                )}
-                {countryBroadcastData.restrictions && (
-                  <div className="flex items-center space-x-2 text-sm">
-                    <AlertTriangle size={16} className="text-yellow-500" />
-                    <span className="font-medium">Restrictions:</span>
-                    <span>{countryBroadcastData.restrictions}</span>
-                  </div>
-                )}
-                {countryBroadcastData.additionalInfo && (
-                  <div className="flex items-center space-x-2 text-sm">
-                    <Info size={16} className="text-blue-500" />
-                    <span className="font-medium">Additional Info:</span>
-                    <span>{countryBroadcastData.additionalInfo}</span>
-                  </div>
-                )}
-              </>
-            ) : (
-              <div className="flex items-center space-x-2 text-yellow-600">
-                <AlertCircle size={16} />
-                <span>
-                  No broadcast information available for this location.
-                </span>
-              </div>
-            )}
-          </div>
+            <div className="flex justify-between">
+              {countryBroadcastData && (
+                <OptionsDisplay 
+                  title="Broadcast Options" 
+                  options={countryBroadcastData.services} 
+                  icon={<Tv size={16} />}
+                />
+              )}
+              <OptionsDisplay 
+                title="Ticket Options" 
+                options={[
+                  { name: "Official Ticket Vendor", link: "https://example.com/tickets" },
+                  { name: "Secondary Market", link: "https://example.com/resale-tickets" },
+                ]} 
+                icon={<Ticket size={16} />}
+              />
+            </div>
+          </>
         ) : (
           <div className="flex items-center space-x-2 text-yellow-600">
             <AlertCircle size={16} />
-            <span>
-              No game time selected. Please choose a game to see converted times
-              and broadcast options.
-            </span>
+            <span>No valid game time available. Please check the game details.</span>
           </div>
         )}
       </CardContent>
