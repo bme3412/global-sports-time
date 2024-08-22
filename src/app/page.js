@@ -7,6 +7,7 @@ import { Calendar, Globe, Tv, Shield, ChevronDown, ChevronUp, Info, Trophy, MapP
 import GlobalSportsApp from '@/components/GlobalSportsApp';
 import VPNComparison from '@/components/VPNComparison';
 
+
 // Define a simple Button component if the UI library is not available
 const Button = ({ onClick, className, children }) => (
   <button
@@ -129,15 +130,6 @@ const FeaturedEvents = () => {
     </div>
   );
 };
-
-// Placeholder components for new sections
-const StreamingOptions = () => (
-  <div>
-    <h2 className="text-2xl font-bold mb-4">Streaming Options</h2>
-    <p>Here you'll find information about various streaming services for different sports and regions.</p>
-    {/* Add more detailed content here */}
-  </div>
-);
 
 const TicketInfo = () => (
   <div>
