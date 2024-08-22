@@ -10,6 +10,7 @@ import VPNComparison from '@/components/VPNComparison';
 import GlobalSportsApp from '@/components/GlobalSportsApp'; 
 import HeroSection from '@/components/HeroSection';
 import GameTimeConverter from '@/components/GameTimeConverter';
+import BackgroundImage from '@/components/BackgroundImage';
 
 
 const vpnData = [
@@ -71,23 +72,23 @@ const FeaturedEvents = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {events.map((event, index) => (
-        <Card key={index}>
+        <Card key={index} className="bg-white/20 backdrop-blur-md text-white">
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               <span>{event.name}</span>
-              <div className="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
+              <div className="w-10 h-10 flex items-center justify-center bg-blue-500/30 rounded-full">
                 <span className="text-2xl">{event.icon}</span>
               </div>
             </CardTitle>
             <div className="flex items-center justify-between mt-2">
-              <Badge variant="secondary">{event.league}</Badge>
-              <span className="text-sm text-muted-foreground">
+              <Badge variant="secondary" className="bg-blue-500/50 text-white">{event.league}</Badge>
+              <span className="text-sm text-blue-200">
                 {event.date}
               </span>
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex items-center">
+            <div className="flex items-center text-blue-100">
               <MapPin className="mr-2 h-4 w-4" />
               <span className="text-sm">{event.location}</span>
             </div>
@@ -99,10 +100,10 @@ const FeaturedEvents = () => {
 };
 
 const TicketInfo = () => (
-  <Card>
+  <Card className="bg-white/20 backdrop-blur-md text-white">
     <CardHeader>
       <CardTitle>Ticket Information</CardTitle>
-      <CardDescription>
+      <CardDescription className="text-blue-100">
         Find details about ticket purchasing, prices, and availability for
         various events.
       </CardDescription>
@@ -112,10 +113,10 @@ const TicketInfo = () => (
 );
 
 const GamedayInfo = () => (
-  <Card>
+  <Card className="bg-white/20 backdrop-blur-md text-white">
     <CardHeader>
       <CardTitle>Gameday Information</CardTitle>
-      <CardDescription>
+      <CardDescription className="text-blue-100">
         Get essential information for your gameday experience, including stadium
         rules, local tips, and more.
       </CardDescription>
@@ -125,16 +126,16 @@ const GamedayInfo = () => (
 );
 
 const VPNInfo = () => (
-  <Card>
+  <Card className="bg-white/20 backdrop-blur-md text-white">
     <CardHeader>
       <CardTitle>VPN Information</CardTitle>
-      <CardDescription>
+      <CardDescription className="text-blue-100">
         Enhance your viewing experience with these top-tier VPN services
       </CardDescription>
     </CardHeader>
     <CardContent>
       <VPNComparison vpns={vpnData} />
-      <Card className="mt-6">
+      <Card className="mt-6 bg-white/30 text-white">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Info className="mr-2" size={20} />
@@ -142,7 +143,7 @@ const VPNInfo = () => (
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-inside space-y-2 text-blue-100">
             <li>Access geo-restricted content and overcome blackouts</li>
             <li>Protect your online privacy and secure your connection</li>
             <li>Potentially find better deals on subscriptions</li>
@@ -150,7 +151,7 @@ const VPNInfo = () => (
           </ul>
         </CardContent>
       </Card>
-      <p className="mt-6 text-sm text-muted-foreground">
+      <p className="mt-6 text-sm text-blue-200">
         Note: Pricing and features are subject to change. Please verify details
         on the official websites.
       </p>
@@ -180,74 +181,82 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
-      <div className="container mx-auto px-4 py-12 md:py-20">
-        <div className="flex flex-col items-center justify-center mb-12">
-          <div className="flex items-center mb-4">
-            <Globe className="text-primary mr-4" size={60} />
-            <h1 className="text-5xl md:text-6xl font-bold text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
-              GameDay Passport
-            </h1>
+    <>
+      <BackgroundImage />
+      <div className="relative z-10 text-white">
+        <div className="container mx-auto px-4 py-12 md:py-20">
+          <div className="flex flex-col items-center justify-center mb-12">
+            <div className="flex items-center mb-4">
+              <Globe className="text-blue-300 mr-4" size={60} />
+              <h1 className="text-5xl md:text-6xl font-bold text-blue-300 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-500">
+                GameDay Passport
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl font-medium text-center text-blue-100 max-w-2xl mb-6">
+              Your premier guide to worldwide sports entertainment
+            </p>
+            
+            <p className="text-lg md:text-xl font-medium text-center text-blue-200 max-w-3xl mb-8 leading-relaxed">
+              Explore comprehensive information on{' '}
+              <span className="font-bold text-blue-100">sports events</span>,{' '}
+              <span className="font-bold text-blue-100">streaming options</span>, and{' '}
+              <span className="font-bold text-blue-100">in-person attendance</span>{' '}
+              from anywhere in the world!
+            </p>
           </div>
-          <p className="text-xl md:text-2xl font-medium text-center text-muted-foreground max-w-2xl mb-6">
-            Your premier guide to worldwide sports entertainment
-          </p>
           
-          <p className="text-lg md:text-xl font-medium text-center text-primary max-w-3xl mb-8 leading-relaxed">
-            Explore comprehensive information on{' '}
-            <span className="font-bold">sports events</span>,{' '}
-            <span className="font-bold">streaming options</span>, and{' '}
-            <span className="font-bold">in-person attendance</span>{' '}
-            from anywhere in the world!
-          </p>
+          <Tabs defaultValue="events" className="mb-12">
+            <div className="flex justify-center mb-8">
+              <TabsList className="inline-flex p-1 bg-white/10 backdrop-blur-md rounded-xl">
+                {[
+                  { value: "events", icon: Trophy, label: "Featured Events" },
+                  { value: "streaming", icon: Tv, label: "Streaming Info" },
+                  { value: "tickets", icon: Ticket, label: "Tickets Info" },
+                  { value: "gameday", icon: Info, label: "Gameday Guide" },
+                  { value: "vpn", icon: Shield, label: "VPN" },
+                ].map(({ value, icon: Icon, label }) => (
+                  <TabsTrigger
+                    key={value}
+                    value={value}
+                    className="flex items-center px-3 py-2 text-sm font-medium transition-all duration-200 ease-in-out rounded-lg
+                               text-blue-100 hover:text-white
+                               data-[state=active]:bg-blue-500/50 data-[state=active]:text-white data-[state=active]:shadow-sm"
+                  >
+                    <Icon className="w-4 h-4 mr-2" />
+                    {label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+            <div className="mt-6">
+              <TabsContent value="events">
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg">
+                  <FeaturedEvents />
+                </div>
+                {selectedEvent && (
+                  <GameTimeConverter {...mockGameTimeConverterProps} />
+                )}
+              </TabsContent>
+              <TabsContent value="streaming">
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg">
+                  <GlobalSportsApp />
+                </div>
+              </TabsContent>
+              <TabsContent value="tickets">
+                <TicketInfo />
+              </TabsContent>
+              <TabsContent value="gameday">
+                <GamedayInfo />
+              </TabsContent>
+              <TabsContent value="vpn">
+                <VPNInfo />
+              </TabsContent>
+            </div>
+          </Tabs>
         </div>
-        
-        <Tabs defaultValue="events" className="mb-12">
-          <div className="flex justify-center mb-8">
-            <TabsList className="inline-flex p-1 bg-muted rounded-xl">
-              {[
-                { value: "events", icon: Trophy, label: "Featured Events" },
-                { value: "streaming", icon: Tv, label: "Streaming Info" },
-                { value: "tickets", icon: Ticket, label: "Tickets Info" },
-                { value: "gameday", icon: Info, label: "Gameday Guide" },
-                { value: "vpn", icon: Shield, label: "VPN" },
-              ].map(({ value, icon: Icon, label }) => (
-                <TabsTrigger
-                  key={value}
-                  value={value}
-                  className="flex items-center px-3 py-2 text-sm font-medium transition-all duration-200 ease-in-out rounded-lg
-                             data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm"
-                >
-                  <Icon className="w-4 h-4 mr-2" />
-                  {label}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </div>
-          <div className="mt-6">
-            <TabsContent value="events">
-              <FeaturedEvents />
-              {selectedEvent && (
-                <GameTimeConverter {...mockGameTimeConverterProps} />
-              )}
-            </TabsContent>
-            <TabsContent value="streaming">
-              <GlobalSportsApp />
-            </TabsContent>
-            <TabsContent value="tickets">
-              <TicketInfo />
-            </TabsContent>
-            <TabsContent value="gameday">
-              <GamedayInfo />
-            </TabsContent>
-            <TabsContent value="vpn">
-              <VPNInfo />
-            </TabsContent>
-          </div>
-        </Tabs>
-      </div>
 
-      <HeroSection />
-    </div>
+        <HeroSection />
+      </div>
+    </>
   );
 }
