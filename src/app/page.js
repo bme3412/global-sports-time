@@ -26,6 +26,7 @@ import FeaturedEvents from "@/components/FeaturedEvents";
 import StreamingPromo from "@/components/StreamingPromo";
 import GameDayGuide from "@/components/GameDayGuide";
 import GameDayGuidePromo from "@/components/GameDayGuidePromo";
+import TicketBuyingGuide from "@/components/TicketBuyingGuide";
 
 const vpnData = [
   {
@@ -271,7 +272,7 @@ export default function Home() {
                 </div>
               </TabsContent>
               <TabsContent value="tickets">
-                <TicketInfo />
+                <TicketBuyingGuide />
               </TabsContent>
               <TabsContent value="vpn">
                 <VPNInfo />
