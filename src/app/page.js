@@ -1,16 +1,31 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Globe, Tv, Shield, Info, Trophy, Ticket } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import React, { useState } from "react";
+import { Globe, Tv, Shield, Info, Trophy, Ticket, MapPin } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import VPNComparison from '@/components/VPNComparison';
-import GlobalSportsApp from '@/components/GlobalSportsApp'; 
-import HeroSection from '@/components/HeroSection';
-import GameTimeConverter from '@/components/GameTimeConverter';
-import BackgroundImage from '@/components/BackgroundImage';
-import FeaturedEvents from '@/components/FeaturedEvents';
-import StreamingPromo from '@/components/StreamingPromo'; 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import VPNComparison from "@/components/VPNComparison";
+import GlobalSportsApp from "@/components/GlobalSportsApp";
+import HeroSection from "@/components/HeroSection";
+import GameTimeConverter from "@/components/GameTimeConverter";
+import BackgroundImage from "@/components/BackgroundImage";
+import FeaturedEvents from "@/components/FeaturedEvents";
+import StreamingPromo from "@/components/StreamingPromo";
+import GameDayGuide from "@/components/GameDayGuide";
+import GameDayGuidePromo from "@/components/GameDayGuidePromo";
 
 const vpnData = [
   {
@@ -104,28 +119,47 @@ const VPNInfo = () => (
 );
 
 const sports = [
-  'Basketball', 'Soccer', 'American Football', 'Baseball', 
-  'Ice Hockey', 'Cricket', 'Rugby', 'Motorsport', 'Mixed Martial Arts'
+  "Basketball",
+  "Soccer",
+  "American Football",
+  "Baseball",
+  "Ice Hockey",
+  "Cricket",
+  "Rugby",
+  "Motorsport",
+  "Mixed Martial Arts",
 ];
 
 const sportGroups = {
   Basketball: [
-    { id: 'nba', name: 'NBA' },
-    { id: 'euroleague', name: 'EuroLeague' },
-    { id: 'ncaa', name: 'NCAA' }
+    { id: "nba", name: "NBA" },
+    { id: "euroleague", name: "EuroLeague" },
+    { id: "ncaa", name: "NCAA" },
   ],
   Soccer: [
-    { id: 'epl', name: 'English Premier League' },
-    { id: 'laliga', name: 'La Liga' },
-    { id: 'bundesliga', name: 'Bundesliga' }
+    { id: "epl", name: "English Premier League" },
+    { id: "laliga", name: "La Liga" },
+    { id: "bundesliga", name: "Bundesliga" },
   ],
   // Add more leagues for other sports...
 };
 
-
+const cities = [
+  "New York",
+  "Los Angeles",
+  "Chicago",
+  "Houston",
+  "Phoenix",
+  "Philadelphia",
+  "San Antonio",
+  "San Diego",
+  "Dallas",
+  "San Jose",
+];
 
 export default function Home() {
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedCity, setSelectedCity] = useState("New York");
 
   // Mock data for GameTimeConverter, replace with actual data fetching logic
   const mockGameTimeConverterProps = {
@@ -160,24 +194,27 @@ export default function Home() {
             <p className="text-xl md:text-2xl font-medium text-center text-blue-100 max-w-2xl mb-6">
               Your premier guide to worldwide sports entertainment
             </p>
-            
+
             <p className="text-lg md:text-xl font-medium text-center text-blue-200 max-w-3xl mb-8 leading-relaxed">
-              Explore comprehensive information on{' '}
-              <span className="font-bold text-blue-100">sports events</span>,{' '}
-              <span className="font-bold text-blue-100">streaming options</span>, and{' '}
-              <span className="font-bold text-blue-100">in-person attendance</span>{' '}
+              Explore comprehensive information on{" "}
+              <span className="font-bold text-blue-100">sports events</span>,{" "}
+              <span className="font-bold text-blue-100">streaming options</span>
+              , and{" "}
+              <span className="font-bold text-blue-100">
+                in-person attendance
+              </span>{" "}
               from anywhere in the world!
             </p>
           </div>
-          
+
           <Tabs defaultValue="events" className="mb-12">
             <div className="flex justify-center mb-8">
               <TabsList className="inline-flex p-1 bg-white/10 backdrop-blur-md rounded-xl">
                 {[
                   { value: "events", icon: Trophy, label: "Featured Events" },
                   { value: "streaming", icon: Tv, label: "Streaming Info" },
+                  { value: "gameday", icon: MapPin, label: "GameDay Guide" },
                   { value: "tickets", icon: Ticket, label: "Tickets Info" },
-                  { value: "gameday", icon: Info, label: "Gameday Guide" },
                   { value: "vpn", icon: Shield, label: "VPN" },
                 ].map(({ value, icon: Icon, label }) => (
                   <TabsTrigger
@@ -207,11 +244,34 @@ export default function Home() {
                   <GlobalSportsApp />
                 </div>
               </TabsContent>
+              <TabsContent value="gameday">
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg">
+                  <div className="mb-6">
+                    <h2 className="text-2xl font-bold mb-4">GameDay Guide</h2>
+                    <div className="flex items-center">
+                      <MapPin className="mr-2" />
+                      <Select
+                        onValueChange={setSelectedCity}
+                        defaultValue={selectedCity}
+                      >
+                        <SelectTrigger className="w-[180px]">
+                          <SelectValue placeholder="Select a city" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {cities.map((city) => (
+                            <SelectItem key={city} value={city}>
+                              {city}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+                  <GameDayGuide city={selectedCity} />
+                </div>
+              </TabsContent>
               <TabsContent value="tickets">
                 <TicketInfo />
-              </TabsContent>
-              <TabsContent value="gameday">
-                <GamedayInfo />
               </TabsContent>
               <TabsContent value="vpn">
                 <VPNInfo />
@@ -223,6 +283,9 @@ export default function Home() {
         <HeroSection />
         <div className="container mx-auto px-4 py-12">
           <StreamingPromo sports={sports} sportGroups={sportGroups} />
+        </div>
+        <div className="container mx-auto px-4 py-12">
+          <GameDayGuidePromo />
         </div>
       </div>
     </>
