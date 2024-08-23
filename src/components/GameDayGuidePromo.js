@@ -13,7 +13,7 @@ const GameDayGuidePromo = () => {
       </CardHeader>
       <CardContent className="p-6">
         <p className="text-xl mb-6 text-center">
-          Great! Here's everything you need to know for an awesome game day experience:
+          Great! Everything you need to know for an awesome game day experience:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
