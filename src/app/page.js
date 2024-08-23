@@ -10,6 +10,7 @@ import HeroSection from '@/components/HeroSection';
 import GameTimeConverter from '@/components/GameTimeConverter';
 import BackgroundImage from '@/components/BackgroundImage';
 import FeaturedEvents from '@/components/FeaturedEvents';
+import StreamingPromo from '@/components/StreamingPromo'; 
 
 const vpnData = [
   {
@@ -101,6 +102,27 @@ const VPNInfo = () => (
     </CardContent>
   </Card>
 );
+
+const sports = [
+  'Basketball', 'Soccer', 'American Football', 'Baseball', 
+  'Ice Hockey', 'Cricket', 'Rugby', 'Motorsport', 'Mixed Martial Arts'
+];
+
+const sportGroups = {
+  Basketball: [
+    { id: 'nba', name: 'NBA' },
+    { id: 'euroleague', name: 'EuroLeague' },
+    { id: 'ncaa', name: 'NCAA' }
+  ],
+  Soccer: [
+    { id: 'epl', name: 'English Premier League' },
+    { id: 'laliga', name: 'La Liga' },
+    { id: 'bundesliga', name: 'Bundesliga' }
+  ],
+  // Add more leagues for other sports...
+};
+
+
 
 export default function Home() {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -199,6 +221,9 @@ export default function Home() {
         </div>
 
         <HeroSection />
+        <div className="container mx-auto px-4 py-12">
+          <StreamingPromo sports={sports} sportGroups={sportGroups} />
+        </div>
       </div>
     </>
   );
