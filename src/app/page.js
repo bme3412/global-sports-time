@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, Suspense } from "react";
+import Link from 'next/link';
 import dynamic from "next/dynamic";
-import { Globe, Tv, Shield, Info, Trophy, Ticket, MapPin } from "lucide-react";
+import { Globe, Tv, Shield, Info, Trophy, Ticket, MapPin, Beer } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -18,6 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
 import VPNComparison from "@/components/VPNComparison";
 import GlobalSportsApp from "@/components/GlobalSportsApp";
 import HeroSection from "@/components/HeroSection";
@@ -28,6 +30,8 @@ import StreamingPromo from "@/components/StreamingPromo";
 import GameDayGuide from "@/components/GameDayGuide";
 import GameDayGuidePromo from "@/components/GameDayGuidePromo";
 import TicketBuyingGuide from "@/components/TicketBuyingGuide";
+
+
 
 // Dynamically import the Events_Full component
 const EventsFull = dynamic(() => import("@/components/Events_Full"), {
@@ -195,7 +199,23 @@ export default function Home() {
   return (
     <>
       <BackgroundImage />
-      <div className="relative z-10 text-white">
+      {/* Fixed header with City Guide button centered and Login/Contact on sides */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-blue-900 to-transparent py-4 px-4 flex justify-between items-center">
+        <a href="/login" className="text-white hover:text-blue-300 transition-colors duration-300">Login</a>
+        <Link href="/city-guide">
+          <Button
+            variant="outline"
+            size="lg"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full flex items-center shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+          >
+            <Beer className="mr-2" size={24} />
+            <span className="text-lg">City Guide - Where to go Before the Game</span>
+          </Button>
+        </Link>
+        <a href="/contact" className="text-white hover:text-blue-300 transition-colors duration-300">Contact</a>
+      </div>
+
+      <div className="relative z-10 text-white pt-24"> {/* Increased padding-top to account for fixed header */}
         <div className="container mx-auto px-4 py-12 md:py-20">
           <div className="flex flex-col items-center justify-center mb-12">
             <div className="flex items-center mb-4">
@@ -219,7 +239,6 @@ export default function Home() {
               from anywhere in the world!
             </p>
           </div>
-
           <Tabs defaultValue="events" className="mb-12">
             <div className="flex justify-center mb-8">
               <TabsList className="inline-flex p-1 bg-white/10 backdrop-blur-md rounded-xl">
