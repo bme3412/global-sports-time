@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
+import dynamic from "next/dynamic";
 import { Globe, Tv, Shield, Info, Trophy, Ticket, MapPin } from "lucide-react";
 import {
   Card,
@@ -27,6 +28,12 @@ import StreamingPromo from "@/components/StreamingPromo";
 import GameDayGuide from "@/components/GameDayGuide";
 import GameDayGuidePromo from "@/components/GameDayGuidePromo";
 import TicketBuyingGuide from "@/components/TicketBuyingGuide";
+
+// Dynamically import the Events_Full component
+const EventsFull = dynamic(() => import("@/components/Events_Full"), {
+  loading: () => <p>Loading full events list...</p>,
+  ssr: false, // Disable server-side rendering for this component
+});
 
 const vpnData = [
   {
@@ -161,6 +168,7 @@ const cities = [
 export default function Home() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedCity, setSelectedCity] = useState("New York");
+  const [showEventsFull, setShowEventsFull] = useState(false);
 
   // Mock data for GameTimeConverter, replace with actual data fetching logic
   const mockGameTimeConverterProps = {
@@ -178,6 +186,10 @@ export default function Home() {
     awayTeam: "Los Angeles Lakers",
     userCountry: "US",
     league: "NBA",
+  };
+
+  const handleViewFullList = () => {
+    setShowEventsFull(true);
   };
 
   return (
@@ -234,8 +246,13 @@ export default function Home() {
             <div className="mt-6">
               <TabsContent value="events">
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg">
-                  <FeaturedEvents />
+                  <FeaturedEvents onViewFullList={handleViewFullList} />
                 </div>
+                {showEventsFull && (
+                  <Suspense fallback={<div>Loading full events list...</div>}>
+                    <EventsFull />
+                  </Suspense>
+                )}
                 {selectedEvent && (
                   <GameTimeConverter {...mockGameTimeConverterProps} />
                 )}

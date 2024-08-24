@@ -1,6 +1,10 @@
+'use client';
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { MapPin, Calendar } from 'lucide-react';
 
 const events = [
@@ -49,33 +53,46 @@ const events = [
 ];
 
 const FeaturedEvents = () => {
+  const router = useRouter();
+
+  const handleViewFullList = () => {
+    router.push('/events-full');
+  };
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {events.map((event, index) => (
-        <Card key={index} className="bg-white/20 backdrop-blur-md text-white">
-          <CardHeader>
-            <CardTitle className="flex items-center justify-between">
-              <span>{event.name}</span>
-              <div className="w-10 h-10 flex items-center justify-center bg-blue-500/30 rounded-full">
-                <span className="text-2xl">{event.icon}</span>
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {events.map((event, index) => (
+          <Card key={index} className="bg-white/20 backdrop-blur-md text-white">
+            <CardHeader>
+              <CardTitle className="flex items-center justify-between">
+                <span>{event.name}</span>
+                <div className="w-10 h-10 flex items-center justify-center bg-blue-500/30 rounded-full">
+                  <span className="text-2xl">{event.icon}</span>
+                </div>
+              </CardTitle>
+              <div className="flex items-center justify-between mt-2">
+                <Badge variant="secondary" className="bg-blue-500/50 text-white">{event.league}</Badge>
               </div>
-            </CardTitle>
-            <div className="flex items-center justify-between mt-2">
-              <Badge variant="secondary" className="bg-blue-500/50 text-white">{event.league}</Badge>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center text-blue-100 mb-2">
-              <Calendar className="mr-2 h-4 w-4" />
-              <span className="text-sm">{event.date}</span>
-            </div>
-            <div className="flex items-center text-blue-100">
-              <MapPin className="mr-2 h-4 w-4" />
-              <span className="text-sm">{event.location}</span>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center text-blue-100 mb-2">
+                <Calendar className="mr-2 h-4 w-4" />
+                <span className="text-sm">{event.date}</span>
+              </div>
+              <div className="flex items-center text-blue-100">
+                <MapPin className="mr-2 h-4 w-4" />
+                <span className="text-sm">{event.location}</span>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <Button onClick={handleViewFullList} className="bg-blue-500 hover:bg-blue-600 text-white">
+          View Full List
+        </Button>
+      </div>
     </div>
   );
 };

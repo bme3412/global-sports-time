@@ -1,0 +1,254 @@
+[
+    {
+      "name": "Solheim Cup",
+      "date": "Sep 10-15",
+      "sport": "Golf",
+      "location": "Robert Trent Jones Golf Club in Gainesville, Virginia USA",
+      "coordinates": [-77.6003, 38.9697]
+    },
+    {
+      "name": "UCI Road World Championships",
+      "date": "Sep 21-29",
+      "sport": "Cycling",
+      "location": "Zurich, Switzerland",
+      "coordinates": [8.5417, 47.3769]
+    },
+    {
+      "name": "Presidents Cup",
+      "date": "Sep 24–29",
+      "sport": "Golf",
+      "location": "Royal Montreal Golf Club, Quebec, Canada",
+      "coordinates": [-73.5673, 45.5017]
+    },
+    {
+      "name": "Grand Final",
+      "date": "Sep 28",
+      "sport": "Australian Football",
+      "location": "Melbourne, Australia",
+      "coordinates": [144.9631, -37.8136]
+    },
+    {
+      "name": "World Series",
+      "date": "Oct ?",
+      "sport": "Baseball",
+      "location": "TBD",
+      "coordinates": [-98.5795, 39.8283]
+    },
+    {
+      "name": "ICC World T20 (women)",
+      "date": "Oct 3-20",
+      "sport": "Cricket",
+      "location": "Bangladesh",
+      "coordinates": [90.3563, 23.6850]
+    },
+    {
+      "name": "Grand Final",
+      "date": "Oct 6",
+      "sport": "Rugby League",
+      "location": "Sydney",
+      "coordinates": [151.2093, -33.8688]
+    },
+    {
+      "name": "America's Cup",
+      "date": "Oct 12-20",
+      "sport": "Sailing",
+      "location": "Barcelona, Spain",
+      "coordinates": [2.1734, 41.3851]
+    },
+    {
+      "name": "World Track Championships",
+      "date": "Oct 16-20",
+      "sport": "Cycling",
+      "location": "Ballerup, Denmark",
+      "coordinates": [12.3644, 55.7298]
+    },
+    {
+      "name": "Melbourne Cup",
+      "date": "Nov 5",
+      "sport": "Horse Racing",
+      "location": "Victoria, Australia",
+      "coordinates": [144.9631, -37.8136]
+    },
+    {
+      "name": "IWF World Championships",
+      "date": "Dec 4-14",
+      "sport": "Weightlifting",
+      "location": "Manama, Bahrain",
+      "coordinates": [50.5860, 26.2285]
+    },
+    {
+      "name": "FINA World Swimming Championships (25m)",
+      "date": "Dec 10-15",
+      "sport": "Swimming",
+      "location": "Budapest, Hungary",
+      "coordinates": [19.0402, 47.4979]
+    },
+    {
+      "name": "Australian Open",
+      "date": "Jan 12-26",
+      "sport": "Tennis",
+      "location": "Melbourne, Australia",
+      "coordinates": [144.9631, -37.8136]
+    },
+    {
+      "name": "Winter World University Games",
+      "date": "Jan 13-23",
+      "sport": "Multi-sports",
+      "location": "Torino, Italy",
+      "coordinates": [7.6869, 45.0703]
+    },
+    {
+      "name": "Six Nations",
+      "date": "Jan 31 - Mar 15",
+      "sport": "Rugby Union",
+      "location": "UK, Ireland, France & Italy",
+      "coordinates": [-3.4359, 55.3781]
+    },
+    {
+      "name": "Invictus Games",
+      "date": "Feb 8-16",
+      "sport": "Multi-sports",
+      "location": "Vancouver and Whistler, Canada",
+      "coordinates": [-123.1207, 49.2827]
+    },
+    {
+      "name": "Super Bowl",
+      "date": "Feb 9",
+      "sport": "Football (American)",
+      "location": "Caesars Superdome, New Orleans, Louisiana",
+      "coordinates": [-90.0812, 29.9511]
+    },
+    {
+      "name": "Alpine World Ski Championships",
+      "date": "Feb?",
+      "sport": "Alpine Skiing",
+      "location": "Saalbach, Austria",
+      "coordinates": [12.6890, 47.3917]
+    },
+    {
+      "name": "Nordic World Ski Championships",
+      "date": "Feb 26 - Mar 9",
+      "sport": "Nordic Skiing",
+      "location": "Trondheim, Norway",
+      "coordinates": [10.3951, 63.4305]
+    },
+    {
+      "name": "20th IAAF World Indoor Athletics Championship",
+      "date": "Mar 21-23",
+      "sport": "Athletics",
+      "location": "Nanjing, China",
+      "coordinates": [118.7965, 32.0584]
+    },
+    {
+      "name": "Winter Military World Games",
+      "date": "Mar 23-30",
+      "sport": "Multi-sports",
+      "location": "Bern, Switzerland",
+      "coordinates": [7.4474, 46.9480]
+    },
+    {
+      "name": "NCAA finals (March Madness)",
+      "date": "Mar?",
+      "sport": "Basketball",
+      "location": "USA",
+      "coordinates": [-98.5795, 39.8283]
+    },
+    {
+      "name": "Masters",
+      "date": "Apr?",
+      "sport": "Golf",
+      "location": "Augusta, Georgia, USA",
+      "coordinates": [-82.0223, 33.5207]
+    },
+    {
+      "name": "World Snooker Championship",
+      "date": "Apr-ends on the 1st Monday in May",
+      "sport": "Snooker",
+      "location": "Crucible Theatre in Sheffield, England",
+      "coordinates": [-1.4659, 53.3811]
+    },
+    {
+      "name": "World Championship",
+      "date": "Apr?",
+      "sport": "Table Tennis",
+      "location": "Doha, Qatar",
+      "coordinates": [51.5310, 25.2854]
+    },
+    {
+      "name": "Grand National",
+      "date": "Apr 12",
+      "sport": "Horse Racing",
+      "location": "Aintree Racecourse in Liverpool",
+      "coordinates": [-2.9486, 53.4711]
+    },
+    {
+      "name": "FA Cup final",
+      "date": "May?",
+      "sport": "Football (Soccer)",
+      "location": "Wembley Stadium, London",
+      "coordinates": [-0.2796, 51.5560]
+    },
+    {
+      "name": "Kentucky Derby",
+      "date": "May 3",
+      "sport": "Horse Racing",
+      "location": "Louisville, Kentucky, US",
+      "coordinates": [-85.7585, 38.2527]
+    },
+    {
+      "name": "Indy 500",
+      "date": "May",
+      "sport": "Auto Racing",
+      "location": "Indianapolis, USA",
+      "coordinates": [-86.2362, 39.7684]
+    },
+    {
+      "name": "US PGA",
+      "date": "May 15–18",
+      "sport": "Golf",
+      "location": "Quail Hollow Club, Charlotte, North Carolina",
+      "coordinates": [-80.8431, 35.2271]
+    },
+    {
+      "name": "World Masters Games (Summer)",
+      "date": "May 17-30",
+      "sport": "Multi-sports",
+      "location": "Taipei, Taiwan",
+      "coordinates": [121.5654, 25.0330]
+    },
+    {
+      "name": "French Open",
+      "date": "May?",
+      "sport": "Tennis",
+      "location": "Paris, France",
+      "coordinates": [2.3522, 48.8566]
+    },
+    {
+      "name": "Monaco Grand Prix",
+      "date": "May?",
+      "sport": "Auto Racing",
+      "location": "Monte Carlo, Monaco",
+      "coordinates": [7.4246, 43.7384]
+    },
+    {
+      "name": "Stanley Cup finals",
+      "date": "May?",
+      "sport": "Ice Hockey",
+      "location": "USA/Canada",
+      "coordinates": [-98.5795, 39.8283]
+    },
+    {
+      "name": "IIHF World Championship",
+      "date": "May ?",
+      "sport": "Ice Hockey",
+      "location": "Sweden and Denmark",
+      "coordinates": [15.6345, 58.4108]
+    },
+    {
+      "name": "UEFA Champions League Final",
+      "date": "May 31",
+      "sport": "Football (Soccer)",
+      "location": "Allianz Arena, Munich, Germany",
+      "coordinates": [11.6247, 48.2188]
+    }
+  ]
