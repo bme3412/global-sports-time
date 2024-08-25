@@ -1,0 +1,158 @@
+{
+    "attractions": [
+      {
+        "name": "TD Garden",
+        "description": "Home arena of the Boston Bruins, offering tours and housing the Sports Museum of New England.",
+        "distance": "0 miles (you're here!)",
+        "website": "https://www.tdgarden.com/",
+        "type": "Sports Venue",
+        "coordinates": {
+          "latitude": 42.3662,
+          "longitude": -71.0621
+        }
+      },
+      {
+        "name": "The Sports Museum",
+        "description": "Located in TD Garden, showcasing the rich sports history of New England, including Bruins memorabilia.",
+        "distance": "0 miles (inside TD Garden)",
+        "website": "https://sportsmuseum.org/",
+        "type": "Sports History",
+        "coordinates": {
+          "latitude": 42.3662,
+          "longitude": -71.0621
+        }
+      },
+      {
+        "name": "Bobby Orr Statue",
+        "description": "Bronze statue commemorating Bruins legend Bobby Orr's famous 'flying goal' in the 1970 Stanley Cup Finals.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "N/A",
+        "type": "Monument",
+        "coordinates": {
+          "latitude": 42.3665,
+          "longitude": -71.0619
+        }
+      },
+      {
+        "name": "Freedom Trail",
+        "description": "A 2.5-mile-long path through downtown Boston that passes by 16 locations significant to the history of the United States.",
+        "distance": "0.5 miles from TD Garden",
+        "website": "https://www.thefreedomtrail.org/",
+        "type": "Historical",
+        "coordinates": {
+          "latitude": 42.3588,
+          "longitude": -71.0578
+        }
+      },
+      {
+        "name": "Faneuil Hall Marketplace",
+        "description": "A historic market complex and meeting hall, now featuring shops, restaurants, and street performances.",
+        "distance": "0.4 miles from TD Garden",
+        "website": "https://faneuilhallmarketplace.com/",
+        "type": "Shopping & Dining",
+        "coordinates": {
+          "latitude": 42.3600,
+          "longitude": -71.0566
+        }
+      },
+      {
+        "name": "New England Aquarium",
+        "description": "Home to thousands of aquatic animals, featuring a giant ocean tank and IMAX theatre.",
+        "distance": "0.8 miles from TD Garden",
+        "website": "https://www.neaq.org/",
+        "type": "Educational",
+        "coordinates": {
+          "latitude": 42.3590,
+          "longitude": -71.0490
+        }
+      },
+      {
+        "name": "Boston Public Garden",
+        "description": "America's first public botanical garden, famous for its Swan Boats and 'Make Way for Ducklings' sculpture.",
+        "distance": "1 mile from TD Garden",
+        "website": "https://friendsofthepublicgarden.org/",
+        "type": "Park",
+        "coordinates": {
+          "latitude": 42.3541,
+          "longitude": -71.0705
+        }
+      },
+      {
+        "name": "Museum of Science",
+        "description": "A science museum with over 700 interactive exhibits, live presentations, planetarium shows, and an IMAX theater.",
+        "distance": "0.7 miles from TD Garden",
+        "website": "https://www.mos.org/",
+        "type": "Educational",
+        "coordinates": {
+          "latitude": 42.3677,
+          "longitude": -71.0708
+        }
+      },
+      {
+        "name": "Paul Revere House",
+        "description": "The colonial home of American patriot Paul Revere, now a national historic landmark and museum.",
+        "distance": "0.6 miles from TD Garden",
+        "website": "https://www.paulreverehouse.org/",
+        "type": "Historical",
+        "coordinates": {
+          "latitude": 42.3635,
+          "longitude": -71.0537
+        }
+      },
+      {
+        "name": "USS Constitution Museum",
+        "description": "A museum dedicated to the history of the USS Constitution, the oldest commissioned warship afloat in the world.",
+        "distance": "1.2 miles from TD Garden",
+        "website": "https://ussconstitutionmuseum.org/",
+        "type": "Historical",
+        "coordinates": {
+          "latitude": 42.3726,
+          "longitude": -71.0567
+        }
+      },
+      {
+        "name": "Boston Harbor Cruises",
+        "description": "Offers various boat tours including whale watching, harbor islands trips, and historical sightseeing cruises.",
+        "distance": "0.7 miles from TD Garden",
+        "website": "https://www.bostonharborcruises.com/",
+        "type": "Tours",
+        "coordinates": {
+          "latitude": 42.3598,
+          "longitude": -71.0501
+        }
+      },
+      {
+        "name": "Warrior Ice Arena",
+        "description": "Practice facility of the Boston Bruins, offering public skating sessions and hockey programs.",
+        "distance": "3.5 miles from TD Garden",
+        "website": "https://www.warrioricearena.com/",
+        "type": "Sports Facility",
+        "coordinates": {
+          "latitude": 42.3568,
+          "longitude": -71.1428
+        }
+      },
+      {
+        "name": "Boston Bruins Pro Shop",
+        "description": "Official team store offering a wide range of Bruins merchandise and memorabilia.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "https://www.bostonproshop.com/",
+        "type": "Shopping",
+        "coordinates": {
+          "latitude": 42.3664,
+          "longitude": -71.0623
+        }
+      },
+      {
+        "name": "The Fours Restaurant & Sports Bar",
+        "description": "Iconic sports bar near TD Garden, known for its extensive collection of Boston sports memorabilia.",
+        "distance": "0.2 miles from TD Garden",
+        "website": "https://thefours.com/",
+        "type": "Dining",
+        "coordinates": {
+          "latitude": 42.3659,
+          "longitude": -71.0606
+        }
+      }
+    ]
+  }

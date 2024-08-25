@@ -1,23 +1,70 @@
 {
-    "cities": [
-      {
-        "name": "Boston",
-        "teams": [
-          {"name": "Celtics", "file": "boston/celtics.json"},
-          {"name": "Red Sox", "file": "boston/red_sox.json"},
-          {"name": "Patriots", "file": "boston/patriots.json"},
-          {"name": "Bruins", "file": "boston/bruins.json"}
-        ]
-      },
-      {
-        "name": "New York",
-        "teams": [
-          {"name": "Knicks", "file": "new_york/knicks.json"},
-          {"name": "Yankees", "file": "new_york/yankees.json"},
-          {"name": "Mets", "file": "new_york/mets.json"},
-          {"name": "Rangers", "file": "new_york/rangers.json"}
-        ]
-      }
-    
-    ]
-  }
+  "cities": [
+    {
+      "name": "Boston",
+      "teams": [
+        {
+          "name": "Celtics",
+          "file": "boston/celtics/info.json",
+          "attractions": "boston/celtics/attractions.json",
+          "hotels": "boston/celtics/hotels.json",
+          "restaurants": "boston/celtics/restaurants.json"
+        },
+        {
+          "name": "Red Sox",
+          "file": "boston/red_sox/info.json",
+          "attractions": "boston/red_sox/attractions.json",
+          "hotels": "boston/red_sox/hotels.json",
+          "restaurants": "boston/red_sox/restaurants.json"
+        },
+        {
+          "name": "Patriots",
+          "file": "boston/patriots/info.json",
+          "attractions": "boston/patriots/attractions.json",
+          "hotels": "boston/patriots/hotels.json",
+          "restaurants": "boston/patriots/restaurants.json"
+        },
+        {
+          "name": "Bruins",
+          "file": "boston/bruins/info.json",
+          "attractions": "boston/bruins/attractions.json",
+          "hotels": "boston/bruins/hotels.json",
+          "restaurants": "boston/bruins/restaurants.json"
+        }
+      ]
+    },
+    {
+      "name": "New York",
+      "teams": [
+        {
+          "name": "Knicks",
+          "file": "new_york/knicks/info.json",
+          "attractions": "new_york/knicks/attractions.json",
+          "hotels": "new_york/knicks/hotels.json",
+          "restaurants": "new_york/knicks/restaurants.json"
+        },
+        {
+          "name": "Yankees",
+          "file": "new_york/yankees/info.json",
+          "attractions": "new_york/yankees/attractions.json",
+          "hotels": "new_york/yankees/hotels.json",
+          "restaurants": "new_york/yankees/restaurants.json"
+        },
+        {
+          "name": "Mets",
+          "file": "new_york/mets/info.json",
+          "attractions": "new_york/mets/attractions.json",
+          "hotels": "new_york/mets/hotels.json",
+          "restaurants": "new_york/mets/restaurants.json"
+        },
+        {
+          "name": "Rangers",
+          "file": "new_york/rangers/info.json",
+          "attractions": "new_york/rangers/attractions.json",
+          "hotels": "new_york/rangers/hotels.json",
+          "restaurants": "new_york/rangers/restaurants.json"
+        }
+      ]
+    }
+  ]
+}

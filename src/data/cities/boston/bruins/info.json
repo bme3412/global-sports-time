@@ -1,10 +1,10 @@
 {
-    "name": "Boston Celtics",
-    "league": "NBA",
+    "name": "Boston Bruins",
+    "league": "NHL",
     "venue": {
       "name": "TD Garden",
       "address": "100 Legends Way, Boston, MA 02114",
-      "capacity": 19156,
+      "capacity": 17850,
       "opened": 1995,
       "coordinates": {
         "latitude": 42.366303,
@@ -12,11 +12,10 @@
       }
     },
     "teamColors": [
-      "Green",
-      "White",
       "Black",
-      "Gold"
+      "Gold",
+      "White"
     ],
-    "championships": 18,
-    "website": "https://www.nba.com/celtics/"
+    "championships": 6,
+    "website": "https://www.nhl.com/bruins/"
   }

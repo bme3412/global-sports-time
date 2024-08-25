@@ -1,0 +1,160 @@
+{
+    "hotels": [
+      {
+        "name": "The Boxer Boston",
+        "description": "Boutique hotel in a converted 1904 warehouse, offering a prime location near TD Garden.",
+        "distance": "0.2 miles from TD Garden",
+        "website": "https://www.theboxerboston.com/",
+        "type": "Boutique",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3647,
+          "longitude": -71.0614
+        },
+        "hockeyPerks": "Often hosts visiting NHL teams"
+      },
+      {
+        "name": "CitizenM Boston North Station",
+        "description": "Modern hotel with high-tech amenities, located right next to TD Garden.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "https://www.citizenm.com/destinations/boston/boston-north-station-hotel",
+        "type": "Modern",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3662,
+          "longitude": -71.0619
+        },
+        "hockeyPerks": "Game day special rates available"
+      },
+      {
+        "name": "Courtyard by Marriott Boston Downtown/North Station",
+        "description": "Contemporary hotel connected to TD Garden, offering convenient access for sports fans.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "https://www.marriott.com/hotels/travel/bosnc-courtyard-boston-downtown-north-station/",
+        "type": "Business",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3665,
+          "longitude": -71.0612
+        },
+        "hockeyPerks": "Direct indoor access to TD Garden"
+      },
+      {
+        "name": "Kimpton Onyx Hotel",
+        "description": "Stylish boutique hotel with a contemporary vibe, close to TD Garden and other attractions.",
+        "distance": "0.3 miles from TD Garden",
+        "website": "https://www.onyxhotel.com/",
+        "type": "Boutique",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3638,
+          "longitude": -71.0598
+        },
+        "hockeyPerks": "Hockey-themed cocktails at the bar during Bruins season"
+      },
+      {
+        "name": "Bostonian Boston",
+        "description": "Upscale hotel offering views of Faneuil Hall and easy access to TD Garden.",
+        "distance": "0.5 miles from TD Garden",
+        "website": "https://www.millenniumhotels.com/en/boston/the-bostonian-boston/",
+        "type": "Luxury",
+        "priceRange": "$$$$",
+        "coordinates": {
+          "latitude": 42.3603,
+          "longitude": -71.0552
+        },
+        "hockeyPerks": "Concierge can arrange VIP experiences at Bruins games"
+      },
+      {
+        "name": "Boston Harbor Hotel",
+        "description": "Five-star waterfront hotel offering luxury accommodations and stunning harbor views.",
+        "distance": "0.9 miles from TD Garden",
+        "website": "https://www.bostonharborhotel.com/",
+        "type": "Luxury",
+        "priceRange": "$$$$$",
+        "coordinates": {
+          "latitude": 42.3568,
+          "longitude": -71.0505
+        },
+        "hockeyPerks": "Water taxi service to TD Garden on game days"
+      },
+      {
+        "name": "Yotel Boston",
+        "description": "High-tech, compact rooms in a modern setting, perfect for budget-conscious travelers.",
+        "distance": "1.2 miles from TD Garden",
+        "website": "https://www.yotel.com/en/hotels/yotel-boston",
+        "type": "Budget",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3518,
+          "longitude": -71.0494
+        },
+        "hockeyPerks": "Bruins game viewing parties in the rooftop bar"
+      },
+      {
+        "name": "Omni Parker House",
+        "description": "Historic hotel in downtown Boston, known for its classic charm and Boston cream pie.",
+        "distance": "0.7 miles from TD Garden",
+        "website": "https://www.omnihotels.com/hotels/boston-parker-house",
+        "type": "Historic",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3578,
+          "longitude": -71.0598
+        },
+        "hockeyPerks": "Hockey history tours available through the concierge"
+      },
+      {
+        "name": "The Godfrey Hotel Boston",
+        "description": "Chic boutique hotel in the heart of Downtown Crossing, offering modern amenities.",
+        "distance": "0.8 miles from TD Garden",
+        "website": "https://www.godfreyhotelboston.com/",
+        "type": "Boutique",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3548,
+          "longitude": -71.0610
+        },
+        "hockeyPerks": "Bruins-themed welcome package available upon request"
+      },
+      {
+        "name": "The Revolution Hotel",
+        "description": "Trendy, budget-friendly hotel celebrating Boston's revolutionary spirit.",
+        "distance": "1.5 miles from TD Garden",
+        "website": "https://therevolutionhotel.com/",
+        "type": "Budget",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3466,
+          "longitude": -71.0707
+        },
+        "hockeyPerks": "Discounted rates for Bruins season ticket holders"
+      },
+      {
+        "name": "Residence Inn by Marriott Boston Harbor on Tudor Wharf",
+        "description": "All-suite hotel with kitchenettes, perfect for extended stays or families.",
+        "distance": "0.4 miles from TD Garden",
+        "website": "https://www.marriott.com/hotels/travel/bostw-residence-inn-boston-harbor-on-tudor-wharf/",
+        "type": "Extended Stay",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3686,
+          "longitude": -71.0581
+        },
+        "hockeyPerks": "Free shuttle to TD Garden on game days"
+      },
+      {
+        "name": "W Boston",
+        "description": "Trendy, upscale hotel in the Theater District, known for its vibrant nightlife scene.",
+        "distance": "1.1 miles from TD Garden",
+        "website": "https://www.marriott.com/hotels/travel/boswh-w-boston/",
+        "type": "Luxury",
+        "priceRange": "$$$$",
+        "coordinates": {
+          "latitude": 42.3515,
+          "longitude": -71.0641
+        },
+        "hockeyPerks": "Exclusive Bruins merchandise available in the hotel shop"
+      }
+    ]
+  }
