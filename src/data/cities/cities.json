@@ -1,59 +1,23 @@
-[
-    {
-      "name": "New York",
-      "country": "United States",
-      "coordinates": [40.7128, -74.0060],
-      "teams": [
-        {
-          "name": "New York Yankees",
-          "league": "MLB",
-          "sport": "Baseball",
-          "venue": "Yankee Stadium",
-          "venueCoordinates": [40.8296, -73.9262],
-          "website": "https://www.mlb.com/yankees"
-        },
-        {
-          "name": "New York Mets",
-          "league": "MLB",
-          "sport": "Baseball",
-          "venue": "Citi Field",
-          "venueCoordinates": [40.7571, -73.8458],
-          "website": "https://www.mlb.com/mets"
-        },
-        {
-          "name": "New York Knicks",
-          "league": "NBA",
-          "sport": "Basketball",
-          "venue": "Madison Square Garden",
-          "venueCoordinates": [40.7505, -73.9934],
-          "website": "https://www.nba.com/knicks"
-        }
-        
-      ]
-    },
-    {
-      "name": "London",
-      "country": "United Kingdom",
-      "coordinates": [51.5074, -0.1278],
-      "teams": [
-        {
-          "name": "Arsenal",
-          "league": "Premier League",
-          "sport": "Football",
-          "venue": "Emirates Stadium",
-          "venueCoordinates": [51.5549, -0.1084],
-          "website": "https://www.arsenal.com"
-        },
-        {
-          "name": "Chelsea",
-          "league": "Premier League",
-          "sport": "Football",
-          "venue": "Stamford Bridge",
-          "venueCoordinates": [51.4817, -0.1910],
-          "website": "https://www.chelseafc.com"
-        }
-       
-      ]
-    }
+{
+    "cities": [
+      {
+        "name": "Boston",
+        "teams": [
+          {"name": "Celtics", "file": "boston/celtics.json"},
+          {"name": "Red Sox", "file": "boston/red_sox.json"},
+          {"name": "Patriots", "file": "boston/patriots.json"},
+          {"name": "Bruins", "file": "boston/bruins.json"}
+        ]
+      },
+      {
+        "name": "New York",
+        "teams": [
+          {"name": "Knicks", "file": "new_york/knicks.json"},
+          {"name": "Yankees", "file": "new_york/yankees.json"},
+          {"name": "Mets", "file": "new_york/mets.json"},
+          {"name": "Rangers", "file": "new_york/rangers.json"}
+        ]
+      }
     
-  ]
+    ]
+  }

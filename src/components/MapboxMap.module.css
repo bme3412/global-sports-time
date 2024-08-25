@@ -1,0 +1,40 @@
+.mapContainer {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .marker {
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .venue {
+    background-image: url('/icons/venue.svg');
+  }
+  
+  .parking {
+    background-image: url('/icons/parking.svg');
+  }
+  
+  .restaurant {
+    background-image: url('/icons/restaurant.svg');
+  }
+  
+  .hotel {
+    background-image: url('/icons/hotel.svg');
+  }
+  
+  .attraction {
+    background-image: url('/icons/attraction.svg');
+  }
+  
+  .transit {
+    background-image: url('/icons/transit.svg');
+  }
+  
+  .default {
+    background-image: url('/icons/default.svg');
+  }
