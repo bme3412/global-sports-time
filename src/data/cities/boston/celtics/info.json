@@ -1,0 +1,22 @@
+{
+    "name": "Boston Celtics",
+    "league": "NBA",
+    "venue": {
+      "name": "TD Garden",
+      "address": "100 Legends Way, Boston, MA 02114",
+      "capacity": 19156,
+      "opened": 1995,
+      "coordinates": {
+        "latitude": 42.366303,
+        "longitude": -71.062228
+      }
+    },
+    "teamColors": [
+      "Green",
+      "White",
+      "Black",
+      "Gold"
+    ],
+    "championships": 17,
+    "website": "https://www.nba.com/celtics/"
+  }

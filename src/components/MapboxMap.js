@@ -47,6 +47,7 @@ const MapboxMap = ({ center, zoom, markers }) => {
 
   useEffect(() => {
     if (!map.current || !mapLoaded) return;
+
     const validCenter = isValidCoordinate(center) ? center : [0, 0];
     map.current.setCenter(validCenter);
     map.current.setZoom(zoom || 2);
@@ -66,9 +67,9 @@ const MapboxMap = ({ center, zoom, markers }) => {
         // Create a popup
         const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
           `<h3>${marker.name || 'Unnamed Location'}</h3>
-           ${marker.address ? `<p>${marker.address}</p>` : ''}
-           ${marker.details ? `<p>${marker.details}</p>` : ''}
-           ${marker.website ? `<a href="${marker.website}" target="_blank">Visit Website</a>` : ''}`
+          ${marker.address ? `<p>${marker.address}</p>` : ''}
+          ${marker.details ? `<p>${marker.details}</p>` : ''}
+          ${marker.website ? `<a href="${marker.website}" target="_blank">Visit Website</a>` : ''}`
         );
 
         // Add marker to the map
@@ -80,7 +81,7 @@ const MapboxMap = ({ center, zoom, markers }) => {
         console.warn("Invalid marker coordinates:", marker);
       }
     });
-  }, [center, zoom, markers, mapLoaded]);
+  }, [center, zoom, mapLoaded, markers]);
 
   return <div ref={mapContainer} className={styles.mapContainer} />;
 };

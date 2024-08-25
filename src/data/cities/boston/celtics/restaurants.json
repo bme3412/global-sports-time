@@ -1,0 +1,100 @@
+{
+    "restaurants": [
+      {
+        "name": "Tavern in the Square",
+        "description": "Sports bar with American fare and a lively atmosphere, perfect for pre or post-game meals.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "https://www.taverninthesquare.com/",
+        "type": "American",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3662,
+          "longitude": -71.0621
+        }
+      },
+      {
+        "name": "The Fours",
+        "description": "Classic sports bar with memorabilia-covered walls, serving pub grub and drinks.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "https://thefours.com/",
+        "type": "Sports Bar",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3662,
+          "longitude": -71.0606
+        }
+      },
+      {
+        "name": "Halftime Pizza",
+        "description": "No-frills pizzeria offering slices and whole pies, popular among game-goers.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "http://www.halftimepizza.com/",
+        "type": "Pizza",
+        "priceRange": "$",
+        "coordinates": {
+          "latitude": 42.3662,
+          "longitude": -71.0615
+        }
+      },
+      {
+        "name": "North Street Grille",
+        "description": "Cozy spot known for its creative breakfast and brunch options.",
+        "distance": "0.3 miles from TD Garden",
+        "website": "https://www.northstreetgrille.com/",
+        "type": "American",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3655,
+          "longitude": -71.0556
+        }
+      },
+      {
+        "name": "Bova's Bakery",
+        "description": "24-hour Italian bakery offering pastries, sandwiches, and pizza.",
+        "distance": "0.5 miles from TD Garden",
+        "website": "https://www.bovabakeryboston.net/",
+        "type": "Bakery",
+        "priceRange": "$",
+        "coordinates": {
+          "latitude": 42.3651,
+          "longitude": -71.0560
+        }
+      },
+      {
+        "name": "Boston Public Market",
+        "description": "Indoor market featuring local food vendors, ideal for a quick, diverse meal.",
+        "distance": "0.3 miles from TD Garden",
+        "website": "https://bostonpublicmarket.org/",
+        "type": "Food Hall",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3619,
+          "longitude": -71.0582
+        }
+      },
+      {
+        "name": "Union Oyster House",
+        "description": "Historic seafood restaurant, the oldest continuously operating restaurant in the US.",
+        "distance": "0.5 miles from TD Garden",
+        "website": "https://www.unionoysterhouse.com/",
+        "type": "Seafood",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3614,
+          "longitude": -71.0567
+        }
+      },
+      {
+        "name": "Pauli's",
+        "description": "Popular sandwich shop known for its lobster rolls and other New England specialties.",
+        "distance": "0.4 miles from TD Garden",
+        "website": "https://www.paulisnorthend.com/",
+        "type": "Sandwiches",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3647,
+          "longitude": -71.0546
+        }
+      }
+    ]
+  }

@@ -1,0 +1,92 @@
+{
+    "attractions": [
+      {
+        "name": "Freedom Trail",
+        "description": "A 2.5-mile-long path through downtown Boston that passes by 16 locations significant to the history of the United States.",
+        "distance": "0.5 miles from TD Garden",
+        "website": "https://www.thefreedomtrail.org/",
+        "type": "Historical",
+        "coordinates": {
+          "latitude": 42.3588,
+          "longitude": -71.0578
+        }
+      },
+      {
+        "name": "Faneuil Hall Marketplace",
+        "description": "A historic market complex and meeting hall, now featuring shops, restaurants, and street performances.",
+        "distance": "0.4 miles from TD Garden",
+        "website": "https://faneuilhallmarketplace.com/",
+        "type": "Shopping & Dining",
+        "coordinates": {
+          "latitude": 42.3600,
+          "longitude": -71.0566
+        }
+      },
+      {
+        "name": "New England Aquarium",
+        "description": "Home to thousands of aquatic animals, featuring a giant ocean tank and IMAX theatre.",
+        "distance": "0.8 miles from TD Garden",
+        "website": "https://www.neaq.org/",
+        "type": "Educational",
+        "coordinates": {
+          "latitude": 42.3590,
+          "longitude": -71.0490
+        }
+      },
+      {
+        "name": "Boston Public Garden",
+        "description": "America's first public botanical garden, famous for its Swan Boats and 'Make Way for Ducklings' sculpture.",
+        "distance": "1 mile from TD Garden",
+        "website": "https://friendsofthepublicgarden.org/",
+        "type": "Park",
+        "coordinates": {
+          "latitude": 42.3541,
+          "longitude": -71.0705
+        }
+      },
+      {
+        "name": "Museum of Science",
+        "description": "A science museum with over 700 interactive exhibits, live presentations, planetarium shows, and an IMAX theater.",
+        "distance": "0.7 miles from TD Garden",
+        "website": "https://www.mos.org/",
+        "type": "Educational",
+        "coordinates": {
+          "latitude": 42.3677,
+          "longitude": -71.0708
+        }
+      },
+      {
+        "name": "Paul Revere House",
+        "description": "The colonial home of American patriot Paul Revere, now a national historic landmark and museum.",
+        "distance": "0.6 miles from TD Garden",
+        "website": "https://www.paulreverehouse.org/",
+        "type": "Historical",
+        "coordinates": {
+          "latitude": 42.3635,
+          "longitude": -71.0537
+        }
+      },
+      {
+        "name": "USS Constitution Museum",
+        "description": "A museum dedicated to the history of the USS Constitution, the oldest commissioned warship afloat in the world.",
+        "distance": "1.2 miles from TD Garden",
+        "website": "https://ussconstitutionmuseum.org/",
+        "type": "Historical",
+        "coordinates": {
+          "latitude": 42.3726,
+          "longitude": -71.0567
+        }
+      },
+      {
+        "name": "Boston Harbor Cruises",
+        "description": "Offers various boat tours including whale watching, harbor islands trips, and historical sightseeing cruises.",
+        "distance": "0.7 miles from TD Garden",
+        "website": "https://www.bostonharborcruises.com/",
+        "type": "Tours",
+        "coordinates": {
+          "latitude": 42.3598,
+          "longitude": -71.0501
+        }
+      }
+    ]
+  }

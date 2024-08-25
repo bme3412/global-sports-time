@@ -1,0 +1,64 @@
+{
+    "hotels": [
+      {
+        "name": "The Boxer Boston",
+        "description": "Boutique hotel in a converted 1904 warehouse, offering a prime location near TD Garden.",
+        "distance": "0.2 miles from TD Garden",
+        "website": "https://www.theboxerboston.com/",
+        "type": "Boutique",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3647,
+          "longitude": -71.0614
+        }
+      },
+      {
+        "name": "CitizenM Boston North Station",
+        "description": "Modern hotel with high-tech amenities, located right next to TD Garden.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "https://www.citizenm.com/destinations/boston/boston-north-station-hotel",
+        "type": "Modern",
+        "priceRange": "$$",
+        "coordinates": {
+          "latitude": 42.3662,
+          "longitude": -71.0619
+        }
+      },
+      {
+        "name": "Courtyard by Marriott Boston Downtown/North Station",
+        "description": "Contemporary hotel connected to TD Garden, offering convenient access for sports fans.",
+        "distance": "0.1 miles from TD Garden",
+        "website": "https://www.marriott.com/hotels/travel/bosnc-courtyard-boston-downtown-north-station/",
+        "type": "Business",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3665,
+          "longitude": -71.0612
+        }
+      },
+      {
+        "name": "Kimpton Onyx Hotel",
+        "description": "Stylish boutique hotel with a contemporary vibe, close to TD Garden and other attractions.",
+        "distance": "0.3 miles from TD Garden",
+        "website": "https://www.onyxhotel.com/",
+        "type": "Boutique",
+        "priceRange": "$$$",
+        "coordinates": {
+          "latitude": 42.3638,
+          "longitude": -71.0598
+        }
+      },
+      {
+        "name": "Bostonian Boston",
+        "description": "Upscale hotel offering views of Faneuil Hall and easy access to TD Garden.",
+        "distance": "0.5 miles from TD Garden",
+        "website": "https://www.millenniumhotels.com/en/boston/the-bostonian-boston/",
+        "type": "Luxury",
+        "priceRange": "$$$$",
+        "coordinates": {
+          "latitude": 42.3603,
+          "longitude": -71.0552
+        }
+      }
+    ]
+  }
